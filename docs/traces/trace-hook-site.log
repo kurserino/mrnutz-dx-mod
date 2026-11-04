@@ -1,0 +1,28 @@
+# trace-hook-site | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc
+SITE $81828A frame=1615 P=$07 m8=false x8=false E=false DBR=$00 D=$0000 SP=$1FEF A=$0000 X=$000C Y=$035E scanline=243
+SITE $81828D frame=1615 P=$05 m8=false x8=false E=false DBR=$00 D=$0000 SP=$1FEF A=$0100 X=$000C Y=$035E scanline=243
+SITE $818290 frame=1615 P=$05 m8=false x8=false E=false DBR=$00 D=$0000 SP=$1FEF A=$0100 X=$000C Y=$035E scanline=243
+SITE $81828A frame=1616 P=$06 m8=false x8=false E=false DBR=$00 D=$0000 SP=$1FEF A=$0000 X=$000C Y=$015C scanline=259
+SITE $81828D frame=1616 P=$04 m8=false x8=false E=false DBR=$00 D=$0000 SP=$1FEF A=$0100 X=$000C Y=$015C scanline=259
+SITE $818290 frame=1616 P=$04 m8=false x8=false E=false DBR=$00 D=$0000 SP=$1FEF A=$0100 X=$000C Y=$015C scanline=259
+SITE $81828A frame=1619 P=$46 m8=false x8=false E=false DBR=$00 D=$0000 SP=$1FEF A=$0000 X=$000C Y=$037E scanline=2
+SITE $81828D frame=1619 P=$44 m8=false x8=false E=false DBR=$00 D=$0000 SP=$1FEF A=$0100 X=$000C Y=$037E scanline=2
+SITE $818290 frame=1619 P=$44 m8=false x8=false E=false DBR=$00 D=$0000 SP=$1FEF A=$0100 X=$000C Y=$037E scanline=3
+SITE $81828D frame=2400 P=$C4 m8=false x8=false E=false DBR=$00 D=$0000 SP=$1FEF A=$8000 X=$0073 Y=$001F scanline=243
+SITE $818290 frame=2400 P=$C4 m8=false x8=false E=false DBR=$00 D=$0000 SP=$1FEF A=$8000 X=$0073 Y=$001F scanline=243
+SITE $81828D frame=2401 P=$85 m8=false x8=false E=false DBR=$00 D=$0000 SP=$1FEF A=$8000 X=$0073 Y=$00E0 scanline=245
+SITE $818290 frame=2401 P=$85 m8=false x8=false E=false DBR=$00 D=$0000 SP=$1FEF A=$8000 X=$0073 Y=$00E0 scanline=245
+SITE $81828D frame=2402 P=$84 m8=false x8=false E=false DBR=$00 D=$0000 SP=$1FEF A=$8000 X=$0073 Y=$001F scanline=231
+SITE $818290 frame=2402 P=$84 m8=false x8=false E=false DBR=$00 D=$0000 SP=$1FEF A=$8000 X=$0073 Y=$001F scanline=231
+SITE $81828A frame=2509 P=$47 m8=false x8=false E=false DBR=$00 D=$0000 SP=$1FEF A=$0000 X=$0073 Y=$00E0 scanline=231
+SITE $81828D frame=2509 P=$45 m8=false x8=false E=false DBR=$00 D=$0000 SP=$1FEF A=$0100 X=$0073 Y=$00E0 scanline=231
+SITE $818290 frame=2509 P=$45 m8=false x8=false E=false DBR=$00 D=$0000 SP=$1FEF A=$0100 X=$0073 Y=$00E0 scanline=231
+SITE $81828D frame=2705 P=$06 m8=false x8=false E=false DBR=$00 D=$0000 SP=$1FEF A=$0000 X=$0073 Y=$00E0 scanline=231
+SITE $818290 frame=2705 P=$06 m8=false x8=false E=false DBR=$00 D=$0000 SP=$1FEF A=$0000 X=$0073 Y=$00E0 scanline=231
+SITE $81828D frame=2707 P=$46 m8=false x8=false E=false DBR=$00 D=$0000 SP=$1FEF A=$0000 X=$0073 Y=$000B scanline=231
+SITE $818290 frame=2707 P=$46 m8=false x8=false E=false DBR=$00 D=$0000 SP=$1FEF A=$0000 X=$0073 Y=$000B scanline=231
+SITE $81828D frame=2708 P=$07 m8=false x8=false E=false DBR=$00 D=$0000 SP=$1FEF A=$0000 X=$0073 Y=$001F scanline=231
+SITE $818290 frame=2708 P=$07 m8=false x8=false E=false DBR=$00 D=$0000 SP=$1FEF A=$0000 X=$0073 Y=$001F scanline=231
+SITE total $81828A count=1167
+SITE total $81828D count=1167
+SITE total $818290 count=1167

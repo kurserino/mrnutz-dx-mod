@@ -1,0 +1,520 @@
+# sweep-colormath | exit=0 signal=- | rom=Mr. Nutz.runtime.sfc | state=level1-start.mss | COLORMATH=1
+LOAD ok=true
+SELECT stage=0 s=1
+SHOT s00-0300 -> output\traces\sweep-colormath/s00-0300.png
+SHOT s00-0600 -> output\traces\sweep-colormath/s00-0600.png
+SHOT s00-0900 -> output\traces\sweep-colormath/s00-0900.png
+SHOT s00-1200 -> output\traces\sweep-colormath/s00-1200.png
+SHOT s00-1340 -> output\traces\sweep-colormath/s00-1340.png
+STAGE 00 gameplay=1017 nutzFrames=978 ok=977 lostMax=1 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=5
+COLORMATH stage=00 frames=1017 enabledOr=$00 objMath=false
+SHOT s01-0300 -> output\traces\sweep-colormath/s01-0300.png
+SHOT s01-0600 -> output\traces\sweep-colormath/s01-0600.png
+SHOT s01-0900 -> output\traces\sweep-colormath/s01-0900.png
+SHOT s01-1200 -> output\traces\sweep-colormath/s01-1200.png
+SHOT s01-1340 -> output\traces\sweep-colormath/s01-1340.png
+STAGE 01 gameplay=871 nutzFrames=774 ok=774 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=5
+COLORMATH stage=01 frames=871 enabledOr=$02 objMath=false
+SHOT s02-0300 -> output\traces\sweep-colormath/s02-0300.png
+SHOT s02-0600 -> output\traces\sweep-colormath/s02-0600.png
+SHOT s02-0900 -> output\traces\sweep-colormath/s02-0900.png
+SHOT s02-1200 -> output\traces\sweep-colormath/s02-1200.png
+SHOT s02-1340 -> output\traces\sweep-colormath/s02-1340.png
+STAGE 02 gameplay=1093 nutzFrames=1092 ok=1092 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=5
+COLORMATH stage=02 frames=1093 enabledOr=$02 objMath=false
+SHOT s03-0300 -> output\traces\sweep-colormath/s03-0300.png
+SHOT s03-0600 -> output\traces\sweep-colormath/s03-0600.png
+SHOT s03-0900 -> output\traces\sweep-colormath/s03-0900.png
+SHOT s03-1200 -> output\traces\sweep-colormath/s03-1200.png
+SHOT s03-1340 -> output\traces\sweep-colormath/s03-1340.png
+STAGE 03 gameplay=1070 nutzFrames=1067 ok=1067 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=5
+COLORMATH stage=03 frames=1070 enabledOr=$02 objMath=false
+SHOT s04-0300 -> output\traces\sweep-colormath/s04-0300.png
+SHOT s04-0600 -> output\traces\sweep-colormath/s04-0600.png
+SHOT s04-0900 -> output\traces\sweep-colormath/s04-0900.png
+SHOT s04-1200 -> output\traces\sweep-colormath/s04-1200.png
+SHOT s04-1340 -> output\traces\sweep-colormath/s04-1340.png
+STAGE 04 gameplay=33 nutzFrames=33 ok=33 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=5
+COLORMATH stage=04 frames=33 enabledOr=$00 objMath=false
+SHOT s05-0300 -> output\traces\sweep-colormath/s05-0300.png
+SHOT s05-0600 -> output\traces\sweep-colormath/s05-0600.png
+SHOT s05-0900 -> output\traces\sweep-colormath/s05-0900.png
+SHOT s05-1200 -> output\traces\sweep-colormath/s05-1200.png
+SHOT s05-1340 -> output\traces\sweep-colormath/s05-1340.png
+STAGE 05 gameplay=1102 nutzFrames=1101 ok=1101 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=6
+COLORMATH stage=05 frames=1102 enabledOr=$00 objMath=false
+SHOT s06-0300 -> output\traces\sweep-colormath/s06-0300.png
+SHOT s06-0600 -> output\traces\sweep-colormath/s06-0600.png
+SHOT s06-0900 -> output\traces\sweep-colormath/s06-0900.png
+SHOT s06-1200 -> output\traces\sweep-colormath/s06-1200.png
+SHOT s06-1340 -> output\traces\sweep-colormath/s06-1340.png
+STAGE 06 gameplay=1101 nutzFrames=1100 ok=1100 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=6
+COLORMATH stage=06 frames=1101 enabledOr=$00 objMath=false
+SHOT s07-0300 -> output\traces\sweep-colormath/s07-0300.png
+SHOT s07-0600 -> output\traces\sweep-colormath/s07-0600.png
+SHOT s07-0900 -> output\traces\sweep-colormath/s07-0900.png
+SHOT s07-1200 -> output\traces\sweep-colormath/s07-1200.png
+SHOT s07-1340 -> output\traces\sweep-colormath/s07-1340.png
+STAGE 07 gameplay=1117 nutzFrames=1114 ok=1114 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=6
+COLORMATH stage=07 frames=1117 enabledOr=$2F objMath=false
+SHOT s08-0300 -> output\traces\sweep-colormath/s08-0300.png
+LOST stage=8 s=405 S=4 X=255 xCustom=false pal=0000 49CE 5A52 6AD6 7B5A 7BDE 031A 0292 018A 00C8 0000 000E 0012 0016 001A 001E
+SHOT s08-lost -> output\traces\sweep-colormath/s08-lost.png
+SHOT s08-0600 -> output\traces\sweep-colormath/s08-0600.png
+SHOT s08-0900 -> output\traces\sweep-colormath/s08-0900.png
+SHOT s08-1200 -> output\traces\sweep-colormath/s08-1200.png
+SHOT s08-1340 -> output\traces\sweep-colormath/s08-1340.png
+STAGE 08 gameplay=1098 nutzFrames=1097 ok=33 lostMax=1064 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=255
+COLORMATH stage=08 frames=1098 enabledOr=$2F objMath=false
+LOST stage=9 s=29 S=4 X=255 xCustom=false pal=0000 49CE 5A52 6AD6 7B5A 7BDE 031A 0292 018A 00C8 0000 000E 0012 0016 001A 001E
+SHOT s09-lost -> output\traces\sweep-colormath/s09-lost.png
+SHOT s09-0300 -> output\traces\sweep-colormath/s09-0300.png
+SHOT s09-0600 -> output\traces\sweep-colormath/s09-0600.png
+SHOT s09-0900 -> output\traces\sweep-colormath/s09-0900.png
+SHOT s09-1200 -> output\traces\sweep-colormath/s09-1200.png
+SHOT s09-1340 -> output\traces\sweep-colormath/s09-1340.png
+STAGE 09 gameplay=33 nutzFrames=33 ok=0 lostMax=33 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=255
+COLORMATH stage=09 frames=33 enabledOr=$20 objMath=false
+SHOT s10-0300 -> output\traces\sweep-colormath/s10-0300.png
+SHOT s10-0600 -> output\traces\sweep-colormath/s10-0600.png
+SHOT s10-0900 -> output\traces\sweep-colormath/s10-0900.png
+SHOT s10-1200 -> output\traces\sweep-colormath/s10-1200.png
+SHOT s10-1340 -> output\traces\sweep-colormath/s10-1340.png
+STAGE 10 gameplay=1108 nutzFrames=1107 ok=1107 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=0 X=1
+COLORMATH stage=10 frames=1108 enabledOr=$10 objMath=true
+SHOT s11-0300 -> output\traces\sweep-colormath/s11-0300.png
+SHOT s11-0600 -> output\traces\sweep-colormath/s11-0600.png
+SHOT s11-0900 -> output\traces\sweep-colormath/s11-0900.png
+SHOT s11-1200 -> output\traces\sweep-colormath/s11-1200.png
+SHOT s11-1340 -> output\traces\sweep-colormath/s11-1340.png
+STAGE 11 gameplay=1357 nutzFrames=1210 ok=1210 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=5
+COLORMATH stage=11 frames=1357 enabledOr=$10 objMath=true
+SHOT s12-0300 -> output\traces\sweep-colormath/s12-0300.png
+SHOT s12-0600 -> output\traces\sweep-colormath/s12-0600.png
+SHOT s12-0900 -> output\traces\sweep-colormath/s12-0900.png
+SHOT s12-1200 -> output\traces\sweep-colormath/s12-1200.png
+SHOT s12-1340 -> output\traces\sweep-colormath/s12-1340.png
+STAGE 12 gameplay=1110 nutzFrames=1109 ok=1109 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=5
+COLORMATH stage=12 frames=1110 enabledOr=$00 objMath=false
+SHOT s13-0300 -> output\traces\sweep-colormath/s13-0300.png
+SHOT s13-0600 -> output\traces\sweep-colormath/s13-0600.png
+SHOT s13-0900 -> output\traces\sweep-colormath/s13-0900.png
+SHOT s13-1200 -> output\traces\sweep-colormath/s13-1200.png
+SHOT s13-1340 -> output\traces\sweep-colormath/s13-1340.png
+STAGE 13 gameplay=1028 nutzFrames=847 ok=847 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=5
+COLORMATH stage=13 frames=1028 enabledOr=$02 objMath=false
+SHOT s14-0300 -> output\traces\sweep-colormath/s14-0300.png
+SHOT s14-0600 -> output\traces\sweep-colormath/s14-0600.png
+SHOT s14-0900 -> output\traces\sweep-colormath/s14-0900.png
+SHOT s14-1200 -> output\traces\sweep-colormath/s14-1200.png
+SHOT s14-1340 -> output\traces\sweep-colormath/s14-1340.png
+STAGE 14 gameplay=1343 nutzFrames=1115 ok=1115 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=6
+COLORMATH stage=14 frames=1343 enabledOr=$02 objMath=false
+SHOT s15-0300 -> output\traces\sweep-colormath/s15-0300.png
+SHOT s15-0600 -> output\traces\sweep-colormath/s15-0600.png
+SHOT s15-0900 -> output\traces\sweep-colormath/s15-0900.png
+SHOT s15-1200 -> output\traces\sweep-colormath/s15-1200.png
+SHOT s15-1340 -> output\traces\sweep-colormath/s15-1340.png
+STAGE 15 gameplay=1349 nutzFrames=1150 ok=1150 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=6
+COLORMATH stage=15 frames=1349 enabledOr=$02 objMath=false
+SHOT s16-0300 -> output\traces\sweep-colormath/s16-0300.png
+SHOT s16-0600 -> output\traces\sweep-colormath/s16-0600.png
+SHOT s16-0900 -> output\traces\sweep-colormath/s16-0900.png
+SHOT s16-1200 -> output\traces\sweep-colormath/s16-1200.png
+SHOT s16-1340 -> output\traces\sweep-colormath/s16-1340.png
+STAGE 16 gameplay=1106 nutzFrames=1071 ok=1071 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=6
+COLORMATH stage=16 frames=1106 enabledOr=$02 objMath=false
+SHOT s17-0300 -> output\traces\sweep-colormath/s17-0300.png
+SHOT s17-0600 -> output\traces\sweep-colormath/s17-0600.png
+SHOT s17-0900 -> output\traces\sweep-colormath/s17-0900.png
+SHOT s17-1200 -> output\traces\sweep-colormath/s17-1200.png
+SHOT s17-1340 -> output\traces\sweep-colormath/s17-1340.png
+STAGE 17 gameplay=33 nutzFrames=33 ok=33 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=6
+COLORMATH stage=17 frames=33 enabledOr=$02 objMath=false
+SHOT s18-0300 -> output\traces\sweep-colormath/s18-0300.png
+SHOT s18-0600 -> output\traces\sweep-colormath/s18-0600.png
+SHOT s18-0900 -> output\traces\sweep-colormath/s18-0900.png
+SHOT s18-1200 -> output\traces\sweep-colormath/s18-1200.png
+SHOT s18-1340 -> output\traces\sweep-colormath/s18-1340.png
+STAGE 18 gameplay=953 nutzFrames=906 ok=906 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=5
+COLORMATH stage=18 frames=953 enabledOr=$00 objMath=false
+SHOT s19-0300 -> output\traces\sweep-colormath/s19-0300.png
+SHOT s19-0600 -> output\traces\sweep-colormath/s19-0600.png
+SHOT s19-0900 -> output\traces\sweep-colormath/s19-0900.png
+SHOT s19-1200 -> output\traces\sweep-colormath/s19-1200.png
+SHOT s19-1340 -> output\traces\sweep-colormath/s19-1340.png
+STAGE 19 gameplay=1112 nutzFrames=1081 ok=1081 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=6
+COLORMATH stage=19 frames=1112 enabledOr=$00 objMath=false
+SHOT s20-0300 -> output\traces\sweep-colormath/s20-0300.png
+SHOT s20-0600 -> output\traces\sweep-colormath/s20-0600.png
+SHOT s20-0900 -> output\traces\sweep-colormath/s20-0900.png
+SHOT s20-1200 -> output\traces\sweep-colormath/s20-1200.png
+SHOT s20-1340 -> output\traces\sweep-colormath/s20-1340.png
+STAGE 20 gameplay=1049 nutzFrames=1029 ok=1029 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=6
+COLORMATH stage=20 frames=1049 enabledOr=$00 objMath=false
+SHOT s21-0300 -> output\traces\sweep-colormath/s21-0300.png
+SHOT s21-0600 -> output\traces\sweep-colormath/s21-0600.png
+SHOT s21-0900 -> output\traces\sweep-colormath/s21-0900.png
+SHOT s21-1200 -> output\traces\sweep-colormath/s21-1200.png
+SHOT s21-1340 -> output\traces\sweep-colormath/s21-1340.png
+STAGE 21 gameplay=752 nutzFrames=722 ok=722 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=6
+COLORMATH stage=21 frames=752 enabledOr=$01 objMath=false
+SHOT s22-0300 -> output\traces\sweep-colormath/s22-0300.png
+SHOT s22-0600 -> output\traces\sweep-colormath/s22-0600.png
+SHOT s22-0900 -> output\traces\sweep-colormath/s22-0900.png
+SHOT s22-1200 -> output\traces\sweep-colormath/s22-1200.png
+SHOT s22-1340 -> output\traces\sweep-colormath/s22-1340.png
+STAGE 22 gameplay=1002 nutzFrames=969 ok=969 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=6
+COLORMATH stage=22 frames=1002 enabledOr=$01 objMath=false
+SHOT s23-0300 -> output\traces\sweep-colormath/s23-0300.png
+SHOT s23-0600 -> output\traces\sweep-colormath/s23-0600.png
+SHOT s23-0900 -> output\traces\sweep-colormath/s23-0900.png
+SHOT s23-1200 -> output\traces\sweep-colormath/s23-1200.png
+SHOT s23-1340 -> output\traces\sweep-colormath/s23-1340.png
+STAGE 23 gameplay=1023 nutzFrames=1020 ok=1020 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=6
+COLORMATH stage=23 frames=1023 enabledOr=$03 objMath=false
+SHOT s24-0300 -> output\traces\sweep-colormath/s24-0300.png
+SHOT s24-0600 -> output\traces\sweep-colormath/s24-0600.png
+SHOT s24-0900 -> output\traces\sweep-colormath/s24-0900.png
+SHOT s24-1200 -> output\traces\sweep-colormath/s24-1200.png
+SHOT s24-1340 -> output\traces\sweep-colormath/s24-1340.png
+STAGE 24 gameplay=33 nutzFrames=33 ok=33 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=6
+COLORMATH stage=24 frames=33 enabledOr=$02 objMath=false
+SHOT s25-0300 -> output\traces\sweep-colormath/s25-0300.png
+SHOT s25-0600 -> output\traces\sweep-colormath/s25-0600.png
+SHOT s25-0900 -> output\traces\sweep-colormath/s25-0900.png
+SHOT s25-1200 -> output\traces\sweep-colormath/s25-1200.png
+SHOT s25-1340 -> output\traces\sweep-colormath/s25-1340.png
+STAGE 25 gameplay=959 nutzFrames=956 ok=956 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=5
+COLORMATH stage=25 frames=959 enabledOr=$02 objMath=false
+SHOT s26-0300 -> output\traces\sweep-colormath/s26-0300.png
+SHOT s26-0600 -> output\traces\sweep-colormath/s26-0600.png
+SHOT s26-0900 -> output\traces\sweep-colormath/s26-0900.png
+SHOT s26-1200 -> output\traces\sweep-colormath/s26-1200.png
+SHOT s26-1340 -> output\traces\sweep-colormath/s26-1340.png
+STAGE 26 gameplay=1068 nutzFrames=981 ok=981 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=5
+COLORMATH stage=26 frames=1068 enabledOr=$02 objMath=false
+SHOT s27-0300 -> output\traces\sweep-colormath/s27-0300.png
+SHOT s27-0600 -> output\traces\sweep-colormath/s27-0600.png
+SHOT s27-0900 -> output\traces\sweep-colormath/s27-0900.png
+SHOT s27-1200 -> output\traces\sweep-colormath/s27-1200.png
+SHOT s27-1340 -> output\traces\sweep-colormath/s27-1340.png
+STAGE 27 gameplay=1073 nutzFrames=1064 ok=1064 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=5
+COLORMATH stage=27 frames=1073 enabledOr=$02 objMath=false
+SHOT s28-0300 -> output\traces\sweep-colormath/s28-0300.png
+SHOT s28-0600 -> output\traces\sweep-colormath/s28-0600.png
+SHOT s28-0900 -> output\traces\sweep-colormath/s28-0900.png
+SHOT s28-1200 -> output\traces\sweep-colormath/s28-1200.png
+SHOT s28-1340 -> output\traces\sweep-colormath/s28-1340.png
+STAGE 28 gameplay=1056 nutzFrames=1053 ok=1053 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=7
+COLORMATH stage=28 frames=1056 enabledOr=$02 objMath=false
+SHOT s29-0300 -> output\traces\sweep-colormath/s29-0300.png
+SHOT s29-0600 -> output\traces\sweep-colormath/s29-0600.png
+SHOT s29-0900 -> output\traces\sweep-colormath/s29-0900.png
+SHOT s29-1200 -> output\traces\sweep-colormath/s29-1200.png
+SHOT s29-1340 -> output\traces\sweep-colormath/s29-1340.png
+STAGE 29 gameplay=33 nutzFrames=33 ok=33 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=7
+COLORMATH stage=29 frames=33 enabledOr=$00 objMath=false
+SHOT s30-0300 -> output\traces\sweep-colormath/s30-0300.png
+SHOT s30-0600 -> output\traces\sweep-colormath/s30-0600.png
+SHOT s30-0900 -> output\traces\sweep-colormath/s30-0900.png
+SHOT s30-1200 -> output\traces\sweep-colormath/s30-1200.png
+SHOT s30-1340 -> output\traces\sweep-colormath/s30-1340.png
+STAGE 30 gameplay=1115 nutzFrames=1114 ok=1114 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=7
+COLORMATH stage=30 frames=1115 enabledOr=$2F objMath=false
+SHOT s31-0300 -> output\traces\sweep-colormath/s31-0300.png
+SHOT s31-0600 -> output\traces\sweep-colormath/s31-0600.png
+SHOT s31-0900 -> output\traces\sweep-colormath/s31-0900.png
+SHOT s31-1200 -> output\traces\sweep-colormath/s31-1200.png
+SHOT s31-1340 -> output\traces\sweep-colormath/s31-1340.png
+STAGE 31 gameplay=1366 nutzFrames=1208 ok=1208 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=7
+COLORMATH stage=31 frames=1366 enabledOr=$2F objMath=false
+SHOT s32-0300 -> output\traces\sweep-colormath/s32-0300.png
+SHOT s32-0600 -> output\traces\sweep-colormath/s32-0600.png
+SHOT s32-0900 -> output\traces\sweep-colormath/s32-0900.png
+SHOT s32-1200 -> output\traces\sweep-colormath/s32-1200.png
+SHOT s32-1340 -> output\traces\sweep-colormath/s32-1340.png
+STAGE 32 gameplay=1077 nutzFrames=957 ok=957 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=7
+COLORMATH stage=32 frames=1077 enabledOr=$00 objMath=false
+SHOT s33-0300 -> output\traces\sweep-colormath/s33-0300.png
+SHOT s33-0600 -> output\traces\sweep-colormath/s33-0600.png
+SHOT s33-0900 -> output\traces\sweep-colormath/s33-0900.png
+SHOT s33-1200 -> output\traces\sweep-colormath/s33-1200.png
+SHOT s33-1340 -> output\traces\sweep-colormath/s33-1340.png
+STAGE 33 gameplay=1072 nutzFrames=1069 ok=1069 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=7
+COLORMATH stage=33 frames=1072 enabledOr=$00 objMath=false
+SHOT s34-0300 -> output\traces\sweep-colormath/s34-0300.png
+SHOT s34-0600 -> output\traces\sweep-colormath/s34-0600.png
+SHOT s34-0900 -> output\traces\sweep-colormath/s34-0900.png
+SHOT s34-1200 -> output\traces\sweep-colormath/s34-1200.png
+SHOT s34-1340 -> output\traces\sweep-colormath/s34-1340.png
+STAGE 34 gameplay=842 nutzFrames=840 ok=840 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=7
+COLORMATH stage=34 frames=842 enabledOr=$00 objMath=false
+SHOT s35-0300 -> output\traces\sweep-colormath/s35-0300.png
+SHOT s35-0600 -> output\traces\sweep-colormath/s35-0600.png
+SHOT s35-0900 -> output\traces\sweep-colormath/s35-0900.png
+SHOT s35-1200 -> output\traces\sweep-colormath/s35-1200.png
+SHOT s35-1340 -> output\traces\sweep-colormath/s35-1340.png
+STAGE 35 gameplay=1261 nutzFrames=1260 ok=1260 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=7
+COLORMATH stage=35 frames=1261 enabledOr=$25 objMath=false
+SHOT s36-0300 -> output\traces\sweep-colormath/s36-0300.png
+SHOT s36-0600 -> output\traces\sweep-colormath/s36-0600.png
+SHOT s36-0900 -> output\traces\sweep-colormath/s36-0900.png
+SHOT s36-1200 -> output\traces\sweep-colormath/s36-1200.png
+SHOT s36-1340 -> output\traces\sweep-colormath/s36-1340.png
+STAGE 36 gameplay=1294 nutzFrames=1293 ok=1293 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=7
+COLORMATH stage=36 frames=1294 enabledOr=$27 objMath=false
+SHOT s37-0300 -> output\traces\sweep-colormath/s37-0300.png
+SHOT s37-0600 -> output\traces\sweep-colormath/s37-0600.png
+SHOT s37-0900 -> output\traces\sweep-colormath/s37-0900.png
+SHOT s37-1200 -> output\traces\sweep-colormath/s37-1200.png
+SHOT s37-1340 -> output\traces\sweep-colormath/s37-1340.png
+STAGE 37 gameplay=261 nutzFrames=260 ok=260 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=7
+COLORMATH stage=37 frames=261 enabledOr=$02 objMath=false
+SHOT s38-0300 -> output\traces\sweep-colormath/s38-0300.png
+SHOT s38-0600 -> output\traces\sweep-colormath/s38-0600.png
+SHOT s38-0900 -> output\traces\sweep-colormath/s38-0900.png
+SHOT s38-1200 -> output\traces\sweep-colormath/s38-1200.png
+SHOT s38-1340 -> output\traces\sweep-colormath/s38-1340.png
+STAGE 38 gameplay=310 nutzFrames=292 ok=292 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=5
+COLORMATH stage=38 frames=310 enabledOr=$02 objMath=false
+SHOT s39-0300 -> output\traces\sweep-colormath/s39-0300.png
+SHOT s39-0600 -> output\traces\sweep-colormath/s39-0600.png
+SHOT s39-0900 -> output\traces\sweep-colormath/s39-0900.png
+SHOT s39-1200 -> output\traces\sweep-colormath/s39-1200.png
+SHOT s39-1340 -> output\traces\sweep-colormath/s39-1340.png
+STAGE 39 gameplay=356 nutzFrames=355 ok=355 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=6
+COLORMATH stage=39 frames=356 enabledOr=$02 objMath=false
+SHOT s40-0300 -> output\traces\sweep-colormath/s40-0300.png
+SHOT s40-0600 -> output\traces\sweep-colormath/s40-0600.png
+SHOT s40-0900 -> output\traces\sweep-colormath/s40-0900.png
+SHOT s40-1200 -> output\traces\sweep-colormath/s40-1200.png
+SHOT s40-1340 -> output\traces\sweep-colormath/s40-1340.png
+STAGE 40 gameplay=371 nutzFrames=370 ok=370 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=6
+COLORMATH stage=40 frames=371 enabledOr=$01 objMath=false
+SHOT s41-0300 -> output\traces\sweep-colormath/s41-0300.png
+SHOT s41-0600 -> output\traces\sweep-colormath/s41-0600.png
+SHOT s41-0900 -> output\traces\sweep-colormath/s41-0900.png
+SHOT s41-1200 -> output\traces\sweep-colormath/s41-1200.png
+SHOT s41-1340 -> output\traces\sweep-colormath/s41-1340.png
+STAGE 41 gameplay=269 nutzFrames=268 ok=268 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=7
+COLORMATH stage=41 frames=269 enabledOr=$03 objMath=false
+SHOT s42-0300 -> output\traces\sweep-colormath/s42-0300.png
+SHOT s42-0600 -> output\traces\sweep-colormath/s42-0600.png
+SHOT s42-0900 -> output\traces\sweep-colormath/s42-0900.png
+SHOT s42-1200 -> output\traces\sweep-colormath/s42-1200.png
+SHOT s42-1340 -> output\traces\sweep-colormath/s42-1340.png
+STAGE 42 gameplay=418 nutzFrames=378 ok=378 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=7
+COLORMATH stage=42 frames=418 enabledOr=$02 objMath=false
+SHOT s43-0300 -> output\traces\sweep-colormath/s43-0300.png
+SHOT s43-0600 -> output\traces\sweep-colormath/s43-0600.png
+SHOT s43-0900 -> output\traces\sweep-colormath/s43-0900.png
+SHOT s43-1200 -> output\traces\sweep-colormath/s43-1200.png
+SHOT s43-1340 -> output\traces\sweep-colormath/s43-1340.png
+STAGE 43 gameplay=272 nutzFrames=271 ok=271 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=5
+COLORMATH stage=43 frames=272 enabledOr=$00 objMath=false
+SHOT s44-0300 -> output\traces\sweep-colormath/s44-0300.png
+SHOT s44-0600 -> output\traces\sweep-colormath/s44-0600.png
+LOST stage=44 s=732 S=4 X=255 xCustom=false pal=0000 49CE 5A52 6AD6 7B5A 7BDE 031A 0292 018A 00C8 0000 000E 0012 0016 001A 001E
+SHOT s44-lost -> output\traces\sweep-colormath/s44-lost.png
+SHOT s44-0900 -> output\traces\sweep-colormath/s44-0900.png
+SHOT s44-1200 -> output\traces\sweep-colormath/s44-1200.png
+SHOT s44-1340 -> output\traces\sweep-colormath/s44-1340.png
+STAGE 44 gameplay=1127 nutzFrames=1127 ok=851 lostMax=175 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=255
+COLORMATH stage=44 frames=1127 enabledOr=$3B objMath=true
+LOST stage=45 s=29 S=4 X=255 xCustom=false pal=0000 49CE 5A52 6AD6 7B5A 7BDE 031A 0292 018A 00C8 0000 000E 0012 0016 001A 001E
+SHOT s45-lost -> output\traces\sweep-colormath/s45-lost.png
+SHOT s45-0300 -> output\traces\sweep-colormath/s45-0300.png
+SHOT s45-0600 -> output\traces\sweep-colormath/s45-0600.png
+SHOT s45-0900 -> output\traces\sweep-colormath/s45-0900.png
+SHOT s45-1200 -> output\traces\sweep-colormath/s45-1200.png
+SHOT s45-1340 -> output\traces\sweep-colormath/s45-1340.png
+STAGE 45 gameplay=33 nutzFrames=33 ok=0 lostMax=33 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=4 X=255
+COLORMATH stage=45 frames=33 enabledOr=$3B objMath=true
+SHOT s46-0300 -> output\traces\sweep-colormath/s46-0300.png
+SHOT s46-0600 -> output\traces\sweep-colormath/s46-0600.png
+SHOT s46-0900 -> output\traces\sweep-colormath/s46-0900.png
+SHOT s46-1200 -> output\traces\sweep-colormath/s46-1200.png
+SHOT s46-1340 -> output\traces\sweep-colormath/s46-1340.png
+STAGE 46 gameplay=0 nutzFrames=0 ok=0 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=nil X=nil
+COLORMATH stage=46 frames=0 enabledOr=$00 objMath=false
+SHOT s47-0300 -> output\traces\sweep-colormath/s47-0300.png
+SHOT s47-0600 -> output\traces\sweep-colormath/s47-0600.png
+SHOT s47-0900 -> output\traces\sweep-colormath/s47-0900.png
+SHOT s47-1200 -> output\traces\sweep-colormath/s47-1200.png
+SHOT s47-1340 -> output\traces\sweep-colormath/s47-1340.png
+STAGE 47 gameplay=0 nutzFrames=0 ok=0 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=nil X=nil
+COLORMATH stage=47 frames=0 enabledOr=$00 objMath=false
+SHOT s48-0300 -> output\traces\sweep-colormath/s48-0300.png
+SHOT s48-0600 -> output\traces\sweep-colormath/s48-0600.png
+SHOT s48-0900 -> output\traces\sweep-colormath/s48-0900.png
+SHOT s48-1200 -> output\traces\sweep-colormath/s48-1200.png
+SHOT s48-1340 -> output\traces\sweep-colormath/s48-1340.png
+STAGE 48 gameplay=0 nutzFrames=0 ok=0 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=nil X=nil
+COLORMATH stage=48 frames=0 enabledOr=$00 objMath=false
+SHOT s49-0300 -> output\traces\sweep-colormath/s49-0300.png
+SHOT s49-0600 -> output\traces\sweep-colormath/s49-0600.png
+SHOT s49-0900 -> output\traces\sweep-colormath/s49-0900.png
+SHOT s49-1200 -> output\traces\sweep-colormath/s49-1200.png
+SHOT s49-1340 -> output\traces\sweep-colormath/s49-1340.png
+STAGE 49 gameplay=0 nutzFrames=0 ok=0 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=nil X=nil
+COLORMATH stage=49 frames=0 enabledOr=$00 objMath=false
+SHOT s50-0300 -> output\traces\sweep-colormath/s50-0300.png
+SHOT s50-0600 -> output\traces\sweep-colormath/s50-0600.png
+SHOT s50-0900 -> output\traces\sweep-colormath/s50-0900.png
+SHOT s50-1200 -> output\traces\sweep-colormath/s50-1200.png
+SHOT s50-1340 -> output\traces\sweep-colormath/s50-1340.png
+STAGE 50 gameplay=0 nutzFrames=0 ok=0 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=nil X=nil
+COLORMATH stage=50 frames=0 enabledOr=$00 objMath=false
+SHOT s51-0300 -> output\traces\sweep-colormath/s51-0300.png
+SHOT s51-0600 -> output\traces\sweep-colormath/s51-0600.png
+SHOT s51-0900 -> output\traces\sweep-colormath/s51-0900.png
+SHOT s51-1200 -> output\traces\sweep-colormath/s51-1200.png
+SHOT s51-1340 -> output\traces\sweep-colormath/s51-1340.png
+STAGE 51 gameplay=0 nutzFrames=0 ok=0 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=nil X=nil
+COLORMATH stage=51 frames=0 enabledOr=$00 objMath=false
+SHOT s52-0300 -> output\traces\sweep-colormath/s52-0300.png
+SHOT s52-0600 -> output\traces\sweep-colormath/s52-0600.png
+SHOT s52-0900 -> output\traces\sweep-colormath/s52-0900.png
+SHOT s52-1200 -> output\traces\sweep-colormath/s52-1200.png
+SHOT s52-1340 -> output\traces\sweep-colormath/s52-1340.png
+STAGE 52 gameplay=0 nutzFrames=0 ok=0 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=nil X=nil
+COLORMATH stage=52 frames=0 enabledOr=$00 objMath=false
+SHOT s53-0300 -> output\traces\sweep-colormath/s53-0300.png
+SHOT s53-0600 -> output\traces\sweep-colormath/s53-0600.png
+SHOT s53-0900 -> output\traces\sweep-colormath/s53-0900.png
+SHOT s53-1200 -> output\traces\sweep-colormath/s53-1200.png
+SHOT s53-1340 -> output\traces\sweep-colormath/s53-1340.png
+STAGE 53 gameplay=0 nutzFrames=0 ok=0 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=nil X=nil
+COLORMATH stage=53 frames=0 enabledOr=$00 objMath=false
+SHOT s54-0300 -> output\traces\sweep-colormath/s54-0300.png
+SHOT s54-0600 -> output\traces\sweep-colormath/s54-0600.png
+SHOT s54-0900 -> output\traces\sweep-colormath/s54-0900.png
+SHOT s54-1200 -> output\traces\sweep-colormath/s54-1200.png
+SHOT s54-1340 -> output\traces\sweep-colormath/s54-1340.png
+STAGE 54 gameplay=0 nutzFrames=0 ok=0 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=nil X=nil
+COLORMATH stage=54 frames=0 enabledOr=$00 objMath=false
+SHOT s55-0300 -> output\traces\sweep-colormath/s55-0300.png
+SHOT s55-0600 -> output\traces\sweep-colormath/s55-0600.png
+SHOT s55-0900 -> output\traces\sweep-colormath/s55-0900.png
+SHOT s55-1200 -> output\traces\sweep-colormath/s55-1200.png
+SHOT s55-1340 -> output\traces\sweep-colormath/s55-1340.png
+STAGE 55 gameplay=0 nutzFrames=0 ok=0 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=nil X=nil
+COLORMATH stage=55 frames=0 enabledOr=$00 objMath=false
+SHOT s56-0300 -> output\traces\sweep-colormath/s56-0300.png
+SHOT s56-0600 -> output\traces\sweep-colormath/s56-0600.png
+SHOT s56-0900 -> output\traces\sweep-colormath/s56-0900.png
+SHOT s56-1200 -> output\traces\sweep-colormath/s56-1200.png
+SHOT s56-1340 -> output\traces\sweep-colormath/s56-1340.png
+STAGE 56 gameplay=0 nutzFrames=0 ok=0 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=nil X=nil
+COLORMATH stage=56 frames=0 enabledOr=$00 objMath=false
+SHOT s57-0300 -> output\traces\sweep-colormath/s57-0300.png
+SHOT s57-0600 -> output\traces\sweep-colormath/s57-0600.png
+SHOT s57-0900 -> output\traces\sweep-colormath/s57-0900.png
+SHOT s57-1200 -> output\traces\sweep-colormath/s57-1200.png
+SHOT s57-1340 -> output\traces\sweep-colormath/s57-1340.png
+STAGE 57 gameplay=0 nutzFrames=0 ok=0 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=nil X=nil
+COLORMATH stage=57 frames=0 enabledOr=$00 objMath=false
+SHOT s58-0300 -> output\traces\sweep-colormath/s58-0300.png
+SHOT s58-0600 -> output\traces\sweep-colormath/s58-0600.png
+SHOT s58-0900 -> output\traces\sweep-colormath/s58-0900.png
+SHOT s58-1200 -> output\traces\sweep-colormath/s58-1200.png
+SHOT s58-1340 -> output\traces\sweep-colormath/s58-1340.png
+STAGE 58 gameplay=0 nutzFrames=0 ok=0 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=nil X=nil
+COLORMATH stage=58 frames=0 enabledOr=$00 objMath=false
+SHOT s59-0300 -> output\traces\sweep-colormath/s59-0300.png
+SHOT s59-0600 -> output\traces\sweep-colormath/s59-0600.png
+SHOT s59-0900 -> output\traces\sweep-colormath/s59-0900.png
+SHOT s59-1200 -> output\traces\sweep-colormath/s59-1200.png
+SHOT s59-1340 -> output\traces\sweep-colormath/s59-1340.png
+STAGE 59 gameplay=0 nutzFrames=0 ok=0 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=nil X=nil
+COLORMATH stage=59 frames=0 enabledOr=$00 objMath=false
+SHOT s60-0300 -> output\traces\sweep-colormath/s60-0300.png
+SHOT s60-0600 -> output\traces\sweep-colormath/s60-0600.png
+SHOT s60-0900 -> output\traces\sweep-colormath/s60-0900.png
+SHOT s60-1200 -> output\traces\sweep-colormath/s60-1200.png
+SHOT s60-1340 -> output\traces\sweep-colormath/s60-1340.png
+STAGE 60 gameplay=0 nutzFrames=0 ok=0 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=nil X=nil
+COLORMATH stage=60 frames=0 enabledOr=$00 objMath=false
+SHOT s61-0300 -> output\traces\sweep-colormath/s61-0300.png
+SHOT s61-0600 -> output\traces\sweep-colormath/s61-0600.png
+SHOT s61-0900 -> output\traces\sweep-colormath/s61-0900.png
+SHOT s61-1200 -> output\traces\sweep-colormath/s61-1200.png
+SHOT s61-1340 -> output\traces\sweep-colormath/s61-1340.png
+STAGE 61 gameplay=0 nutzFrames=0 ok=0 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=nil X=nil
+COLORMATH stage=61 frames=0 enabledOr=$00 objMath=false
+SHOT s62-0300 -> output\traces\sweep-colormath/s62-0300.png
+SHOT s62-0600 -> output\traces\sweep-colormath/s62-0600.png
+SHOT s62-0900 -> output\traces\sweep-colormath/s62-0900.png
+SHOT s62-1200 -> output\traces\sweep-colormath/s62-1200.png
+SHOT s62-1340 -> output\traces\sweep-colormath/s62-1340.png
+STAGE 62 gameplay=0 nutzFrames=0 ok=0 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=nil X=nil
+COLORMATH stage=62 frames=0 enabledOr=$00 objMath=false
+SHOT s63-0300 -> output\traces\sweep-colormath/s63-0300.png
+SHOT s63-0600 -> output\traces\sweep-colormath/s63-0600.png
+SHOT s63-0900 -> output\traces\sweep-colormath/s63-0900.png
+SHOT s63-1200 -> output\traces\sweep-colormath/s63-1200.png
+SHOT s63-1340 -> output\traces\sweep-colormath/s63-1340.png
+STAGE 63 gameplay=0 nutzFrames=0 ok=0 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=nil X=nil
+COLORMATH stage=63 frames=0 enabledOr=$00 objMath=false
+SHOT s64-0300 -> output\traces\sweep-colormath/s64-0300.png
+SHOT s64-0600 -> output\traces\sweep-colormath/s64-0600.png
+SHOT s64-0900 -> output\traces\sweep-colormath/s64-0900.png
+SHOT s64-1200 -> output\traces\sweep-colormath/s64-1200.png
+SHOT s64-1340 -> output\traces\sweep-colormath/s64-1340.png
+STAGE 64 gameplay=0 nutzFrames=0 ok=0 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=nil X=nil
+COLORMATH stage=64 frames=0 enabledOr=$00 objMath=false
+SHOT s65-0300 -> output\traces\sweep-colormath/s65-0300.png
+SHOT s65-0600 -> output\traces\sweep-colormath/s65-0600.png
+SHOT s65-0900 -> output\traces\sweep-colormath/s65-0900.png
+SHOT s65-1200 -> output\traces\sweep-colormath/s65-1200.png
+SHOT s65-1340 -> output\traces\sweep-colormath/s65-1340.png
+STAGE 65 gameplay=0 nutzFrames=0 ok=0 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=nil X=nil
+COLORMATH stage=65 frames=0 enabledOr=$00 objMath=false
+SHOT s66-0300 -> output\traces\sweep-colormath/s66-0300.png
+SHOT s66-0600 -> output\traces\sweep-colormath/s66-0600.png
+SHOT s66-0900 -> output\traces\sweep-colormath/s66-0900.png
+SHOT s66-1200 -> output\traces\sweep-colormath/s66-1200.png
+SHOT s66-1340 -> output\traces\sweep-colormath/s66-1340.png
+STAGE 66 gameplay=0 nutzFrames=0 ok=0 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=nil X=nil
+COLORMATH stage=66 frames=0 enabledOr=$00 objMath=false
+SHOT s67-0300 -> output\traces\sweep-colormath/s67-0300.png
+SHOT s67-0600 -> output\traces\sweep-colormath/s67-0600.png
+SHOT s67-0900 -> output\traces\sweep-colormath/s67-0900.png
+SHOT s67-1200 -> output\traces\sweep-colormath/s67-1200.png
+SHOT s67-1340 -> output\traces\sweep-colormath/s67-1340.png
+STAGE 67 gameplay=0 nutzFrames=0 ok=0 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=nil X=nil
+COLORMATH stage=67 frames=0 enabledOr=$00 objMath=false
+SHOT s68-0300 -> output\traces\sweep-colormath/s68-0300.png
+SHOT s68-0600 -> output\traces\sweep-colormath/s68-0600.png
+SHOT s68-0900 -> output\traces\sweep-colormath/s68-0900.png
+SHOT s68-1200 -> output\traces\sweep-colormath/s68-1200.png
+SHOT s68-1340 -> output\traces\sweep-colormath/s68-1340.png
+STAGE 68 gameplay=0 nutzFrames=0 ok=0 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=nil X=nil
+COLORMATH stage=68 frames=0 enabledOr=$00 objMath=false
+SHOT s69-0300 -> output\traces\sweep-colormath/s69-0300.png
+SHOT s69-0600 -> output\traces\sweep-colormath/s69-0600.png
+SHOT s69-0900 -> output\traces\sweep-colormath/s69-0900.png
+SHOT s69-1200 -> output\traces\sweep-colormath/s69-1200.png
+SHOT s69-1340 -> output\traces\sweep-colormath/s69-1340.png
+STAGE 69 gameplay=0 nutzFrames=0 ok=0 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=nil X=nil
+STAGE 70 gameplay=0 nutzFrames=0 ok=0 lostMax=0 sharedChanged=0 foreignOnX=0 noSlot=0 reselect=0 S=nil X=nil
+RESET start idx=2/3
+RESET done idx=2/3 magic=$5A4E
+AFTERRESET r=300 01DC=$8357 idx=2/3 magic=$5A4E X=255 xCustom=false
+SHOT reset-0300 -> output\traces\sweep-colormath/reset-0300.png
+AFTERRESET r=600 01DC=$8357 idx=2/3 magic=$5A4E X=255 xCustom=false
+SHOT reset-0600 -> output\traces\sweep-colormath/reset-0600.png
+AFTERRESET r=900 01DC=$8357 idx=2/3 magic=$5A4E X=255 xCustom=false
+SHOT reset-0900 -> output\traces\sweep-colormath/reset-0900.png
+AFTERRESET r=1200 01DC=$8357 idx=2/3 magic=$5A4E X=5 xCustom=true
+SHOT reset-1200 -> output\traces\sweep-colormath/reset-1200.png
+AFTERRESET r=1500 01DC=$8357 idx=2/3 magic=$5A4E X=5 xCustom=false
+SHOT reset-1500 -> output\traces\sweep-colormath/reset-1500.png
+AFTERRESET r=1800 01DC=$835B idx=2/3 magic=$5A4E X=5 xCustom=true
+SHOT reset-1800 -> output\traces\sweep-colormath/reset-1800.png
+AFTERRESET r=2100 01DC=$835B idx=2/3 magic=$5A4E X=5 xCustom=true
+SHOT reset-2100 -> output\traces\sweep-colormath/reset-2100.png
+AFTERRESET r=2400 01DC=$835B idx=2/3 magic=$5A4E X=5 xCustom=true
+SHOT reset-2400 -> output\traces\sweep-colormath/reset-2400.png
+DONE

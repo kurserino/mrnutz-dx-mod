@@ -1,0 +1,60 @@
+# swim-blue-35 | exit=0 signal=- | rom=Mr. Nutz.runtime.sfc | state=level1-start.mss
+LOAD ok=true
+SWIM start 1EC9=$00 01DC=$835B pal=0000 49CE 5A52 6AD6 7B5A 7BDE 031A 0292 018A 00C8 0000 000E 0012 0016 001A 001E
+CHANGE t=0 X=6 X6/X15=4FBF/5A7F idx=1/1 01DC=$835B pal=0000 49CE 5A52 6AD6 7B5A 7BDE 031A 0292 018A 00C8 0000 000E 0012 0016 001A 001E
+SHOT swim-0010 -> output\traces\swim-blue-35/swim-0010.png
+OAM t=10 p0=0 p1=4 p2=0 p3=0 p4=5 p5=0 p6=6 p7=0
+SHOT swim-0070 -> output\traces\swim-blue-35/swim-0070.png
+OAM t=70 p0=0 p1=4 p2=0 p3=3 p4=13 p5=0 p6=0 p7=0
+SHOT swim-0130 -> output\traces\swim-blue-35/swim-0130.png
+OAM t=130 p0=0 p1=4 p2=0 p3=12 p4=11 p5=0 p6=5 p7=0
+SHOT swim-0190 -> output\traces\swim-blue-35/swim-0190.png
+OAM t=190 p0=0 p1=2 p2=0 p3=24 p4=1 p5=0 p6=0 p7=0
+CHANGE t=202 X=6 X6/X15=4FBF/7EAF idx=2/1 01DC=$835B pal=0000 49CE 5A52 6AD6 7B5A 7BDE 031A 0292 018A 00C8 0000 000E 0012 0016 001A 001E
+SHOT swim-0250 -> output\traces\swim-blue-35/swim-0250.png
+OAM t=250 p0=0 p1=0 p2=0 p3=23 p4=2 p5=0 p6=5 p7=0
+CHANGE t=262 X=6 X6/X15=4FD6/7EAF idx=2/2 01DC=$835B pal=0000 49CE 5A52 6AD6 7B5A 7BDE 031A 0292 018A 00C8 0000 000E 0012 0016 001A 001E
+SHOT swim-0310 -> output\traces\swim-blue-35/swim-0310.png
+OAM t=310 p0=0 p1=2 p2=0 p3=11 p4=0 p5=0 p6=0 p7=0
+SHOT swim-0370 -> output\traces\swim-blue-35/swim-0370.png
+OAM t=370 p0=0 p1=4 p2=0 p3=9 p4=10 p5=0 p6=5 p7=0
+SHOT swim-0430 -> output\traces\swim-blue-35/swim-0430.png
+OAM t=430 p0=0 p1=4 p2=0 p3=0 p4=8 p5=0 p6=6 p7=0
+SHOT swim-0490 -> output\traces\swim-blue-35/swim-0490.png
+OAM t=490 p0=0 p1=2 p2=0 p3=0 p4=2 p5=0 p6=6 p7=0
+SHOT swim-0550 -> output\traces\swim-blue-35/swim-0550.png
+OAM t=550 p0=0 p1=1 p2=0 p3=0 p4=7 p5=0 p6=6 p7=0
+SHOT swim-0610 -> output\traces\swim-blue-35/swim-0610.png
+OAM t=610 p0=0 p1=1 p2=0 p3=0 p4=9 p5=0 p6=5 p7=0
+SHOT swim-0670 -> output\traces\swim-blue-35/swim-0670.png
+OAM t=670 p0=0 p1=1 p2=0 p3=0 p4=4 p5=0 p6=6 p7=0
+SHOT swim-0730 -> output\traces\swim-blue-35/swim-0730.png
+OAM t=730 p0=0 p1=1 p2=0 p3=0 p4=8 p5=0 p6=0 p7=0
+SHOT swim-0790 -> output\traces\swim-blue-35/swim-0790.png
+OAM t=790 p0=0 p1=1 p2=0 p3=0 p4=12 p5=0 p6=6 p7=0
+SHOT swim-0850 -> output\traces\swim-blue-35/swim-0850.png
+OAM t=850 p0=0 p1=1 p2=0 p3=0 p4=12 p5=0 p6=5 p7=0
+SHOT swim-0910 -> output\traces\swim-blue-35/swim-0910.png
+OAM t=910 p0=0 p1=1 p2=0 p3=0 p4=9 p5=0 p6=6 p7=0
+SHOT swim-0970 -> output\traces\swim-blue-35/swim-0970.png
+OAM t=970 p0=0 p1=3 p2=0 p3=0 p4=5 p5=0 p6=6 p7=0
+SHOT swim-1030 -> output\traces\swim-blue-35/swim-1030.png
+OAM t=1030 p0=0 p1=3 p2=0 p3=0 p4=4 p5=0 p6=6 p7=0
+SHOT swim-1090 -> output\traces\swim-blue-35/swim-1090.png
+OAM t=1090 p0=0 p1=3 p2=0 p3=0 p4=4 p5=0 p6=3 p7=0
+SHOT swim-1150 -> output\traces\swim-blue-35/swim-1150.png
+OAM t=1150 p0=0 p1=3 p2=0 p3=0 p4=1 p5=0 p6=3 p7=0
+CGDMA t=1164 pc=9D:ACB3 src=$85:9CC0 cgramAddr=$0C0 size=$0020
+CHANGE t=1165 X=6 X6/X15=01C0/039C idx=2/2 01DC=$835B pal=0000 49CE 5A52 6AD6 7B5A 7BDE 031A 0292 018A 00C8 0000 000E 0012 0016 001A 001E
+CHANGE t=1180 X=6 X6/X15=4FD6/7EAF idx=2/2 01DC=$835B pal=0000 49CE 5A52 6AD6 7B5A 7BDE 031A 0292 018A 00C8 0000 000E 0012 0016 001A 001E
+SHOT swim-1210 -> output\traces\swim-blue-35/swim-1210.png
+OAM t=1210 p0=0 p1=2 p2=0 p3=0 p4=0 p5=0 p6=6 p7=0
+SHOT swim-1270 -> output\traces\swim-blue-35/swim-1270.png
+OAM t=1270 p0=0 p1=2 p2=0 p3=0 p4=0 p5=0 p6=6 p7=0
+SHOT swim-1330 -> output\traces\swim-blue-35/swim-1330.png
+OAM t=1330 p0=0 p1=2 p2=0 p3=0 p4=0 p5=0 p6=6 p7=0
+SHOT swim-1390 -> output\traces\swim-blue-35/swim-1390.png
+OAM t=1390 p0=0 p1=2 p2=0 p3=0 p4=3 p5=0 p6=5 p7=0
+SHOT swim-1450 -> output\traces\swim-blue-35/swim-1450.png
+OAM t=1450 p0=0 p1=4 p2=0 p3=3 p4=13 p5=0 p6=6 p7=0
+DONE t=1500 changes=5 slot4Changed=0 hookRuns=1464

@@ -1,0 +1,155 @@
+# sweep-prepare | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=level1-start.mss
+LOAD ok=true
+STATE stage-00 -> output\states/stage-00.mss
+STAGE 00 frame=90
+SHOT stage-00 -> output\traces\sweep-prepare/stage-00.png
+STATE stage-01 -> output\states/stage-01.mss
+STAGE 01 frame=648
+SHOT stage-01 -> output\traces\sweep-prepare/stage-01.png
+STATE stage-02 -> output\states/stage-02.mss
+STAGE 02 frame=1319
+SHOT stage-02 -> output\traces\sweep-prepare/stage-02.png
+STATE stage-03 -> output\states/stage-03.mss
+STAGE 03 frame=1805
+SHOT stage-03 -> output\traces\sweep-prepare/stage-03.png
+STATE stage-04 -> output\states/stage-04.mss
+STAGE 04 frame=2282
+SHOT stage-04 -> output\traces\sweep-prepare/stage-04.png
+SKIP after stage 4 misses=1
+SKIP after stage 4 misses=2
+SKIP after stage 4 misses=3
+STATE stage-05 -> output\states/stage-05.mss
+STAGE 05 frame=4988
+SHOT stage-05 -> output\traces\sweep-prepare/stage-05.png
+STATE stage-06 -> output\states/stage-06.mss
+STAGE 06 frame=5466
+SHOT stage-06 -> output\traces\sweep-prepare/stage-06.png
+STATE stage-07 -> output\states/stage-07.mss
+STAGE 07 frame=5988
+SHOT stage-07 -> output\traces\sweep-prepare/stage-07.png
+STATE stage-08 -> output\states/stage-08.mss
+STAGE 08 frame=6431
+SHOT stage-08 -> output\traces\sweep-prepare/stage-08.png
+SKIP after stage 8 misses=1
+SKIP after stage 8 misses=2
+SKIP after stage 8 misses=3
+STATE stage-09 -> output\states/stage-09.mss
+STAGE 09 frame=9111
+SHOT stage-09 -> output\traces\sweep-prepare/stage-09.png
+STATE stage-10 -> output\states/stage-10.mss
+STAGE 10 frame=9296
+SHOT stage-10 -> output\traces\sweep-prepare/stage-10.png
+STATE stage-11 -> output\states/stage-11.mss
+STAGE 11 frame=9765
+SHOT stage-11 -> output\traces\sweep-prepare/stage-11.png
+STATE stage-12 -> output\states/stage-12.mss
+STAGE 12 frame=10280
+SHOT stage-12 -> output\traces\sweep-prepare/stage-12.png
+STATE stage-13 -> output\states/stage-13.mss
+STAGE 13 frame=10479
+SHOT stage-13 -> output\traces\sweep-prepare/stage-13.png
+STATE stage-14 -> output\states/stage-14.mss
+STAGE 14 frame=10672
+SHOT stage-14 -> output\traces\sweep-prepare/stage-14.png
+STATE stage-15 -> output\states/stage-15.mss
+STAGE 15 frame=11108
+SHOT stage-15 -> output\traces\sweep-prepare/stage-15.png
+SKIP after stage 15 misses=1
+SKIP after stage 15 misses=2
+SKIP after stage 15 misses=3
+STATE stage-16 -> output\states/stage-16.mss
+STAGE 16 frame=13963
+SHOT stage-16 -> output\traces\sweep-prepare/stage-16.png
+STATE stage-17 -> output\states/stage-17.mss
+STAGE 17 frame=14430
+SHOT stage-17 -> output\traces\sweep-prepare/stage-17.png
+STATE stage-18 -> output\states/stage-18.mss
+STAGE 18 frame=14960
+SHOT stage-18 -> output\traces\sweep-prepare/stage-18.png
+STATE stage-19 -> output\states/stage-19.mss
+STAGE 19 frame=15415
+SHOT stage-19 -> output\traces\sweep-prepare/stage-19.png
+STATE stage-20 -> output\states/stage-20.mss
+STAGE 20 frame=15882
+SHOT stage-20 -> output\traces\sweep-prepare/stage-20.png
+STATE stage-21 -> output\states/stage-21.mss
+STAGE 21 frame=16401
+SHOT stage-21 -> output\traces\sweep-prepare/stage-21.png
+SKIP after stage 21 misses=1
+SKIP after stage 21 misses=2
+SKIP after stage 21 misses=3
+SKIP after stage 21 misses=4
+STATE stage-22 -> output\states/stage-22.mss
+STAGE 22 frame=19469
+SHOT stage-22 -> output\traces\sweep-prepare/stage-22.png
+STATE stage-23 -> output\states/stage-23.mss
+STAGE 23 frame=19980
+SHOT stage-23 -> output\traces\sweep-prepare/stage-23.png
+STATE stage-24 -> output\states/stage-24.mss
+STAGE 24 frame=20486
+SHOT stage-24 -> output\traces\sweep-prepare/stage-24.png
+STATE stage-25 -> output\states/stage-25.mss
+STAGE 25 frame=21032
+SHOT stage-25 -> output\traces\sweep-prepare/stage-25.png
+SKIP after stage 25 misses=1
+SKIP after stage 25 misses=2
+SKIP after stage 25 misses=3
+SKIP after stage 25 misses=4
+STATE stage-26 -> output\states/stage-26.mss
+STAGE 26 frame=24074
+SHOT stage-26 -> output\traces\sweep-prepare/stage-26.png
+STATE stage-27 -> output\states/stage-27.mss
+STAGE 27 frame=24250
+SHOT stage-27 -> output\traces\sweep-prepare/stage-27.png
+STATE stage-28 -> output\states/stage-28.mss
+STAGE 28 frame=24752
+SHOT stage-28 -> output\traces\sweep-prepare/stage-28.png
+STATE stage-29 -> output\states/stage-29.mss
+STAGE 29 frame=25259
+SHOT stage-29 -> output\traces\sweep-prepare/stage-29.png
+STATE stage-30 -> output\states/stage-30.mss
+STAGE 30 frame=25728
+SHOT stage-30 -> output\traces\sweep-prepare/stage-30.png
+STATE stage-31 -> output\states/stage-31.mss
+STAGE 31 frame=26069
+SHOT stage-31 -> output\traces\sweep-prepare/stage-31.png
+STATE stage-32 -> output\states/stage-32.mss
+STAGE 32 frame=26377
+SHOT stage-32 -> output\traces\sweep-prepare/stage-32.png
+SKIP after stage 32 misses=1
+STATE stage-33 -> output\states/stage-33.mss
+STAGE 33 frame=27718
+SHOT stage-33 -> output\traces\sweep-prepare/stage-33.png
+SKIP after stage 33 misses=1
+STATE stage-34 -> output\states/stage-34.mss
+STAGE 34 frame=29010
+SHOT stage-34 -> output\traces\sweep-prepare/stage-34.png
+SKIP after stage 34 misses=1
+STATE stage-35 -> output\states/stage-35.mss
+STAGE 35 frame=30256
+SHOT stage-35 -> output\traces\sweep-prepare/stage-35.png
+SKIP after stage 35 misses=1
+STATE stage-36 -> output\states/stage-36.mss
+STAGE 36 frame=31487
+SHOT stage-36 -> output\traces\sweep-prepare/stage-36.png
+SKIP after stage 36 misses=1
+STATE stage-37 -> output\states/stage-37.mss
+STAGE 37 frame=32820
+SHOT stage-37 -> output\traces\sweep-prepare/stage-37.png
+SKIP after stage 37 misses=1
+STATE stage-38 -> output\states/stage-38.mss
+STAGE 38 frame=34004
+SHOT stage-38 -> output\traces\sweep-prepare/stage-38.png
+SKIP after stage 38 misses=1
+STATE stage-39 -> output\states/stage-39.mss
+STAGE 39 frame=35272
+SHOT stage-39 -> output\traces\sweep-prepare/stage-39.png
+SKIP after stage 39 misses=1
+SKIP after stage 39 misses=2
+SKIP after stage 39 misses=3
+SKIP after stage 39 misses=4
+SKIP after stage 39 misses=5
+SKIP after stage 39 misses=6
+SKIP after stage 39 misses=7
+SKIP after stage 39 misses=8
+DONE stages=40

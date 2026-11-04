@@ -1,0 +1,560 @@
+# sweep-oamtiming | exit=0 signal=- | rom=Mr. Nutz.runtime.sfc | state=level1-start.mss | OAM_TIMING=1
+LOAD ok=true
+SELECT stage=0 s=1
+SLOT stage=0 s=1 base=$C0
+SHOT s00-0300 -> output\traces\sweep-oamtiming/s00-0300.png
+SHOT s00-0600 -> output\traces\sweep-oamtiming/s00-0600.png
+SHOT s00-0900 -> output\traces\sweep-oamtiming/s00-0900.png
+SHOT s00-1200 -> output\traces\sweep-oamtiming/s00-1200.png
+SHOT s00-1340 -> output\traces\sweep-oamtiming/s00-1340.png
+OAMT stage=00 calls=1020 entryScanline=227..241 exitInActiveDisplay=0 (max line -1) maxBytes=80 afterHook=0 beforeHook=1020
+STAGE 00 gameplay=1020 ok=1019 lostMax=1 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=1 s=0 base=$C0
+SHOT s01-0300 -> output\traces\sweep-oamtiming/s01-0300.png
+SHOT s01-0600 -> output\traces\sweep-oamtiming/s01-0600.png
+SHOT s01-0900 -> output\traces\sweep-oamtiming/s01-0900.png
+SHOT s01-1200 -> output\traces\sweep-oamtiming/s01-1200.png
+SHOT s01-1340 -> output\traces\sweep-oamtiming/s01-1340.png
+OAMT stage=01 calls=871 entryScanline=227..243 exitInActiveDisplay=0 (max line -1) maxBytes=56 afterHook=0 beforeHook=871
+STAGE 01 gameplay=871 ok=871 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=2 s=0 base=$C0
+SHOT s02-0300 -> output\traces\sweep-oamtiming/s02-0300.png
+SHOT s02-0600 -> output\traces\sweep-oamtiming/s02-0600.png
+SHOT s02-0900 -> output\traces\sweep-oamtiming/s02-0900.png
+SHOT s02-1200 -> output\traces\sweep-oamtiming/s02-1200.png
+SHOT s02-1340 -> output\traces\sweep-oamtiming/s02-1340.png
+OAMT stage=02 calls=1093 entryScanline=227..241 exitInActiveDisplay=0 (max line -1) maxBytes=56 afterHook=0 beforeHook=1093
+STAGE 02 gameplay=1093 ok=1093 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=3 s=0 base=$C0
+SHOT s03-0300 -> output\traces\sweep-oamtiming/s03-0300.png
+SHOT s03-0600 -> output\traces\sweep-oamtiming/s03-0600.png
+SHOT s03-0900 -> output\traces\sweep-oamtiming/s03-0900.png
+SHOT s03-1200 -> output\traces\sweep-oamtiming/s03-1200.png
+SHOT s03-1340 -> output\traces\sweep-oamtiming/s03-1340.png
+OAMT stage=03 calls=1070 entryScanline=227..242 exitInActiveDisplay=0 (max line -1) maxBytes=24 afterHook=0 beforeHook=1070
+STAGE 03 gameplay=1070 ok=1070 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=4 s=0 base=$C0
+SHOT s04-0300 -> output\traces\sweep-oamtiming/s04-0300.png
+SHOT s04-0600 -> output\traces\sweep-oamtiming/s04-0600.png
+SHOT s04-0900 -> output\traces\sweep-oamtiming/s04-0900.png
+SHOT s04-1200 -> output\traces\sweep-oamtiming/s04-1200.png
+SHOT s04-1340 -> output\traces\sweep-oamtiming/s04-1340.png
+OAMT stage=04 calls=909 entryScanline=225..239 exitInActiveDisplay=0 (max line -1) maxBytes=188 afterHook=0 beforeHook=909
+STAGE 04 gameplay=33 ok=33 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$C0
+SHOT s05-0300 -> output\traces\sweep-oamtiming/s05-0300.png
+SLOT stage=5 s=338 base=$C0
+SHOT s05-0600 -> output\traces\sweep-oamtiming/s05-0600.png
+SHOT s05-0900 -> output\traces\sweep-oamtiming/s05-0900.png
+SHOT s05-1200 -> output\traces\sweep-oamtiming/s05-1200.png
+SHOT s05-1340 -> output\traces\sweep-oamtiming/s05-1340.png
+OAMT stage=05 calls=1102 entryScanline=227..241 exitInActiveDisplay=0 (max line -1) maxBytes=32 afterHook=0 beforeHook=1102
+STAGE 05 gameplay=1102 ok=1102 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=6 s=0 base=$C0
+SHOT s06-0300 -> output\traces\sweep-oamtiming/s06-0300.png
+SHOT s06-0600 -> output\traces\sweep-oamtiming/s06-0600.png
+SHOT s06-0900 -> output\traces\sweep-oamtiming/s06-0900.png
+SHOT s06-1200 -> output\traces\sweep-oamtiming/s06-1200.png
+SHOT s06-1340 -> output\traces\sweep-oamtiming/s06-1340.png
+OAMT stage=06 calls=1101 entryScanline=227..242 exitInActiveDisplay=0 (max line -1) maxBytes=80 afterHook=0 beforeHook=1101
+STAGE 06 gameplay=1101 ok=1101 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=7 s=0 base=$C0
+SHOT s07-0300 -> output\traces\sweep-oamtiming/s07-0300.png
+SHOT s07-0600 -> output\traces\sweep-oamtiming/s07-0600.png
+SHOT s07-0900 -> output\traces\sweep-oamtiming/s07-0900.png
+SHOT s07-1200 -> output\traces\sweep-oamtiming/s07-1200.png
+SHOT s07-1340 -> output\traces\sweep-oamtiming/s07-1340.png
+OAMT stage=07 calls=1117 entryScanline=227..241 exitInActiveDisplay=0 (max line -1) maxBytes=148 afterHook=0 beforeHook=1117
+STAGE 07 gameplay=1117 ok=1117 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=8 s=0 base=$C0
+SHOT s08-0300 -> output\traces\sweep-oamtiming/s08-0300.png
+SHOT s08-0600 -> output\traces\sweep-oamtiming/s08-0600.png
+SHOT s08-0900 -> output\traces\sweep-oamtiming/s08-0900.png
+SHOT s08-1200 -> output\traces\sweep-oamtiming/s08-1200.png
+SHOT s08-1340 -> output\traces\sweep-oamtiming/s08-1340.png
+OAMT stage=08 calls=1101 entryScanline=48..241 exitInActiveDisplay=2 (max line 166) maxBytes=512 afterHook=0 beforeHook=1101
+STAGE 08 gameplay=1099 ok=1099 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=9 s=0 base=$C0
+SHOT s09-0300 -> output\traces\sweep-oamtiming/s09-0300.png
+SHOT s09-0600 -> output\traces\sweep-oamtiming/s09-0600.png
+SHOT s09-0900 -> output\traces\sweep-oamtiming/s09-0900.png
+SHOT s09-1200 -> output\traces\sweep-oamtiming/s09-1200.png
+SHOT s09-1340 -> output\traces\sweep-oamtiming/s09-1340.png
+OAMT stage=09 calls=1069 entryScanline=225..239 exitInActiveDisplay=0 (max line -1) maxBytes=188 afterHook=0 beforeHook=1069
+STAGE 09 gameplay=33 ok=33 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$C0
+SHOT s10-0300 -> output\traces\sweep-oamtiming/s10-0300.png
+SLOT stage=10 s=332 base=$80
+SHOT s10-0600 -> output\traces\sweep-oamtiming/s10-0600.png
+SHOT s10-0900 -> output\traces\sweep-oamtiming/s10-0900.png
+SHOT s10-1200 -> output\traces\sweep-oamtiming/s10-1200.png
+SHOT s10-1340 -> output\traces\sweep-oamtiming/s10-1340.png
+OAMT stage=10 calls=1108 entryScanline=227..242 exitInActiveDisplay=0 (max line -1) maxBytes=24 afterHook=0 beforeHook=1108
+STAGE 10 gameplay=1108 ok=1108 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$80
+SLOT stage=11 s=0 base=$80
+SLOT stage=11 s=116 base=$C0
+SHOT s11-0300 -> output\traces\sweep-oamtiming/s11-0300.png
+SHOT s11-0600 -> output\traces\sweep-oamtiming/s11-0600.png
+SHOT s11-0900 -> output\traces\sweep-oamtiming/s11-0900.png
+SHOT s11-1200 -> output\traces\sweep-oamtiming/s11-1200.png
+SHOT s11-1340 -> output\traces\sweep-oamtiming/s11-1340.png
+OAMT stage=11 calls=1357 entryScanline=227..241 exitInActiveDisplay=0 (max line -1) maxBytes=44 afterHook=0 beforeHook=1357
+STAGE 11 gameplay=1357 ok=1357 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=12 s=0 base=$C0
+SHOT s12-0300 -> output\traces\sweep-oamtiming/s12-0300.png
+SHOT s12-0600 -> output\traces\sweep-oamtiming/s12-0600.png
+SHOT s12-0900 -> output\traces\sweep-oamtiming/s12-0900.png
+SHOT s12-1200 -> output\traces\sweep-oamtiming/s12-1200.png
+SHOT s12-1340 -> output\traces\sweep-oamtiming/s12-1340.png
+OAMT stage=12 calls=1110 entryScanline=227..241 exitInActiveDisplay=0 (max line -1) maxBytes=28 afterHook=0 beforeHook=1110
+STAGE 12 gameplay=1110 ok=1110 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=13 s=0 base=$C0
+SHOT s13-0300 -> output\traces\sweep-oamtiming/s13-0300.png
+SHOT s13-0600 -> output\traces\sweep-oamtiming/s13-0600.png
+SHOT s13-0900 -> output\traces\sweep-oamtiming/s13-0900.png
+SHOT s13-1200 -> output\traces\sweep-oamtiming/s13-1200.png
+SHOT s13-1340 -> output\traces\sweep-oamtiming/s13-1340.png
+OAMT stage=13 calls=1028 entryScanline=227..241 exitInActiveDisplay=0 (max line -1) maxBytes=48 afterHook=0 beforeHook=1028
+STAGE 13 gameplay=1028 ok=1028 lostMax=0 noPalSpritesMax=14 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=14 s=0 base=$C0
+SHOT s14-0300 -> output\traces\sweep-oamtiming/s14-0300.png
+SHOT s14-0600 -> output\traces\sweep-oamtiming/s14-0600.png
+SHOT s14-0900 -> output\traces\sweep-oamtiming/s14-0900.png
+SHOT s14-1200 -> output\traces\sweep-oamtiming/s14-1200.png
+SHOT s14-1340 -> output\traces\sweep-oamtiming/s14-1340.png
+OAMT stage=14 calls=1343 entryScanline=227..241 exitInActiveDisplay=0 (max line -1) maxBytes=88 afterHook=0 beforeHook=1343
+STAGE 14 gameplay=1343 ok=1343 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=15 s=0 base=$C0
+SHOT s15-0300 -> output\traces\sweep-oamtiming/s15-0300.png
+SHOT s15-0600 -> output\traces\sweep-oamtiming/s15-0600.png
+SHOT s15-0900 -> output\traces\sweep-oamtiming/s15-0900.png
+SHOT s15-1200 -> output\traces\sweep-oamtiming/s15-1200.png
+SHOT s15-1340 -> output\traces\sweep-oamtiming/s15-1340.png
+OAMT stage=15 calls=1349 entryScanline=227..241 exitInActiveDisplay=0 (max line -1) maxBytes=128 afterHook=0 beforeHook=1349
+STAGE 15 gameplay=1349 ok=1349 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=16 s=0 base=$C0
+SHOT s16-0300 -> output\traces\sweep-oamtiming/s16-0300.png
+SHOT s16-0600 -> output\traces\sweep-oamtiming/s16-0600.png
+SHOT s16-0900 -> output\traces\sweep-oamtiming/s16-0900.png
+SHOT s16-1200 -> output\traces\sweep-oamtiming/s16-1200.png
+SHOT s16-1340 -> output\traces\sweep-oamtiming/s16-1340.png
+OAMT stage=16 calls=1106 entryScanline=227..241 exitInActiveDisplay=0 (max line -1) maxBytes=84 afterHook=0 beforeHook=1106
+STAGE 16 gameplay=1106 ok=1106 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=17 s=0 base=$C0
+SHOT s17-0300 -> output\traces\sweep-oamtiming/s17-0300.png
+SHOT s17-0600 -> output\traces\sweep-oamtiming/s17-0600.png
+SHOT s17-0900 -> output\traces\sweep-oamtiming/s17-0900.png
+SHOT s17-1200 -> output\traces\sweep-oamtiming/s17-1200.png
+SHOT s17-1340 -> output\traces\sweep-oamtiming/s17-1340.png
+OAMT stage=17 calls=1069 entryScanline=225..239 exitInActiveDisplay=0 (max line -1) maxBytes=188 afterHook=0 beforeHook=1069
+STAGE 17 gameplay=33 ok=33 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$C0
+SHOT s18-0300 -> output\traces\sweep-oamtiming/s18-0300.png
+SLOT stage=18 s=487 base=$C0
+SHOT s18-0600 -> output\traces\sweep-oamtiming/s18-0600.png
+SHOT s18-0900 -> output\traces\sweep-oamtiming/s18-0900.png
+SHOT s18-1200 -> output\traces\sweep-oamtiming/s18-1200.png
+SHOT s18-1340 -> output\traces\sweep-oamtiming/s18-1340.png
+OAMT stage=18 calls=953 entryScanline=227..241 exitInActiveDisplay=0 (max line -1) maxBytes=80 afterHook=0 beforeHook=953
+STAGE 18 gameplay=953 ok=953 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=19 s=0 base=$C0
+SHOT s19-0300 -> output\traces\sweep-oamtiming/s19-0300.png
+SHOT s19-0600 -> output\traces\sweep-oamtiming/s19-0600.png
+SHOT s19-0900 -> output\traces\sweep-oamtiming/s19-0900.png
+SHOT s19-1200 -> output\traces\sweep-oamtiming/s19-1200.png
+SHOT s19-1340 -> output\traces\sweep-oamtiming/s19-1340.png
+OAMT stage=19 calls=1112 entryScanline=227..241 exitInActiveDisplay=0 (max line -1) maxBytes=76 afterHook=0 beforeHook=1112
+STAGE 19 gameplay=1112 ok=1112 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=20 s=0 base=$C0
+SHOT s20-0300 -> output\traces\sweep-oamtiming/s20-0300.png
+SHOT s20-0600 -> output\traces\sweep-oamtiming/s20-0600.png
+SHOT s20-0900 -> output\traces\sweep-oamtiming/s20-0900.png
+SHOT s20-1200 -> output\traces\sweep-oamtiming/s20-1200.png
+SHOT s20-1340 -> output\traces\sweep-oamtiming/s20-1340.png
+OAMT stage=20 calls=1049 entryScanline=227..243 exitInActiveDisplay=0 (max line -1) maxBytes=60 afterHook=0 beforeHook=1049
+STAGE 20 gameplay=1049 ok=1049 lostMax=0 noPalSpritesMax=2 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=21 s=0 base=$C0
+SHOT s21-0300 -> output\traces\sweep-oamtiming/s21-0300.png
+SHOT s21-0600 -> output\traces\sweep-oamtiming/s21-0600.png
+SHOT s21-0900 -> output\traces\sweep-oamtiming/s21-0900.png
+SHOT s21-1200 -> output\traces\sweep-oamtiming/s21-1200.png
+SHOT s21-1340 -> output\traces\sweep-oamtiming/s21-1340.png
+OAMT stage=21 calls=752 entryScanline=227..241 exitInActiveDisplay=0 (max line -1) maxBytes=36 afterHook=0 beforeHook=752
+STAGE 21 gameplay=752 ok=752 lostMax=0 noPalSpritesMax=27 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=22 s=0 base=$C0
+SHOT s22-0300 -> output\traces\sweep-oamtiming/s22-0300.png
+SHOT s22-0600 -> output\traces\sweep-oamtiming/s22-0600.png
+SHOT s22-0900 -> output\traces\sweep-oamtiming/s22-0900.png
+SHOT s22-1200 -> output\traces\sweep-oamtiming/s22-1200.png
+SHOT s22-1340 -> output\traces\sweep-oamtiming/s22-1340.png
+OAMT stage=22 calls=1002 entryScanline=227..242 exitInActiveDisplay=0 (max line -1) maxBytes=40 afterHook=0 beforeHook=1002
+STAGE 22 gameplay=1002 ok=1002 lostMax=0 noPalSpritesMax=32 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=23 s=0 base=$C0
+SHOT s23-0300 -> output\traces\sweep-oamtiming/s23-0300.png
+SHOT s23-0600 -> output\traces\sweep-oamtiming/s23-0600.png
+SHOT s23-0900 -> output\traces\sweep-oamtiming/s23-0900.png
+SHOT s23-1200 -> output\traces\sweep-oamtiming/s23-1200.png
+SHOT s23-1340 -> output\traces\sweep-oamtiming/s23-1340.png
+OAMT stage=23 calls=1023 entryScanline=227..242 exitInActiveDisplay=0 (max line -1) maxBytes=28 afterHook=0 beforeHook=1023
+STAGE 23 gameplay=1023 ok=1023 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=24 s=0 base=$C0
+SHOT s24-0300 -> output\traces\sweep-oamtiming/s24-0300.png
+SHOT s24-0600 -> output\traces\sweep-oamtiming/s24-0600.png
+SHOT s24-0900 -> output\traces\sweep-oamtiming/s24-0900.png
+SHOT s24-1200 -> output\traces\sweep-oamtiming/s24-1200.png
+SHOT s24-1340 -> output\traces\sweep-oamtiming/s24-1340.png
+OAMT stage=24 calls=1064 entryScanline=225..239 exitInActiveDisplay=0 (max line -1) maxBytes=188 afterHook=0 beforeHook=1064
+STAGE 24 gameplay=33 ok=33 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$C0
+SHOT s25-0300 -> output\traces\sweep-oamtiming/s25-0300.png
+SLOT stage=25 s=481 base=$C0
+SHOT s25-0600 -> output\traces\sweep-oamtiming/s25-0600.png
+SHOT s25-0900 -> output\traces\sweep-oamtiming/s25-0900.png
+SHOT s25-1200 -> output\traces\sweep-oamtiming/s25-1200.png
+SHOT s25-1340 -> output\traces\sweep-oamtiming/s25-1340.png
+OAMT stage=25 calls=959 entryScanline=227..241 exitInActiveDisplay=0 (max line -1) maxBytes=60 afterHook=0 beforeHook=959
+STAGE 25 gameplay=959 ok=959 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=26 s=0 base=$C0
+SHOT s26-0300 -> output\traces\sweep-oamtiming/s26-0300.png
+SHOT s26-0600 -> output\traces\sweep-oamtiming/s26-0600.png
+SHOT s26-0900 -> output\traces\sweep-oamtiming/s26-0900.png
+SHOT s26-1200 -> output\traces\sweep-oamtiming/s26-1200.png
+SHOT s26-1340 -> output\traces\sweep-oamtiming/s26-1340.png
+OAMT stage=26 calls=1068 entryScanline=227..241 exitInActiveDisplay=0 (max line -1) maxBytes=108 afterHook=0 beforeHook=1068
+STAGE 26 gameplay=1068 ok=1068 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=27 s=0 base=$C0
+SHOT s27-0300 -> output\traces\sweep-oamtiming/s27-0300.png
+SHOT s27-0600 -> output\traces\sweep-oamtiming/s27-0600.png
+SHOT s27-0900 -> output\traces\sweep-oamtiming/s27-0900.png
+SHOT s27-1200 -> output\traces\sweep-oamtiming/s27-1200.png
+SHOT s27-1340 -> output\traces\sweep-oamtiming/s27-1340.png
+OAMT stage=27 calls=1073 entryScanline=227..242 exitInActiveDisplay=0 (max line -1) maxBytes=72 afterHook=0 beforeHook=1073
+STAGE 27 gameplay=1073 ok=1073 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=28 s=0 base=$C0
+SHOT s28-0300 -> output\traces\sweep-oamtiming/s28-0300.png
+SHOT s28-0600 -> output\traces\sweep-oamtiming/s28-0600.png
+SHOT s28-0900 -> output\traces\sweep-oamtiming/s28-0900.png
+SHOT s28-1200 -> output\traces\sweep-oamtiming/s28-1200.png
+SHOT s28-1340 -> output\traces\sweep-oamtiming/s28-1340.png
+OAMT stage=28 calls=1058 entryScanline=104..240 exitInActiveDisplay=1 (max line 105) maxBytes=512 afterHook=0 beforeHook=1058
+STAGE 28 gameplay=1056 ok=1056 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=29 s=0 base=$C0
+SHOT s29-0300 -> output\traces\sweep-oamtiming/s29-0300.png
+SHOT s29-0600 -> output\traces\sweep-oamtiming/s29-0600.png
+SHOT s29-0900 -> output\traces\sweep-oamtiming/s29-0900.png
+SHOT s29-1200 -> output\traces\sweep-oamtiming/s29-1200.png
+SHOT s29-1340 -> output\traces\sweep-oamtiming/s29-1340.png
+OAMT stage=29 calls=1064 entryScanline=225..239 exitInActiveDisplay=0 (max line -1) maxBytes=188 afterHook=0 beforeHook=1064
+STAGE 29 gameplay=33 ok=33 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$C0
+SHOT s30-0300 -> output\traces\sweep-oamtiming/s30-0300.png
+SLOT stage=30 s=385 base=$C0
+SHOT s30-0600 -> output\traces\sweep-oamtiming/s30-0600.png
+SHOT s30-0900 -> output\traces\sweep-oamtiming/s30-0900.png
+SHOT s30-1200 -> output\traces\sweep-oamtiming/s30-1200.png
+SHOT s30-1340 -> output\traces\sweep-oamtiming/s30-1340.png
+OAMT stage=30 calls=1115 entryScanline=227..240 exitInActiveDisplay=0 (max line -1) maxBytes=192 afterHook=0 beforeHook=1115
+STAGE 30 gameplay=1115 ok=1115 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=31 s=0 base=$C0
+SHOT s31-0300 -> output\traces\sweep-oamtiming/s31-0300.png
+SHOT s31-0600 -> output\traces\sweep-oamtiming/s31-0600.png
+SHOT s31-0900 -> output\traces\sweep-oamtiming/s31-0900.png
+SHOT s31-1200 -> output\traces\sweep-oamtiming/s31-1200.png
+SHOT s31-1340 -> output\traces\sweep-oamtiming/s31-1340.png
+OAMT stage=31 calls=1366 entryScanline=227..242 exitInActiveDisplay=0 (max line -1) maxBytes=192 afterHook=0 beforeHook=1366
+STAGE 31 gameplay=1366 ok=1366 lostMax=0 noPalSpritesMax=29 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=32 s=0 base=$C0
+SHOT s32-0300 -> output\traces\sweep-oamtiming/s32-0300.png
+SHOT s32-0600 -> output\traces\sweep-oamtiming/s32-0600.png
+SHOT s32-0900 -> output\traces\sweep-oamtiming/s32-0900.png
+SHOT s32-1200 -> output\traces\sweep-oamtiming/s32-1200.png
+SHOT s32-1340 -> output\traces\sweep-oamtiming/s32-1340.png
+OAMT stage=32 calls=1077 entryScanline=227..241 exitInActiveDisplay=0 (max line -1) maxBytes=36 afterHook=0 beforeHook=1077
+STAGE 32 gameplay=1077 ok=1077 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=33 s=0 base=$C0
+SHOT s33-0300 -> output\traces\sweep-oamtiming/s33-0300.png
+SHOT s33-0600 -> output\traces\sweep-oamtiming/s33-0600.png
+SHOT s33-0900 -> output\traces\sweep-oamtiming/s33-0900.png
+SHOT s33-1200 -> output\traces\sweep-oamtiming/s33-1200.png
+SHOT s33-1340 -> output\traces\sweep-oamtiming/s33-1340.png
+OAMT stage=33 calls=1072 entryScanline=227..241 exitInActiveDisplay=0 (max line -1) maxBytes=100 afterHook=0 beforeHook=1072
+STAGE 33 gameplay=1072 ok=1072 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=34 s=0 base=$C0
+SHOT s34-0300 -> output\traces\sweep-oamtiming/s34-0300.png
+SHOT s34-0600 -> output\traces\sweep-oamtiming/s34-0600.png
+SHOT s34-0900 -> output\traces\sweep-oamtiming/s34-0900.png
+SHOT s34-1200 -> output\traces\sweep-oamtiming/s34-1200.png
+SHOT s34-1340 -> output\traces\sweep-oamtiming/s34-1340.png
+OAMT stage=34 calls=842 entryScanline=227..241 exitInActiveDisplay=0 (max line -1) maxBytes=68 afterHook=0 beforeHook=842
+STAGE 34 gameplay=842 ok=842 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=35 s=0 base=$C0
+SHOT s35-0300 -> output\traces\sweep-oamtiming/s35-0300.png
+SHOT s35-0600 -> output\traces\sweep-oamtiming/s35-0600.png
+SHOT s35-0900 -> output\traces\sweep-oamtiming/s35-0900.png
+SHOT s35-1200 -> output\traces\sweep-oamtiming/s35-1200.png
+SHOT s35-1340 -> output\traces\sweep-oamtiming/s35-1340.png
+OAMT stage=35 calls=1261 entryScanline=227..240 exitInActiveDisplay=0 (max line -1) maxBytes=24 afterHook=0 beforeHook=1261
+STAGE 35 gameplay=1261 ok=1261 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=36 s=0 base=$C0
+SHOT s36-0300 -> output\traces\sweep-oamtiming/s36-0300.png
+SHOT s36-0600 -> output\traces\sweep-oamtiming/s36-0600.png
+SHOT s36-0900 -> output\traces\sweep-oamtiming/s36-0900.png
+SHOT s36-1200 -> output\traces\sweep-oamtiming/s36-1200.png
+SHOT s36-1340 -> output\traces\sweep-oamtiming/s36-1340.png
+OAMT stage=36 calls=1294 entryScanline=227..243 exitInActiveDisplay=0 (max line -1) maxBytes=60 afterHook=0 beforeHook=1294
+STAGE 36 gameplay=1294 ok=1294 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=37 s=0 base=$C0
+SHOT s37-0300 -> output\traces\sweep-oamtiming/s37-0300.png
+SHOT s37-0600 -> output\traces\sweep-oamtiming/s37-0600.png
+SHOT s37-0900 -> output\traces\sweep-oamtiming/s37-0900.png
+SHOT s37-1200 -> output\traces\sweep-oamtiming/s37-1200.png
+SHOT s37-1340 -> output\traces\sweep-oamtiming/s37-1340.png
+OAMT stage=37 calls=261 entryScanline=227..242 exitInActiveDisplay=0 (max line -1) maxBytes=72 afterHook=0 beforeHook=261
+STAGE 37 gameplay=261 ok=261 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=38 s=0 base=$C0
+SHOT s38-0300 -> output\traces\sweep-oamtiming/s38-0300.png
+SHOT s38-0600 -> output\traces\sweep-oamtiming/s38-0600.png
+SHOT s38-0900 -> output\traces\sweep-oamtiming/s38-0900.png
+SHOT s38-1200 -> output\traces\sweep-oamtiming/s38-1200.png
+SHOT s38-1340 -> output\traces\sweep-oamtiming/s38-1340.png
+OAMT stage=38 calls=310 entryScanline=227..241 exitInActiveDisplay=0 (max line -1) maxBytes=76 afterHook=0 beforeHook=310
+STAGE 38 gameplay=310 ok=310 lostMax=0 noPalSpritesMax=13 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=39 s=0 base=$C0
+SHOT s39-0300 -> output\traces\sweep-oamtiming/s39-0300.png
+SHOT s39-0600 -> output\traces\sweep-oamtiming/s39-0600.png
+SHOT s39-0900 -> output\traces\sweep-oamtiming/s39-0900.png
+SHOT s39-1200 -> output\traces\sweep-oamtiming/s39-1200.png
+SHOT s39-1340 -> output\traces\sweep-oamtiming/s39-1340.png
+OAMT stage=39 calls=356 entryScanline=227..241 exitInActiveDisplay=0 (max line -1) maxBytes=80 afterHook=0 beforeHook=356
+STAGE 39 gameplay=356 ok=356 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=40 s=0 base=$C0
+SHOT s40-0300 -> output\traces\sweep-oamtiming/s40-0300.png
+SHOT s40-0600 -> output\traces\sweep-oamtiming/s40-0600.png
+SHOT s40-0900 -> output\traces\sweep-oamtiming/s40-0900.png
+SHOT s40-1200 -> output\traces\sweep-oamtiming/s40-1200.png
+SHOT s40-1340 -> output\traces\sweep-oamtiming/s40-1340.png
+OAMT stage=40 calls=371 entryScanline=227..243 exitInActiveDisplay=0 (max line -1) maxBytes=72 afterHook=0 beforeHook=371
+STAGE 40 gameplay=371 ok=371 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=41 s=0 base=$C0
+SHOT s41-0300 -> output\traces\sweep-oamtiming/s41-0300.png
+SHOT s41-0600 -> output\traces\sweep-oamtiming/s41-0600.png
+SHOT s41-0900 -> output\traces\sweep-oamtiming/s41-0900.png
+SHOT s41-1200 -> output\traces\sweep-oamtiming/s41-1200.png
+SHOT s41-1340 -> output\traces\sweep-oamtiming/s41-1340.png
+OAMT stage=41 calls=269 entryScanline=227..243 exitInActiveDisplay=0 (max line -1) maxBytes=96 afterHook=0 beforeHook=269
+STAGE 41 gameplay=269 ok=269 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=42 s=0 base=$C0
+SHOT s42-0300 -> output\traces\sweep-oamtiming/s42-0300.png
+SHOT s42-0600 -> output\traces\sweep-oamtiming/s42-0600.png
+SHOT s42-0900 -> output\traces\sweep-oamtiming/s42-0900.png
+SHOT s42-1200 -> output\traces\sweep-oamtiming/s42-1200.png
+SHOT s42-1340 -> output\traces\sweep-oamtiming/s42-1340.png
+OAMT stage=42 calls=418 entryScanline=227..241 exitInActiveDisplay=0 (max line -1) maxBytes=84 afterHook=0 beforeHook=418
+STAGE 42 gameplay=418 ok=418 lostMax=0 noPalSpritesMax=30 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=43 s=0 base=$C0
+SHOT s43-0300 -> output\traces\sweep-oamtiming/s43-0300.png
+SHOT s43-0600 -> output\traces\sweep-oamtiming/s43-0600.png
+SHOT s43-0900 -> output\traces\sweep-oamtiming/s43-0900.png
+SHOT s43-1200 -> output\traces\sweep-oamtiming/s43-1200.png
+SHOT s43-1340 -> output\traces\sweep-oamtiming/s43-1340.png
+OAMT stage=43 calls=273 entryScanline=227..241 exitInActiveDisplay=0 (max line -1) maxBytes=92 afterHook=0 beforeHook=273
+STAGE 43 gameplay=272 ok=272 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=44 s=79 base=$C0
+SHOT s44-0300 -> output\traces\sweep-oamtiming/s44-0300.png
+SHOT s44-0600 -> output\traces\sweep-oamtiming/s44-0600.png
+SHOT s44-0900 -> output\traces\sweep-oamtiming/s44-0900.png
+SHOT s44-1200 -> output\traces\sweep-oamtiming/s44-1200.png
+SHOT s44-1340 -> output\traces\sweep-oamtiming/s44-1340.png
+OAMT stage=44 calls=1129 entryScanline=227..242 exitInActiveDisplay=0 (max line -1) maxBytes=56 afterHook=0 beforeHook=1129
+STAGE 44 gameplay=1127 ok=1127 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=45 s=0 base=$C0
+SHOT s45-0300 -> output\traces\sweep-oamtiming/s45-0300.png
+SHOT s45-0600 -> output\traces\sweep-oamtiming/s45-0600.png
+SHOT s45-0900 -> output\traces\sweep-oamtiming/s45-0900.png
+SHOT s45-1200 -> output\traces\sweep-oamtiming/s45-1200.png
+SHOT s45-1340 -> output\traces\sweep-oamtiming/s45-1340.png
+OAMT stage=45 calls=33 entryScanline=227..239 exitInActiveDisplay=0 (max line -1) maxBytes=44 afterHook=0 beforeHook=33
+STAGE 45 gameplay=33 ok=33 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$C0
+SHOT s46-0300 -> output\traces\sweep-oamtiming/s46-0300.png
+SHOT s46-0600 -> output\traces\sweep-oamtiming/s46-0600.png
+SHOT s46-0900 -> output\traces\sweep-oamtiming/s46-0900.png
+SHOT s46-1200 -> output\traces\sweep-oamtiming/s46-1200.png
+SHOT s46-1340 -> output\traces\sweep-oamtiming/s46-1340.png
+OAMT stage=46 calls=0 entryScanline=999..-1 exitInActiveDisplay=0 (max line -1) maxBytes=0 afterHook=0 beforeHook=0
+STAGE 46 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s47-0300 -> output\traces\sweep-oamtiming/s47-0300.png
+SHOT s47-0600 -> output\traces\sweep-oamtiming/s47-0600.png
+SHOT s47-0900 -> output\traces\sweep-oamtiming/s47-0900.png
+SHOT s47-1200 -> output\traces\sweep-oamtiming/s47-1200.png
+SHOT s47-1340 -> output\traces\sweep-oamtiming/s47-1340.png
+OAMT stage=47 calls=0 entryScanline=999..-1 exitInActiveDisplay=0 (max line -1) maxBytes=0 afterHook=0 beforeHook=0
+STAGE 47 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s48-0300 -> output\traces\sweep-oamtiming/s48-0300.png
+SHOT s48-0600 -> output\traces\sweep-oamtiming/s48-0600.png
+SHOT s48-0900 -> output\traces\sweep-oamtiming/s48-0900.png
+SHOT s48-1200 -> output\traces\sweep-oamtiming/s48-1200.png
+SHOT s48-1340 -> output\traces\sweep-oamtiming/s48-1340.png
+OAMT stage=48 calls=0 entryScanline=999..-1 exitInActiveDisplay=0 (max line -1) maxBytes=0 afterHook=0 beforeHook=0
+STAGE 48 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s49-0300 -> output\traces\sweep-oamtiming/s49-0300.png
+SHOT s49-0600 -> output\traces\sweep-oamtiming/s49-0600.png
+SHOT s49-0900 -> output\traces\sweep-oamtiming/s49-0900.png
+SHOT s49-1200 -> output\traces\sweep-oamtiming/s49-1200.png
+SHOT s49-1340 -> output\traces\sweep-oamtiming/s49-1340.png
+OAMT stage=49 calls=0 entryScanline=999..-1 exitInActiveDisplay=0 (max line -1) maxBytes=0 afterHook=0 beforeHook=0
+STAGE 49 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s50-0300 -> output\traces\sweep-oamtiming/s50-0300.png
+SHOT s50-0600 -> output\traces\sweep-oamtiming/s50-0600.png
+SHOT s50-0900 -> output\traces\sweep-oamtiming/s50-0900.png
+SHOT s50-1200 -> output\traces\sweep-oamtiming/s50-1200.png
+SHOT s50-1340 -> output\traces\sweep-oamtiming/s50-1340.png
+OAMT stage=50 calls=0 entryScanline=999..-1 exitInActiveDisplay=0 (max line -1) maxBytes=0 afterHook=0 beforeHook=0
+STAGE 50 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s51-0300 -> output\traces\sweep-oamtiming/s51-0300.png
+SHOT s51-0600 -> output\traces\sweep-oamtiming/s51-0600.png
+SHOT s51-0900 -> output\traces\sweep-oamtiming/s51-0900.png
+SHOT s51-1200 -> output\traces\sweep-oamtiming/s51-1200.png
+SHOT s51-1340 -> output\traces\sweep-oamtiming/s51-1340.png
+OAMT stage=51 calls=0 entryScanline=999..-1 exitInActiveDisplay=0 (max line -1) maxBytes=0 afterHook=0 beforeHook=0
+STAGE 51 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s52-0300 -> output\traces\sweep-oamtiming/s52-0300.png
+SHOT s52-0600 -> output\traces\sweep-oamtiming/s52-0600.png
+SHOT s52-0900 -> output\traces\sweep-oamtiming/s52-0900.png
+SHOT s52-1200 -> output\traces\sweep-oamtiming/s52-1200.png
+SHOT s52-1340 -> output\traces\sweep-oamtiming/s52-1340.png
+OAMT stage=52 calls=0 entryScanline=999..-1 exitInActiveDisplay=0 (max line -1) maxBytes=0 afterHook=0 beforeHook=0
+STAGE 52 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s53-0300 -> output\traces\sweep-oamtiming/s53-0300.png
+SHOT s53-0600 -> output\traces\sweep-oamtiming/s53-0600.png
+SHOT s53-0900 -> output\traces\sweep-oamtiming/s53-0900.png
+SHOT s53-1200 -> output\traces\sweep-oamtiming/s53-1200.png
+SHOT s53-1340 -> output\traces\sweep-oamtiming/s53-1340.png
+OAMT stage=53 calls=0 entryScanline=999..-1 exitInActiveDisplay=0 (max line -1) maxBytes=0 afterHook=0 beforeHook=0
+STAGE 53 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s54-0300 -> output\traces\sweep-oamtiming/s54-0300.png
+SHOT s54-0600 -> output\traces\sweep-oamtiming/s54-0600.png
+SHOT s54-0900 -> output\traces\sweep-oamtiming/s54-0900.png
+SHOT s54-1200 -> output\traces\sweep-oamtiming/s54-1200.png
+SHOT s54-1340 -> output\traces\sweep-oamtiming/s54-1340.png
+OAMT stage=54 calls=0 entryScanline=999..-1 exitInActiveDisplay=0 (max line -1) maxBytes=0 afterHook=0 beforeHook=0
+STAGE 54 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s55-0300 -> output\traces\sweep-oamtiming/s55-0300.png
+SHOT s55-0600 -> output\traces\sweep-oamtiming/s55-0600.png
+SHOT s55-0900 -> output\traces\sweep-oamtiming/s55-0900.png
+SHOT s55-1200 -> output\traces\sweep-oamtiming/s55-1200.png
+SHOT s55-1340 -> output\traces\sweep-oamtiming/s55-1340.png
+OAMT stage=55 calls=0 entryScanline=999..-1 exitInActiveDisplay=0 (max line -1) maxBytes=0 afterHook=0 beforeHook=0
+STAGE 55 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s56-0300 -> output\traces\sweep-oamtiming/s56-0300.png
+SHOT s56-0600 -> output\traces\sweep-oamtiming/s56-0600.png
+SHOT s56-0900 -> output\traces\sweep-oamtiming/s56-0900.png
+SHOT s56-1200 -> output\traces\sweep-oamtiming/s56-1200.png
+SHOT s56-1340 -> output\traces\sweep-oamtiming/s56-1340.png
+OAMT stage=56 calls=0 entryScanline=999..-1 exitInActiveDisplay=0 (max line -1) maxBytes=0 afterHook=0 beforeHook=0
+STAGE 56 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s57-0300 -> output\traces\sweep-oamtiming/s57-0300.png
+SHOT s57-0600 -> output\traces\sweep-oamtiming/s57-0600.png
+SHOT s57-0900 -> output\traces\sweep-oamtiming/s57-0900.png
+SHOT s57-1200 -> output\traces\sweep-oamtiming/s57-1200.png
+SHOT s57-1340 -> output\traces\sweep-oamtiming/s57-1340.png
+OAMT stage=57 calls=0 entryScanline=999..-1 exitInActiveDisplay=0 (max line -1) maxBytes=0 afterHook=0 beforeHook=0
+STAGE 57 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s58-0300 -> output\traces\sweep-oamtiming/s58-0300.png
+SHOT s58-0600 -> output\traces\sweep-oamtiming/s58-0600.png
+SHOT s58-0900 -> output\traces\sweep-oamtiming/s58-0900.png
+SHOT s58-1200 -> output\traces\sweep-oamtiming/s58-1200.png
+SHOT s58-1340 -> output\traces\sweep-oamtiming/s58-1340.png
+OAMT stage=58 calls=0 entryScanline=999..-1 exitInActiveDisplay=0 (max line -1) maxBytes=0 afterHook=0 beforeHook=0
+STAGE 58 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s59-0300 -> output\traces\sweep-oamtiming/s59-0300.png
+SHOT s59-0600 -> output\traces\sweep-oamtiming/s59-0600.png
+SHOT s59-0900 -> output\traces\sweep-oamtiming/s59-0900.png
+SHOT s59-1200 -> output\traces\sweep-oamtiming/s59-1200.png
+SHOT s59-1340 -> output\traces\sweep-oamtiming/s59-1340.png
+OAMT stage=59 calls=0 entryScanline=999..-1 exitInActiveDisplay=0 (max line -1) maxBytes=0 afterHook=0 beforeHook=0
+STAGE 59 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s60-0300 -> output\traces\sweep-oamtiming/s60-0300.png
+SHOT s60-0600 -> output\traces\sweep-oamtiming/s60-0600.png
+SHOT s60-0900 -> output\traces\sweep-oamtiming/s60-0900.png
+SHOT s60-1200 -> output\traces\sweep-oamtiming/s60-1200.png
+SHOT s60-1340 -> output\traces\sweep-oamtiming/s60-1340.png
+OAMT stage=60 calls=0 entryScanline=999..-1 exitInActiveDisplay=0 (max line -1) maxBytes=0 afterHook=0 beforeHook=0
+STAGE 60 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s61-0300 -> output\traces\sweep-oamtiming/s61-0300.png
+SHOT s61-0600 -> output\traces\sweep-oamtiming/s61-0600.png
+SHOT s61-0900 -> output\traces\sweep-oamtiming/s61-0900.png
+SHOT s61-1200 -> output\traces\sweep-oamtiming/s61-1200.png
+SHOT s61-1340 -> output\traces\sweep-oamtiming/s61-1340.png
+OAMT stage=61 calls=0 entryScanline=999..-1 exitInActiveDisplay=0 (max line -1) maxBytes=0 afterHook=0 beforeHook=0
+STAGE 61 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s62-0300 -> output\traces\sweep-oamtiming/s62-0300.png
+SHOT s62-0600 -> output\traces\sweep-oamtiming/s62-0600.png
+SHOT s62-0900 -> output\traces\sweep-oamtiming/s62-0900.png
+SHOT s62-1200 -> output\traces\sweep-oamtiming/s62-1200.png
+SHOT s62-1340 -> output\traces\sweep-oamtiming/s62-1340.png
+OAMT stage=62 calls=0 entryScanline=999..-1 exitInActiveDisplay=0 (max line -1) maxBytes=0 afterHook=0 beforeHook=0
+STAGE 62 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s63-0300 -> output\traces\sweep-oamtiming/s63-0300.png
+SHOT s63-0600 -> output\traces\sweep-oamtiming/s63-0600.png
+SHOT s63-0900 -> output\traces\sweep-oamtiming/s63-0900.png
+SHOT s63-1200 -> output\traces\sweep-oamtiming/s63-1200.png
+SHOT s63-1340 -> output\traces\sweep-oamtiming/s63-1340.png
+OAMT stage=63 calls=0 entryScanline=999..-1 exitInActiveDisplay=0 (max line -1) maxBytes=0 afterHook=0 beforeHook=0
+STAGE 63 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s64-0300 -> output\traces\sweep-oamtiming/s64-0300.png
+SHOT s64-0600 -> output\traces\sweep-oamtiming/s64-0600.png
+SHOT s64-0900 -> output\traces\sweep-oamtiming/s64-0900.png
+SHOT s64-1200 -> output\traces\sweep-oamtiming/s64-1200.png
+SHOT s64-1340 -> output\traces\sweep-oamtiming/s64-1340.png
+OAMT stage=64 calls=0 entryScanline=999..-1 exitInActiveDisplay=0 (max line -1) maxBytes=0 afterHook=0 beforeHook=0
+STAGE 64 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s65-0300 -> output\traces\sweep-oamtiming/s65-0300.png
+SHOT s65-0600 -> output\traces\sweep-oamtiming/s65-0600.png
+SHOT s65-0900 -> output\traces\sweep-oamtiming/s65-0900.png
+SHOT s65-1200 -> output\traces\sweep-oamtiming/s65-1200.png
+SHOT s65-1340 -> output\traces\sweep-oamtiming/s65-1340.png
+OAMT stage=65 calls=0 entryScanline=999..-1 exitInActiveDisplay=0 (max line -1) maxBytes=0 afterHook=0 beforeHook=0
+STAGE 65 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s66-0300 -> output\traces\sweep-oamtiming/s66-0300.png
+SHOT s66-0600 -> output\traces\sweep-oamtiming/s66-0600.png
+SHOT s66-0900 -> output\traces\sweep-oamtiming/s66-0900.png
+SHOT s66-1200 -> output\traces\sweep-oamtiming/s66-1200.png
+SHOT s66-1340 -> output\traces\sweep-oamtiming/s66-1340.png
+OAMT stage=66 calls=0 entryScanline=999..-1 exitInActiveDisplay=0 (max line -1) maxBytes=0 afterHook=0 beforeHook=0
+STAGE 66 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s67-0300 -> output\traces\sweep-oamtiming/s67-0300.png
+SHOT s67-0600 -> output\traces\sweep-oamtiming/s67-0600.png
+SHOT s67-0900 -> output\traces\sweep-oamtiming/s67-0900.png
+SHOT s67-1200 -> output\traces\sweep-oamtiming/s67-1200.png
+SHOT s67-1340 -> output\traces\sweep-oamtiming/s67-1340.png
+OAMT stage=67 calls=0 entryScanline=999..-1 exitInActiveDisplay=0 (max line -1) maxBytes=0 afterHook=0 beforeHook=0
+STAGE 67 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s68-0300 -> output\traces\sweep-oamtiming/s68-0300.png
+SHOT s68-0600 -> output\traces\sweep-oamtiming/s68-0600.png
+SHOT s68-0900 -> output\traces\sweep-oamtiming/s68-0900.png
+SHOT s68-1200 -> output\traces\sweep-oamtiming/s68-1200.png
+SHOT s68-1340 -> output\traces\sweep-oamtiming/s68-1340.png
+OAMT stage=68 calls=0 entryScanline=999..-1 exitInActiveDisplay=0 (max line -1) maxBytes=0 afterHook=0 beforeHook=0
+STAGE 68 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s69-0300 -> output\traces\sweep-oamtiming/s69-0300.png
+SHOT s69-0600 -> output\traces\sweep-oamtiming/s69-0600.png
+SHOT s69-0900 -> output\traces\sweep-oamtiming/s69-0900.png
+SHOT s69-1200 -> output\traces\sweep-oamtiming/s69-1200.png
+SHOT s69-1340 -> output\traces\sweep-oamtiming/s69-1340.png
+OAMT stage=69 calls=0 entryScanline=999..-1 exitInActiveDisplay=0 (max line -1) maxBytes=0 afterHook=0 beforeHook=0
+STAGE 69 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+STAGE 70 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+RESET start idx=2/3
+RESET done idx=2/3 magic=$5A4E
+AFTERRESET r=300 01DC=$8357 idx=2/3 magic=$5A4E C6/CF=031A/001E
+SHOT reset-0300 -> output\traces\sweep-oamtiming/reset-0300.png
+AFTERRESET r=600 01DC=$8357 idx=2/3 magic=$5A4E C6/CF=031A/001E
+SHOT reset-0600 -> output\traces\sweep-oamtiming/reset-0600.png
+AFTERRESET r=900 01DC=$8357 idx=2/3 magic=$5A4E C6/CF=031A/001E
+SHOT reset-0900 -> output\traces\sweep-oamtiming/reset-0900.png
+AFTERRESET r=1200 01DC=$8357 idx=2/3 magic=$5A4E C6/CF=031A/001E
+SHOT reset-1200 -> output\traces\sweep-oamtiming/reset-1200.png
+AFTERRESET r=1500 01DC=$8357 idx=2/3 magic=$5A4E C6/CF=031A/001E
+SHOT reset-1500 -> output\traces\sweep-oamtiming/reset-1500.png
+AFTERRESET r=1800 01DC=$835B idx=2/3 magic=$5A4E C6/CF=7EDB/7EAF
+SHOT reset-1800 -> output\traces\sweep-oamtiming/reset-1800.png
+AFTERRESET r=2100 01DC=$835B idx=2/3 magic=$5A4E C6/CF=7EDB/7EAF
+SHOT reset-2100 -> output\traces\sweep-oamtiming/reset-2100.png
+AFTERRESET r=2400 01DC=$835B idx=2/3 magic=$5A4E C6/CF=7EDB/7EAF
+SHOT reset-2400 -> output\traces\sweep-oamtiming/reset-2400.png
+DONE

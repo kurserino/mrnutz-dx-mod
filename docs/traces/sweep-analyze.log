@@ -1,0 +1,559 @@
+# sweep-analyze | exit=0 signal=- | rom=Mr. Nutz.runtime.sfc | state=level1-start.mss | ANALYZE=1
+LOAD ok=true
+SELECT stage=0 s=1
+SLOT stage=0 s=1 base=$C0
+SHOT s00-0300 -> output\traces\sweep-analyze/s00-0300.png
+SHOT s00-0600 -> output\traces\sweep-analyze/s00-0600.png
+SHOT s00-0900 -> output\traces\sweep-analyze/s00-0900.png
+SHOT s00-1200 -> output\traces\sweep-analyze/s00-1200.png
+SHOT s00-1340 -> output\traces\sweep-analyze/s00-1340.png
+STAGE 00 gameplay=1020 ok=1019 lostMax=1 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=1 s=0 base=$C0
+ANALYZE stage=00 frames=1020 usedPals=0,1,2,4,6 sharedFrames=66 maxNutzSprites=6 dupes=none nutzTiles=000,004,024,040,042,044 sharedTiles=064
+SHOT s01-0300 -> output\traces\sweep-analyze/s01-0300.png
+SHOT s01-0600 -> output\traces\sweep-analyze/s01-0600.png
+SHOT s01-0900 -> output\traces\sweep-analyze/s01-0900.png
+SHOT s01-1200 -> output\traces\sweep-analyze/s01-1200.png
+SHOT s01-1340 -> output\traces\sweep-analyze/s01-1340.png
+STAGE 01 gameplay=871 ok=871 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=2 s=0 base=$C0
+ANALYZE stage=01 frames=871 usedPals=0,1,4,6 sharedFrames=36 maxNutzSprites=6 dupes=none nutzTiles=000,004,024,040,042,044,046 sharedTiles=064
+SHOT s02-0300 -> output\traces\sweep-analyze/s02-0300.png
+SHOT s02-0600 -> output\traces\sweep-analyze/s02-0600.png
+SHOT s02-0900 -> output\traces\sweep-analyze/s02-0900.png
+SHOT s02-1200 -> output\traces\sweep-analyze/s02-1200.png
+SHOT s02-1340 -> output\traces\sweep-analyze/s02-1340.png
+STAGE 02 gameplay=1093 ok=1093 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=3 s=0 base=$C0
+ANALYZE stage=02 frames=1093 usedPals=0,1,4 sharedFrames=114 maxNutzSprites=6 dupes=none nutzTiles=000,004,024,040,042,044 sharedTiles=064
+SHOT s03-0300 -> output\traces\sweep-analyze/s03-0300.png
+SHOT s03-0600 -> output\traces\sweep-analyze/s03-0600.png
+SHOT s03-0900 -> output\traces\sweep-analyze/s03-0900.png
+SHOT s03-1200 -> output\traces\sweep-analyze/s03-1200.png
+SHOT s03-1340 -> output\traces\sweep-analyze/s03-1340.png
+STAGE 03 gameplay=1070 ok=1070 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=4 s=0 base=$C0
+ANALYZE stage=03 frames=1070 usedPals=4 sharedFrames=71 maxNutzSprites=6 dupes=none nutzTiles=000,004,024,040,042,044 sharedTiles=064
+SHOT s04-0300 -> output\traces\sweep-analyze/s04-0300.png
+SHOT s04-0600 -> output\traces\sweep-analyze/s04-0600.png
+SHOT s04-0900 -> output\traces\sweep-analyze/s04-0900.png
+SHOT s04-1200 -> output\traces\sweep-analyze/s04-1200.png
+SHOT s04-1340 -> output\traces\sweep-analyze/s04-1340.png
+STAGE 04 gameplay=33 ok=33 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$C0
+ANALYZE stage=04 frames=33 usedPals=4 sharedFrames=0 maxNutzSprites=6 dupes=none nutzTiles=000,004,024,040,042,044 sharedTiles=
+SHOT s05-0300 -> output\traces\sweep-analyze/s05-0300.png
+SLOT stage=5 s=338 base=$C0
+SHOT s05-0600 -> output\traces\sweep-analyze/s05-0600.png
+SHOT s05-0900 -> output\traces\sweep-analyze/s05-0900.png
+SHOT s05-1200 -> output\traces\sweep-analyze/s05-1200.png
+SHOT s05-1340 -> output\traces\sweep-analyze/s05-1340.png
+STAGE 05 gameplay=1102 ok=1102 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=6 s=0 base=$C0
+ANALYZE stage=05 frames=1102 usedPals=1,4 sharedFrames=1006 maxNutzSprites=6 dupes=none nutzTiles=000,004,024,040,042,044 sharedTiles=064,104,16E,1C4
+SHOT s06-0300 -> output\traces\sweep-analyze/s06-0300.png
+SHOT s06-0600 -> output\traces\sweep-analyze/s06-0600.png
+SHOT s06-0900 -> output\traces\sweep-analyze/s06-0900.png
+SHOT s06-1200 -> output\traces\sweep-analyze/s06-1200.png
+SHOT s06-1340 -> output\traces\sweep-analyze/s06-1340.png
+STAGE 06 gameplay=1101 ok=1101 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=7 s=0 base=$C0
+ANALYZE stage=06 frames=1101 usedPals=1,2,4 sharedFrames=433 maxNutzSprites=6 dupes=none nutzTiles=000,004,024,040,042,044 sharedTiles=064,104,16E,1C4
+SHOT s07-0300 -> output\traces\sweep-analyze/s07-0300.png
+SHOT s07-0600 -> output\traces\sweep-analyze/s07-0600.png
+SHOT s07-0900 -> output\traces\sweep-analyze/s07-0900.png
+SHOT s07-1200 -> output\traces\sweep-analyze/s07-1200.png
+SHOT s07-1340 -> output\traces\sweep-analyze/s07-1340.png
+STAGE 07 gameplay=1117 ok=1117 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=8 s=0 base=$C0
+ANALYZE stage=07 frames=1117 usedPals=0,3,4 sharedFrames=796 maxNutzSprites=6 dupes=none nutzTiles=000,004,024,040,042,044 sharedTiles=060,062,064
+SHOT s08-0300 -> output\traces\sweep-analyze/s08-0300.png
+SHOT s08-0600 -> output\traces\sweep-analyze/s08-0600.png
+SHOT s08-0900 -> output\traces\sweep-analyze/s08-0900.png
+SHOT s08-1200 -> output\traces\sweep-analyze/s08-1200.png
+SHOT s08-1340 -> output\traces\sweep-analyze/s08-1340.png
+STAGE 08 gameplay=1099 ok=1099 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=9 s=0 base=$C0
+ANALYZE stage=08 frames=1099 usedPals=3,4,5,6,7 sharedFrames=82 maxNutzSprites=6 dupes=none nutzTiles=000,004,024,040,042,044 sharedTiles=064
+SHOT s09-0300 -> output\traces\sweep-analyze/s09-0300.png
+SHOT s09-0600 -> output\traces\sweep-analyze/s09-0600.png
+SHOT s09-0900 -> output\traces\sweep-analyze/s09-0900.png
+SHOT s09-1200 -> output\traces\sweep-analyze/s09-1200.png
+SHOT s09-1340 -> output\traces\sweep-analyze/s09-1340.png
+STAGE 09 gameplay=33 ok=33 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$C0
+ANALYZE stage=09 frames=33 usedPals=3,4,5,6,7 sharedFrames=0 maxNutzSprites=6 dupes=none nutzTiles=000,004,024,040,042,044 sharedTiles=
+SHOT s10-0300 -> output\traces\sweep-analyze/s10-0300.png
+SLOT stage=10 s=332 base=$80
+SHOT s10-0600 -> output\traces\sweep-analyze/s10-0600.png
+SHOT s10-0900 -> output\traces\sweep-analyze/s10-0900.png
+SHOT s10-1200 -> output\traces\sweep-analyze/s10-1200.png
+SHOT s10-1340 -> output\traces\sweep-analyze/s10-1340.png
+STAGE 10 gameplay=1108 ok=1108 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$80
+SLOT stage=11 s=0 base=$80
+ANALYZE stage=10 frames=1108 usedPals=0 sharedFrames=82 maxNutzSprites=6 dupes=1=6 nutzTiles=000,004,024,040,042,044 sharedTiles=064
+SLOT stage=11 s=116 base=$C0
+SHOT s11-0300 -> output\traces\sweep-analyze/s11-0300.png
+SHOT s11-0600 -> output\traces\sweep-analyze/s11-0600.png
+SHOT s11-0900 -> output\traces\sweep-analyze/s11-0900.png
+SHOT s11-1200 -> output\traces\sweep-analyze/s11-1200.png
+SHOT s11-1340 -> output\traces\sweep-analyze/s11-1340.png
+STAGE 11 gameplay=1357 ok=1357 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=12 s=0 base=$C0
+ANALYZE stage=11 frames=1357 usedPals=0,4 sharedFrames=94 maxNutzSprites=6 dupes=1=6 nutzTiles=000,004,024,040,042,044 sharedTiles=064
+SHOT s12-0300 -> output\traces\sweep-analyze/s12-0300.png
+SHOT s12-0600 -> output\traces\sweep-analyze/s12-0600.png
+SHOT s12-0900 -> output\traces\sweep-analyze/s12-0900.png
+SHOT s12-1200 -> output\traces\sweep-analyze/s12-1200.png
+SHOT s12-1340 -> output\traces\sweep-analyze/s12-1340.png
+STAGE 12 gameplay=1110 ok=1110 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=13 s=0 base=$C0
+ANALYZE stage=12 frames=1110 usedPals=0,4 sharedFrames=33 maxNutzSprites=6 dupes=none nutzTiles=000,004,024,040,042,044 sharedTiles=064
+SHOT s13-0300 -> output\traces\sweep-analyze/s13-0300.png
+SHOT s13-0600 -> output\traces\sweep-analyze/s13-0600.png
+SHOT s13-0900 -> output\traces\sweep-analyze/s13-0900.png
+SHOT s13-1200 -> output\traces\sweep-analyze/s13-1200.png
+SHOT s13-1340 -> output\traces\sweep-analyze/s13-1340.png
+STAGE 13 gameplay=1028 ok=1028 lostMax=0 noPalSpritesMax=14 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=14 s=0 base=$C0
+ANALYZE stage=13 frames=1028 usedPals=0,3,4 sharedFrames=85 maxNutzSprites=6 dupes=none nutzTiles=000,004,024,040,042,044 sharedTiles=064
+SHOT s14-0300 -> output\traces\sweep-analyze/s14-0300.png
+SHOT s14-0600 -> output\traces\sweep-analyze/s14-0600.png
+SHOT s14-0900 -> output\traces\sweep-analyze/s14-0900.png
+SHOT s14-1200 -> output\traces\sweep-analyze/s14-1200.png
+SHOT s14-1340 -> output\traces\sweep-analyze/s14-1340.png
+STAGE 14 gameplay=1343 ok=1343 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=15 s=0 base=$C0
+ANALYZE stage=14 frames=1343 usedPals=2,3,4,5 sharedFrames=106 maxNutzSprites=6 dupes=none nutzTiles=000,004,024,040,042,044 sharedTiles=064,100,102,104,106,108,10A,10C,10E,120,122,124,126,128,12A,12C,12E
+SHOT s15-0300 -> output\traces\sweep-analyze/s15-0300.png
+SHOT s15-0600 -> output\traces\sweep-analyze/s15-0600.png
+SHOT s15-0900 -> output\traces\sweep-analyze/s15-0900.png
+SHOT s15-1200 -> output\traces\sweep-analyze/s15-1200.png
+SHOT s15-1340 -> output\traces\sweep-analyze/s15-1340.png
+STAGE 15 gameplay=1349 ok=1349 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=16 s=0 base=$C0
+ANALYZE stage=15 frames=1349 usedPals=1,3,4 sharedFrames=1160 maxNutzSprites=6 dupes=none nutzTiles=000,004,024,040,042,044 sharedTiles=064,100,102,104,106,108,10A,10C,10E,120,122,124,126,128,12A,12C,12E,14C,14E,16C,16E
+SHOT s16-0300 -> output\traces\sweep-analyze/s16-0300.png
+SHOT s16-0600 -> output\traces\sweep-analyze/s16-0600.png
+SHOT s16-0900 -> output\traces\sweep-analyze/s16-0900.png
+SHOT s16-1200 -> output\traces\sweep-analyze/s16-1200.png
+SHOT s16-1340 -> output\traces\sweep-analyze/s16-1340.png
+STAGE 16 gameplay=1106 ok=1106 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=17 s=0 base=$C0
+ANALYZE stage=16 frames=1106 usedPals=1,3,4 sharedFrames=353 maxNutzSprites=6 dupes=none nutzTiles=000,004,024,040,042,044 sharedTiles=064,06E,100,102,104,106,108,10A,10C,10E,120,122,124,126,128,12A,12C,12E,14C,14E,16C,16E
+SHOT s17-0300 -> output\traces\sweep-analyze/s17-0300.png
+SHOT s17-0600 -> output\traces\sweep-analyze/s17-0600.png
+SHOT s17-0900 -> output\traces\sweep-analyze/s17-0900.png
+SHOT s17-1200 -> output\traces\sweep-analyze/s17-1200.png
+SHOT s17-1340 -> output\traces\sweep-analyze/s17-1340.png
+STAGE 17 gameplay=33 ok=33 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$C0
+ANALYZE stage=17 frames=33 usedPals=1,4 sharedFrames=0 maxNutzSprites=6 dupes=none nutzTiles=000,004,024,040,042,044 sharedTiles=
+SHOT s18-0300 -> output\traces\sweep-analyze/s18-0300.png
+SLOT stage=18 s=487 base=$C0
+SHOT s18-0600 -> output\traces\sweep-analyze/s18-0600.png
+SHOT s18-0900 -> output\traces\sweep-analyze/s18-0900.png
+SHOT s18-1200 -> output\traces\sweep-analyze/s18-1200.png
+SHOT s18-1340 -> output\traces\sweep-analyze/s18-1340.png
+STAGE 18 gameplay=953 ok=953 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=19 s=0 base=$C0
+ANALYZE stage=18 frames=953 usedPals=0,4,6 sharedFrames=110 maxNutzSprites=6 dupes=none nutzTiles=000,004,024,040,042,044 sharedTiles=064
+SHOT s19-0300 -> output\traces\sweep-analyze/s19-0300.png
+SHOT s19-0600 -> output\traces\sweep-analyze/s19-0600.png
+SHOT s19-0900 -> output\traces\sweep-analyze/s19-0900.png
+SHOT s19-1200 -> output\traces\sweep-analyze/s19-1200.png
+SHOT s19-1340 -> output\traces\sweep-analyze/s19-1340.png
+STAGE 19 gameplay=1112 ok=1112 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=20 s=0 base=$C0
+ANALYZE stage=19 frames=1112 usedPals=0,1,4,6 sharedFrames=101 maxNutzSprites=6 dupes=none nutzTiles=000,004,024,040,042,044 sharedTiles=064
+SHOT s20-0300 -> output\traces\sweep-analyze/s20-0300.png
+SHOT s20-0600 -> output\traces\sweep-analyze/s20-0600.png
+SHOT s20-0900 -> output\traces\sweep-analyze/s20-0900.png
+SHOT s20-1200 -> output\traces\sweep-analyze/s20-1200.png
+SHOT s20-1340 -> output\traces\sweep-analyze/s20-1340.png
+STAGE 20 gameplay=1049 ok=1049 lostMax=0 noPalSpritesMax=2 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=21 s=0 base=$C0
+ANALYZE stage=20 frames=1049 usedPals=0,1,4 sharedFrames=142 maxNutzSprites=6 dupes=none nutzTiles=000,004,024,040,042,044,046 sharedTiles=064
+SHOT s21-0300 -> output\traces\sweep-analyze/s21-0300.png
+SHOT s21-0600 -> output\traces\sweep-analyze/s21-0600.png
+SHOT s21-0900 -> output\traces\sweep-analyze/s21-0900.png
+SHOT s21-1200 -> output\traces\sweep-analyze/s21-1200.png
+SHOT s21-1340 -> output\traces\sweep-analyze/s21-1340.png
+STAGE 21 gameplay=752 ok=752 lostMax=0 noPalSpritesMax=27 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=22 s=0 base=$C0
+ANALYZE stage=21 frames=752 usedPals=0,1,4 sharedFrames=90 maxNutzSprites=6 dupes=none nutzTiles=000,004,024,040,042,044 sharedTiles=064
+SHOT s22-0300 -> output\traces\sweep-analyze/s22-0300.png
+SHOT s22-0600 -> output\traces\sweep-analyze/s22-0600.png
+SHOT s22-0900 -> output\traces\sweep-analyze/s22-0900.png
+SHOT s22-1200 -> output\traces\sweep-analyze/s22-1200.png
+SHOT s22-1340 -> output\traces\sweep-analyze/s22-1340.png
+STAGE 22 gameplay=1002 ok=1002 lostMax=0 noPalSpritesMax=32 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=23 s=0 base=$C0
+ANALYZE stage=22 frames=1002 usedPals=0,1,4 sharedFrames=64 maxNutzSprites=6 dupes=none nutzTiles=000,004,024,040,042,044 sharedTiles=064
+SHOT s23-0300 -> output\traces\sweep-analyze/s23-0300.png
+SHOT s23-0600 -> output\traces\sweep-analyze/s23-0600.png
+SHOT s23-0900 -> output\traces\sweep-analyze/s23-0900.png
+SHOT s23-1200 -> output\traces\sweep-analyze/s23-1200.png
+SHOT s23-1340 -> output\traces\sweep-analyze/s23-1340.png
+STAGE 23 gameplay=1023 ok=1023 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=24 s=0 base=$C0
+ANALYZE stage=23 frames=1023 usedPals=0,4 sharedFrames=76 maxNutzSprites=6 dupes=none nutzTiles=000,004,024,040,042,044 sharedTiles=064
+SHOT s24-0300 -> output\traces\sweep-analyze/s24-0300.png
+SHOT s24-0600 -> output\traces\sweep-analyze/s24-0600.png
+SHOT s24-0900 -> output\traces\sweep-analyze/s24-0900.png
+SHOT s24-1200 -> output\traces\sweep-analyze/s24-1200.png
+SHOT s24-1340 -> output\traces\sweep-analyze/s24-1340.png
+STAGE 24 gameplay=33 ok=33 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$C0
+ANALYZE stage=24 frames=33 usedPals=4 sharedFrames=0 maxNutzSprites=6 dupes=none nutzTiles=000,004,024,040,042,044 sharedTiles=
+SHOT s25-0300 -> output\traces\sweep-analyze/s25-0300.png
+SLOT stage=25 s=481 base=$C0
+SHOT s25-0600 -> output\traces\sweep-analyze/s25-0600.png
+SHOT s25-0900 -> output\traces\sweep-analyze/s25-0900.png
+SHOT s25-1200 -> output\traces\sweep-analyze/s25-1200.png
+SHOT s25-1340 -> output\traces\sweep-analyze/s25-1340.png
+STAGE 25 gameplay=959 ok=959 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=26 s=0 base=$C0
+ANALYZE stage=25 frames=959 usedPals=4,6 sharedFrames=76 maxNutzSprites=6 dupes=0=2 nutzTiles=000,004,024,040,042,044 sharedTiles=064
+SHOT s26-0300 -> output\traces\sweep-analyze/s26-0300.png
+SHOT s26-0600 -> output\traces\sweep-analyze/s26-0600.png
+SHOT s26-0900 -> output\traces\sweep-analyze/s26-0900.png
+SHOT s26-1200 -> output\traces\sweep-analyze/s26-1200.png
+SHOT s26-1340 -> output\traces\sweep-analyze/s26-1340.png
+STAGE 26 gameplay=1068 ok=1068 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=27 s=0 base=$C0
+ANALYZE stage=26 frames=1068 usedPals=1,3,4,6 sharedFrames=74 maxNutzSprites=6 dupes=0=2 nutzTiles=000,004,024,040,042,044 sharedTiles=064
+SHOT s27-0300 -> output\traces\sweep-analyze/s27-0300.png
+SHOT s27-0600 -> output\traces\sweep-analyze/s27-0600.png
+SHOT s27-0900 -> output\traces\sweep-analyze/s27-0900.png
+SHOT s27-1200 -> output\traces\sweep-analyze/s27-1200.png
+SHOT s27-1340 -> output\traces\sweep-analyze/s27-1340.png
+STAGE 27 gameplay=1073 ok=1073 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=28 s=0 base=$C0
+ANALYZE stage=27 frames=1073 usedPals=0,1,3,4,5,6 sharedFrames=86 maxNutzSprites=6 dupes=0=2 nutzTiles=000,004,024,040,042,044 sharedTiles=064
+SHOT s28-0300 -> output\traces\sweep-analyze/s28-0300.png
+SHOT s28-0600 -> output\traces\sweep-analyze/s28-0600.png
+SHOT s28-0900 -> output\traces\sweep-analyze/s28-0900.png
+SHOT s28-1200 -> output\traces\sweep-analyze/s28-1200.png
+SHOT s28-1340 -> output\traces\sweep-analyze/s28-1340.png
+STAGE 28 gameplay=1056 ok=1056 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=29 s=0 base=$C0
+ANALYZE stage=28 frames=1056 usedPals=1,2,4,5,6 sharedFrames=0 maxNutzSprites=6 dupes=2=7 nutzTiles=000,004,024,040,042,044 sharedTiles=
+SHOT s29-0300 -> output\traces\sweep-analyze/s29-0300.png
+SHOT s29-0600 -> output\traces\sweep-analyze/s29-0600.png
+SHOT s29-0900 -> output\traces\sweep-analyze/s29-0900.png
+SHOT s29-1200 -> output\traces\sweep-analyze/s29-1200.png
+SHOT s29-1340 -> output\traces\sweep-analyze/s29-1340.png
+STAGE 29 gameplay=33 ok=33 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$C0
+ANALYZE stage=29 frames=33 usedPals=2,4,5,6 sharedFrames=0 maxNutzSprites=6 dupes=none nutzTiles=000,004,024,040,042,044 sharedTiles=
+SHOT s30-0300 -> output\traces\sweep-analyze/s30-0300.png
+SLOT stage=30 s=385 base=$C0
+SHOT s30-0600 -> output\traces\sweep-analyze/s30-0600.png
+SHOT s30-0900 -> output\traces\sweep-analyze/s30-0900.png
+SHOT s30-1200 -> output\traces\sweep-analyze/s30-1200.png
+SHOT s30-1340 -> output\traces\sweep-analyze/s30-1340.png
+STAGE 30 gameplay=1115 ok=1115 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=31 s=0 base=$C0
+ANALYZE stage=30 frames=1115 usedPals=0,1,4,6 sharedFrames=958 maxNutzSprites=6 dupes=none nutzTiles=000,004,024,040,042,044 sharedTiles=060,062,064
+SHOT s31-0300 -> output\traces\sweep-analyze/s31-0300.png
+SHOT s31-0600 -> output\traces\sweep-analyze/s31-0600.png
+SHOT s31-0900 -> output\traces\sweep-analyze/s31-0900.png
+SHOT s31-1200 -> output\traces\sweep-analyze/s31-1200.png
+SHOT s31-1340 -> output\traces\sweep-analyze/s31-1340.png
+STAGE 31 gameplay=1366 ok=1366 lostMax=0 noPalSpritesMax=29 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=32 s=0 base=$C0
+ANALYZE stage=31 frames=1366 usedPals=0,1,2,4,6 sharedFrames=144 maxNutzSprites=6 dupes=none nutzTiles=000,004,024,040,042,044 sharedTiles=060,062,064
+SHOT s32-0300 -> output\traces\sweep-analyze/s32-0300.png
+SHOT s32-0600 -> output\traces\sweep-analyze/s32-0600.png
+SHOT s32-0900 -> output\traces\sweep-analyze/s32-0900.png
+SHOT s32-1200 -> output\traces\sweep-analyze/s32-1200.png
+SHOT s32-1340 -> output\traces\sweep-analyze/s32-1340.png
+STAGE 32 gameplay=1077 ok=1077 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=33 s=0 base=$C0
+ANALYZE stage=32 frames=1077 usedPals=1,2,4 sharedFrames=69 maxNutzSprites=6 dupes=none nutzTiles=000,004,024,040,042,044 sharedTiles=064
+SHOT s33-0300 -> output\traces\sweep-analyze/s33-0300.png
+SHOT s33-0600 -> output\traces\sweep-analyze/s33-0600.png
+SHOT s33-0900 -> output\traces\sweep-analyze/s33-0900.png
+SHOT s33-1200 -> output\traces\sweep-analyze/s33-1200.png
+SHOT s33-1340 -> output\traces\sweep-analyze/s33-1340.png
+STAGE 33 gameplay=1072 ok=1072 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=34 s=0 base=$C0
+ANALYZE stage=33 frames=1072 usedPals=1,2,4,6 sharedFrames=88 maxNutzSprites=6 dupes=none nutzTiles=000,004,024,040,042,044 sharedTiles=064
+SHOT s34-0300 -> output\traces\sweep-analyze/s34-0300.png
+SHOT s34-0600 -> output\traces\sweep-analyze/s34-0600.png
+SHOT s34-0900 -> output\traces\sweep-analyze/s34-0900.png
+SHOT s34-1200 -> output\traces\sweep-analyze/s34-1200.png
+SHOT s34-1340 -> output\traces\sweep-analyze/s34-1340.png
+STAGE 34 gameplay=842 ok=842 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=35 s=0 base=$C0
+ANALYZE stage=34 frames=842 usedPals=1,4,6 sharedFrames=250 maxNutzSprites=6 dupes=none nutzTiles=000,004,024,040,042,044 sharedTiles=064,06E
+SHOT s35-0300 -> output\traces\sweep-analyze/s35-0300.png
+SHOT s35-0600 -> output\traces\sweep-analyze/s35-0600.png
+SHOT s35-0900 -> output\traces\sweep-analyze/s35-0900.png
+SHOT s35-1200 -> output\traces\sweep-analyze/s35-1200.png
+SHOT s35-1340 -> output\traces\sweep-analyze/s35-1340.png
+STAGE 35 gameplay=1261 ok=1261 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=36 s=0 base=$C0
+ANALYZE stage=35 frames=1261 usedPals=4 sharedFrames=0 maxNutzSprites=6 dupes=none nutzTiles=000,004,024,040,042,044 sharedTiles=
+SHOT s36-0300 -> output\traces\sweep-analyze/s36-0300.png
+SHOT s36-0600 -> output\traces\sweep-analyze/s36-0600.png
+SHOT s36-0900 -> output\traces\sweep-analyze/s36-0900.png
+SHOT s36-1200 -> output\traces\sweep-analyze/s36-1200.png
+SHOT s36-1340 -> output\traces\sweep-analyze/s36-1340.png
+STAGE 36 gameplay=1294 ok=1294 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=37 s=0 base=$C0
+ANALYZE stage=36 frames=1294 usedPals=1,4,5 sharedFrames=502 maxNutzSprites=6 dupes=none nutzTiles=000,004,024,040,042,044 sharedTiles=064
+SHOT s37-0300 -> output\traces\sweep-analyze/s37-0300.png
+SHOT s37-0600 -> output\traces\sweep-analyze/s37-0600.png
+SHOT s37-0900 -> output\traces\sweep-analyze/s37-0900.png
+SHOT s37-1200 -> output\traces\sweep-analyze/s37-1200.png
+SHOT s37-1340 -> output\traces\sweep-analyze/s37-1340.png
+STAGE 37 gameplay=261 ok=261 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=38 s=0 base=$C0
+ANALYZE stage=37 frames=261 usedPals=1,2,4,5 sharedFrames=175 maxNutzSprites=6 dupes=none nutzTiles=000,004,024,040,042,044 sharedTiles=064,104,16E,1C4
+SHOT s38-0300 -> output\traces\sweep-analyze/s38-0300.png
+SHOT s38-0600 -> output\traces\sweep-analyze/s38-0600.png
+SHOT s38-0900 -> output\traces\sweep-analyze/s38-0900.png
+SHOT s38-1200 -> output\traces\sweep-analyze/s38-1200.png
+SHOT s38-1340 -> output\traces\sweep-analyze/s38-1340.png
+STAGE 38 gameplay=310 ok=310 lostMax=0 noPalSpritesMax=13 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=39 s=0 base=$C0
+ANALYZE stage=38 frames=310 usedPals=0,1,2,3,4,7 sharedFrames=108 maxNutzSprites=6 dupes=none nutzTiles=000,004,024,040,042,044 sharedTiles=064,100,102,104,106,108,10A,10C,10E,120,122,124,126,128,12A,12C,12E,16E,1C4
+SHOT s39-0300 -> output\traces\sweep-analyze/s39-0300.png
+SHOT s39-0600 -> output\traces\sweep-analyze/s39-0600.png
+SHOT s39-0900 -> output\traces\sweep-analyze/s39-0900.png
+SHOT s39-1200 -> output\traces\sweep-analyze/s39-1200.png
+SHOT s39-1340 -> output\traces\sweep-analyze/s39-1340.png
+STAGE 39 gameplay=356 ok=356 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=40 s=0 base=$C0
+ANALYZE stage=39 frames=356 usedPals=0,1,4,5,7 sharedFrames=71 maxNutzSprites=6 dupes=none nutzTiles=000,004,024,040,042,044 sharedTiles=064
+SHOT s40-0300 -> output\traces\sweep-analyze/s40-0300.png
+SHOT s40-0600 -> output\traces\sweep-analyze/s40-0600.png
+SHOT s40-0900 -> output\traces\sweep-analyze/s40-0900.png
+SHOT s40-1200 -> output\traces\sweep-analyze/s40-1200.png
+SHOT s40-1340 -> output\traces\sweep-analyze/s40-1340.png
+STAGE 40 gameplay=371 ok=371 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=41 s=0 base=$C0
+ANALYZE stage=40 frames=371 usedPals=0,1,4,5 sharedFrames=174 maxNutzSprites=6 dupes=none nutzTiles=000,004,024,040,042,044 sharedTiles=064,0CC,0CE,0EC
+SHOT s41-0300 -> output\traces\sweep-analyze/s41-0300.png
+SHOT s41-0600 -> output\traces\sweep-analyze/s41-0600.png
+SHOT s41-0900 -> output\traces\sweep-analyze/s41-0900.png
+SHOT s41-1200 -> output\traces\sweep-analyze/s41-1200.png
+SHOT s41-1340 -> output\traces\sweep-analyze/s41-1340.png
+STAGE 41 gameplay=269 ok=269 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=42 s=0 base=$C0
+ANALYZE stage=41 frames=269 usedPals=1,4,5,6 sharedFrames=107 maxNutzSprites=6 dupes=none nutzTiles=000,004,024,040,042,044 sharedTiles=064,0CC,0CE,0EC
+SHOT s42-0300 -> output\traces\sweep-analyze/s42-0300.png
+SHOT s42-0600 -> output\traces\sweep-analyze/s42-0600.png
+SHOT s42-0900 -> output\traces\sweep-analyze/s42-0900.png
+SHOT s42-1200 -> output\traces\sweep-analyze/s42-1200.png
+SHOT s42-1340 -> output\traces\sweep-analyze/s42-1340.png
+STAGE 42 gameplay=418 ok=418 lostMax=0 noPalSpritesMax=30 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=43 s=0 base=$C0
+ANALYZE stage=42 frames=418 usedPals=1,2,4,5,6 sharedFrames=69 maxNutzSprites=6 dupes=0=2 nutzTiles=000,004,024,040,042,044 sharedTiles=064
+SHOT s43-0300 -> output\traces\sweep-analyze/s43-0300.png
+SHOT s43-0600 -> output\traces\sweep-analyze/s43-0600.png
+SHOT s43-0900 -> output\traces\sweep-analyze/s43-0900.png
+SHOT s43-1200 -> output\traces\sweep-analyze/s43-1200.png
+SHOT s43-1340 -> output\traces\sweep-analyze/s43-1340.png
+STAGE 43 gameplay=272 ok=272 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+ANALYZE stage=43 frames=272 usedPals=1,4,6,7 sharedFrames=36 maxNutzSprites=6 dupes=none nutzTiles=000,004,024,040,042,044 sharedTiles=064
+SLOT stage=44 s=79 base=$C0
+SHOT s44-0300 -> output\traces\sweep-analyze/s44-0300.png
+SHOT s44-0600 -> output\traces\sweep-analyze/s44-0600.png
+SHOT s44-0900 -> output\traces\sweep-analyze/s44-0900.png
+SHOT s44-1200 -> output\traces\sweep-analyze/s44-1200.png
+SHOT s44-1340 -> output\traces\sweep-analyze/s44-1340.png
+STAGE 44 gameplay=1127 ok=1127 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=45 s=0 base=$C0
+ANALYZE stage=44 frames=1127 usedPals=4,5,6,7 sharedFrames=452 maxNutzSprites=6 dupes=none nutzTiles=000,004,024,040,042,044 sharedTiles=064
+SHOT s45-0300 -> output\traces\sweep-analyze/s45-0300.png
+SHOT s45-0600 -> output\traces\sweep-analyze/s45-0600.png
+SHOT s45-0900 -> output\traces\sweep-analyze/s45-0900.png
+SHOT s45-1200 -> output\traces\sweep-analyze/s45-1200.png
+SHOT s45-1340 -> output\traces\sweep-analyze/s45-1340.png
+STAGE 45 gameplay=33 ok=33 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$C0
+ANALYZE stage=45 frames=33 usedPals=4,5 sharedFrames=0 maxNutzSprites=6 dupes=none nutzTiles=000,004,024,040,042,044 sharedTiles=
+SHOT s46-0300 -> output\traces\sweep-analyze/s46-0300.png
+SHOT s46-0600 -> output\traces\sweep-analyze/s46-0600.png
+SHOT s46-0900 -> output\traces\sweep-analyze/s46-0900.png
+SHOT s46-1200 -> output\traces\sweep-analyze/s46-1200.png
+SHOT s46-1340 -> output\traces\sweep-analyze/s46-1340.png
+STAGE 46 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+ANALYZE stage=46 frames=0 usedPals= sharedFrames=0 maxNutzSprites=0 dupes= nutzTiles= sharedTiles=
+SHOT s47-0300 -> output\traces\sweep-analyze/s47-0300.png
+SHOT s47-0600 -> output\traces\sweep-analyze/s47-0600.png
+SHOT s47-0900 -> output\traces\sweep-analyze/s47-0900.png
+SHOT s47-1200 -> output\traces\sweep-analyze/s47-1200.png
+SHOT s47-1340 -> output\traces\sweep-analyze/s47-1340.png
+STAGE 47 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+ANALYZE stage=47 frames=0 usedPals= sharedFrames=0 maxNutzSprites=0 dupes= nutzTiles= sharedTiles=
+SHOT s48-0300 -> output\traces\sweep-analyze/s48-0300.png
+SHOT s48-0600 -> output\traces\sweep-analyze/s48-0600.png
+SHOT s48-0900 -> output\traces\sweep-analyze/s48-0900.png
+SHOT s48-1200 -> output\traces\sweep-analyze/s48-1200.png
+SHOT s48-1340 -> output\traces\sweep-analyze/s48-1340.png
+STAGE 48 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+ANALYZE stage=48 frames=0 usedPals= sharedFrames=0 maxNutzSprites=0 dupes= nutzTiles= sharedTiles=
+SHOT s49-0300 -> output\traces\sweep-analyze/s49-0300.png
+SHOT s49-0600 -> output\traces\sweep-analyze/s49-0600.png
+SHOT s49-0900 -> output\traces\sweep-analyze/s49-0900.png
+SHOT s49-1200 -> output\traces\sweep-analyze/s49-1200.png
+SHOT s49-1340 -> output\traces\sweep-analyze/s49-1340.png
+STAGE 49 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+ANALYZE stage=49 frames=0 usedPals= sharedFrames=0 maxNutzSprites=0 dupes= nutzTiles= sharedTiles=
+SHOT s50-0300 -> output\traces\sweep-analyze/s50-0300.png
+SHOT s50-0600 -> output\traces\sweep-analyze/s50-0600.png
+SHOT s50-0900 -> output\traces\sweep-analyze/s50-0900.png
+SHOT s50-1200 -> output\traces\sweep-analyze/s50-1200.png
+SHOT s50-1340 -> output\traces\sweep-analyze/s50-1340.png
+STAGE 50 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+ANALYZE stage=50 frames=0 usedPals= sharedFrames=0 maxNutzSprites=0 dupes= nutzTiles= sharedTiles=
+SHOT s51-0300 -> output\traces\sweep-analyze/s51-0300.png
+SHOT s51-0600 -> output\traces\sweep-analyze/s51-0600.png
+SHOT s51-0900 -> output\traces\sweep-analyze/s51-0900.png
+SHOT s51-1200 -> output\traces\sweep-analyze/s51-1200.png
+SHOT s51-1340 -> output\traces\sweep-analyze/s51-1340.png
+STAGE 51 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+ANALYZE stage=51 frames=0 usedPals= sharedFrames=0 maxNutzSprites=0 dupes= nutzTiles= sharedTiles=
+SHOT s52-0300 -> output\traces\sweep-analyze/s52-0300.png
+SHOT s52-0600 -> output\traces\sweep-analyze/s52-0600.png
+SHOT s52-0900 -> output\traces\sweep-analyze/s52-0900.png
+SHOT s52-1200 -> output\traces\sweep-analyze/s52-1200.png
+SHOT s52-1340 -> output\traces\sweep-analyze/s52-1340.png
+STAGE 52 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+ANALYZE stage=52 frames=0 usedPals= sharedFrames=0 maxNutzSprites=0 dupes= nutzTiles= sharedTiles=
+SHOT s53-0300 -> output\traces\sweep-analyze/s53-0300.png
+SHOT s53-0600 -> output\traces\sweep-analyze/s53-0600.png
+SHOT s53-0900 -> output\traces\sweep-analyze/s53-0900.png
+SHOT s53-1200 -> output\traces\sweep-analyze/s53-1200.png
+SHOT s53-1340 -> output\traces\sweep-analyze/s53-1340.png
+STAGE 53 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+ANALYZE stage=53 frames=0 usedPals= sharedFrames=0 maxNutzSprites=0 dupes= nutzTiles= sharedTiles=
+SHOT s54-0300 -> output\traces\sweep-analyze/s54-0300.png
+SHOT s54-0600 -> output\traces\sweep-analyze/s54-0600.png
+SHOT s54-0900 -> output\traces\sweep-analyze/s54-0900.png
+SHOT s54-1200 -> output\traces\sweep-analyze/s54-1200.png
+SHOT s54-1340 -> output\traces\sweep-analyze/s54-1340.png
+STAGE 54 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+ANALYZE stage=54 frames=0 usedPals= sharedFrames=0 maxNutzSprites=0 dupes= nutzTiles= sharedTiles=
+SHOT s55-0300 -> output\traces\sweep-analyze/s55-0300.png
+SHOT s55-0600 -> output\traces\sweep-analyze/s55-0600.png
+SHOT s55-0900 -> output\traces\sweep-analyze/s55-0900.png
+SHOT s55-1200 -> output\traces\sweep-analyze/s55-1200.png
+SHOT s55-1340 -> output\traces\sweep-analyze/s55-1340.png
+STAGE 55 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+ANALYZE stage=55 frames=0 usedPals= sharedFrames=0 maxNutzSprites=0 dupes= nutzTiles= sharedTiles=
+SHOT s56-0300 -> output\traces\sweep-analyze/s56-0300.png
+SHOT s56-0600 -> output\traces\sweep-analyze/s56-0600.png
+SHOT s56-0900 -> output\traces\sweep-analyze/s56-0900.png
+SHOT s56-1200 -> output\traces\sweep-analyze/s56-1200.png
+SHOT s56-1340 -> output\traces\sweep-analyze/s56-1340.png
+STAGE 56 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+ANALYZE stage=56 frames=0 usedPals= sharedFrames=0 maxNutzSprites=0 dupes= nutzTiles= sharedTiles=
+SHOT s57-0300 -> output\traces\sweep-analyze/s57-0300.png
+SHOT s57-0600 -> output\traces\sweep-analyze/s57-0600.png
+SHOT s57-0900 -> output\traces\sweep-analyze/s57-0900.png
+SHOT s57-1200 -> output\traces\sweep-analyze/s57-1200.png
+SHOT s57-1340 -> output\traces\sweep-analyze/s57-1340.png
+STAGE 57 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+ANALYZE stage=57 frames=0 usedPals= sharedFrames=0 maxNutzSprites=0 dupes= nutzTiles= sharedTiles=
+SHOT s58-0300 -> output\traces\sweep-analyze/s58-0300.png
+SHOT s58-0600 -> output\traces\sweep-analyze/s58-0600.png
+SHOT s58-0900 -> output\traces\sweep-analyze/s58-0900.png
+SHOT s58-1200 -> output\traces\sweep-analyze/s58-1200.png
+SHOT s58-1340 -> output\traces\sweep-analyze/s58-1340.png
+STAGE 58 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+ANALYZE stage=58 frames=0 usedPals= sharedFrames=0 maxNutzSprites=0 dupes= nutzTiles= sharedTiles=
+SHOT s59-0300 -> output\traces\sweep-analyze/s59-0300.png
+SHOT s59-0600 -> output\traces\sweep-analyze/s59-0600.png
+SHOT s59-0900 -> output\traces\sweep-analyze/s59-0900.png
+SHOT s59-1200 -> output\traces\sweep-analyze/s59-1200.png
+SHOT s59-1340 -> output\traces\sweep-analyze/s59-1340.png
+STAGE 59 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+ANALYZE stage=59 frames=0 usedPals= sharedFrames=0 maxNutzSprites=0 dupes= nutzTiles= sharedTiles=
+SHOT s60-0300 -> output\traces\sweep-analyze/s60-0300.png
+SHOT s60-0600 -> output\traces\sweep-analyze/s60-0600.png
+SHOT s60-0900 -> output\traces\sweep-analyze/s60-0900.png
+SHOT s60-1200 -> output\traces\sweep-analyze/s60-1200.png
+SHOT s60-1340 -> output\traces\sweep-analyze/s60-1340.png
+STAGE 60 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+ANALYZE stage=60 frames=0 usedPals= sharedFrames=0 maxNutzSprites=0 dupes= nutzTiles= sharedTiles=
+SHOT s61-0300 -> output\traces\sweep-analyze/s61-0300.png
+SHOT s61-0600 -> output\traces\sweep-analyze/s61-0600.png
+SHOT s61-0900 -> output\traces\sweep-analyze/s61-0900.png
+SHOT s61-1200 -> output\traces\sweep-analyze/s61-1200.png
+SHOT s61-1340 -> output\traces\sweep-analyze/s61-1340.png
+STAGE 61 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+ANALYZE stage=61 frames=0 usedPals= sharedFrames=0 maxNutzSprites=0 dupes= nutzTiles= sharedTiles=
+SHOT s62-0300 -> output\traces\sweep-analyze/s62-0300.png
+SHOT s62-0600 -> output\traces\sweep-analyze/s62-0600.png
+SHOT s62-0900 -> output\traces\sweep-analyze/s62-0900.png
+SHOT s62-1200 -> output\traces\sweep-analyze/s62-1200.png
+SHOT s62-1340 -> output\traces\sweep-analyze/s62-1340.png
+STAGE 62 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+ANALYZE stage=62 frames=0 usedPals= sharedFrames=0 maxNutzSprites=0 dupes= nutzTiles= sharedTiles=
+SHOT s63-0300 -> output\traces\sweep-analyze/s63-0300.png
+SHOT s63-0600 -> output\traces\sweep-analyze/s63-0600.png
+SHOT s63-0900 -> output\traces\sweep-analyze/s63-0900.png
+SHOT s63-1200 -> output\traces\sweep-analyze/s63-1200.png
+SHOT s63-1340 -> output\traces\sweep-analyze/s63-1340.png
+STAGE 63 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+ANALYZE stage=63 frames=0 usedPals= sharedFrames=0 maxNutzSprites=0 dupes= nutzTiles= sharedTiles=
+SHOT s64-0300 -> output\traces\sweep-analyze/s64-0300.png
+SHOT s64-0600 -> output\traces\sweep-analyze/s64-0600.png
+SHOT s64-0900 -> output\traces\sweep-analyze/s64-0900.png
+SHOT s64-1200 -> output\traces\sweep-analyze/s64-1200.png
+SHOT s64-1340 -> output\traces\sweep-analyze/s64-1340.png
+STAGE 64 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+ANALYZE stage=64 frames=0 usedPals= sharedFrames=0 maxNutzSprites=0 dupes= nutzTiles= sharedTiles=
+SHOT s65-0300 -> output\traces\sweep-analyze/s65-0300.png
+SHOT s65-0600 -> output\traces\sweep-analyze/s65-0600.png
+SHOT s65-0900 -> output\traces\sweep-analyze/s65-0900.png
+SHOT s65-1200 -> output\traces\sweep-analyze/s65-1200.png
+SHOT s65-1340 -> output\traces\sweep-analyze/s65-1340.png
+STAGE 65 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+ANALYZE stage=65 frames=0 usedPals= sharedFrames=0 maxNutzSprites=0 dupes= nutzTiles= sharedTiles=
+SHOT s66-0300 -> output\traces\sweep-analyze/s66-0300.png
+SHOT s66-0600 -> output\traces\sweep-analyze/s66-0600.png
+SHOT s66-0900 -> output\traces\sweep-analyze/s66-0900.png
+SHOT s66-1200 -> output\traces\sweep-analyze/s66-1200.png
+SHOT s66-1340 -> output\traces\sweep-analyze/s66-1340.png
+STAGE 66 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+ANALYZE stage=66 frames=0 usedPals= sharedFrames=0 maxNutzSprites=0 dupes= nutzTiles= sharedTiles=
+SHOT s67-0300 -> output\traces\sweep-analyze/s67-0300.png
+SHOT s67-0600 -> output\traces\sweep-analyze/s67-0600.png
+SHOT s67-0900 -> output\traces\sweep-analyze/s67-0900.png
+SHOT s67-1200 -> output\traces\sweep-analyze/s67-1200.png
+SHOT s67-1340 -> output\traces\sweep-analyze/s67-1340.png
+STAGE 67 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+ANALYZE stage=67 frames=0 usedPals= sharedFrames=0 maxNutzSprites=0 dupes= nutzTiles= sharedTiles=
+SHOT s68-0300 -> output\traces\sweep-analyze/s68-0300.png
+SHOT s68-0600 -> output\traces\sweep-analyze/s68-0600.png
+SHOT s68-0900 -> output\traces\sweep-analyze/s68-0900.png
+SHOT s68-1200 -> output\traces\sweep-analyze/s68-1200.png
+SHOT s68-1340 -> output\traces\sweep-analyze/s68-1340.png
+STAGE 68 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+ANALYZE stage=68 frames=0 usedPals= sharedFrames=0 maxNutzSprites=0 dupes= nutzTiles= sharedTiles=
+SHOT s69-0300 -> output\traces\sweep-analyze/s69-0300.png
+SHOT s69-0600 -> output\traces\sweep-analyze/s69-0600.png
+SHOT s69-0900 -> output\traces\sweep-analyze/s69-0900.png
+SHOT s69-1200 -> output\traces\sweep-analyze/s69-1200.png
+SHOT s69-1340 -> output\traces\sweep-analyze/s69-1340.png
+STAGE 69 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+STAGE 70 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+RESET start idx=2/3
+RESET done idx=2/3 magic=$5A4E
+AFTERRESET r=300 01DC=$8357 idx=2/3 magic=$5A4E C6/CF=031A/001E
+SHOT reset-0300 -> output\traces\sweep-analyze/reset-0300.png
+AFTERRESET r=600 01DC=$8357 idx=2/3 magic=$5A4E C6/CF=031A/001E
+SHOT reset-0600 -> output\traces\sweep-analyze/reset-0600.png
+AFTERRESET r=900 01DC=$8357 idx=2/3 magic=$5A4E C6/CF=031A/001E
+SHOT reset-0900 -> output\traces\sweep-analyze/reset-0900.png
+AFTERRESET r=1200 01DC=$8357 idx=2/3 magic=$5A4E C6/CF=031A/001E
+SHOT reset-1200 -> output\traces\sweep-analyze/reset-1200.png
+AFTERRESET r=1500 01DC=$8357 idx=2/3 magic=$5A4E C6/CF=031A/001E
+SHOT reset-1500 -> output\traces\sweep-analyze/reset-1500.png
+AFTERRESET r=1800 01DC=$835B idx=2/3 magic=$5A4E C6/CF=7EDB/7EAF
+SHOT reset-1800 -> output\traces\sweep-analyze/reset-1800.png
+AFTERRESET r=2100 01DC=$835B idx=2/3 magic=$5A4E C6/CF=7EDB/7EAF
+SHOT reset-2100 -> output\traces\sweep-analyze/reset-2100.png
+AFTERRESET r=2400 01DC=$835B idx=2/3 magic=$5A4E C6/CF=7EDB/7EAF
+SHOT reset-2400 -> output\traces\sweep-analyze/reset-2400.png
+DONE

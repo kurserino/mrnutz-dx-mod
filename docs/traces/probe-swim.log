@@ -1,0 +1,19 @@
+# probe-swim | exit=0 | rom=Mr. Nutz.runtime.sfc | state=level1-start.mss
+LOAD ok=true
+SWIM start 1EC9=$00 01DC=$835B pal=0000 49CE 5A52 6AD6 7B5A 7BDE 031A 0292 018A 00C8 0000 000E 0012 0016 001A 001E
+CHANGE t=0 C6/CF=031A/001E idx=0/0 01DC=$835B pal=0000 49CE 5A52 6AD6 7B5A 7BDE 031A 0292 018A 00C8 0000 000E 0012 0016 001A 001E
+SHOT swim-0010 -> output\traces\probe-swim/swim-0010.png
+CHANGE t=21 C6/CF=031A/5A7F idx=1/0 01DC=$835B pal=0000 49CE 5A52 6AD6 7B5A 7BDE 031A 0292 018A 00C8 0000 104B 2091 2CF8 3D5F 5A7F
+CHANGE t=61 C6/CF=4FBF/5A7F idx=1/1 01DC=$835B pal=0000 49CE 5A52 6AD6 7B5A 7BDE 4FBF 275F 0214 014D 0000 104B 2091 2CF8 3D5F 5A7F
+SHOT swim-0160 -> output\traces\probe-swim/swim-0160.png
+SHOT swim-0310 -> output\traces\probe-swim/swim-0310.png
+SHOT swim-0460 -> output\traces\probe-swim/swim-0460.png
+SHOT swim-0610 -> output\traces\probe-swim/swim-0610.png
+SHOT swim-0760 -> output\traces\probe-swim/swim-0760.png
+SHOT swim-0910 -> output\traces\probe-swim/swim-0910.png
+SHOT swim-1060 -> output\traces\probe-swim/swim-1060.png
+SHOT swim-1210 -> output\traces\probe-swim/swim-1210.png
+SHOT swim-1360 -> output\traces\probe-swim/swim-1360.png
+SHOT swim-1510 -> output\traces\probe-swim/swim-1510.png
+SHOT swim-1660 -> output\traces\probe-swim/swim-1660.png
+DONE t=1800 changes=3 hookRuns=1800 final=0000 49CE 5A52 6AD6 7B5A 7BDE 4FBF 275F 0214 014D 0000 104B 2091 2CF8 3D5F 5A7F

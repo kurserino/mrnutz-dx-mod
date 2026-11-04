@@ -1,0 +1,194 @@
+# sweep-debug22 | exit=0 signal=- | rom=Mr. Nutz.runtime.sfc | state=level1-start.mss | DEBUG_STAGE=22
+LOAD ok=true
+SELECT stage=0 s=1
+SLOT stage=0 s=1 base=$C0
+SHOT s00-0300 -> output\traces\sweep-debug22/s00-0300.png
+SHOT s00-0600 -> output\traces\sweep-debug22/s00-0600.png
+SHOT s00-0900 -> output\traces\sweep-debug22/s00-0900.png
+SHOT s00-1200 -> output\traces\sweep-debug22/s00-1200.png
+SHOT s00-1340 -> output\traces\sweep-debug22/s00-1340.png
+STAGE 00 gameplay=1020 ok=1019 lostMax=1 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=1 s=0 base=$C0
+SHOT s01-0300 -> output\traces\sweep-debug22/s01-0300.png
+SHOT s01-0600 -> output\traces\sweep-debug22/s01-0600.png
+SHOT s01-0900 -> output\traces\sweep-debug22/s01-0900.png
+SHOT s01-1200 -> output\traces\sweep-debug22/s01-1200.png
+SHOT s01-1340 -> output\traces\sweep-debug22/s01-1340.png
+STAGE 01 gameplay=871 ok=871 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=2 s=0 base=$C0
+SHOT s02-0300 -> output\traces\sweep-debug22/s02-0300.png
+SHOT s02-0600 -> output\traces\sweep-debug22/s02-0600.png
+SHOT s02-0900 -> output\traces\sweep-debug22/s02-0900.png
+SHOT s02-1200 -> output\traces\sweep-debug22/s02-1200.png
+SHOT s02-1340 -> output\traces\sweep-debug22/s02-1340.png
+STAGE 02 gameplay=1093 ok=1093 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=3 s=0 base=$C0
+SHOT s03-0300 -> output\traces\sweep-debug22/s03-0300.png
+SHOT s03-0600 -> output\traces\sweep-debug22/s03-0600.png
+SHOT s03-0900 -> output\traces\sweep-debug22/s03-0900.png
+SHOT s03-1200 -> output\traces\sweep-debug22/s03-1200.png
+SHOT s03-1340 -> output\traces\sweep-debug22/s03-1340.png
+STAGE 03 gameplay=1070 ok=1070 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=4 s=0 base=$C0
+SHOT s04-0300 -> output\traces\sweep-debug22/s04-0300.png
+SHOT s04-0600 -> output\traces\sweep-debug22/s04-0600.png
+SHOT s04-0900 -> output\traces\sweep-debug22/s04-0900.png
+SHOT s04-1200 -> output\traces\sweep-debug22/s04-1200.png
+SHOT s04-1340 -> output\traces\sweep-debug22/s04-1340.png
+STAGE 04 gameplay=33 ok=33 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$C0
+SHOT s05-0300 -> output\traces\sweep-debug22/s05-0300.png
+SLOT stage=5 s=338 base=$C0
+SHOT s05-0600 -> output\traces\sweep-debug22/s05-0600.png
+SHOT s05-0900 -> output\traces\sweep-debug22/s05-0900.png
+SHOT s05-1200 -> output\traces\sweep-debug22/s05-1200.png
+SHOT s05-1340 -> output\traces\sweep-debug22/s05-1340.png
+STAGE 05 gameplay=1102 ok=1102 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=6 s=0 base=$C0
+SHOT s06-0300 -> output\traces\sweep-debug22/s06-0300.png
+SHOT s06-0600 -> output\traces\sweep-debug22/s06-0600.png
+SHOT s06-0900 -> output\traces\sweep-debug22/s06-0900.png
+SHOT s06-1200 -> output\traces\sweep-debug22/s06-1200.png
+SHOT s06-1340 -> output\traces\sweep-debug22/s06-1340.png
+STAGE 06 gameplay=1101 ok=1101 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=7 s=0 base=$C0
+SHOT s07-0300 -> output\traces\sweep-debug22/s07-0300.png
+SHOT s07-0600 -> output\traces\sweep-debug22/s07-0600.png
+SHOT s07-0900 -> output\traces\sweep-debug22/s07-0900.png
+SHOT s07-1200 -> output\traces\sweep-debug22/s07-1200.png
+SHOT s07-1340 -> output\traces\sweep-debug22/s07-1340.png
+STAGE 07 gameplay=1117 ok=1117 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=8 s=0 base=$C0
+SHOT s08-0300 -> output\traces\sweep-debug22/s08-0300.png
+SHOT s08-0600 -> output\traces\sweep-debug22/s08-0600.png
+SHOT s08-0900 -> output\traces\sweep-debug22/s08-0900.png
+SHOT s08-1200 -> output\traces\sweep-debug22/s08-1200.png
+SHOT s08-1340 -> output\traces\sweep-debug22/s08-1340.png
+STAGE 08 gameplay=1099 ok=1099 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=9 s=0 base=$C0
+SHOT s09-0300 -> output\traces\sweep-debug22/s09-0300.png
+SHOT s09-0600 -> output\traces\sweep-debug22/s09-0600.png
+SHOT s09-0900 -> output\traces\sweep-debug22/s09-0900.png
+SHOT s09-1200 -> output\traces\sweep-debug22/s09-1200.png
+SHOT s09-1340 -> output\traces\sweep-debug22/s09-1340.png
+STAGE 09 gameplay=33 ok=33 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$C0
+SHOT s10-0300 -> output\traces\sweep-debug22/s10-0300.png
+SLOT stage=10 s=332 base=$80
+SHOT s10-0600 -> output\traces\sweep-debug22/s10-0600.png
+SHOT s10-0900 -> output\traces\sweep-debug22/s10-0900.png
+SHOT s10-1200 -> output\traces\sweep-debug22/s10-1200.png
+SHOT s10-1340 -> output\traces\sweep-debug22/s10-1340.png
+STAGE 10 gameplay=1108 ok=1108 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$80
+SLOT stage=11 s=0 base=$80
+SLOT stage=11 s=116 base=$C0
+SHOT s11-0300 -> output\traces\sweep-debug22/s11-0300.png
+SHOT s11-0600 -> output\traces\sweep-debug22/s11-0600.png
+SHOT s11-0900 -> output\traces\sweep-debug22/s11-0900.png
+SHOT s11-1200 -> output\traces\sweep-debug22/s11-1200.png
+SHOT s11-1340 -> output\traces\sweep-debug22/s11-1340.png
+STAGE 11 gameplay=1357 ok=1357 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=12 s=0 base=$C0
+SHOT s12-0300 -> output\traces\sweep-debug22/s12-0300.png
+SHOT s12-0600 -> output\traces\sweep-debug22/s12-0600.png
+SHOT s12-0900 -> output\traces\sweep-debug22/s12-0900.png
+SHOT s12-1200 -> output\traces\sweep-debug22/s12-1200.png
+SHOT s12-1340 -> output\traces\sweep-debug22/s12-1340.png
+STAGE 12 gameplay=1110 ok=1110 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=13 s=0 base=$C0
+SHOT s13-0300 -> output\traces\sweep-debug22/s13-0300.png
+SHOT s13-0600 -> output\traces\sweep-debug22/s13-0600.png
+SHOT s13-0900 -> output\traces\sweep-debug22/s13-0900.png
+SHOT s13-1200 -> output\traces\sweep-debug22/s13-1200.png
+SHOT s13-1340 -> output\traces\sweep-debug22/s13-1340.png
+STAGE 13 gameplay=1028 ok=1028 lostMax=0 noPalSpritesMax=14 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=14 s=0 base=$C0
+SHOT s14-0300 -> output\traces\sweep-debug22/s14-0300.png
+SHOT s14-0600 -> output\traces\sweep-debug22/s14-0600.png
+SHOT s14-0900 -> output\traces\sweep-debug22/s14-0900.png
+SHOT s14-1200 -> output\traces\sweep-debug22/s14-1200.png
+SHOT s14-1340 -> output\traces\sweep-debug22/s14-1340.png
+STAGE 14 gameplay=1343 ok=1343 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=15 s=0 base=$C0
+SHOT s15-0300 -> output\traces\sweep-debug22/s15-0300.png
+SHOT s15-0600 -> output\traces\sweep-debug22/s15-0600.png
+SHOT s15-0900 -> output\traces\sweep-debug22/s15-0900.png
+SHOT s15-1200 -> output\traces\sweep-debug22/s15-1200.png
+SHOT s15-1340 -> output\traces\sweep-debug22/s15-1340.png
+STAGE 15 gameplay=1349 ok=1349 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=16 s=0 base=$C0
+SHOT s16-0300 -> output\traces\sweep-debug22/s16-0300.png
+SHOT s16-0600 -> output\traces\sweep-debug22/s16-0600.png
+SHOT s16-0900 -> output\traces\sweep-debug22/s16-0900.png
+SHOT s16-1200 -> output\traces\sweep-debug22/s16-1200.png
+SHOT s16-1340 -> output\traces\sweep-debug22/s16-1340.png
+STAGE 16 gameplay=1106 ok=1106 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=17 s=0 base=$C0
+SHOT s17-0300 -> output\traces\sweep-debug22/s17-0300.png
+SHOT s17-0600 -> output\traces\sweep-debug22/s17-0600.png
+SHOT s17-0900 -> output\traces\sweep-debug22/s17-0900.png
+SHOT s17-1200 -> output\traces\sweep-debug22/s17-1200.png
+SHOT s17-1340 -> output\traces\sweep-debug22/s17-1340.png
+STAGE 17 gameplay=33 ok=33 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$C0
+SHOT s18-0300 -> output\traces\sweep-debug22/s18-0300.png
+SLOT stage=18 s=487 base=$C0
+SHOT s18-0600 -> output\traces\sweep-debug22/s18-0600.png
+SHOT s18-0900 -> output\traces\sweep-debug22/s18-0900.png
+SHOT s18-1200 -> output\traces\sweep-debug22/s18-1200.png
+SHOT s18-1340 -> output\traces\sweep-debug22/s18-1340.png
+STAGE 18 gameplay=953 ok=953 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=19 s=0 base=$C0
+SHOT s19-0300 -> output\traces\sweep-debug22/s19-0300.png
+SHOT s19-0600 -> output\traces\sweep-debug22/s19-0600.png
+SHOT s19-0900 -> output\traces\sweep-debug22/s19-0900.png
+SHOT s19-1200 -> output\traces\sweep-debug22/s19-1200.png
+SHOT s19-1340 -> output\traces\sweep-debug22/s19-1340.png
+STAGE 19 gameplay=1112 ok=1112 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=20 s=0 base=$C0
+SHOT s20-0300 -> output\traces\sweep-debug22/s20-0300.png
+SHOT s20-0600 -> output\traces\sweep-debug22/s20-0600.png
+SHOT s20-0900 -> output\traces\sweep-debug22/s20-0900.png
+SHOT s20-1200 -> output\traces\sweep-debug22/s20-1200.png
+SHOT s20-1340 -> output\traces\sweep-debug22/s20-1340.png
+STAGE 20 gameplay=1049 ok=1049 lostMax=0 noPalSpritesMax=2 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=21 s=0 base=$C0
+SHOT s21-0300 -> output\traces\sweep-debug22/s21-0300.png
+SHOT s21-0600 -> output\traces\sweep-debug22/s21-0600.png
+SHOT s21-0900 -> output\traces\sweep-debug22/s21-0900.png
+SHOT s21-1200 -> output\traces\sweep-debug22/s21-1200.png
+SHOT s21-1340 -> output\traces\sweep-debug22/s21-1340.png
+STAGE 21 gameplay=752 ok=752 lostMax=0 noPalSpritesMax=27 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=22 s=0 base=$C0
+DBGOAMDMA s=0 pc=81:C390 src=$00:0321 size=$0018 mode=$00
+DBGDMA s=34 pc=9D:AC7E src=$92:D1A2 size=$0100 cgramAddr=$000 055E=$82:D4AC
+DBGDMA s=34 pc=9D:ACB3 src=$85:9D80 size=$0020 cgramAddr=$080 055E=$82:D4AC
+DBGDMA s=34 pc=9D:ACB3 src=$85:9C60 size=$0020 cgramAddr=$090 055E=$82:D4AC
+DBGDMA s=34 pc=9D:ACB3 src=$85:9C80 size=$0020 cgramAddr=$0A0 055E=$82:D4AC
+DBGDMA s=34 pc=9D:ACB3 src=$85:9CA0 size=$0020 cgramAddr=$0B0 055E=$82:D4AC
+DBGDMA s=34 pc=9D:ACB3 src=$85:9CC0 size=$0020 cgramAddr=$0C0 055E=$82:D4AC
+DBGDMA s=34 pc=9D:ACB3 src=$85:9CE0 size=$0020 cgramAddr=$0D0 055E=$82:D4AC
+DBGDMA s=34 pc=9D:ACB3 src=$85:9DA0 size=$0020 cgramAddr=$0E0 055E=$82:D4AC
+DBGDMA s=34 pc=9D:ACB3 src=$85:9D40 size=$0020 cgramAddr=$0F0 055E=$82:D4AC
+SHOT s22-0300 -> output\traces\sweep-debug22/s22-0300.png
+DBGDMA s=342 pc=9D:AC7E src=$8B:C32A size=$0100 cgramAddr=$000 055E=$82:D6C0
+DBGDMA s=342 pc=9D:ACB3 src=$85:A5D8 size=$0020 cgramAddr=$080 055E=$82:D6C0
+DBGDMA s=342 pc=9D:ACB3 src=$85:9C60 size=$0020 cgramAddr=$090 055E=$82:D6C0
+DBGDMA s=342 pc=9D:ACB3 src=$85:A438 size=$0020 cgramAddr=$0A0 055E=$82:D6C0
+DBGDMA s=342 pc=9D:ACB3 src=$85:A5F8 size=$0020 cgramAddr=$0B0 055E=$82:D6C0
+DBGDMA s=342 pc=9D:ACB3 src=$85:9CC0 size=$0020 cgramAddr=$0C0 055E=$82:D6C0
+DBGDMA s=342 pc=9D:ACB3 src=$85:9EE0 size=$0020 cgramAddr=$0D0 055E=$82:D6C0
+DBGDMA s=342 pc=9D:ACB3 src=$85:A278 size=$0020 cgramAddr=$0E0 055E=$82:D6C0
+DBGDMA s=342 pc=9D:ACB3 src=$85:9E20 size=$0020 cgramAddr=$0F0 055E=$82:D6C0
+DBGOAM #000 x= 78 y= 89 tile=$28 pal=0 attr=$20
+DBGOAM #001 x= 77 y= 96 tile=$00 pal=4 attr=$28
+DBGOAM #002 x=109 y= 96 tile=$04 pal=4 attr=$28
+DBGOAM #003 x=109 y=112 tile=$24 pal=4 attr=$28
+DBGOAM #004 x=109 y=128 tile=$44 pal=4 attr=$28
+DBGOAM #005 x= 77 y=128 tile=$40 pal=4 attr=$28
+DBGOAM #006 x= 93 y=128 tile=$42 pal=4 attr=$28
+DBGPAL obj0 $80 0000 0018 00BD 017E 023E 02FF 03BF 61E0 6602 6A46 6E89 72ED 7331 7776 7BBA 7FFF
+DBGPAL obj1 $90 0000 001F 18C6 318C 0014 0010 001C 0004 0088 010C 0190 0214 0298 031C 339C 7BDE
+DBGPAL obj2 $A0 0000 2108 4210 6B5A 7BDE 000C 0012 0018 00DE 0000 0084 0906 194A 198A 220C 2A90
+DBGPAL obj3 $B0 0000 3B94 2ACE 220A 1186 0140 5A9C 7BDE 0000 731E 41D6 5A12 5190 494E 410C 38CA
+DBGPAL obj4 $C0 0000 49CE 5A52 6AD6 7B5A 7BDE 7EDB 7594 54AD 3447 0000 2C61 4CC3 6944 7DE7 7EAF
+DBGPAL obj5 $D0 0000 518C 6210 7294 7318 4298 3214 2190 0280 739C 039C 6318 4210 029C 019C 0148
+DBGPAL obj6 $E0 0000 0080 00C0 0100 0140 0180 01C0 0200 0280 018C 1110 1194 1218 029C 031C 039C
+DBGPAL obj7 $F0 0000 025E 021E 011E 009A 02DE 4298 429A 4ADA 531E 639E 0000 1150 090C 008A 7BDE

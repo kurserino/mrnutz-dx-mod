@@ -1,0 +1,94 @@
+# sweep-debug10 | exit=0 | rom=Mr. Nutz.runtime.sfc | state=level1-start.mss | DEBUG_STAGE=10
+LOAD ok=true
+SELECT stage=0 s=1
+SHOT s00-0300 -> output\traces\sweep-debug10/s00-0300.png
+SHOT s00-0600 -> output\traces\sweep-debug10/s00-0600.png
+SHOT s00-0900 -> output\traces\sweep-debug10/s00-0900.png
+SHOT s00-1200 -> output\traces\sweep-debug10/s00-1200.png
+SHOT s00-1340 -> output\traces\sweep-debug10/s00-1340.png
+STAGE 00 gameplay=1020 ok=1019 lostMax=1 nop4Max=1 foreign=0 reselect=1
+SHOT s01-0300 -> output\traces\sweep-debug10/s01-0300.png
+SHOT s01-0600 -> output\traces\sweep-debug10/s01-0600.png
+SHOT s01-0900 -> output\traces\sweep-debug10/s01-0900.png
+SHOT s01-1200 -> output\traces\sweep-debug10/s01-1200.png
+SHOT s01-1340 -> output\traces\sweep-debug10/s01-1340.png
+STAGE 01 gameplay=726 ok=726 lostMax=0 nop4Max=1 foreign=0 reselect=0
+SHOT s02-0300 -> output\traces\sweep-debug10/s02-0300.png
+SHOT s02-0600 -> output\traces\sweep-debug10/s02-0600.png
+SHOT s02-0900 -> output\traces\sweep-debug10/s02-0900.png
+SHOT s02-1200 -> output\traces\sweep-debug10/s02-1200.png
+SHOT s02-1340 -> output\traces\sweep-debug10/s02-1340.png
+STAGE 02 gameplay=1093 ok=1093 lostMax=0 nop4Max=1 foreign=0 reselect=0
+SHOT s03-0300 -> output\traces\sweep-debug10/s03-0300.png
+SHOT s03-0600 -> output\traces\sweep-debug10/s03-0600.png
+SHOT s03-0900 -> output\traces\sweep-debug10/s03-0900.png
+SHOT s03-1200 -> output\traces\sweep-debug10/s03-1200.png
+SHOT s03-1340 -> output\traces\sweep-debug10/s03-1340.png
+STAGE 03 gameplay=1130 ok=1130 lostMax=0 nop4Max=1 foreign=0 reselect=0
+SHOT s04-0300 -> output\traces\sweep-debug10/s04-0300.png
+SHOT s04-0600 -> output\traces\sweep-debug10/s04-0600.png
+SHOT s04-0900 -> output\traces\sweep-debug10/s04-0900.png
+SHOT s04-1200 -> output\traces\sweep-debug10/s04-1200.png
+SHOT s04-1340 -> output\traces\sweep-debug10/s04-1340.png
+STAGE 04 gameplay=33 ok=33 lostMax=0 nop4Max=0 foreign=0 reselect=0
+SHOT s05-0300 -> output\traces\sweep-debug10/s05-0300.png
+SHOT s05-0600 -> output\traces\sweep-debug10/s05-0600.png
+SHOT s05-0900 -> output\traces\sweep-debug10/s05-0900.png
+SHOT s05-1200 -> output\traces\sweep-debug10/s05-1200.png
+SHOT s05-1340 -> output\traces\sweep-debug10/s05-1340.png
+STAGE 05 gameplay=1118 ok=1118 lostMax=0 nop4Max=1 foreign=0 reselect=0
+SHOT s06-0300 -> output\traces\sweep-debug10/s06-0300.png
+SHOT s06-0600 -> output\traces\sweep-debug10/s06-0600.png
+SHOT s06-0900 -> output\traces\sweep-debug10/s06-0900.png
+SHOT s06-1200 -> output\traces\sweep-debug10/s06-1200.png
+SHOT s06-1340 -> output\traces\sweep-debug10/s06-1340.png
+STAGE 06 gameplay=929 ok=929 lostMax=0 nop4Max=1 foreign=0 reselect=0
+SHOT s07-0300 -> output\traces\sweep-debug10/s07-0300.png
+SELECT stage=7 s=416
+SHOT s07-0600 -> output\traces\sweep-debug10/s07-0600.png
+SHOT s07-0900 -> output\traces\sweep-debug10/s07-0900.png
+SHOT s07-1200 -> output\traces\sweep-debug10/s07-1200.png
+SHOT s07-1340 -> output\traces\sweep-debug10/s07-1340.png
+STAGE 07 gameplay=1057 ok=1056 lostMax=1 nop4Max=1 foreign=0 reselect=1
+SHOT s08-0300 -> output\traces\sweep-debug10/s08-0300.png
+SHOT s08-0600 -> output\traces\sweep-debug10/s08-0600.png
+SHOT s08-0900 -> output\traces\sweep-debug10/s08-0900.png
+SHOT s08-1200 -> output\traces\sweep-debug10/s08-1200.png
+SHOT s08-1340 -> output\traces\sweep-debug10/s08-1340.png
+STAGE 08 gameplay=1099 ok=1099 lostMax=0 nop4Max=1 foreign=0 reselect=0
+SHOT s09-0300 -> output\traces\sweep-debug10/s09-0300.png
+SHOT s09-0600 -> output\traces\sweep-debug10/s09-0600.png
+SHOT s09-0900 -> output\traces\sweep-debug10/s09-0900.png
+SHOT s09-1200 -> output\traces\sweep-debug10/s09-1200.png
+SHOT s09-1340 -> output\traces\sweep-debug10/s09-1340.png
+STAGE 09 gameplay=33 ok=33 lostMax=0 nop4Max=1 foreign=0 reselect=0
+SHOT s10-0300 -> output\traces\sweep-debug10/s10-0300.png
+DBGDMA s=325 pc=9D:AC7E src=$89:8000 size=$0100 cgramAddr=$000 055E=$82:D60C
+DBGDMA s=325 pc=9D:ACB3 src=$85:9CC0 size=$0020 cgramAddr=$080 055E=$82:D60C
+DBGDMA s=325 pc=9D:ACB3 src=$85:9C60 size=$0020 cgramAddr=$090 055E=$82:D60C
+DBGDMA s=325 pc=9D:ACB3 src=$85:9FE0 size=$0020 cgramAddr=$0A0 055E=$82:D60C
+DBGDMA s=325 pc=9D:ACB3 src=$85:A000 size=$0020 cgramAddr=$0B0 055E=$82:D60C
+DBGDMA s=325 pc=9D:ACB3 src=$85:A020 size=$0020 cgramAddr=$0C0 055E=$82:D60C
+DBGDMA s=325 pc=9D:ACB3 src=$85:9C1A size=$0020 cgramAddr=$0D0 055E=$82:D60C
+DBGDMA s=325 pc=9D:ACB3 src=$85:9C60 size=$0020 cgramAddr=$0E0 055E=$82:D60C
+DBGDMA s=325 pc=9D:ACB3 src=$85:A0A0 size=$0020 cgramAddr=$0F0 055E=$82:D60C
+FOREIGN stage=10 s=332 pal=0000 6982 69C4 6A04 7248 7288 728A 72CC 730E 7B10 7B52 7B4C 7B52 7B94 7BD8 7BDE
+SHOT s10-foreign -> output\traces\sweep-debug10/s10-foreign.png
+LOST stage=10 s=361 expected=7EDB/7EAF pal=0000 6982 69C4 6A04 7248 7288 728A 72CC 730E 7B10 7B52 7B4C 7B52 7B94 7BD8 7BDE
+SHOT s10-lost -> output\traces\sweep-debug10/s10-lost.png
+NOP4 stage=10 s=391
+SHOT s10-nop4 -> output\traces\sweep-debug10/s10-nop4.png
+DBGOAM #000 x=214 y=148 tile=$00 pal=0 attr=$20
+DBGOAM #001 x=246 y=148 tile=$04 pal=0 attr=$20
+DBGOAM #002 x=246 y=164 tile=$24 pal=0 attr=$20
+DBGOAM #003 x=246 y=180 tile=$44 pal=0 attr=$20
+DBGOAM #004 x=214 y=180 tile=$40 pal=0 attr=$20
+DBGOAM #005 x=230 y=180 tile=$42 pal=0 attr=$20
+DBGPAL obj0 $80 0000 49CE 5A52 6AD6 7B5A 7BDE 031A 0292 018A 00C8 0000 000E 0012 0016 001A 001E
+DBGPAL obj1 $90 0000 03FF 18C6 318C 0014 0010 001C 0004 0088 010C 0190 0214 0298 031C 339C 7BDE
+DBGPAL obj2 $A0 0000 21D2 114E 090C 00CA 0088 0046 0004 7A14 6992 410E 3256 21D0 2A96 2B1A 439E
+DBGPAL obj3 $B0 0000 4B9E 3B1A 3296 2A14 2190 194E 110C 10C6 0000 298C 3A10 4A94 5318 735A 7BDE
+DBGPAL obj4 $C0 0000 6982 69C4 6A04 7248 7288 728A 72CC 730E 7B10 7B52 7B4C 7B52 7B94 7BD8 7BDE
+DBGPAL obj5 $D0 0000 0000 7A94 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+DBGPAL obj6 $E0 0000 001E 18C6 318C 0014 0010 001C 0004 0088 010C 0190 0214 0298 031C 339C 7BDE
+DBGPAL obj7 $F0 0000 13DE 135C 1B1A 1A9A 1A58 1A16 19D4 3218 3A9A 6180 1800 3040 3880 4900 4B1C

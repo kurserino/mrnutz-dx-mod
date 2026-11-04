@@ -1,0 +1,32 @@
+{
+  "name": "mr-nutz-color-mod",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Spec-driven Mr. Nutz SNES palette research and IPS build toolkit",
+  "scripts": {
+    "rom:inspect": "tsx src/cli.ts inspect",
+    "palette:show": "tsx src/cli.ts palette",
+    "rom:header": "tsx src/cli.ts header",
+    "rom:disasm": "tsx src/cli.ts disasm",
+    "trace:palette": "tsx tools/mesen/run.ts tools/mesen/trace-palette.lua",
+    "trace:wram": "tsx tools/mesen/run.ts tools/mesen/trace-wram.lua",
+    "trace:hook": "tsx tools/mesen/run.ts tools/mesen/trace-hook-site.lua",
+    "runtime:build": "tsx src/cli.ts runtime",
+    "sweep:all": "tsx tools/mesen/sweep.ts",
+    "sweep:prepare": "tsx tools/mesen/sweep.ts --prepare",
+    "sweep:stage": "tsx tools/mesen/sweep.ts --only",
+    "research:sweep": "tsx tools/mesen/run.ts tools/mesen/research-sweep.lua --rom \"output/Mr. Nutz.runtime.sfc\" --state roms/states/level1-start.mss",
+    "verify:runtime": "tsx tools/mesen/run.ts tools/mesen/verify-runtime.lua --rom \"output/Mr. Nutz.runtime.sfc\"",
+    "patch:build": "tsx src/cli.ts build",
+    "patch:verify": "tsx src/cli.ts verify",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.0"
+  }
+}

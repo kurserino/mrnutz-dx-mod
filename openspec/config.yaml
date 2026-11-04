@@ -1,0 +1,28 @@
+schema: spec-driven
+context: |
+  Project: Mr. Nutz Color Mod, SNES ROM research and patch builder.
+  Stack: Node.js, TypeScript, IPS, BGR555 little-endian, 65C816 SNES LoROM.
+  Baseline patch builder is implemented. Runtime palette switching and in-game UI are NOT implemented.
+  User-provided ROM is private; never commit or redistribute it.
+  Work against only validated original ROM signatures. No speculative offsets or ASM injections.
+  See CLAUDE.md, docs/rom-map.md and docs/debugging-playbook.md.
+  Code/identifiers/comments in English. Project docs and explanations in Portuguese.
+rules:
+  proposal:
+    - State whether change is static palette pipeline or runtime ROM hack.
+    - Document emulator validation requirements and any unverified assumptions.
+  specs:
+    - Write testable requirements and Given/When/Then scenarios.
+    - Keep cross-palette effects and original-ROM integrity explicit.
+  design:
+    - Include exact CPU/ROM/CGRAM mapping, byte-level rollback, and Mesen trace references for any hook.
+  tasks:
+    - Include tests, ROM signature checking, ares/Mesen smoke test, and IPS regression verification.
+operations:
+  apply:
+    guidance:
+      - Do not mark any runtime ASM task done without emulator evidence.
+      - Run npm test, npm run typecheck and npm run patch:build.
+  archive:
+    guidance:
+      - Archive only after acceptance checks pass and specs reflect implemented functionality.

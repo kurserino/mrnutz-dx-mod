@@ -1,0 +1,137 @@
+# probe-warp | exit=0 | rom=Mr. Nutz.runtime.sfc | state=level1-start.mss
+LOAD ok=true
+ARM frame=20 1EC9=$01 01F4=$B5
+SHOT area0-334 -> output\traces\probe-warp/area0-334.png
+AREA idx=0 phase=334 01F4=$B4 056D=$01 01DC=$8357 C6=$031A CF=$001E idx=1/1
+ARM frame=380 1EC9=$01 01F4=$B4
+SHOT area1-334 -> output\traces\probe-warp/area1-334.png
+AREA idx=1 phase=334 01F4=$B5 056D=$01 01DC=$835B C6=$4FBF CF=$5A7F idx=1/1
+ARM frame=740 1EC9=$01 01F4=$B5
+SHOT area2-334 -> output\traces\probe-warp/area2-334.png
+AREA idx=2 phase=334 01F4=$B5 056D=$01 01DC=$8357 C6=$031A CF=$001E idx=1/1
+ARM frame=1100 1EC9=$01 01F4=$B5
+SHOT area3-334 -> output\traces\probe-warp/area3-334.png
+AREA idx=3 phase=334 01F4=$B5 056D=$01 01DC=$835B C6=$4FBF CF=$5A7F idx=1/1
+ARM frame=1460 1EC9=$01 01F4=$B6
+SHOT area4-334 -> output\traces\probe-warp/area4-334.png
+AREA idx=4 phase=334 01F4=$B5 056D=$01 01DC=$8357 C6=$031A CF=$001E idx=1/1
+ARM frame=1820 1EC9=$01 01F4=$B5
+SHOT area5-334 -> output\traces\probe-warp/area5-334.png
+AREA idx=5 phase=334 01F4=$B5 056D=$01 01DC=$835B C6=$4FBF CF=$5A7F idx=1/1
+ARM frame=2180 1EC9=$01 01F4=$B5
+SHOT area6-334 -> output\traces\probe-warp/area6-334.png
+AREA idx=6 phase=334 01F4=$B5 056D=$01 01DC=$8357 C6=$031A CF=$001E idx=1/1
+ARM frame=2540 1EC9=$01 01F4=$B5
+SHOT area7-334 -> output\traces\probe-warp/area7-334.png
+AREA idx=7 phase=334 01F4=$B5 056D=$01 01DC=$835B C6=$4FBF CF=$5A7F idx=1/1
+ARM frame=2900 1EC9=$01 01F4=$B5
+SHOT area8-334 -> output\traces\probe-warp/area8-334.png
+AREA idx=8 phase=334 01F4=$B5 056D=$01 01DC=$8357 C6=$031A CF=$001E idx=1/1
+ARM frame=3260 1EC9=$01 01F4=$B5
+SHOT area9-334 -> output\traces\probe-warp/area9-334.png
+AREA idx=9 phase=334 01F4=$B5 056D=$01 01DC=$8357 C6=$031A CF=$001E idx=1/1
+ARM frame=3620 1EC9=$01 01F4=$B5
+SHOT area10-334 -> output\traces\probe-warp/area10-334.png
+AREA idx=10 phase=334 01F4=$B5 056D=$01 01DC=$8357 C6=$031A CF=$001E idx=1/1
+ARM frame=3980 1EC9=$01 01F4=$B5
+SHOT area11-334 -> output\traces\probe-warp/area11-334.png
+AREA idx=11 phase=334 01F4=$B5 056D=$01 01DC=$8357 C6=$031A CF=$001E idx=1/1
+ARM frame=4340 1EC9=$01 01F4=$B5
+SHOT area12-334 -> output\traces\probe-warp/area12-334.png
+AREA idx=12 phase=334 01F4=$B5 056D=$01 01DC=$8357 C6=$031A CF=$001E idx=1/1
+ARM frame=4700 1EC9=$01 01F4=$B5
+SHOT area13-334 -> output\traces\probe-warp/area13-334.png
+AREA idx=13 phase=334 01F4=$B5 056D=$01 01DC=$8357 C6=$031A CF=$001E idx=1/1
+ARM frame=5060 1EC9=$01 01F4=$B5
+SHOT area14-334 -> output\traces\probe-warp/area14-334.png
+AREA idx=14 phase=334 01F4=$B5 056D=$01 01DC=$835B C6=$4FBF CF=$5A7F idx=1/1
+ARM frame=5420 1EC9=$01 01F4=$B6
+SHOT area15-334 -> output\traces\probe-warp/area15-334.png
+AREA idx=15 phase=334 01F4=$B4 056D=$01 01DC=$8357 C6=$031A CF=$001E idx=1/1
+ARM frame=5780 1EC9=$01 01F4=$B4
+SHOT area16-334 -> output\traces\probe-warp/area16-334.png
+AREA idx=16 phase=334 01F4=$B4 056D=$01 01DC=$835B C6=$4FBF CF=$5A7F idx=1/1
+ARM frame=6140 1EC9=$01 01F4=$B4
+SHOT area17-334 -> output\traces\probe-warp/area17-334.png
+AREA idx=17 phase=334 01F4=$B5 056D=$01 01DC=$8357 C6=$031A CF=$001E idx=1/1
+ARM frame=6500 1EC9=$01 01F4=$B5
+SHOT area18-334 -> output\traces\probe-warp/area18-334.png
+AREA idx=18 phase=334 01F4=$B5 056D=$01 01DC=$835B C6=$031A CF=$001E idx=0/0
+ARM frame=6860 1EC9=$01 01F4=$B5
+SHOT area19-334 -> output\traces\probe-warp/area19-334.png
+AREA idx=19 phase=334 01F4=$B5 056D=$01 01DC=$835B C6=$031A CF=$001E idx=0/0
+ARM frame=7220 1EC9=$01 01F4=$B5
+SHOT area20-334 -> output\traces\probe-warp/area20-334.png
+AREA idx=20 phase=334 01F4=$B5 056D=$01 01DC=$8357 C6=$031A CF=$001E idx=0/0
+ARM frame=7580 1EC9=$01 01F4=$B5
+SHOT area21-334 -> output\traces\probe-warp/area21-334.png
+AREA idx=21 phase=334 01F4=$B5 056D=$01 01DC=$8357 C6=$031A CF=$001E idx=0/0
+ARM frame=7940 1EC9=$01 01F4=$B5
+SHOT area22-334 -> output\traces\probe-warp/area22-334.png
+AREA idx=22 phase=334 01F4=$B5 056D=$01 01DC=$8357 C6=$031A CF=$001E idx=0/0
+ARM frame=8300 1EC9=$01 01F4=$B5
+SHOT area23-334 -> output\traces\probe-warp/area23-334.png
+AREA idx=23 phase=334 01F4=$B5 056D=$01 01DC=$8357 C6=$031A CF=$001E idx=0/0
+ARM frame=8660 1EC9=$01 01F4=$B5
+SHOT area24-334 -> output\traces\probe-warp/area24-334.png
+AREA idx=24 phase=334 01F4=$B5 056D=$01 01DC=$8357 C6=$031A CF=$001E idx=0/0
+ARM frame=9020 1EC9=$01 01F4=$B5
+SHOT area25-334 -> output\traces\probe-warp/area25-334.png
+AREA idx=25 phase=334 01F4=$B5 056D=$01 01DC=$8357 C6=$031A CF=$001E idx=0/0
+ARM frame=9380 1EC9=$01 01F4=$B5
+SHOT area26-334 -> output\traces\probe-warp/area26-334.png
+AREA idx=26 phase=334 01F4=$B5 056D=$01 01DC=$835B C6=$728A CF=$7BDE idx=0/0
+ARM frame=9740 1EC9=$01 01F4=$B5
+SHOT area27-334 -> output\traces\probe-warp/area27-334.png
+AREA idx=27 phase=334 01F4=$B4 056D=$01 01DC=$835B C6=$031A CF=$001E idx=0/0
+ARM frame=10100 1EC9=$01 01F4=$B4
+SHOT area28-334 -> output\traces\probe-warp/area28-334.png
+AREA idx=28 phase=334 01F4=$B5 056D=$01 01DC=$8357 C6=$031A CF=$001E idx=0/0
+ARM frame=10460 1EC9=$01 01F4=$B5
+SHOT area29-334 -> output\traces\probe-warp/area29-334.png
+AREA idx=29 phase=334 01F4=$B5 056D=$01 01DC=$835B C6=$031A CF=$001E idx=0/0
+ARM frame=10820 1EC9=$01 01F4=$B5
+SHOT area30-334 -> output\traces\probe-warp/area30-334.png
+AREA idx=30 phase=334 01F4=$B5 056D=$01 01DC=$835B C6=$031A CF=$001E idx=0/0
+ARM frame=11180 1EC9=$01 01F4=$B5
+SHOT area31-334 -> output\traces\probe-warp/area31-334.png
+AREA idx=31 phase=334 01F4=$B6 056D=$01 01DC=$835B C6=$031A CF=$001E idx=0/0
+ARM frame=11540 1EC9=$01 01F4=$B6
+SHOT area32-334 -> output\traces\probe-warp/area32-334.png
+AREA idx=32 phase=334 01F4=$B5 056D=$01 01DC=$835B C6=$031A CF=$001E idx=0/0
+ARM frame=11900 1EC9=$01 01F4=$B5
+SHOT area33-334 -> output\traces\probe-warp/area33-334.png
+AREA idx=33 phase=334 01F4=$B6 056D=$01 01DC=$835B C6=$031A CF=$001E idx=0/0
+ARM frame=12260 1EC9=$01 01F4=$B6
+SHOT area34-334 -> output\traces\probe-warp/area34-334.png
+AREA idx=34 phase=334 01F4=$B5 056D=$01 01DC=$835B C6=$031A CF=$001E idx=0/0
+ARM frame=12620 1EC9=$01 01F4=$B5
+SHOT area35-334 -> output\traces\probe-warp/area35-334.png
+AREA idx=35 phase=334 01F4=$B5 056D=$01 01DC=$8357 C6=$031A CF=$001E idx=0/0
+ARM frame=12980 1EC9=$01 01F4=$B5
+SHOT area36-334 -> output\traces\probe-warp/area36-334.png
+AREA idx=36 phase=334 01F4=$B5 056D=$01 01DC=$8357 C6=$031A CF=$001E idx=0/0
+ARM frame=13340 1EC9=$01 01F4=$B5
+SHOT area37-334 -> output\traces\probe-warp/area37-334.png
+AREA idx=37 phase=334 01F4=$B5 056D=$01 01DC=$8357 C6=$031A CF=$001E idx=0/0
+ARM frame=13700 1EC9=$01 01F4=$B5
+SHOT area38-334 -> output\traces\probe-warp/area38-334.png
+AREA idx=38 phase=334 01F4=$B5 056D=$01 01DC=$8357 C6=$031A CF=$001E idx=0/0
+ARM frame=14060 1EC9=$01 01F4=$B5
+SHOT area39-334 -> output\traces\probe-warp/area39-334.png
+AREA idx=39 phase=334 01F4=$B5 056D=$01 01DC=$8357 C6=$031A CF=$001E idx=0/0
+ARM frame=14420 1EC9=$01 01F4=$B5
+SHOT area40-334 -> output\traces\probe-warp/area40-334.png
+AREA idx=40 phase=334 01F4=$B5 056D=$01 01DC=$8357 C6=$031A CF=$001E idx=0/0
+ARM frame=14780 1EC9=$01 01F4=$B5
+SHOT area41-334 -> output\traces\probe-warp/area41-334.png
+AREA idx=41 phase=334 01F4=$B5 056D=$01 01DC=$835B C6=$031A CF=$001E idx=0/0
+ARM frame=15140 1EC9=$01 01F4=$B6
+SHOT area42-334 -> output\traces\probe-warp/area42-334.png
+AREA idx=42 phase=334 01F4=$B4 056D=$01 01DC=$8357 C6=$031A CF=$001E idx=0/0
+ARM frame=15500 1EC9=$01 01F4=$B4
+SHOT area43-334 -> output\traces\probe-warp/area43-334.png
+AREA idx=43 phase=334 01F4=$B5 056D=$01 01DC=$835B C6=$031A CF=$001E idx=0/0
+ARM frame=15860 1EC9=$01 01F4=$B5
+SHOT area44-334 -> output\traces\probe-warp/area44-334.png
+AREA idx=44 phase=334 01F4=$B5 056D=$01 01DC=$8357 C6=$031A CF=$001E idx=0/0

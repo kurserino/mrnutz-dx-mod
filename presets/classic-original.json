@@ -1,0 +1,4 @@
+{
+  "name": "Reference Only - use ROM original as canonical source",
+  "note": "Not a build preset. Original values are encoded in src/core.ts."
+}

@@ -1,0 +1,527 @@
+# sweep-wram | exit=0 signal=- | rom=Mr. Nutz.runtime.sfc | state=level1-start.mss | WRAM_SCAN=1
+LOAD ok=true
+SELECT stage=0 s=1
+SLOT stage=0 s=1 base=$C0
+SHOT s00-0300 -> output\traces\sweep-wram/s00-0300.png
+SHOT s00-0600 -> output\traces\sweep-wram/s00-0600.png
+SHOT s00-0900 -> output\traces\sweep-wram/s00-0900.png
+SHOT s00-1200 -> output\traces\sweep-wram/s00-1200.png
+SHOT s00-1340 -> output\traces\sweep-wram/s00-1340.png
+STAGE 00 gameplay=1020 ok=1019 lostMax=1 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=1 slot=$C0
+SLOT stage=1 s=0 base=$C0
+SHOT s01-0300 -> output\traces\sweep-wram/s01-0300.png
+SHOT s01-0600 -> output\traces\sweep-wram/s01-0600.png
+SHOT s01-0900 -> output\traces\sweep-wram/s01-0900.png
+SHOT s01-1200 -> output\traces\sweep-wram/s01-1200.png
+SHOT s01-1340 -> output\traces\sweep-wram/s01-1340.png
+STAGE 01 gameplay=871 ok=871 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=2 s=0 base=$C0
+SHOT s02-0300 -> output\traces\sweep-wram/s02-0300.png
+SHOT s02-0600 -> output\traces\sweep-wram/s02-0600.png
+SHOT s02-0900 -> output\traces\sweep-wram/s02-0900.png
+SHOT s02-1200 -> output\traces\sweep-wram/s02-1200.png
+SHOT s02-1340 -> output\traces\sweep-wram/s02-1340.png
+STAGE 02 gameplay=1093 ok=1093 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=3 s=0 base=$C0
+SHOT s03-0300 -> output\traces\sweep-wram/s03-0300.png
+SHOT s03-0600 -> output\traces\sweep-wram/s03-0600.png
+SHOT s03-0900 -> output\traces\sweep-wram/s03-0900.png
+SHOT s03-1200 -> output\traces\sweep-wram/s03-1200.png
+SHOT s03-1340 -> output\traces\sweep-wram/s03-1340.png
+STAGE 03 gameplay=1070 ok=1070 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=4 s=0 base=$C0
+SHOT s04-0300 -> output\traces\sweep-wram/s04-0300.png
+SHOT s04-0600 -> output\traces\sweep-wram/s04-0600.png
+SHOT s04-0900 -> output\traces\sweep-wram/s04-0900.png
+SHOT s04-1200 -> output\traces\sweep-wram/s04-1200.png
+SHOT s04-1340 -> output\traces\sweep-wram/s04-1340.png
+STAGE 04 gameplay=33 ok=33 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$C0
+SHOT s05-0300 -> output\traces\sweep-wram/s05-0300.png
+SLOT stage=5 s=338 base=$C0
+SHOT s05-0600 -> output\traces\sweep-wram/s05-0600.png
+SHOT s05-0900 -> output\traces\sweep-wram/s05-0900.png
+SHOT s05-1200 -> output\traces\sweep-wram/s05-1200.png
+SHOT s05-1340 -> output\traces\sweep-wram/s05-1340.png
+STAGE 05 gameplay=1102 ok=1102 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=6 s=0 base=$C0
+SHOT s06-0300 -> output\traces\sweep-wram/s06-0300.png
+SHOT s06-0600 -> output\traces\sweep-wram/s06-0600.png
+SHOT s06-0900 -> output\traces\sweep-wram/s06-0900.png
+SHOT s06-1200 -> output\traces\sweep-wram/s06-1200.png
+SHOT s06-1340 -> output\traces\sweep-wram/s06-1340.png
+STAGE 06 gameplay=1101 ok=1101 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=7 s=0 base=$C0
+SHOT s07-0300 -> output\traces\sweep-wram/s07-0300.png
+SELECT stage=7 s=416
+SHOT s07-0600 -> output\traces\sweep-wram/s07-0600.png
+SELECT stage=7 s=761
+SHOT s07-0900 -> output\traces\sweep-wram/s07-0900.png
+SELECT stage=7 s=1121
+SHOT s07-1200 -> output\traces\sweep-wram/s07-1200.png
+SHOT s07-1340 -> output\traces\sweep-wram/s07-1340.png
+STAGE 07 gameplay=1117 ok=1114 lostMax=1 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=3 slot=$C0
+SLOT stage=8 s=0 base=$C0
+SHOT s08-0300 -> output\traces\sweep-wram/s08-0300.png
+SHOT s08-0600 -> output\traces\sweep-wram/s08-0600.png
+SHOT s08-0900 -> output\traces\sweep-wram/s08-0900.png
+SHOT s08-1200 -> output\traces\sweep-wram/s08-1200.png
+SHOT s08-1340 -> output\traces\sweep-wram/s08-1340.png
+STAGE 08 gameplay=1099 ok=1099 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=9 s=0 base=$C0
+SHOT s09-0300 -> output\traces\sweep-wram/s09-0300.png
+SHOT s09-0600 -> output\traces\sweep-wram/s09-0600.png
+SHOT s09-0900 -> output\traces\sweep-wram/s09-0900.png
+SHOT s09-1200 -> output\traces\sweep-wram/s09-1200.png
+SHOT s09-1340 -> output\traces\sweep-wram/s09-1340.png
+STAGE 09 gameplay=33 ok=33 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$C0
+SHOT s10-0300 -> output\traces\sweep-wram/s10-0300.png
+SLOT stage=10 s=332 base=$80
+SHOT s10-0600 -> output\traces\sweep-wram/s10-0600.png
+SHOT s10-0900 -> output\traces\sweep-wram/s10-0900.png
+SHOT s10-1200 -> output\traces\sweep-wram/s10-1200.png
+SHOT s10-1340 -> output\traces\sweep-wram/s10-1340.png
+STAGE 10 gameplay=1108 ok=1108 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$80
+SLOT stage=11 s=0 base=$80
+SLOT stage=11 s=116 base=$C0
+SHOT s11-0300 -> output\traces\sweep-wram/s11-0300.png
+SHOT s11-0600 -> output\traces\sweep-wram/s11-0600.png
+SHOT s11-0900 -> output\traces\sweep-wram/s11-0900.png
+SHOT s11-1200 -> output\traces\sweep-wram/s11-1200.png
+SHOT s11-1340 -> output\traces\sweep-wram/s11-1340.png
+STAGE 11 gameplay=1357 ok=1357 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=12 s=0 base=$C0
+SHOT s12-0300 -> output\traces\sweep-wram/s12-0300.png
+SHOT s12-0600 -> output\traces\sweep-wram/s12-0600.png
+SHOT s12-0900 -> output\traces\sweep-wram/s12-0900.png
+SHOT s12-1200 -> output\traces\sweep-wram/s12-1200.png
+SHOT s12-1340 -> output\traces\sweep-wram/s12-1340.png
+STAGE 12 gameplay=1110 ok=1110 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=13 s=0 base=$C0
+SHOT s13-0300 -> output\traces\sweep-wram/s13-0300.png
+SHOT s13-0600 -> output\traces\sweep-wram/s13-0600.png
+SHOT s13-0900 -> output\traces\sweep-wram/s13-0900.png
+SHOT s13-1200 -> output\traces\sweep-wram/s13-1200.png
+SHOT s13-1340 -> output\traces\sweep-wram/s13-1340.png
+STAGE 13 gameplay=1028 ok=1028 lostMax=0 noPalSpritesMax=14 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=14 s=0 base=$C0
+SHOT s14-0300 -> output\traces\sweep-wram/s14-0300.png
+SHOT s14-0600 -> output\traces\sweep-wram/s14-0600.png
+SHOT s14-0900 -> output\traces\sweep-wram/s14-0900.png
+SHOT s14-1200 -> output\traces\sweep-wram/s14-1200.png
+SHOT s14-1340 -> output\traces\sweep-wram/s14-1340.png
+STAGE 14 gameplay=1343 ok=1343 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=15 s=0 base=$C0
+SHOT s15-0300 -> output\traces\sweep-wram/s15-0300.png
+SHOT s15-0600 -> output\traces\sweep-wram/s15-0600.png
+SHOT s15-0900 -> output\traces\sweep-wram/s15-0900.png
+SHOT s15-1200 -> output\traces\sweep-wram/s15-1200.png
+SHOT s15-1340 -> output\traces\sweep-wram/s15-1340.png
+STAGE 15 gameplay=1349 ok=1349 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=16 s=0 base=$C0
+SHOT s16-0300 -> output\traces\sweep-wram/s16-0300.png
+SHOT s16-0600 -> output\traces\sweep-wram/s16-0600.png
+SHOT s16-0900 -> output\traces\sweep-wram/s16-0900.png
+SHOT s16-1200 -> output\traces\sweep-wram/s16-1200.png
+SHOT s16-1340 -> output\traces\sweep-wram/s16-1340.png
+STAGE 16 gameplay=1106 ok=1106 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=17 s=0 base=$C0
+SHOT s17-0300 -> output\traces\sweep-wram/s17-0300.png
+SHOT s17-0600 -> output\traces\sweep-wram/s17-0600.png
+SHOT s17-0900 -> output\traces\sweep-wram/s17-0900.png
+SHOT s17-1200 -> output\traces\sweep-wram/s17-1200.png
+SHOT s17-1340 -> output\traces\sweep-wram/s17-1340.png
+STAGE 17 gameplay=33 ok=33 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$C0
+SHOT s18-0300 -> output\traces\sweep-wram/s18-0300.png
+SLOT stage=18 s=487 base=$C0
+SHOT s18-0600 -> output\traces\sweep-wram/s18-0600.png
+SHOT s18-0900 -> output\traces\sweep-wram/s18-0900.png
+SHOT s18-1200 -> output\traces\sweep-wram/s18-1200.png
+SHOT s18-1340 -> output\traces\sweep-wram/s18-1340.png
+STAGE 18 gameplay=953 ok=953 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=19 s=0 base=$C0
+SHOT s19-0300 -> output\traces\sweep-wram/s19-0300.png
+SHOT s19-0600 -> output\traces\sweep-wram/s19-0600.png
+SHOT s19-0900 -> output\traces\sweep-wram/s19-0900.png
+SHOT s19-1200 -> output\traces\sweep-wram/s19-1200.png
+SHOT s19-1340 -> output\traces\sweep-wram/s19-1340.png
+STAGE 19 gameplay=1112 ok=1112 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=20 s=0 base=$C0
+SHOT s20-0300 -> output\traces\sweep-wram/s20-0300.png
+SHOT s20-0600 -> output\traces\sweep-wram/s20-0600.png
+SHOT s20-0900 -> output\traces\sweep-wram/s20-0900.png
+SHOT s20-1200 -> output\traces\sweep-wram/s20-1200.png
+SHOT s20-1340 -> output\traces\sweep-wram/s20-1340.png
+STAGE 20 gameplay=1049 ok=1049 lostMax=0 noPalSpritesMax=2 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=21 s=0 base=$C0
+SHOT s21-0300 -> output\traces\sweep-wram/s21-0300.png
+SHOT s21-0600 -> output\traces\sweep-wram/s21-0600.png
+SHOT s21-0900 -> output\traces\sweep-wram/s21-0900.png
+SHOT s21-1200 -> output\traces\sweep-wram/s21-1200.png
+SHOT s21-1340 -> output\traces\sweep-wram/s21-1340.png
+STAGE 21 gameplay=752 ok=752 lostMax=0 noPalSpritesMax=27 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=22 s=0 base=$C0
+SHOT s22-0300 -> output\traces\sweep-wram/s22-0300.png
+SHOT s22-0600 -> output\traces\sweep-wram/s22-0600.png
+SHOT s22-0900 -> output\traces\sweep-wram/s22-0900.png
+SHOT s22-1200 -> output\traces\sweep-wram/s22-1200.png
+SHOT s22-1340 -> output\traces\sweep-wram/s22-1340.png
+STAGE 22 gameplay=1002 ok=1002 lostMax=0 noPalSpritesMax=32 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=23 s=0 base=$C0
+SHOT s23-0300 -> output\traces\sweep-wram/s23-0300.png
+SHOT s23-0600 -> output\traces\sweep-wram/s23-0600.png
+SHOT s23-0900 -> output\traces\sweep-wram/s23-0900.png
+SHOT s23-1200 -> output\traces\sweep-wram/s23-1200.png
+SHOT s23-1340 -> output\traces\sweep-wram/s23-1340.png
+STAGE 23 gameplay=1023 ok=1023 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=24 s=0 base=$C0
+SHOT s24-0300 -> output\traces\sweep-wram/s24-0300.png
+SHOT s24-0600 -> output\traces\sweep-wram/s24-0600.png
+SHOT s24-0900 -> output\traces\sweep-wram/s24-0900.png
+SHOT s24-1200 -> output\traces\sweep-wram/s24-1200.png
+SHOT s24-1340 -> output\traces\sweep-wram/s24-1340.png
+STAGE 24 gameplay=33 ok=33 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$C0
+SHOT s25-0300 -> output\traces\sweep-wram/s25-0300.png
+SLOT stage=25 s=481 base=$C0
+SHOT s25-0600 -> output\traces\sweep-wram/s25-0600.png
+SHOT s25-0900 -> output\traces\sweep-wram/s25-0900.png
+SHOT s25-1200 -> output\traces\sweep-wram/s25-1200.png
+SHOT s25-1340 -> output\traces\sweep-wram/s25-1340.png
+STAGE 25 gameplay=959 ok=959 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=26 s=0 base=$C0
+SHOT s26-0300 -> output\traces\sweep-wram/s26-0300.png
+SHOT s26-0600 -> output\traces\sweep-wram/s26-0600.png
+SHOT s26-0900 -> output\traces\sweep-wram/s26-0900.png
+SHOT s26-1200 -> output\traces\sweep-wram/s26-1200.png
+SHOT s26-1340 -> output\traces\sweep-wram/s26-1340.png
+STAGE 26 gameplay=1068 ok=1068 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=27 s=0 base=$C0
+SHOT s27-0300 -> output\traces\sweep-wram/s27-0300.png
+SHOT s27-0600 -> output\traces\sweep-wram/s27-0600.png
+SHOT s27-0900 -> output\traces\sweep-wram/s27-0900.png
+SHOT s27-1200 -> output\traces\sweep-wram/s27-1200.png
+SHOT s27-1340 -> output\traces\sweep-wram/s27-1340.png
+STAGE 27 gameplay=1073 ok=1073 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=28 s=0 base=$C0
+SHOT s28-0300 -> output\traces\sweep-wram/s28-0300.png
+SHOT s28-0600 -> output\traces\sweep-wram/s28-0600.png
+SHOT s28-0900 -> output\traces\sweep-wram/s28-0900.png
+SHOT s28-1200 -> output\traces\sweep-wram/s28-1200.png
+SHOT s28-1340 -> output\traces\sweep-wram/s28-1340.png
+STAGE 28 gameplay=1056 ok=1056 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=29 s=0 base=$C0
+SHOT s29-0300 -> output\traces\sweep-wram/s29-0300.png
+SHOT s29-0600 -> output\traces\sweep-wram/s29-0600.png
+SHOT s29-0900 -> output\traces\sweep-wram/s29-0900.png
+SHOT s29-1200 -> output\traces\sweep-wram/s29-1200.png
+SHOT s29-1340 -> output\traces\sweep-wram/s29-1340.png
+STAGE 29 gameplay=33 ok=33 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$C0
+SHOT s30-0300 -> output\traces\sweep-wram/s30-0300.png
+SLOT stage=30 s=385 base=$C0
+SHOT s30-0600 -> output\traces\sweep-wram/s30-0600.png
+SHOT s30-0900 -> output\traces\sweep-wram/s30-0900.png
+SHOT s30-1200 -> output\traces\sweep-wram/s30-1200.png
+SHOT s30-1340 -> output\traces\sweep-wram/s30-1340.png
+STAGE 30 gameplay=1115 ok=1115 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=31 s=0 base=$C0
+SHOT s31-0300 -> output\traces\sweep-wram/s31-0300.png
+SHOT s31-0600 -> output\traces\sweep-wram/s31-0600.png
+SHOT s31-0900 -> output\traces\sweep-wram/s31-0900.png
+SHOT s31-1200 -> output\traces\sweep-wram/s31-1200.png
+SHOT s31-1340 -> output\traces\sweep-wram/s31-1340.png
+STAGE 31 gameplay=1366 ok=1366 lostMax=0 noPalSpritesMax=29 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=32 s=0 base=$C0
+SHOT s32-0300 -> output\traces\sweep-wram/s32-0300.png
+SHOT s32-0600 -> output\traces\sweep-wram/s32-0600.png
+SHOT s32-0900 -> output\traces\sweep-wram/s32-0900.png
+SHOT s32-1200 -> output\traces\sweep-wram/s32-1200.png
+SHOT s32-1340 -> output\traces\sweep-wram/s32-1340.png
+STAGE 32 gameplay=1077 ok=1077 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=33 s=0 base=$C0
+SHOT s33-0300 -> output\traces\sweep-wram/s33-0300.png
+SHOT s33-0600 -> output\traces\sweep-wram/s33-0600.png
+SHOT s33-0900 -> output\traces\sweep-wram/s33-0900.png
+SHOT s33-1200 -> output\traces\sweep-wram/s33-1200.png
+SHOT s33-1340 -> output\traces\sweep-wram/s33-1340.png
+STAGE 33 gameplay=1072 ok=1072 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=34 s=0 base=$C0
+SHOT s34-0300 -> output\traces\sweep-wram/s34-0300.png
+SHOT s34-0600 -> output\traces\sweep-wram/s34-0600.png
+SHOT s34-0900 -> output\traces\sweep-wram/s34-0900.png
+SHOT s34-1200 -> output\traces\sweep-wram/s34-1200.png
+SHOT s34-1340 -> output\traces\sweep-wram/s34-1340.png
+STAGE 34 gameplay=842 ok=842 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=35 s=0 base=$C0
+SHOT s35-0300 -> output\traces\sweep-wram/s35-0300.png
+SHOT s35-0600 -> output\traces\sweep-wram/s35-0600.png
+SHOT s35-0900 -> output\traces\sweep-wram/s35-0900.png
+SHOT s35-1200 -> output\traces\sweep-wram/s35-1200.png
+SHOT s35-1340 -> output\traces\sweep-wram/s35-1340.png
+STAGE 35 gameplay=1261 ok=1261 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=36 s=0 base=$C0
+SHOT s36-0300 -> output\traces\sweep-wram/s36-0300.png
+SHOT s36-0600 -> output\traces\sweep-wram/s36-0600.png
+SHOT s36-0900 -> output\traces\sweep-wram/s36-0900.png
+SHOT s36-1200 -> output\traces\sweep-wram/s36-1200.png
+SHOT s36-1340 -> output\traces\sweep-wram/s36-1340.png
+STAGE 36 gameplay=1294 ok=1294 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=37 s=0 base=$C0
+SHOT s37-0300 -> output\traces\sweep-wram/s37-0300.png
+SHOT s37-0600 -> output\traces\sweep-wram/s37-0600.png
+SHOT s37-0900 -> output\traces\sweep-wram/s37-0900.png
+SHOT s37-1200 -> output\traces\sweep-wram/s37-1200.png
+SHOT s37-1340 -> output\traces\sweep-wram/s37-1340.png
+STAGE 37 gameplay=261 ok=261 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=38 s=0 base=$C0
+SHOT s38-0300 -> output\traces\sweep-wram/s38-0300.png
+SHOT s38-0600 -> output\traces\sweep-wram/s38-0600.png
+SHOT s38-0900 -> output\traces\sweep-wram/s38-0900.png
+SHOT s38-1200 -> output\traces\sweep-wram/s38-1200.png
+SHOT s38-1340 -> output\traces\sweep-wram/s38-1340.png
+STAGE 38 gameplay=310 ok=310 lostMax=0 noPalSpritesMax=13 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=39 s=0 base=$C0
+SHOT s39-0300 -> output\traces\sweep-wram/s39-0300.png
+SHOT s39-0600 -> output\traces\sweep-wram/s39-0600.png
+SHOT s39-0900 -> output\traces\sweep-wram/s39-0900.png
+SHOT s39-1200 -> output\traces\sweep-wram/s39-1200.png
+SHOT s39-1340 -> output\traces\sweep-wram/s39-1340.png
+STAGE 39 gameplay=356 ok=356 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=40 s=0 base=$C0
+SHOT s40-0300 -> output\traces\sweep-wram/s40-0300.png
+SHOT s40-0600 -> output\traces\sweep-wram/s40-0600.png
+SHOT s40-0900 -> output\traces\sweep-wram/s40-0900.png
+SHOT s40-1200 -> output\traces\sweep-wram/s40-1200.png
+SHOT s40-1340 -> output\traces\sweep-wram/s40-1340.png
+STAGE 40 gameplay=371 ok=371 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=41 s=0 base=$C0
+SHOT s41-0300 -> output\traces\sweep-wram/s41-0300.png
+SHOT s41-0600 -> output\traces\sweep-wram/s41-0600.png
+SHOT s41-0900 -> output\traces\sweep-wram/s41-0900.png
+SHOT s41-1200 -> output\traces\sweep-wram/s41-1200.png
+SHOT s41-1340 -> output\traces\sweep-wram/s41-1340.png
+STAGE 41 gameplay=269 ok=269 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=42 s=0 base=$C0
+SHOT s42-0300 -> output\traces\sweep-wram/s42-0300.png
+SHOT s42-0600 -> output\traces\sweep-wram/s42-0600.png
+SHOT s42-0900 -> output\traces\sweep-wram/s42-0900.png
+SHOT s42-1200 -> output\traces\sweep-wram/s42-1200.png
+SHOT s42-1340 -> output\traces\sweep-wram/s42-1340.png
+STAGE 42 gameplay=418 ok=418 lostMax=0 noPalSpritesMax=30 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=43 s=0 base=$C0
+SHOT s43-0300 -> output\traces\sweep-wram/s43-0300.png
+SHOT s43-0600 -> output\traces\sweep-wram/s43-0600.png
+SHOT s43-0900 -> output\traces\sweep-wram/s43-0900.png
+SHOT s43-1200 -> output\traces\sweep-wram/s43-1200.png
+SHOT s43-1340 -> output\traces\sweep-wram/s43-1340.png
+STAGE 43 gameplay=272 ok=272 lostMax=0 noPalSpritesMax=1 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=44 s=79 base=$C0
+SHOT s44-0300 -> output\traces\sweep-wram/s44-0300.png
+SHOT s44-0600 -> output\traces\sweep-wram/s44-0600.png
+SHOT s44-0900 -> output\traces\sweep-wram/s44-0900.png
+SHOT s44-1200 -> output\traces\sweep-wram/s44-1200.png
+SHOT s44-1340 -> output\traces\sweep-wram/s44-1340.png
+STAGE 44 gameplay=1127 ok=1127 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$C0
+SLOT stage=45 s=0 base=$C0
+SHOT s45-0300 -> output\traces\sweep-wram/s45-0300.png
+SHOT s45-0600 -> output\traces\sweep-wram/s45-0600.png
+SHOT s45-0900 -> output\traces\sweep-wram/s45-0900.png
+SHOT s45-1200 -> output\traces\sweep-wram/s45-1200.png
+SHOT s45-1340 -> output\traces\sweep-wram/s45-1340.png
+STAGE 45 gameplay=33 ok=33 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$C0
+SHOT s46-0300 -> output\traces\sweep-wram/s46-0300.png
+SHOT s46-0600 -> output\traces\sweep-wram/s46-0600.png
+SHOT s46-0900 -> output\traces\sweep-wram/s46-0900.png
+SHOT s46-1200 -> output\traces\sweep-wram/s46-1200.png
+SHOT s46-1340 -> output\traces\sweep-wram/s46-1340.png
+STAGE 46 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s47-0300 -> output\traces\sweep-wram/s47-0300.png
+SHOT s47-0600 -> output\traces\sweep-wram/s47-0600.png
+SHOT s47-0900 -> output\traces\sweep-wram/s47-0900.png
+SHOT s47-1200 -> output\traces\sweep-wram/s47-1200.png
+SHOT s47-1340 -> output\traces\sweep-wram/s47-1340.png
+STAGE 47 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s48-0300 -> output\traces\sweep-wram/s48-0300.png
+SHOT s48-0600 -> output\traces\sweep-wram/s48-0600.png
+SHOT s48-0900 -> output\traces\sweep-wram/s48-0900.png
+SHOT s48-1200 -> output\traces\sweep-wram/s48-1200.png
+SHOT s48-1340 -> output\traces\sweep-wram/s48-1340.png
+STAGE 48 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s49-0300 -> output\traces\sweep-wram/s49-0300.png
+SHOT s49-0600 -> output\traces\sweep-wram/s49-0600.png
+SHOT s49-0900 -> output\traces\sweep-wram/s49-0900.png
+SHOT s49-1200 -> output\traces\sweep-wram/s49-1200.png
+SHOT s49-1340 -> output\traces\sweep-wram/s49-1340.png
+STAGE 49 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s50-0300 -> output\traces\sweep-wram/s50-0300.png
+SHOT s50-0600 -> output\traces\sweep-wram/s50-0600.png
+SHOT s50-0900 -> output\traces\sweep-wram/s50-0900.png
+SHOT s50-1200 -> output\traces\sweep-wram/s50-1200.png
+SHOT s50-1340 -> output\traces\sweep-wram/s50-1340.png
+STAGE 50 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s51-0300 -> output\traces\sweep-wram/s51-0300.png
+SHOT s51-0600 -> output\traces\sweep-wram/s51-0600.png
+SHOT s51-0900 -> output\traces\sweep-wram/s51-0900.png
+SHOT s51-1200 -> output\traces\sweep-wram/s51-1200.png
+SHOT s51-1340 -> output\traces\sweep-wram/s51-1340.png
+STAGE 51 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s52-0300 -> output\traces\sweep-wram/s52-0300.png
+SHOT s52-0600 -> output\traces\sweep-wram/s52-0600.png
+SHOT s52-0900 -> output\traces\sweep-wram/s52-0900.png
+SHOT s52-1200 -> output\traces\sweep-wram/s52-1200.png
+SHOT s52-1340 -> output\traces\sweep-wram/s52-1340.png
+STAGE 52 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s53-0300 -> output\traces\sweep-wram/s53-0300.png
+SHOT s53-0600 -> output\traces\sweep-wram/s53-0600.png
+SHOT s53-0900 -> output\traces\sweep-wram/s53-0900.png
+SHOT s53-1200 -> output\traces\sweep-wram/s53-1200.png
+SHOT s53-1340 -> output\traces\sweep-wram/s53-1340.png
+STAGE 53 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s54-0300 -> output\traces\sweep-wram/s54-0300.png
+SHOT s54-0600 -> output\traces\sweep-wram/s54-0600.png
+SHOT s54-0900 -> output\traces\sweep-wram/s54-0900.png
+SHOT s54-1200 -> output\traces\sweep-wram/s54-1200.png
+SHOT s54-1340 -> output\traces\sweep-wram/s54-1340.png
+STAGE 54 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s55-0300 -> output\traces\sweep-wram/s55-0300.png
+SHOT s55-0600 -> output\traces\sweep-wram/s55-0600.png
+SHOT s55-0900 -> output\traces\sweep-wram/s55-0900.png
+SHOT s55-1200 -> output\traces\sweep-wram/s55-1200.png
+SHOT s55-1340 -> output\traces\sweep-wram/s55-1340.png
+STAGE 55 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s56-0300 -> output\traces\sweep-wram/s56-0300.png
+SHOT s56-0600 -> output\traces\sweep-wram/s56-0600.png
+SHOT s56-0900 -> output\traces\sweep-wram/s56-0900.png
+SHOT s56-1200 -> output\traces\sweep-wram/s56-1200.png
+SHOT s56-1340 -> output\traces\sweep-wram/s56-1340.png
+STAGE 56 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s57-0300 -> output\traces\sweep-wram/s57-0300.png
+SHOT s57-0600 -> output\traces\sweep-wram/s57-0600.png
+SHOT s57-0900 -> output\traces\sweep-wram/s57-0900.png
+SHOT s57-1200 -> output\traces\sweep-wram/s57-1200.png
+SHOT s57-1340 -> output\traces\sweep-wram/s57-1340.png
+STAGE 57 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s58-0300 -> output\traces\sweep-wram/s58-0300.png
+SHOT s58-0600 -> output\traces\sweep-wram/s58-0600.png
+SHOT s58-0900 -> output\traces\sweep-wram/s58-0900.png
+SHOT s58-1200 -> output\traces\sweep-wram/s58-1200.png
+SHOT s58-1340 -> output\traces\sweep-wram/s58-1340.png
+STAGE 58 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s59-0300 -> output\traces\sweep-wram/s59-0300.png
+SHOT s59-0600 -> output\traces\sweep-wram/s59-0600.png
+SHOT s59-0900 -> output\traces\sweep-wram/s59-0900.png
+SHOT s59-1200 -> output\traces\sweep-wram/s59-1200.png
+SHOT s59-1340 -> output\traces\sweep-wram/s59-1340.png
+STAGE 59 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s60-0300 -> output\traces\sweep-wram/s60-0300.png
+SHOT s60-0600 -> output\traces\sweep-wram/s60-0600.png
+SHOT s60-0900 -> output\traces\sweep-wram/s60-0900.png
+SHOT s60-1200 -> output\traces\sweep-wram/s60-1200.png
+SHOT s60-1340 -> output\traces\sweep-wram/s60-1340.png
+STAGE 60 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s61-0300 -> output\traces\sweep-wram/s61-0300.png
+SHOT s61-0600 -> output\traces\sweep-wram/s61-0600.png
+SHOT s61-0900 -> output\traces\sweep-wram/s61-0900.png
+SHOT s61-1200 -> output\traces\sweep-wram/s61-1200.png
+SHOT s61-1340 -> output\traces\sweep-wram/s61-1340.png
+STAGE 61 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s62-0300 -> output\traces\sweep-wram/s62-0300.png
+SHOT s62-0600 -> output\traces\sweep-wram/s62-0600.png
+SHOT s62-0900 -> output\traces\sweep-wram/s62-0900.png
+SHOT s62-1200 -> output\traces\sweep-wram/s62-1200.png
+SHOT s62-1340 -> output\traces\sweep-wram/s62-1340.png
+STAGE 62 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s63-0300 -> output\traces\sweep-wram/s63-0300.png
+SHOT s63-0600 -> output\traces\sweep-wram/s63-0600.png
+SHOT s63-0900 -> output\traces\sweep-wram/s63-0900.png
+SHOT s63-1200 -> output\traces\sweep-wram/s63-1200.png
+SHOT s63-1340 -> output\traces\sweep-wram/s63-1340.png
+STAGE 63 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s64-0300 -> output\traces\sweep-wram/s64-0300.png
+SHOT s64-0600 -> output\traces\sweep-wram/s64-0600.png
+SHOT s64-0900 -> output\traces\sweep-wram/s64-0900.png
+SHOT s64-1200 -> output\traces\sweep-wram/s64-1200.png
+SHOT s64-1340 -> output\traces\sweep-wram/s64-1340.png
+STAGE 64 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s65-0300 -> output\traces\sweep-wram/s65-0300.png
+SHOT s65-0600 -> output\traces\sweep-wram/s65-0600.png
+SHOT s65-0900 -> output\traces\sweep-wram/s65-0900.png
+SHOT s65-1200 -> output\traces\sweep-wram/s65-1200.png
+SHOT s65-1340 -> output\traces\sweep-wram/s65-1340.png
+STAGE 65 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s66-0300 -> output\traces\sweep-wram/s66-0300.png
+SHOT s66-0600 -> output\traces\sweep-wram/s66-0600.png
+SHOT s66-0900 -> output\traces\sweep-wram/s66-0900.png
+SHOT s66-1200 -> output\traces\sweep-wram/s66-1200.png
+SHOT s66-1340 -> output\traces\sweep-wram/s66-1340.png
+STAGE 66 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s67-0300 -> output\traces\sweep-wram/s67-0300.png
+SHOT s67-0600 -> output\traces\sweep-wram/s67-0600.png
+SHOT s67-0900 -> output\traces\sweep-wram/s67-0900.png
+SHOT s67-1200 -> output\traces\sweep-wram/s67-1200.png
+SHOT s67-1340 -> output\traces\sweep-wram/s67-1340.png
+STAGE 67 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s68-0300 -> output\traces\sweep-wram/s68-0300.png
+SHOT s68-0600 -> output\traces\sweep-wram/s68-0600.png
+SHOT s68-0900 -> output\traces\sweep-wram/s68-0900.png
+SHOT s68-1200 -> output\traces\sweep-wram/s68-1200.png
+SHOT s68-1340 -> output\traces\sweep-wram/s68-1340.png
+STAGE 68 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+SHOT s69-0300 -> output\traces\sweep-wram/s69-0300.png
+SHOT s69-0600 -> output\traces\sweep-wram/s69-0600.png
+SHOT s69-0900 -> output\traces\sweep-wram/s69-0900.png
+SHOT s69-1200 -> output\traces\sweep-wram/s69-1200.png
+SHOT s69-1340 -> output\traces\sweep-wram/s69-1340.png
+STAGE 69 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+STAGE 70 gameplay=0 ok=0 lostMax=0 noPalSpritesMax=0 foreign=0 noSlot=0 reselect=0 slot=$00
+RESET start idx=2/3
+UNUSED game $7E06E9..$7E0828 len=320
+UNUSED game $7E0A3B..$7E0A72 len=56
+UNUSED game $7E0AC1..$7E0B68 len=168
+UNUSED game $7E0BE7..$7E0E3E len=600
+UNUSED game $7E0ECE..$7E1065 len=408
+UNUSED game $7E11AC..$7E13B3 len=520
+UNUSED game $7E18B8..$7E18EF len=56
+UNUSED game $7E1911..$7E1988 len=120
+UNUSED game $7E1A19..$7E1A56 len=62
+UNUSED game $7E1C82..$7E1D61 len=224
+UNUSED game $7E1D6A..$7E1E11 len=168
+UNUSED game $7E1E18..$7E1E45 len=46
+UNUSED game $7E1E67..$7E1E81 len=27
+UNUSED game $7E1E90..$7E1EA1 len=18
+UNUSED game $7E1F13..$7E1FBF len=173
+UNUSED game $7EF6C0..$7EF6FF len=64
+UNUSED game $7EF740..$7EF7FF len=192
+UNUSED game $7F9BA8..$7F9FF7 len=1104
+UNUSED game $7FAC20..$7FAFEF len=976
+UNUSED game $7FAFF8..$7FB007 len=16
+UNUSED game $7FB38B..$7FB39C len=18
+UNUSED game $7FB480..$7FB4BF len=64
+UNUSED game $7FB57E..$7FB5BF len=66
+UNUSED game $7FB5D8..$7FB61F len=72
+UNUSED game $7FB622..$7FB63F len=30
+UNUSED game $7FB680..$7FBFFF len=2432
+UNUSED game total=8000
+RESET done idx=2/3 magic=$5A4E
+AFTERRESET r=300 01DC=$8357 idx=2/3 magic=$5A4E C6/CF=031A/001E
+SHOT reset-0300 -> output\traces\sweep-wram/reset-0300.png
+AFTERRESET r=600 01DC=$8357 idx=2/3 magic=$5A4E C6/CF=031A/001E
+SHOT reset-0600 -> output\traces\sweep-wram/reset-0600.png
+AFTERRESET r=900 01DC=$8357 idx=2/3 magic=$5A4E C6/CF=031A/001E
+SHOT reset-0900 -> output\traces\sweep-wram/reset-0900.png
+AFTERRESET r=1200 01DC=$8357 idx=2/3 magic=$5A4E C6/CF=031A/001E
+SHOT reset-1200 -> output\traces\sweep-wram/reset-1200.png
+AFTERRESET r=1500 01DC=$8357 idx=2/3 magic=$5A4E C6/CF=031A/001E
+SHOT reset-1500 -> output\traces\sweep-wram/reset-1500.png
+AFTERRESET r=1800 01DC=$835B idx=2/3 magic=$5A4E C6/CF=7EDB/7EAF
+SHOT reset-1800 -> output\traces\sweep-wram/reset-1800.png
+AFTERRESET r=2100 01DC=$835B idx=2/3 magic=$5A4E C6/CF=7EDB/7EAF
+SHOT reset-2100 -> output\traces\sweep-wram/reset-2100.png
+AFTERRESET r=2400 01DC=$835B idx=2/3 magic=$5A4E C6/CF=7EDB/7EAF
+SHOT reset-2400 -> output\traces\sweep-wram/reset-2400.png
+UNUSED game+reset $7E1F18..$7E1FBF len=168
+UNUSED game+reset $7EF5B7..$7EF7FF len=585
+UNUSED game+reset $7F83D8..$7F9FFF len=7208
+UNUSED game+reset $7FA190..$7FAFFF len=3696
+UNUSED game+reset $7FB6C0..$7FBFFF len=2368
+UNUSED game+reset $7FC618..$7FFFEF len=14808
+UNUSED game+reset total=28833
+DONE

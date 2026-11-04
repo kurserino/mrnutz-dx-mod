@@ -1,0 +1,13 @@
+{
+  "note": "Runtime presets cycled in game with Select+L (fur) and Select+R (outfit). Index 0 is always the original ROM palette and is added by the builder.",
+  "fur": [
+    { "name": "Pink", "colors": ["#5A1023", "#8C1F3F", "#C9365E", "#FF557A", "#FF9DB3"] },
+    { "name": "Blue", "colors": ["#0B1A5C", "#1530A0", "#2050D8", "#3A78FF", "#7FB0FF"] },
+    { "name": "Brown", "colors": ["#2E1606", "#4F270C", "#764015", "#9C5A22", "#C4844A"] }
+  ],
+  "outfit": [
+    { "name": "Bright yellow", "colors": ["#FFF2A0", "#FFD84A", "#A88300", "#6B5600"] },
+    { "name": "Green", "colors": ["#B8F5A0", "#5CCB3A", "#2E8A1C", "#17500E"] },
+    { "name": "Purple", "colors": ["#E0B8FF", "#A860F0", "#6A2CB0", "#3A146A"] }
+  ]
+}

@@ -1,0 +1,15 @@
+# flicker-00 | exit=0 | rom=Mr. Nutz.runtime.sfc | state=stage-00.mss
+LOAD ok=true
+FLICKER frame=21 kind=original idx=1/0 S=4 X=5 ready=1 applied=255
+FLICKER frame=41 kind=stale idx=2/0 S=4 X=5 ready=1 applied=5
+FLICKER frame=61 kind=stale idx=3/0 S=4 X=5 ready=1 applied=5
+FLICKER frame=101 kind=original idx=1/0 S=4 X=5 ready=1 applied=255
+FLICKER frame=121 kind=stale idx=2/0 S=4 X=5 ready=1 applied=5
+FLICKER frame=141 kind=stale idx=3/0 S=4 X=5 ready=1 applied=5
+FLICKER frame=181 kind=original idx=1/0 S=4 X=5 ready=1 applied=255
+FLICKER frame=201 kind=stale idx=2/0 S=4 X=5 ready=1 applied=5
+FLICKER frame=221 kind=stale idx=3/0 S=4 X=5 ready=1 applied=5
+FLICKER frame=261 kind=original idx=0/1 S=4 X=5 ready=1 applied=255
+FLICKER frame=281 kind=stale idx=0/2 S=4 X=5 ready=1 applied=5
+FLICKER frame=301 kind=stale idx=0/3 S=4 X=5 ready=1 applied=5
+RESULT frames=360 ok=342 original=6 stale=12 flash=0

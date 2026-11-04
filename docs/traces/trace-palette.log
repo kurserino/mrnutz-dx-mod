@@ -1,0 +1,108 @@
+# trace-palette | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc
+DMA frame=45 pc=9D:AC7E ch=0 src=$85:9BFA size=$0100 cgramAddr=$000 scanline=16
+DMA frame=45 pc=9D:ACB3 ch=0 src=$85:9D80 size=$0020 cgramAddr=$080 scanline=18
+DMA frame=45 pc=9D:ACB3 ch=0 src=$85:9C60 size=$0020 cgramAddr=$090 scanline=18
+DMA frame=45 pc=9D:ACB3 ch=0 src=$85:9C80 size=$0020 cgramAddr=$0A0 scanline=19
+DMA frame=45 pc=9D:ACB3 ch=0 src=$85:9CA0 size=$0020 cgramAddr=$0B0 scanline=20
+DMA frame=45 pc=9D:ACB3 ch=0 src=$85:9CC0 size=$0020 cgramAddr=$0C0 scanline=20
+CGREG frame=45 pc=9D:ACB4 reg=$2122 val=$00 cgramAddr=$0C0
+DMA frame=45 pc=9D:ACB3 ch=0 src=$85:9CE0 size=$0020 cgramAddr=$0D0 scanline=21
+DMA frame=45 pc=9D:ACB3 ch=0 src=$85:9DA0 size=$0020 cgramAddr=$0E0 scanline=22
+DMA frame=45 pc=9D:ACB3 ch=0 src=$85:9D40 size=$0020 cgramAddr=$0F0 scanline=22
+PADREAD frame=101 pc=9D:E1E5 reg=$4218 scanline=0 sp=$1FEC
+DMA frame=576 pc=9D:AC7E ch=0 src=$95:FEC0 size=$0100 cgramAddr=$000 scanline=179
+HDMA frame=578 pc=9D:B4F3 ch=7 src=$82:DFA7 size=$FFFF cgramAddr=$000 scanline=226
+PADREAD frame=578 pc=9D:BF2F reg=$4218 scanline=0 sp=$1FEA
+HDMA frame=579 pc=9D:B4F3 ch=7 src=$82:DFA7 size=$FF00 cgramAddr=$000 scanline=226
+HDMA frame=663 pc=9D:B4F3 ch=3 src=$82:E0EB size=$FFFF cgramAddr=$000 scanline=227
+PADREAD frame=663 pc=9D:BFDB reg=$4218 scanline=0 sp=$1FEA
+HDMA frame=664 pc=9D:B4F3 ch=3 src=$82:E0EB size=$4088 cgramAddr=$00F scanline=227
+DMA frame=872 pc=9D:AC7E ch=0 src=$82:FCBC size=$0100 cgramAddr=$000 scanline=159
+DMA frame=872 pc=9D:ACB3 ch=0 src=$92:BF5E size=$0020 cgramAddr=$080 scanline=161
+DMA frame=872 pc=9D:ACB3 ch=0 src=$92:BF7E size=$0020 cgramAddr=$090 scanline=162
+DMA frame=872 pc=9D:ACB3 ch=0 src=$92:BF9E size=$0020 cgramAddr=$0A0 scanline=163
+DMA frame=872 pc=9D:ACB3 ch=0 src=$92:BFBE size=$0020 cgramAddr=$0B0 scanline=163
+DMA frame=872 pc=9D:ACB3 ch=0 src=$92:BFDE size=$0020 cgramAddr=$0D0 scanline=164
+DMA frame=872 pc=9D:ACB3 ch=0 src=$92:BFFE size=$0020 cgramAddr=$0E0 scanline=165
+DMA frame=872 pc=9D:ACB3 ch=0 src=$85:9C20 size=$0020 cgramAddr=$0F0 scanline=166
+HDMA frame=979 pc=9D:B5C0 ch=6 src=$82:DFAB size=$E4AA cgramAddr=$000 scanline=232
+PADREAD frame=979 pc=9D:B715 reg=$4218 scanline=0 sp=$1FEC
+HDMA frame=980 pc=9D:B5C0 ch=6 src=$82:DFAB size=$9000 cgramAddr=$001 scanline=232
+DMA frame=1133 pc=9D:AC7E ch=0 src=$92:D222 size=$0100 cgramAddr=$000 scanline=175
+PALETTE gameplay frame=1600 0000 49CE 5A52 6AD6 7B5A 7BDE 031A 0292 018A 00C8 0000 000E 0012 0016 001A 001E
+RAM gameplay frame=1600 1A6F=$0000 1EC9=$00 01DC=$8357 01F4=$B5 056D=$01 13B4=$00
+DMA frame=1607 pc=9D:AC7E ch=0 src=$8D:DE7D size=$0100 cgramAddr=$000 scanline=163
+DMA frame=1607 pc=9D:ACB3 ch=0 src=$85:9C40 size=$0020 cgramAddr=$080 scanline=165
+DMA frame=1607 pc=9D:ACB3 ch=0 src=$85:9D00 size=$0020 cgramAddr=$0E0 scanline=169
+HDMA frame=1615 pc=81:81F6 ch=1 src=$82:E46C size=$FFFF cgramAddr=$092 scanline=230
+PADREAD frame=1615 pc=81:828D reg=$4218 scanline=243 sp=$1FEF
+HDMA frame=1616 pc=81:81F6 ch=1 src=$82:E46C size=$7A08 cgramAddr=$092 scanline=241
+HDMA frame=1679 pc=81:81F6 ch=1 src=$82:E46C size=$0800 cgramAddr=$092 scanline=242
+SHOT sweep-base -> output\traces\trace-palette/sweep-base.png
+SHOT sweep-C1 -> output\traces\trace-palette/sweep-C1.png
+SHOT sweep-C2 -> output\traces\trace-palette/sweep-C2.png
+SHOT sweep-C3 -> output\traces\trace-palette/sweep-C3.png
+SHOT sweep-C4 -> output\traces\trace-palette/sweep-C4.png
+SHOT sweep-C5 -> output\traces\trace-palette/sweep-C5.png
+SHOT sweep-C6 -> output\traces\trace-palette/sweep-C6.png
+SHOT sweep-C7 -> output\traces\trace-palette/sweep-C7.png
+SHOT sweep-C8 -> output\traces\trace-palette/sweep-C8.png
+SHOT sweep-C9 -> output\traces\trace-palette/sweep-C9.png
+SHOT sweep-CA -> output\traces\trace-palette/sweep-CA.png
+SHOT sweep-CB -> output\traces\trace-palette/sweep-CB.png
+SHOT sweep-CC -> output\traces\trace-palette/sweep-CC.png
+SHOT sweep-CD -> output\traces\trace-palette/sweep-CD.png
+SHOT sweep-CE -> output\traces\trace-palette/sweep-CE.png
+SHOT sweep-CF -> output\traces\trace-palette/sweep-CF.png
+PERSIST start frame=2080 0000 49CE 5A52 6AD6 7B5A 7BDE 7C01 7C02 7C03 7C04 0000 7C05 7C06 7C07 7C08 7C09
+SHOT persist-2400 -> output\traces\trace-palette/persist-2400.png
+RAM pre frame=2690 1A6F=$0100 1EC9=$00 01DC=$835B 01F4=$B6 056D=$01 13B4=$00
+RAM held frame=2730 1A6F=$2020 1EC9=$00 01DC=$835B 01F4=$B6 056D=$01 13B4=$00
+SHOT input-2730 -> output\traces\trace-palette/input-2730.png
+RAM pre frame=2790 1A6F=$0000 1EC9=$00 01DC=$835B 01F4=$B6 056D=$01 13B4=$00
+RAM held frame=2830 1A6F=$2010 1EC9=$00 01DC=$835B 01F4=$B6 056D=$01 13B4=$00
+SHOT input-2830 -> output\traces\trace-palette/input-2830.png
+RAM pre frame=2890 1A6F=$0000 1EC9=$00 01DC=$835B 01F4=$B6 056D=$01 13B4=$00
+RAM held frame=2930 1A6F=$0020 1EC9=$00 01DC=$835B 01F4=$B6 056D=$01 13B4=$00
+SHOT input-2930 -> output\traces\trace-palette/input-2930.png
+RAM pre frame=2990 1A6F=$0000 1EC9=$00 01DC=$835B 01F4=$B6 056D=$01 13B4=$00
+RAM held frame=3030 1A6F=$0010 1EC9=$00 01DC=$835B 01F4=$B6 056D=$01 13B4=$00
+SHOT input-3030 -> output\traces\trace-palette/input-3030.png
+RAM pre frame=3090 1A6F=$0000 1EC9=$00 01DC=$835B 01F4=$B6 056D=$01 13B4=$00
+PADREAD total 9D:B715@4218 count=152
+PADREAD total 9D:BF2F@4218 count=23
+PADREAD total 9D:BFDB@4218 count=138
+PADREAD total 9D:E1E5@4218 count=610
+PADREAD total 81:828D@4218 count=1585
+CGDMA total DMA9D:ACB385:9D0032 count=1
+CGDMA total DMA9D:ACB385:9CC032 count=5
+CGDMA total HDMA81:81F682:E46C2048 count=1521
+CGDMA total DMA9D:ACB385:9C4032 count=1
+CGDMA total DMA9D:ACB385:9CA032 count=4
+CGDMA total HDMA81:81F682:E46C31240 count=63
+CGDMA total DMA9D:AC7E92:D222256 count=1
+CGDMA total DMA9D:AC7E8D:DE7D256 count=1
+CGDMA total HDMA81:81F682:E46C65535 count=1
+CGDMA total DMA9D:ACB385:9D8032 count=3
+CGDMA total HDMA9D:B5C082:DFAB36864 count=151
+CGDMA total DMA9D:ACB392:BF7E32 count=1
+CGDMA total DMA9D:ACB385:9DA032 count=3
+CGDMA total HDMA9D:B4F382:DFA765280 count=252
+CGDMA total DMA9D:ACB392:BFDE32 count=1
+CGDMA total DMA9D:ACB385:9D4032 count=4
+CGDMA total HDMA9D:B4F382:E0EB16520 count=167
+CGDMA total DMA9D:ACB385:9C2032 count=1
+CGDMA total DMA9D:ACB392:BFBE32 count=1
+CGDMA total DMA9D:AC7E85:9BFA256 count=1
+CGDMA total DMA9D:AC7E95:FEC0256 count=1
+CGDMA total DMA9D:ACB385:9CE032 count=4
+CGDMA total HDMA9D:B5C082:DFAB58538 count=1
+CGDMA total DMA9D:ACB385:9C8032 count=4
+CGDMA total DMA9D:ACB392:BF5E32 count=1
+CGDMA total DMA9D:ACB385:9C6032 count=4
+CGDMA total DMA9D:ACB392:BF9E32 count=1
+CGDMA total DMA9D:AC7E82:FCBC256 count=1
+CGDMA total DMA9D:ACB392:BFFE32 count=1
+CGDMA total HDMA9D:B4F382:DFA765535 count=1
+CGDMA total HDMA9D:B4F382:E0EB65535 count=1
+PALETTE final frame=3200 0000 49CE 5A52 6AD6 7B5A 7BDE 7C01 7C02 7C03 7C04 0000 7C05 7C06 7C07 7C08 7C09

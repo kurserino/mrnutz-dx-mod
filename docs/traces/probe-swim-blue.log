@@ -1,0 +1,35 @@
+# probe-swim-blue | exit=0 | rom=Mr. Nutz.runtime.sfc | state=level1-start.mss
+LOAD ok=true
+SWIM start 1EC9=$00 01DC=$835B pal=0000 49CE 5A52 6AD6 7B5A 7BDE 031A 0292 018A 00C8 0000 000E 0012 0016 001A 001E
+CHANGE t=0 C6/CF=031A/001E idx=0/0 01DC=$835B pal=0000 49CE 5A52 6AD6 7B5A 7BDE 031A 0292 018A 00C8 0000 000E 0012 0016 001A 001E
+SHOT swim-0010 -> output\traces\probe-swim-blue/swim-0010.png
+SHOT swim-0070 -> output\traces\probe-swim-blue/swim-0070.png
+SHOT swim-0130 -> output\traces\probe-swim-blue/swim-0130.png
+SHOT swim-0190 -> output\traces\probe-swim-blue/swim-0190.png
+CHANGE t=201 C6/CF=031A/5A7F idx=1/0 01DC=$835B pal=0000 49CE 5A52 6AD6 7B5A 7BDE 031A 0292 018A 00C8 0000 104B 2091 2CF8 3D5F 5A7F
+SHOT swim-0250 -> output\traces\probe-swim-blue/swim-0250.png
+CHANGE t=261 C6/CF=4FBF/5A7F idx=1/1 01DC=$835B pal=0000 49CE 5A52 6AD6 7B5A 7BDE 4FBF 275F 0214 014D 0000 104B 2091 2CF8 3D5F 5A7F
+SHOT swim-0310 -> output\traces\probe-swim-blue/swim-0310.png
+SHOT swim-0370 -> output\traces\probe-swim-blue/swim-0370.png
+SHOT swim-0430 -> output\traces\probe-swim-blue/swim-0430.png
+SHOT swim-0490 -> output\traces\probe-swim-blue/swim-0490.png
+SHOT swim-0550 -> output\traces\probe-swim-blue/swim-0550.png
+SHOT swim-0610 -> output\traces\probe-swim-blue/swim-0610.png
+SHOT swim-0670 -> output\traces\probe-swim-blue/swim-0670.png
+SHOT swim-0730 -> output\traces\probe-swim-blue/swim-0730.png
+SHOT swim-0790 -> output\traces\probe-swim-blue/swim-0790.png
+SHOT swim-0850 -> output\traces\probe-swim-blue/swim-0850.png
+SHOT swim-0910 -> output\traces\probe-swim-blue/swim-0910.png
+SHOT swim-0970 -> output\traces\probe-swim-blue/swim-0970.png
+SHOT swim-1030 -> output\traces\probe-swim-blue/swim-1030.png
+SHOT swim-1090 -> output\traces\probe-swim-blue/swim-1090.png
+SHOT swim-1150 -> output\traces\probe-swim-blue/swim-1150.png
+CGDMA t=1164 pc=9D:ACB3 src=$85:9CC0 cgramAddr=$0C0 size=$0020
+CHANGE t=1165 C6/CF=031A/001E idx=1/1 01DC=$835B pal=0000 49CE 5A52 6AD6 7B5A 7BDE 031A 0292 018A 00C8 0000 000E 0012 0016 001A 001E
+CHANGE t=1180 C6/CF=4FBF/5A7F idx=1/1 01DC=$835B pal=0000 49CE 5A52 6AD6 7B5A 7BDE 4FBF 275F 0214 014D 0000 104B 2091 2CF8 3D5F 5A7F
+SHOT swim-1210 -> output\traces\probe-swim-blue/swim-1210.png
+SHOT swim-1270 -> output\traces\probe-swim-blue/swim-1270.png
+SHOT swim-1330 -> output\traces\probe-swim-blue/swim-1330.png
+SHOT swim-1390 -> output\traces\probe-swim-blue/swim-1390.png
+SHOT swim-1450 -> output\traces\probe-swim-blue/swim-1450.png
+DONE t=1500 changes=5 hookRuns=1464 final=0000 49CE 5A52 6AD6 7B5A 7BDE 4FBF 275F 0214 014D 0000 104B 2091 2CF8 3D5F 5A7F

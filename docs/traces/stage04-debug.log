@@ -1,0 +1,33 @@
+# stage04-debug | exit=0 | rom=Mr. Nutz.runtime.sfc | state=stage-04.mss
+LOAD ok=true
+CGDMA frame=1 pc=81:81F6 cga=$092 size=$7A08 src=$82:E46C kind=HDMA
+SHOT f0200 -> output\traces\stage04-debug/f0200.png
+SHOT f0500 -> output\traces\stage04-debug/f0500.png
+SHOT f0830 -> output\traces\stage04-debug/f0830.png
+CGW frame=919 pc=9D:CDA6 reg=$2121 val=$CA cga=$001 scanline=34 X=255
+CGW frame=919 pc=9D:CDA6 reg=$2122 val=$9A cga=$0CA scanline=34 X=255
+CGW frame=919 pc=9D:CD5B reg=$2121 val=$CD cga=$001 scanline=43 X=255
+CGW frame=919 pc=9D:CD5B reg=$2122 val=$38 cga=$0CD scanline=43 X=255
+CGW frame=919 pc=81:F6E3 reg=$2121 val=$CA cga=$009 scanline=56 X=255
+CGW frame=919 pc=81:F6E3 reg=$2122 val=$05 cga=$0CA scanline=56 X=255
+CGW frame=919 pc=81:8520 reg=$2121 val=$CD cga=$075 scanline=58 X=255
+CGW frame=919 pc=81:8520 reg=$2122 val=$00 cga=$0CD scanline=58 X=255
+CGW frame=919 pc=81:C69A reg=$2121 val=$CC cga=$00D scanline=64 X=255
+CGW frame=919 pc=81:C69A reg=$2122 val=$3C cga=$0CC scanline=64 X=255
+CGW frame=919 pc=81:8BD4 reg=$2121 val=$C2 cga=$001 scanline=68 X=255
+CGW frame=919 pc=81:8BD4 reg=$2122 val=$00 cga=$0C2 scanline=68 X=255
+CGW frame=919 pc=81:C042 reg=$2121 val=$C2 cga=$001 scanline=86 X=255
+CGW frame=919 pc=81:C042 reg=$2122 val=$00 cga=$0C2 scanline=86 X=255
+CGW frame=919 pc=81:C007 reg=$2121 val=$CA cga=$051 scanline=99 X=255
+CGW frame=919 pc=81:C007 reg=$2122 val=$38 cga=$0CA scanline=99 X=255
+CGW frame=919 pc=81:C0BC reg=$2121 val=$C0 cga=$001 scanline=112 X=255
+CGW frame=919 pc=81:C0BC reg=$2122 val=$D4 cga=$0C0 scanline=112 X=255
+CGW frame=919 pc=81:FB52 reg=$2121 val=$C2 cga=$001 scanline=113 X=255
+CGW frame=919 pc=81:FB52 reg=$2122 val=$0E cga=$0C2 scanline=113 X=255
+CGW frame=919 pc=80:8231 reg=$2121 val=$CA cga=$0BC scanline=161 X=255
+CGW frame=919 pc=80:8233 reg=$2121 val=$CD cga=$0DD scanline=170 X=255
+CGW frame=919 pc=80:8232 reg=$2121 val=$CA cga=$0BC scanline=215 X=255
+CGW frame=919 pc=80:8230 reg=$2121 val=$CD cga=$0DD scanline=224 X=255
+SHARED_CHANGED frame=920 S=4 entry=0 pal=00D4 49CE 000E 6AD6 7B5A 7BDE 031A 0292 018A 00C8 0038 000E 003C 0100 001A 001E
+SHOT event-shared_changed -> output\traces\stage04-debug/event-shared_changed.png
+RESULT gameplay=860 nutzFrames=860 ok=391 lostMax=469 sharedChanged=10 foreignOnX=0 noSlot=0 slots=4/255,4/5,4/7 idx=2/3

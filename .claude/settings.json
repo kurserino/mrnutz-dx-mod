@@ -1,0 +1,33 @@
+{
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
+  "includeCoAuthoredBy": false,
+  "enabledPlugins": {
+    "claudekit-core@claudekit": true,
+    "claudekit-openspec@claudekit": true,
+    "ponytail@ponytail": true,
+    "caveman@caveman": true
+  },
+  "extraKnownMarketplaces": {
+    "claudekit": {
+      "source": {
+        "source": "github",
+        "repo": "kurserino/claudekit"
+      }
+    },
+    "ponytail": {
+      "source": {
+        "source": "github",
+        "repo": "DietrichGebert/ponytail"
+      }
+    },
+    "caveman": {
+      "source": {
+        "source": "github",
+        "repo": "JuliusBrussee/caveman"
+      }
+    }
+  }
+}

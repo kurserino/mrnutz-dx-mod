@@ -1,0 +1,61 @@
+# stage04-timing | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-04.mss
+LOAD ok=true
+SHORTCUT_FAIL frame=70 idx=97/85
+SHOT event-shortcut_fail -> output\traces\stage04-timing/event-shortcut_fail.png
+SHOT f0200 -> output\traces\stage04-timing/f0200.png
+SHOT f0500 -> output\traces\stage04-timing/f0500.png
+SHOT f0830 -> output\traces\stage04-timing/f0830.png
+OAMHOOK_ENTRY frame=900 scanline=227
+HDMAEN frame=900 pc=81:81F6 val=$AF scanline=233
+OAMHOOK_ENTRY frame=901 scanline=227
+HDMAEN frame=901 pc=81:81F6 val=$AF scanline=236
+OAMHOOK_ENTRY frame=902 scanline=227
+HDMAEN frame=902 pc=81:81F6 val=$AF scanline=233
+OAMHOOK_ENTRY frame=903 scanline=227
+HDMAEN frame=903 pc=81:81F6 val=$AF scanline=233
+OAMHOOK_ENTRY frame=904 scanline=227
+HDMAEN frame=904 pc=81:81F6 val=$AF scanline=236
+OAMHOOK_ENTRY frame=905 scanline=227
+HDMAEN frame=905 pc=81:81F6 val=$AF scanline=233
+OAMHOOK_ENTRY frame=906 scanline=227
+HDMAEN frame=906 pc=81:81F6 val=$AF scanline=233
+OAMHOOK_ENTRY frame=907 scanline=227
+HDMAEN frame=907 pc=81:81F6 val=$AF scanline=236
+OAMHOOK_ENTRY frame=908 scanline=227
+HDMAEN frame=908 pc=81:81F6 val=$AF scanline=233
+OAMHOOK_ENTRY frame=909 scanline=238
+HDMAEN frame=909 pc=81:81F6 val=$AF scanline=244
+OAMHOOK_ENTRY frame=910 scanline=227
+HDMAEN frame=910 pc=81:81F6 val=$AF scanline=236
+OAMHOOK_ENTRY frame=911 scanline=227
+HDMAEN frame=911 pc=81:81F6 val=$AF scanline=233
+OAMHOOK_ENTRY frame=912 scanline=227
+HDMAEN frame=912 pc=81:81F6 val=$AF scanline=233
+OAMHOOK_ENTRY frame=913 scanline=227
+HDMAEN frame=913 pc=81:81F6 val=$AF scanline=236
+OAMHOOK_ENTRY frame=914 scanline=227
+HDMAEN frame=914 pc=81:81F6 val=$AF scanline=233
+OAMHOOK_ENTRY frame=915 scanline=227
+HDMAEN frame=915 pc=81:81F6 val=$AF scanline=233
+OAMHOOK_ENTRY frame=916 scanline=227
+HDMAEN frame=916 pc=81:81F6 val=$AF scanline=236
+OAMHOOK_ENTRY frame=917 scanline=227
+HDMAEN frame=917 pc=81:81F6 val=$AF scanline=233
+OAMHOOK_ENTRY frame=918 scanline=227
+HDMAEN frame=918 pc=81:81F6 val=$AF scanline=233
+OAMHOOK_ENTRY frame=919 scanline=227
+HDMAEN frame=919 pc=81:81F6 val=$AF scanline=237
+OAMHOOK_ENTRY frame=920 scanline=227
+HDMAEN frame=920 pc=81:81F6 val=$AF scanline=233
+OAMHOOK_ENTRY frame=921 scanline=227
+HDMAEN frame=921 pc=81:81F6 val=$AF scanline=233
+OAMHOOK_ENTRY frame=922 scanline=227
+HDMAEN frame=922 pc=81:81F6 val=$AF scanline=236
+OAMHOOK_ENTRY frame=923 scanline=227
+HDMAEN frame=923 pc=81:81F6 val=$AF scanline=233
+OAMHOOK_ENTRY frame=924 scanline=240
+HDMAEN frame=924 pc=81:81F6 val=$AF scanline=246
+OAMHOOK_ENTRY frame=925 scanline=227
+HDMAEN frame=925 pc=81:81F6 val=$AF scanline=236
+HDMAEN summary writes=934 duringActiveDisplay=0
+RESULT gameplay=860 nutzFrames=860 ok=0 lostMax=860 sharedChanged=0 foreignOnX=0 noSlot=0 slots=4/143 idx=97/85

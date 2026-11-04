@@ -1,0 +1,10 @@
+node_modules/
+dist/
+output/
+*.sfc
+*.smc
+*.zip
+*.ips
+.DS_Store
+.env
+*.mss
