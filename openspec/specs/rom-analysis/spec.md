@@ -1,7 +1,7 @@
 # rom-analysis Specification
 
 ## Purpose
-Dar ferramentas estáticas (mapeamento LoROM, disassembly 65C816 e leitura do header) para estudar a ROM suportada sem emulador.
+Provide static tools (LoROM mapping, 65C816 disassembly and header inspection) to study the supported ROM without an emulator.
 
 ## Requirements
 

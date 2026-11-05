@@ -5,18 +5,25 @@ context: |
   Baseline patch builder and the in-game runtime palette switch (Select+L/R, release v0.1.0) are implemented. An in-game palette menu is NOT implemented.
   User-provided ROM is private; never commit or redistribute it.
   Work against only validated original ROM signatures. No speculative offsets or ASM injections.
-  See CLAUDE.md, docs/rom-map.md and docs/debugging-playbook.md.
-  Code/identifiers/comments in English. Project docs and explanations in Portuguese.
+  Rules for every agent: AGENTS.md. Known game facts (addresses, NMI/VBlank, palettes, options, protection, tools):
+  docs/knowledge/README.md; check it before researching and record new facts there.
+  Language: everything in the repository is English (code, specs including Purpose, proposals, designs, tasks, docs,
+  commit messages). Only conversation with the user may be Portuguese.
 rules:
   proposal:
+    - Write in English.
     - State whether change is static palette pipeline or runtime ROM hack.
     - Document emulator validation requirements and any unverified assumptions.
   specs:
+    - Write in English.
     - Write testable requirements and Given/When/Then scenarios.
     - Keep cross-palette effects and original-ROM integrity explicit.
   design:
+    - Write in English.
     - Include exact CPU/ROM/CGRAM mapping, byte-level rollback, and Mesen trace references for any hook.
+    - Reference docs/knowledge/ for game facts instead of repeating them.
   tasks:
+    - Write in English.
     - Include tests, ROM signature checking, Mesen smoke test, and IPS regression verification.
 operations:
   apply:
