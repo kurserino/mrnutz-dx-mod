@@ -1,4 +1,4 @@
-# Mr. Nutz Color Mod — Spec Driven
+# Mr. Nutz DX Mod — Spec Driven
 
 A TypeScript + OpenSpec + Claude Code project for studying and modifying the SNES **Mr. Nutz (USA) (En,Fr)** palette and building an **IPS** patch. The ROM supplied in the original conversation is copied into `roms/` in this private package; **do not publish or commit ROM files**.
 

@@ -1,6 +1,6 @@
 schema: spec-driven
 context: |
-  Project: Mr. Nutz Color Mod, SNES ROM research and patch builder.
+  Project: Mr. Nutz DX Mod, SNES ROM research and patch builder.
   Stack: Node.js, TypeScript, IPS, BGR555 little-endian, 65C816 SNES LoROM.
   Baseline patch builder is implemented. Runtime palette switching and in-game UI are NOT implemented.
   User-provided ROM is private; never commit or redistribute it.

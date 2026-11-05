@@ -1,4 +1,4 @@
-# Claude Code — Mr. Nutz Color Mod
+# Claude Code — Mr. Nutz DX Mod
 
 You are maintaining a spec-driven SNES ROM hacking project. Read these files before editing anything:
 
