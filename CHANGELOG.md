@@ -1,9 +1,10 @@
 # Changelog
 
-## Unreleased — runtime palette switch (`openspec/changes/runtime-palette-switch`)
+## v0.1.0 — 2026-11-04 — runtime palette switch (`openspec/changes/runtime-palette-switch`)
 
-Patch: `npm run runtime:build` → `output/Mr. Nutz.runtime.ips` (2365 bytes, 2 MiB expanded LoROM).
-Source ROM: `Mr. Nutz (USA) (En,Fr).sfc`, CRC32 `A99BDD9A`, unheadered.
+Patch: `npm run runtime:build` → `output/Mr. Nutz.runtime.ips` (2365 bytes, 2 MiB expanded LoROM),
+published as `mrnutz-dx-v0.1.0.ips` on the GitHub release.
+Source ROM: `Mr. Nutz (USA) (En,Fr).sfc`, CRC32 `A99BDD9A`, unheadered. Patched ROM: CRC32 `077391CD`.
 
 ### Added
 - In-game colour selection: `Select+L` cycles fur, `Select+R` cycles outfit; index 0 is the original
@@ -35,5 +36,5 @@ Source ROM: `Mr. Nutz (USA) (En,Fr).sfc`, CRC32 `A99BDD9A`, unheadered.
 - Intro, "Stage Clear" and other non-gameplay screens show the original colours.
 - Power-off resets the selection (no SRAM; the game hangs when it detects SRAM).
 
-### Pending before release
-- Manual Mesen GUI regression pass with this build.
+### Not yet verified
+- Manual Mesen GUI regression pass with this build (automated headless sweep only).
