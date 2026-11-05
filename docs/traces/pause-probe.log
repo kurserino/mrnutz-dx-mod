@@ -1,0 +1,17 @@
+# pause-probe | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-00.mss
+LOAD ok=true
+SHOT play -> output\traces\pause-probe/play.png
+SHOT paused -> output\traces\pause-probe/paused.png
+PAUSE_FLAG $7E00AD play=$00 paused=$10
+PAUSE_FLAG $7E0231 play=$40 paused=$20
+PAUSE_FLAG $7E0242 play=$A0 paused=$80
+PAUSE_FLAG $7E0257 play=$00 paused=$E0
+PAUSE_FLAG $7E0296 play=$20 paused=$00
+PAUSE_FLAG $7E0297 play=$AF paused=$B1
+PAUSE_FLAG $7E13B4 play=$00 paused=$FF
+PAUSE_FLAG $7E1FEF play=$81 paused=$00
+PAUSE_FLAG total=8
+PC $808230 frames=140
+PC $808231 frames=139
+NMI pad play=399 paused=0 | oam play=399 paused=0
+SHOT after -> output\traces\pause-probe/after.png

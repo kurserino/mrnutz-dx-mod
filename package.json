@@ -21,7 +21,14 @@
     "patch:build": "tsx src/cli.ts build",
     "patch:verify": "tsx src/cli.ts verify",
     "test": "vitest run",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "trace:sram": "tsx tools/mesen/run.ts tools/mesen/trace-sram.lua",
+    "trace:sram:all": "tsx tools/mesen/trace-sram-all.ts",
+    "check:ending": "tsx tools/mesen/run.ts tools/mesen/ending-check.lua --rom \"output/Mr. Nutz.runtime.sfc\" --state output/states/stage-36.mss --define FRAMES=25000",
+    "check:power": "tsx tools/mesen/power-cycle.ts",
+    "survey:space": "tsx tools/mesen/space-survey.ts",
+    "probe:options": "tsx tools/mesen/run.ts tools/mesen/options-probe.lua --define STAGE=1",
+    "probe:pause": "tsx tools/mesen/run.ts tools/mesen/pause-probe.lua --state output/states/stage-00.mss"
   },
   "devDependencies": {
     "@types/node": "^22.15.0",

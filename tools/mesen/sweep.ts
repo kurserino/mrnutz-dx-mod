@@ -6,11 +6,13 @@
 //    (SWEEP_JOBS or --jobs, default: CPU count - 1, max 6).
 // 3. flicker-check.lua per stage: 24 colour changes, no frame may fall back to the original colours (flash).
 // 4. persist-check.lua: selection across world changes and a soft reset.
+// 5. power-cycle.ts: SRAM save across real power-ons (fresh, restore, corrupted, out-of-range record).
 // Writes docs/traces/sweep-all.log; exit code 1 on any violation, missing result or persistence failure.
 import { existsSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { availableParallelism } from "node:os";
 import { join } from "node:path";
 import { STATES_DIR, runMesen } from "./run.js";
+import { powerCycle } from "./power-cycle.js";
 import { DEFAULT_ROM_PATH } from "../../src/core.js";
 import { buildRuntimePatch } from "../../src/runtime.js";
 import type { RuntimePresetFile } from "../../src/runtime.js";
@@ -32,7 +34,7 @@ const started = Date.now();
 const presets = JSON.parse(readFileSync("presets/runtime.json", "utf8")) as RuntimePresetFile;
 writeFileSync(PATCHED, buildRuntimePatch(readFileSync(process.env.ROM_PATH || DEFAULT_ROM_PATH), presets).patched);
 if (args.includes("--prepare") || !existsSync(join(STATES_DIR, "stage-00.mss"))) {
-  if (!existsSync(LEVEL1_STATE)) throw new Error(`${LEVEL1_STATE} missing (copy of a level 1 savestate, see docs/runtime-hook.md)`);
+  if (!existsSync(LEVEL1_STATE)) throw new Error(`${LEVEL1_STATE} missing (copy of a level 1 savestate, see docs/knowledge/research-tools.md)`);
   console.log("preparing stage states on the original ROM...");
   const p = await runMesen({ script: "tools/mesen/prepare-stages.lua", state: LEVEL1_STATE, name: "sweep-prepare" });
   console.log(p.lines.filter((l) => l.startsWith("DONE")).join("\n"));
@@ -60,6 +62,7 @@ async function worker() {
 const persist = runMesen({ script: "tools/mesen/persist-check.lua", rom: PATCHED, state: join(STATES_DIR, `${PERSIST_STAGE}.mss`), name: "sweep/persist", log: false });
 await Promise.all(Array.from({ length: Math.min(jobs, stages.length) }, worker));
 const p = only ? undefined : await persist;
+const power = only ? undefined : await powerCycle();
 console.log("");
 
 results.sort((a, b) => a.stage.localeCompare(b.stage));
@@ -84,6 +87,11 @@ if (p) {
   if (!res || fails > 0) violations++;
   out.push(`persist (${PERSIST_STAGE}): ${res ?? "NO RESULT"}`);
   for (const l of p.lines.filter((l) => l.startsWith("PERSIST"))) out.push(`  ${l}`);
+}
+if (power) {
+  if (power.fails > 0) violations++;
+  out.push(`power-cycle: fails=${power.fails}`);
+  for (const l of power.lines.filter((l) => /^(ok|FAIL) /.test(l))) out.push(`  ${l}`);
 }
 out.push(`summary: violations=${violations}; Mr. Nutz kept original colours (no free slot) in: ${original.join(", ") || "none"}`);
 writeFileSync("docs/traces/sweep-all.log", out.join("\n") + "\n");

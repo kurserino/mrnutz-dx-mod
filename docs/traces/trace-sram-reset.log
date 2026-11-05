@@ -1,0 +1,30 @@
+# trace-sram-reset | rom=original | 4 runs | 25 s
+boot: RESULT mode=0 frames=3000 gameplay=386 calls=A=0,B=0,C=0,D=0 sramReads=1828 sramWrites=1054 codeReads=0
+stage-00: RESULT mode=1 frames=1500 gameplay=1439 calls=A=0,B=0,C=0,D=0 sramReads=7460 sramWrites=4738 codeReads=0
+stage-00-death: RESULT mode=2 frames=5000 gameplay=1843 calls=A=0,B=0,C=0,D=0 sramReads=8752 sramWrites=5160 codeReads=0
+stage-00-reset: RESULT mode=3 frames=4000 gameplay=685 calls=A=0,B=0,C=0,D=0 sramReads=3168 sramWrites=1880 codeReads=0
+
+## Check routine calls (distinct routine + return address)
+none
+
+## SRAM accessors (union over all runs)
+pc=$81C45E r=8372 w=0 addr=$7000A9-$7000AA runs=4 (boot,stage-00,stage-00-death,stage-00-reset)
+pc=$81C46A r=0 w=8372 addr=$7000A9-$7000AA runs=4 (boot,stage-00,stage-00-death,stage-00-reset)
+pc=$81C475 r=8372 w=0 addr=$7000A9-$7000AA runs=4 (boot,stage-00,stage-00-death,stage-00-reset)
+pc=$82B9C8 r=1114 w=0 addr=$700345-$700346 runs=4 (boot,stage-00,stage-00-death,stage-00-reset)
+pc=$82B9CE r=0 w=1114 addr=$700345-$700346 runs=4 (boot,stage-00,stage-00-death,stage-00-reset)
+pc=$82B9D2 r=1114 w=0 addr=$700347-$700348 runs=4 (boot,stage-00,stage-00-death,stage-00-reset)
+pc=$82B9D8 r=0 w=1114 addr=$700347-$700348 runs=4 (boot,stage-00,stage-00-death,stage-00-reset)
+pc=$82B9DA r=1114 w=0 addr=$700345-$700346 runs=4 (boot,stage-00,stage-00-death,stage-00-reset)
+pc=$82B9EC r=0 w=1114 addr=$700347-$700348 runs=4 (boot,stage-00,stage-00-death,stage-00-reset)
+pc=$82B9EF r=0 w=1114 addr=$700345-$700346 runs=4 (boot,stage-00,stage-00-death,stage-00-reset)
+pc=$82BA24 r=1114 w=0 addr=$700345-$700346 runs=4 (boot,stage-00,stage-00-death,stage-00-reset)
+pc=$9CF81D r=4 w=0 addr=$700000-$700001 runs=2 (boot,stage-00-reset)
+pc=$9CF823 r=0 w=4 addr=$700000-$700001 runs=2 (boot,stage-00-reset)
+pc=$9CF82A r=4 w=0 addr=$700000-$700001 runs=2 (boot,stage-00-reset)
+
+## Hangs
+none
+
+## Data reads of check routine bytes
+none

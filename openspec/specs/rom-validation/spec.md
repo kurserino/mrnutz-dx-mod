@@ -1,7 +1,7 @@
 # ROM validation
 
 ## Purpose
-Evitar patches aplicados em ROMs erradas e proteger a entrada original.
+Prevent patches from being applied to the wrong ROM and protect the original input.
 
 ## Requirements
 

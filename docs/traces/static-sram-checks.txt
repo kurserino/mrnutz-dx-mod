@@ -1,0 +1,70 @@
+# Static disassembly of SRAM/anti-copier check candidates (original ROM, npm run rom:disasm) [static]
+# Source ROM CRC32 A99BDD9A. Lowercase m/x = 8-bit, uppercase = 16-bit. Entry widths are assumptions until traced.
+# No direct JSL/JSR/JML caller found for any routine (static scan of the whole ROM).
+
+## A (hang at $80:8400) $80:83EF
+$8083EF  A9 75 4E     Mx  LDA #$4E75
+$8083F2  CF 34 00 70  Mx  CMP $700034
+$8083F6  F0 0A        Mx  BEQ $808402
+$8083F8  8F 34 00 70  Mx  STA $700034
+$8083FC  CF 34 00 70  Mx  CMP $700034
+$808400  F0 FE        Mx  BEQ $808400
+$808402  6B           Mx  RTL
+
+## D (hang at $81:9D4B) $81:9D3A
+$819D3A  A9 58 58     Mx  LDA #$5858
+$819D3D  CF 04 00 70  Mx  CMP $700004
+$819D41  F0 0A        Mx  BEQ $819D4D
+$819D43  8F 04 00 70  Mx  STA $700004
+$819D47  CF 04 00 70  Mx  CMP $700004
+$819D4B  F0 FE        Mx  BEQ $819D4B
+$819D4D  6B           Mx  RTL
+
+## C (skips RTS when SRAM write sticks) $81:8F53
+$818F53  A9 93 00     Mx  LDA #$0093
+$818F56  8F 00 00 70  Mx  STA $700000
+$818F5A  CF 00 00 70  Mx  CMP $700000
+$818F5E  F0 01        Mx  BEQ $818F61
+$818F60  60           Mx  RTS
+
+## C fall-through target $81:8F61
+$818F61  E2 20        mx  SEP #$20
+$818F63  C2 10        mx  REP #$10
+$818F65  9C 21 21     mX  STZ $2121
+$818F68  9C 30 21     mX  STZ $2130
+$818F6B  A9 02        mX  LDA #$02
+$818F6D  8D 31 21     mX  STA $2131
+$818F70  A9 E0        mX  LDA #$E0
+$818F72  8D 32 21     mX  STA $2132
+$818F75  A2 A2 E2     mX  LDX #$E2A2
+$818F78  A9 82        mX  LDA #$82
+$818F7A  8E 62 43     mX  STX $4362
+$818F7D  8E 68 43     mX  STX $4368
+$818F80  8D 64 43     mX  STA $4364
+$818F83  A9 42        mX  LDA #$42
+$818F85  8D 60 43     mX  STA $4360
+$818F88  A9 22        mX  LDA #$22
+$818F8A  8D 61 43     mX  STA $4361
+$818F8D  A9 02        mX  LDA #$02
+$818F8F  8D 67 43     mX  STA $4367
+$818F92  A2 BE E2     mX  LDX #$E2BE
+$818F95  A9 82        mX  LDA #$82
+$818F97  8E 52 43     mX  STX $4352
+$818F9A  8E 58 43     mX  STX $4358
+$818F9D  8D 54 43     mX  STA $4354
+$818FA0  A9 40        mX  LDA #$40
+$818FA2  8D 50 43     mX  STA $4350
+$818FA5  A9 21        mX  LDA #$21
+$818FA7  8D 51 43     mX  STA $4351
+$818FAA  A9 02        mX  LDA #$02
+$818FAC  8D 57 43     mX  STA $4357
+$818FAF  A2 EC E2     mX  LDX #$E2EC
+
+## B (returns carry = SRAM writable) $81:802B
+$81802B  9F 00 00 70  mx  STA $700000,X
+$81802F  DF 00 00 70  mx  CMP $700000,X
+$818033  D0 02        mx  BNE $818037
+$818035  38           mx  SEC
+$818036  6B           mx  RTL
+$818037  18           mx  CLC
+$818038  6B           mx  RTL

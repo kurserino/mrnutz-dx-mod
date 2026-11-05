@@ -1,7 +1,7 @@
 # IPS patch builds
 
 ## Purpose
-Gerar e verificar patches IPS determinísticos para a ROM suportada.
+Generate and verify deterministic IPS patches for the supported ROM.
 
 ## Requirements
 

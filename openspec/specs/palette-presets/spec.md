@@ -1,7 +1,7 @@
 # Palette presets
 
 ## Purpose
-Permitir cores diferentes para pelo e roupa por meio de um preset.
+Allow different fur and outfit colours through a preset.
 
 ## Requirements
 

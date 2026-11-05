@@ -1,0 +1,5 @@
+# watch-060E | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-00.mss | ADDR=1550 FRAMES=6000
+LOAD ok=true
+WRITE frame=376 addr=$00060E value=255 pc=$81E3D7 A=$FFFF X=$A5A4 Y=$BB22
+WRITE frame=376 addr=$00060E value=1 pc=$81E4E5 A=$0120 X=$9F63 Y=$BB22
+WRITE frame=376 addr=$00060E value=1 pc=$81E501 A=$01AA X=$9F63 Y=$BB22

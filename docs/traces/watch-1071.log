@@ -1,0 +1,3 @@
+# watch-1071 | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-00.mss | ADDR=4209 FRAMES=5000
+LOAD ok=true
+WRITE frame=1762 addr=$001071 value=2 pc=$81DACB A=$02A0 X=$106A Y=$00C0

@@ -1,0 +1,8 @@
+# poke-energy05A2 | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-00.mss | ADDR=1442 VALUE=6 HOLD=1 END=5000
+LOAD ok=true
+BEFORE $7E05A2=5
+SHOT before -> output\traces\poke-energy05A2/before.png
+AFTER $7E05A2=6
+SHOT after -> output\traces\poke-energy05A2/after.png
+LATE $7E05A2=6
+SHOT late -> output\traces\poke-energy05A2/late.png

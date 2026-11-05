@@ -17,7 +17,7 @@ The tools refuse to patch any other ROM.
 ## Status
 
 - **Working**: strict ROM verification, BGR555 conversion, recoloring the established `C6-C9` outfit and `CB-CF` fur palette entries, IPS patch build, patched `.sfc`, and verification report.
-- **Runtime switch**: `Select+L`/`Select+R` hook implemented; automated Mesen 2 sweep covers every stage, bosses, credits, pause and soft reset, with selection persistence. Released as v0.1.0 (`docs/runtime-hook.md`).
+- **Runtime switch**: `Select+L`/`Select+R` hook implemented; automated Mesen 2 sweep covers every stage, bosses, credits, pause and soft reset, with selection persistence. Released as v0.1.0 (`docs/knowledge/mod-implementation.md`).
 - **Not done**: in-game palette menu. Do not claim one exists.
 
 ## Requirements
@@ -49,13 +49,16 @@ Place `Mr. Nutz.ips` alongside an original ROM named `Mr. Nutz.sfc` if your emul
 
 ## Runtime palette switch (in game)
 
-`npm run runtime:build` writes `output/Mr. Nutz.runtime.ips` (2 MiB expanded LoROM) plus a local test ROM and `runtime-report.json`. In game: `Select+L` cycles fur, `Select+R` cycles outfit (presets in `presets/runtime.json`, index 0 = original). Details, evidence and open gaps: `docs/runtime-hook.md`.
+`npm run runtime:build` writes `output/Mr. Nutz.runtime.ips` (2 MiB expanded LoROM) plus a local test ROM and `runtime-report.json`. In game: `Select+L` cycles fur, `Select+R` cycles outfit (presets in `presets/runtime.json`, index 0 = original). The selection is saved to battery-backed SRAM (2 KiB): the emulator keeps a `.srm` file next to the ROM (or in its save folder), and the colours come back on the next power-on. Details and evidence: `docs/knowledge/mod-implementation.md`.
 
 Mesen 2 automation (headless `--testRunner`, Lua): copy `.env.example` to `.env`, set `MESEN_PATH`, then:
 
 ```bash
 npm run sweep:prepare    # once: one savestate per stage from roms/states/level1-start.mss (original ROM)
-npm run sweep:all        # regression: every stage in parallel + persistence, ~35 s, exit 1 on any violation
+npm run sweep:all        # regression: every stage in parallel + persistence + power cycle, ~1-2 min, exit 1 on any violation
+npm run check:power      # SRAM save across real power-ons (fresh, restore, corrupted, out of range)
+npm run check:ending     # last stage -> credits -> final screen -> reset -> new game
+npm run trace:sram:all   # SRAM / anti-copier evidence over the whole game (--rom, --light)
 npm run sweep:stage -- 14,15   # only some stages
 npm run verify:runtime   # power-on path smoke test (~12 s)
 npm run trace:palette    # evidence traces on the original ROM (palette DMA, E4 sweep), trace:hook, trace:wram
@@ -64,13 +67,24 @@ npm run research:sweep   # slow single-run sweep kept for its investigation mode
 
 Text logs go to `docs/traces/`; screenshots to `output/traces/` (private).
 
-## Claude + OpenSpec workflow
+## Documentation map
 
-1. Open this folder in your terminal and run `claude`.
-2. Read `CLAUDE.md`, `docs/rom-map.md`, and `openspec/specs/`.
-3. Run `openspec init --tools claude` to install or refresh **the current OpenSpec Claude skills and commands**. The project already includes its config, base specs, and archived changes; init must not remove them.
+| Where | What |
+| --- | --- |
+| `AGENTS.md` | rules for every agent (Claude Code and Codex): contract, required checks, language |
+| `docs/knowledge/` | how the game works: memory map, frame cycle, palettes, game state, protection, our implementation, research tools |
+| `openspec/specs/` | what the mod must do (accepted behaviour and scenarios) |
+| `openspec/changes/` | work in progress; finished changes in `openspec/changes/archive/` |
+| `docs/traces/` | evidence logs from Mesen runs |
+| `CHANGELOG.md` | release history |
+
+## Agents + OpenSpec workflow (Claude Code and Codex)
+
+1. Open this folder and run `claude` or `codex`. Both read `AGENTS.md` (Claude through `CLAUDE.md`, which imports it).
+2. Read `docs/knowledge/README.md` and `openspec/specs/` before researching or changing anything.
+3. Run `openspec init --tools claude,codex` to install or refresh **the current OpenSpec skills and commands** for both agents. The project already includes its config, base specs, and archived changes; init must not remove them.
 4. Check `openspec/changes/` for active work; finished changes live in `openspec/changes/archive/` (e.g. `2026-11-04-runtime-palette-switch`).
-5. Ask Claude to use the OpenSpec workflow (`/opsx:apply` or available installed OpenSpec command; check installed commands first).
+5. Ask the agent to use the OpenSpec workflow (`/opsx:apply` or the installed OpenSpec command; check installed commands first).
 6. Require an IPS build + verification after every implementation change.
 
 ## Safety rules
@@ -78,7 +92,7 @@ Text logs go to `docs/traces/`; screenshots to `output/traces/` (private).
 - Never commit ROMs, patched ROMs, or savestates (`roms/` and `output/` are git-ignored).
 - Work from a copy of this specific ROM only; never mutate the source file.
 - Do not patch arbitrary ROM versions. The original palette bytes and ROM length must match.
-- Code/variables/comments are in English; documentation in Portuguese.
+- **Everything in this repository is in English**: code, comments, specs, OpenSpec changes, docs, README, CHANGELOG, agent files and commit messages.
 - `openspec/specs/` holds accepted behavior; `openspec/changes/` holds work in progress.
 - Every low-level ROM hook must be backed by Mesen traces and an actual smoke test.
 

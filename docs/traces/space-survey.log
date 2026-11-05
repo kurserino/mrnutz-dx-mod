@@ -1,0 +1,161 @@
+# space-survey | original ROM | 40 stage states | 32 s
+Method: per stage, counters reset after the state loads; action cycle, 300-frame pause, action cycle (900 frames).
+WRAM/CGRAM/OAM: blocks read or written by the CPU/DMA. VRAM: blocks referenced by BG1-3 tilemaps, their tiles or visible sprites.
+
+## WRAM never touched in any stage run (64-byte blocks, runs >= 256 bytes)
+$7FD040-$7FFFFF (12224 bytes)
+$7F94C0-$7F9FBF (2816 bytes)
+$7FB680-$7FBFFF (2432 bytes)
+$7EEE40-$7EF3FF (1472 bytes)
+$7FAC40-$7FAFBF (896 bytes)
+$7FB040-$7FB37F (832 bytes)
+$7E0C40-$7E0DFF (448 bytes)
+$7E11C0-$7E137F (448 bytes)
+$7E1BC0-$7E1D3F (384 bytes)
+$7EF680-$7EF7FF (384 bytes)
+$7F8F00-$7F907F (384 bytes)
+$7E0F00-$7E103F (320 bytes)
+$7E0700-$7E07FF (256 bytes)
+$7EB780-$7EB87F (256 bytes)
+
+## VRAM never referenced in any stage run (byte addresses, 256-byte blocks)
+$008600-$0086FF (256 bytes)
+
+## VRAM referenced: stages per 256-byte block (0-9, + = 10 or more)
+++++++++++++++++++++++++++++++++++++++++++++++++++++9+98+++++6++
+++57++78++65++66++84++96++47++88++67++68++67++34++94++67++75++55
+++56++04++94++45++76++48++64++98++44++56++44++36++66++52++68++77
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+## cgram/32: stages that touched each block after load
++9888888++888888
+
+## oam/32: stages that touched each block after load
+++++++9988888888+
+
+## vram/256: stages that touched each block after load
++++++++++++++++++++++++9999999992222222222222222000000007777770044444444444444444444444444444444444440400000000000000000000000005555555555555555++++88885555888866666666555555555555555555555555+++++++++8+8+5+5343434343434222243434343434343433333333333333333
+
+## PPU layout per stage (word addresses as reported by Mesen; bytes = x2)
+stage-00: mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-00 (paused): mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-01: mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-01 (paused): mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-02: mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-02 (paused): mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-03: mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-03 (paused): mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-04: mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-04 (paused): mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-05: mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-05 (paused): mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-06: mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-06 (paused): mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-07: mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-07 (paused): mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-08: mode=7 main=$11 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$0000 bg2 map=$0400 chr=$0000 bg3 map=$4800 chr=$4000 bg4 map=$0000 chr=$4000
+stage-08 (paused): mode=7 main=$11 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$0000 bg2 map=$0400 chr=$0000 bg3 map=$4800 chr=$4000 bg4 map=$0000 chr=$4000
+stage-09: mode=1 main=$17 sub=$03 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-09 (paused): mode=1 main=$17 sub=$03 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-10: mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-10 (paused): mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-11: mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-11 (paused): mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-12: mode=1 main=$17 sub=$11 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-12 (paused): mode=1 main=$17 sub=$11 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-13: mode=1 main=$17 sub=$11 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-13 (paused): mode=1 main=$17 sub=$11 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-14: mode=1 main=$17 sub=$11 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-14 (paused): mode=1 main=$17 sub=$11 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-15: mode=1 main=$17 sub=$11 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-15 (paused): mode=1 main=$17 sub=$11 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-16: mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-16 (paused): mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-17: mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-17 (paused): mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-18: mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-18 (paused): mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-19: mode=1 main=$17 sub=$10 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-19 (paused): mode=1 main=$17 sub=$10 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-20: mode=1 main=$17 sub=$10 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-20 (paused): mode=1 main=$17 sub=$10 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-21: mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-21 (paused): mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-22: mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-22 (paused): mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-23: mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-23 (paused): mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-24: mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-24 (paused): mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-25: mode=7 main=$11 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$0000 bg2 map=$0400 chr=$0000 bg3 map=$4800 chr=$4000 bg4 map=$0000 chr=$4000
+stage-25 (paused): mode=7 main=$11 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$0000 bg2 map=$0400 chr=$0000 bg3 map=$4800 chr=$4000 bg4 map=$0000 chr=$4000
+stage-26: mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-26 (paused): mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-27: mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-27 (paused): mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-28: mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-28 (paused): mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-29: mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-29 (paused): mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-30: mode=1 main=$01 sub=$00 bright=10 forcedBlank=false obj=$6000 oamMode=3 $01DC=$8357 bg1 map=$0000 chr=$6000 bg2 map=$0400 chr=$6000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-30 (paused): mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-31: mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-31 (paused): mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-32: mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-32 (paused): mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-33: mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-33 (paused): mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-34: mode=1 main=$17 sub=$11 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-34 (paused): mode=1 main=$17 sub=$11 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-35: mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-35 (paused): mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-36: mode=1 main=$17 sub=$10 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-36 (paused): mode=1 main=$17 sub=$10 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-37: mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-37 (paused): mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-38: mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-38 (paused): mode=1 main=$17 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-39: mode=1 main=$16 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+stage-39 (paused): mode=1 main=$16 sub=$00 bright=15 forcedBlank=false obj=$6000 oamMode=3 $01DC=$835B bg1 map=$0000 chr=$2000 bg2 map=$0400 chr=$2000 bg3 map=$0800 chr=$0000 bg4 map=$0000 chr=$0000
+
+## Joypad mirror / hook site ($81:828A) runs while playing vs. while paused
+stage-00: siteRunsPlay=599 siteRunsPause=0
+stage-01: siteRunsPlay=599 siteRunsPause=0
+stage-02: siteRunsPlay=504 siteRunsPause=0
+stage-03: siteRunsPlay=599 siteRunsPause=0
+stage-04: siteRunsPlay=599 siteRunsPause=0
+stage-05: siteRunsPlay=599 siteRunsPause=0
+stage-06: siteRunsPlay=422 siteRunsPause=0
+stage-07: siteRunsPlay=599 siteRunsPause=0
+stage-08: siteRunsPlay=599 siteRunsPause=0
+stage-09: siteRunsPlay=599 siteRunsPause=0
+stage-10: siteRunsPlay=599 siteRunsPause=0
+stage-11: siteRunsPlay=599 siteRunsPause=0
+stage-12: siteRunsPlay=599 siteRunsPause=0
+stage-13: siteRunsPlay=585 siteRunsPause=0
+stage-14: siteRunsPlay=599 siteRunsPause=0
+stage-15: siteRunsPlay=599 siteRunsPause=0
+stage-16: siteRunsPlay=599 siteRunsPause=0
+stage-17: siteRunsPlay=599 siteRunsPause=0
+stage-18: siteRunsPlay=599 siteRunsPause=0
+stage-19: siteRunsPlay=396 siteRunsPause=0
+stage-20: siteRunsPlay=599 siteRunsPause=0
+stage-21: siteRunsPlay=599 siteRunsPause=0
+stage-22: siteRunsPlay=599 siteRunsPause=0
+stage-23: siteRunsPlay=599 siteRunsPause=0
+stage-24: siteRunsPlay=599 siteRunsPause=0
+stage-25: siteRunsPlay=599 siteRunsPause=0
+stage-26: siteRunsPlay=331 siteRunsPause=269
+stage-27: siteRunsPlay=599 siteRunsPause=0
+stage-28: siteRunsPlay=599 siteRunsPause=0
+stage-29: siteRunsPlay=599 siteRunsPause=0
+stage-30: siteRunsPlay=209 siteRunsPause=202
+stage-31: siteRunsPlay=630 siteRunsPause=269
+stage-32: siteRunsPlay=630 siteRunsPause=269
+stage-33: siteRunsPlay=630 siteRunsPause=269
+stage-34: siteRunsPlay=630 siteRunsPause=269
+stage-35: siteRunsPlay=571 siteRunsPause=269
+stage-36: siteRunsPlay=571 siteRunsPause=269
+stage-37: siteRunsPlay=571 siteRunsPause=269
+stage-38: siteRunsPlay=330 siteRunsPause=160
+stage-39: siteRunsPlay=360 siteRunsPause=259

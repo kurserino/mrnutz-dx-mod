@@ -1,0 +1,28 @@
+# power-cycle | rom=Mr. Nutz.power-test.sfc (runtime build) | save=Saves/Mr. Nutz.power-test.srm
+  1-fresh: CHECK boot frame=1935 idx=0/0 X=255 nutz=6 nutzOk=false noSlot=nil sharedChanged=false sram=4C16C8703CA73C76
+  1-fresh: CHECK selected frame=2055 idx=2/3 X=5 nutz=6 nutzOk=true noSlot=nil sharedChanged=false sram=4E5A01020300ADA3
+  1-fresh: RESULT ok
+ok   1 fresh boot is original: CHECK boot frame=1935 idx=0/0 X=255 nutz=6 nutzOk=false noSlot=nil sharedChanged=false sram=4C16C8703CA73C76
+ok   1 selection applied: CHECK selected frame=2055 idx=2/3 X=5 nutz=6 nutzOk=true noSlot=nil sharedChanged=false sram=4E5A01020300ADA3
+ok   1 save file holds the record: srm=4E5A01020300ADA3 expected=4E5A01020300ADA3
+  2-restore: CHECK boot frame=1935 idx=2/3 X=5 nutz=6 nutzOk=true noSlot=nil sharedChanged=false sram=4E5A01020300ADA3
+  2-restore: CHECK warp-1 frame=2332 idx=2/3 X=5 nutz=6 nutzOk=true noSlot=nil sharedChanged=false sram=4E5A01020300ADA3
+  2-restore: CHECK warp-2 frame=3033 idx=2/3 X=5 nutz=6 nutzOk=true noSlot=nil sharedChanged=false sram=4E5A01020300ADA3
+  2-restore: CHECK warp-3 frame=3549 idx=2/3 X=5 nutz=6 nutzOk=true noSlot=nil sharedChanged=false sram=4E5A01020300ADA3
+  2-restore: CHECK warp-4 frame=4056 idx=2/3 X=5 nutz=6 nutzOk=true noSlot=nil sharedChanged=false sram=4E5A01020300ADA3
+  2-restore: CHECK warp-5 frame=6610 idx=2/3 X=5 nutz=6 nutzOk=true noSlot=nil sharedChanged=false sram=4E5A01020300ADA3
+  2-restore: CHECK warp-6 frame=7118 idx=2/3 X=5 nutz=6 nutzOk=true noSlot=nil sharedChanged=false sram=4E5A01020300ADA3
+  2-restore: CHECK warp-7 frame=7670 idx=2/3 X=5 nutz=6 nutzOk=true noSlot=nil sharedChanged=false sram=4E5A01020300ADA3
+  2-restore: CHECK warp-8 frame=8143 idx=2/3 X=255 nutz=6 nutzOk=false noSlot=nil sharedChanged=false sram=4E5A01020300ADA3
+  2-restore: CHECK warp-9 frame=10611 idx=2/3 X=1 nutz=6 nutzOk=true noSlot=nil sharedChanged=false sram=4E5A01020300ADA3
+  2-restore: CHECK warp-10 frame=10826 idx=2/3 X=5 nutz=6 nutzOk=true noSlot=nil sharedChanged=false sram=4E5A01020300ADA3
+  2-restore: RESULT ok
+ok   2 power-on restores 2/3: CHECK boot frame=1935 idx=2/3 X=5 nutz=6 nutzOk=true noSlot=nil sharedChanged=false sram=4E5A01020300ADA3
+ok   2 restored colours in every stage after the power-on (10 skips, next world): 10/10 gameplay stages ok
+  3-corrupt: CHECK boot frame=1935 idx=0/0 X=255 nutz=6 nutzOk=false noSlot=nil sharedChanged=false sram=4E5A01020300ADF6
+  3-corrupt: RESULT ok
+ok   3 corrupted record falls back to 0/0: CHECK boot frame=1935 idx=0/0 X=255 nutz=6 nutzOk=false noSlot=nil sharedChanged=false sram=4E5A01020300ADF6
+  4-range: CHECK boot frame=1935 idx=0/1 X=5 nutz=6 nutzOk=true noSlot=nil sharedChanged=false sram=4E5A01090100AF9C
+  4-range: RESULT ok
+ok   4 out-of-range fur falls back to 0, outfit kept: CHECK boot frame=1935 idx=0/1 X=5 nutz=6 nutzOk=true noSlot=nil sharedChanged=false sram=4E5A01090100AF9C
+summary: fails=0
