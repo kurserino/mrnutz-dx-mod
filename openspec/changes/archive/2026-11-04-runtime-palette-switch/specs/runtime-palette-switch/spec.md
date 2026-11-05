@@ -1,5 +1,8 @@
 # Runtime palette switching (delta)
 
+## Purpose
+Permitir trocar as cores de pelo e roupa do Mr. Nutz durante o jogo, sem afetar outros objetos nem a jogabilidade.
+
 ## ADDED Requirements
 
 ### Requirement: Independent runtime cycling

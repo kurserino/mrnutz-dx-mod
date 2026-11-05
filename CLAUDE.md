@@ -38,4 +38,4 @@ npm run typecheck
 
 ## First Claude task
 
-Read the baseline spec and existing change `runtime-palette-switch`. Confirm current build pipeline; then design and implement one feature at a time. Begin with a Mesen tracing plan (controller reading, in-game palette DMA, VBlank timing), not speculative ASM bytes.
+Read the baseline specs in `openspec/specs/`. The runtime palette switch shipped in v0.1.0 and its change is archived in `openspec/changes/archive/2026-11-04-runtime-palette-switch/`. Confirm the current build pipeline; then design and implement one feature at a time, each as a new OpenSpec change. Begin with a Mesen tracing plan (controller reading, in-game palette DMA, VBlank timing), not speculative ASM bytes.

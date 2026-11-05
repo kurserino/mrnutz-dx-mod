@@ -1,4 +1,4 @@
-# sweep-all | 40 stages | jobs=6 | 59 s
+# sweep-all | 40 stages | jobs=6 | 58 s
 stage-00 ok nutzColoured=100.0% gameplay=800 nutzFrames=756 lostMax=0 sharedChanged=0 foreignOnX=0 hdmaLate=0 hdmaMaxLine=249 flash=0 slotSwitch=0 noSlot=0 slots(S/X)=4/5 idx=2/3
 stage-01 ok nutzColoured=100.0% gameplay=800 nutzFrames=712 lostMax=0 sharedChanged=0 foreignOnX=0 hdmaLate=0 hdmaMaxLine=251 flash=0 slotSwitch=0 noSlot=0 slots(S/X)=4/5 idx=2/3
 stage-02 ok nutzColoured=100.0% gameplay=587 nutzFrames=498 lostMax=0 sharedChanged=0 foreignOnX=0 hdmaLate=0 hdmaMaxLine=250 flash=0 slotSwitch=0 noSlot=0 slots(S/X)=4/5 idx=2/3

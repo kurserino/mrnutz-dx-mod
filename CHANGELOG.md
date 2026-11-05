@@ -1,6 +1,6 @@
 # Changelog
 
-## v0.1.0 — 2026-11-04 — runtime palette switch (`openspec/changes/runtime-palette-switch`)
+## v0.1.0 — 2026-11-04 — runtime palette switch (`openspec/changes/archive/2026-11-04-runtime-palette-switch`)
 
 Patch: `npm run runtime:build` → `output/Mr. Nutz.runtime.ips` (2365 bytes, 2 MiB expanded LoROM),
 published as `mrnutz-dx-v0.1.0.ips` on the GitHub release.
@@ -29,6 +29,8 @@ Source ROM: `Mr. Nutz (USA) (En,Fr).sfc`, CRC32 `A99BDD9A`, unheadered. Patched 
   shown in the private slot, HDMA always enabled in VBlank; Mr. Nutz in the selected colours in >= 99% of
   visible frames in 34 stages, original colours where no slot is free (spider boss and three other stages, partly).
 - Swimming in blue water (two areas), death and respawn, pause, stage transitions, soft reset.
+- Release build (2026-11-04): IPS replayed on the clean ROM equals the tested ROM; `sweep:all` (violations=0)
+  and `verify:runtime` pass; screenshots reviewed (cycling, wrap, underwater, snow, after reset).
 
 ### Known limitations
 - Spider boss (Woody Land 5) and credits: no free palette slot in the same colour-math group → Mr. Nutz
@@ -37,4 +39,5 @@ Source ROM: `Mr. Nutz (USA) (En,Fr).sfc`, CRC32 `A99BDD9A`, unheadered. Patched 
 - Power-off resets the selection (no SRAM; the game hangs when it detects SRAM).
 
 ### Not yet verified
-- Manual Mesen GUI regression pass with this build (automated headless sweep only).
+- Interactive (human) Mesen GUI play-through; verification so far is headless plus screenshot review.
+- Continue / game over screens.

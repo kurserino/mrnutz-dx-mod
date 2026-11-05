@@ -17,7 +17,7 @@ The tools refuse to patch any other ROM.
 ## Status
 
 - **Working**: strict ROM verification, BGR555 conversion, recoloring the established `C6-C9` outfit and `CB-CF` fur palette entries, IPS patch build, patched `.sfc`, and verification report.
-- **Runtime switch**: `Select+L`/`Select+R` hook implemented; automated Mesen 2 sweep covers every stage, bosses, credits, pause and soft reset, with selection persistence. A manual Mesen GUI regression pass is still pending before the OpenSpec change is archived (`docs/runtime-hook.md`).
+- **Runtime switch**: `Select+L`/`Select+R` hook implemented; automated Mesen 2 sweep covers every stage, bosses, credits, pause and soft reset, with selection persistence. Released as v0.1.0 (`docs/runtime-hook.md`).
 - **Not done**: in-game palette menu. Do not claim one exists.
 
 ## Requirements
@@ -68,8 +68,8 @@ Text logs go to `docs/traces/`; screenshots to `output/traces/` (private).
 
 1. Open this folder in your terminal and run `claude`.
 2. Read `CLAUDE.md`, `docs/rom-map.md`, and `openspec/specs/`.
-3. Run `openspec init --tools claude` to install or refresh **the current OpenSpec Claude skills and commands**. The project already includes its config, base specs, and a proposed future change; init must not remove them.
-4. Review the active change in `openspec/changes/runtime-palette-switch/` (implemented; final manual verification pending).
+3. Run `openspec init --tools claude` to install or refresh **the current OpenSpec Claude skills and commands**. The project already includes its config, base specs, and archived changes; init must not remove them.
+4. Check `openspec/changes/` for active work; finished changes live in `openspec/changes/archive/` (e.g. `2026-11-04-runtime-palette-switch`).
 5. Ask Claude to use the OpenSpec workflow (`/opsx:apply` or available installed OpenSpec command; check installed commands first).
 6. Require an IPS build + verification after every implementation change.
 
@@ -79,7 +79,7 @@ Text logs go to `docs/traces/`; screenshots to `output/traces/` (private).
 - Work from a copy of this specific ROM only; never mutate the source file.
 - Do not patch arbitrary ROM versions. The original palette bytes and ROM length must match.
 - Code/variables/comments are in English; documentation in Portuguese.
-- `openspec/specs/` holds accepted behavior; `openspec/changes/` holds unimplemented work.
+- `openspec/specs/` holds accepted behavior; `openspec/changes/` holds work in progress.
 - Every low-level ROM hook must be backed by Mesen traces and an actual smoke test.
 
 ## Legal

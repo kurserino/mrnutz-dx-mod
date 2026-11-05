@@ -1,8 +1,8 @@
 # Pedido de evidências — Mesen 2
 
-**Status 2026-11-04:** E1, E2, E4 e E5 coletados automaticamente com `tools/mesen/` (logs em `docs/traces/`); E3 parcial (falta morte, continue, troca de fase, chefe); E6 OK no Mesen. Itens abertos estão em `docs/runtime-hook.md` → Lacunas.
+**Status 2026-11-04:** E1, E2, E4 e E5 coletados automaticamente com `tools/mesen/` (logs em `docs/traces/`); E3 parcial (falta continue/game over; morte, troca de fase e chefes verificados); E6 OK no Mesen. Itens abertos estão em `docs/runtime-hook.md` → Limitações e pendências.
 
-Cada item desbloqueia uma task de `openspec/changes/runtime-palette-switch/tasks.md`.
+Cada item desbloqueia uma task de `openspec/changes/archive/2026-11-04-runtime-palette-switch/tasks.md`.
 Para cada um, envie: screenshot do debugger (ou texto do Trace Logger), PC, registradores
 (A, X, Y, D, DB, P com flags m/x), e o que estava na tela. Salve traces em `docs/traces/` (texto, sem ROM).
 

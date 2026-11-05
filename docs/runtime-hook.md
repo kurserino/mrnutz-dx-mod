@@ -1,7 +1,7 @@
 # Hook runtime — troca de pelo e roupa no jogo
 
-Status: **implementado e verificado em Mesen 2.2.1 (headless)** na fase 1. Falta smoke test manual
-(Mesen GUI) e cobertura de morte/continue/troca de fase — ver "Lacunas".
+Status: **implementado e lançado na v0.1.0**, verificado em Mesen 2.2.1 (headless) no jogo inteiro
+(`sweep:all`, 40 estágios) — ver "Limitações e pendências".
 
 ## Controles
 
@@ -67,12 +67,12 @@ Até 2026-11-04 o estado ficava em `$7FFFF0`, que o jogo limpa em algumas mudan�
 - Troca de cena: o init recarrega a paleta original da ROM; o hook detecta isso e reaplica no próximo
   frame de gameplay com VBlank livre (1 frame com a cor original no máximo na varredura completa).
 
-## Lacunas antes do release
+## Limitações e pendências
 
-- Smoke test manual no Mesen GUI (task 3.3).
-- Chefes e continue/game over (task 3.3); morte, troca de estágio e natação já verificados (ver abaixo).
-- Decidir se a seleção deve sobreviver à mudança de mundo (hoje volta ao original).
-- Reset (persistência acima).
+- Não verificado: continue/game over e uma partida interativa (humana) no Mesen GUI; chefes, morte, troca de
+  estágio/mundo, natação e reset já verificados (ver abaixo e `sweep-all.log`).
+- Chefe aranha (Woody Land 5) e créditos: sem slot livre no mesmo grupo de colour math → cor original.
+- Telas fora do gameplay (intro, "Stage Clear") mostram a cor original.
 - Desligar o console apaga a WRAM: a seleção volta ao original no power-on. Persistir além disso exigiria SRAM,
   e o jogo trava se detectar SRAM (checagem anticopiadora em `$80:83EF`, `$70:0034`).
 

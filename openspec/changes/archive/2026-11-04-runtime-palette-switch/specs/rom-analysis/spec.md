@@ -1,5 +1,8 @@
 # ROM analysis (delta)
 
+## Purpose
+Dar ferramentas estáticas (mapeamento LoROM, disassembly 65C816 e leitura do header) para estudar a ROM suportada sem emulador.
+
 ## ADDED Requirements
 
 ### Requirement: LoROM address mapping

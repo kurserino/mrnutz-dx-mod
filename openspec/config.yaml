@@ -2,7 +2,7 @@ schema: spec-driven
 context: |
   Project: Mr. Nutz DX Mod, SNES ROM research and patch builder.
   Stack: Node.js, TypeScript, IPS, BGR555 little-endian, 65C816 SNES LoROM.
-  Baseline patch builder is implemented. Runtime palette switching and in-game UI are NOT implemented.
+  Baseline patch builder and the in-game runtime palette switch (Select+L/R, release v0.1.0) are implemented. An in-game palette menu is NOT implemented.
   User-provided ROM is private; never commit or redistribute it.
   Work against only validated original ROM signatures. No speculative offsets or ASM injections.
   See CLAUDE.md, docs/rom-map.md and docs/debugging-playbook.md.
