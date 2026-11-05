@@ -1,4 +1,4 @@
-# Playbook de debug — Mesen 2 + ares
+# Playbook de debug — Mesen 2
 
 ## Paleta do personagem
 
@@ -13,7 +13,7 @@
 
 ## Validação obrigatória de cada patch
 
-- Abra o jogo no ares ou Mesen e percorra a primeira fase.
+- Abra o jogo no Mesen e percorra a primeira fase.
 - Captura antes/depois do personagem parado, andando, pulando, sofrendo dano, entre áreas.
 - Confirme roupa e pelo visualmente, e verifique se outros sprites compartilham a paleta.
 - Confirme que gameplay, vidas, HUD, itens, música, transição de nível e saves não mudaram.

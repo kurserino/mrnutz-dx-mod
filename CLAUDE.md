@@ -20,7 +20,6 @@ You are maintaining a spec-driven SNES ROM hacking project. Read these files bef
 - The current full character palette is CGRAM `$C0-$CF` (byte offsets `$0180-$019F`). From observed ROM bytes, `$C6-$C9` is the likely outfit gradient and `$CB-$CF` the likely fur gradient; confirm on actual sprites across animation and level states.
 - The first `$C0` entry is the transparent sprite color. Never recolor it.
 - The entrypoint of the runtime DMA is not yet a validated safe hook. Captures show a routine near CPU `$9DAC8A-$9DACB7`, but it can update multiple sprite palettes.
-- Do not assume patch ROM bank `$85` offset maps to a writable RAM code cheat for ares.
 - Validate original ROM size, exact original palette bytes, and generated patch scope.
 - Always run `npm test && npm run typecheck && npm run patch:build` before claiming completion.
 - For new in-game features, save original disassemblies/register traces and manually verify in Mesen before producing a release patch.

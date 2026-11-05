@@ -28,7 +28,6 @@ Source ROM: `Mr. Nutz (USA) (En,Fr).sfc`, CRC32 `A99BDD9A`, unheadered.
   shown in the private slot, HDMA always enabled in VBlank; Mr. Nutz in the selected colours in >= 99% of
   visible frames in 34 stages, original colours where no slot is free (spider boss and three other stages, partly).
 - Swimming in blue water (two areas), death and respawn, pause, stage transitions, soft reset.
-- ares soft-patch IPS and death (manual, by the user, on an earlier build).
 
 ### Known limitations
 - Spider boss (Woody Land 5) and credits: no free palette slot in the same colour-math group → Mr. Nutz
@@ -37,4 +36,4 @@ Source ROM: `Mr. Nutz (USA) (En,Fr).sfc`, CRC32 `A99BDD9A`, unheadered.
 - Power-off resets the selection (no SRAM; the game hangs when it detects SRAM).
 
 ### Pending before release
-- Manual Mesen GUI and ares regression pass with this build.
+- Manual Mesen GUI regression pass with this build.

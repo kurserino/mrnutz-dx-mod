@@ -1,7 +1,7 @@
 # Hook runtime — troca de pelo e roupa no jogo
 
 Status: **implementado e verificado em Mesen 2.2.1 (headless)** na fase 1. Falta smoke test manual
-(Mesen GUI + ares) e cobertura de morte/continue/troca de fase — ver "Lacunas".
+(Mesen GUI) e cobertura de morte/continue/troca de fase — ver "Lacunas".
 
 ## Controles
 
@@ -69,16 +69,15 @@ Até 2026-11-04 o estado ficava em `$7FFFF0`, que o jogo limpa em algumas mudan�
 
 ## Lacunas antes do release
 
-- Smoke test manual no Mesen GUI e no ares (task 3.4).
+- Smoke test manual no Mesen GUI (task 3.3).
 - Chefes e continue/game over (task 3.3); morte, troca de estágio e natação já verificados (ver abaixo).
 - Decidir se a seleção deve sobreviver à mudança de mundo (hoje volta ao original).
 - Reset (persistência acima).
 - Desligar o console apaga a WRAM: a seleção volta ao original no power-on. Persistir além disso exigiria SRAM,
   e o jogo trava se detectar SRAM (checagem anticopiadora em `$80:83EF`, `$70:0034`).
 
-## Verificação estendida (2026-11-04, Mesen 2.2.1 headless + ares manual)
+## Verificação estendida (2026-11-04, Mesen 2.2.1 headless)
 
-- **ares (manual, usuário):** soft-patch `.ips` funcionou; cor mantida após morrer.
 - **Pulo de estágio de debug** (`$1EC9` bit0 + R, só na RAM do emulador): confirmado — avança estágios
   (`docs/traces/probe-warp.log`; script substituído por `npm run sweep:prepare`). Usado apenas para testes.
 - **Troca de estágio:** seleção mantida em todas as áreas de gameplay 1-16. Telas de intro/"Stage Clear"

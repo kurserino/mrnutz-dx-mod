@@ -11,7 +11,7 @@ The baseline Node.js/TypeScript builder creates an IPS that changes one 32-byte 
 5. Avoid writes to CGRAM while PPU actively renders; respect 65C816 P/M/X width and bank conventions, save/restore modified registers and flags.
 6. Provide original preset and deterministic reset behavior.
 7. Extend patch manifest to whitelist the exact hook sites, added code, tables, and every modified byte.
-8. Build with assembler verified in Windows; compare IPS-applied result against expected ROM and smoke test in Mesen + ares.
+8. Build with assembler verified in Windows; compare IPS-applied result against expected ROM and smoke test in Mesen.
 
 ## Static findings (2026-11-04, see `docs/static-analysis.md`)
 - Palette `$C0-$CF` is uploaded by the tail of the scene PPU-init routine `JSL $9DABA7` (`$9DAC7E-$9DACB5`): an 8-iteration DMA loop reading 4-byte (addr, bank) pointers from `[$10]` (copied from `$055E/$0560`). Tables at `$82:D454+` always place `$85:9CC0` in slot 4. Hypothesis: no per-frame upload of `$C0-$CF`.

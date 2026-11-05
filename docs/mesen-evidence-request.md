@@ -1,6 +1,6 @@
 # Pedido de evidências — Mesen 2
 
-**Status 2026-11-04:** E1, E2, E4 e E5 coletados automaticamente com `tools/mesen/` (logs em `docs/traces/`); E3 parcial (falta morte, continue, troca de fase, chefe); E6 OK no Mesen, falta ares. Itens abertos estão em `docs/runtime-hook.md` → Lacunas.
+**Status 2026-11-04:** E1, E2, E4 e E5 coletados automaticamente com `tools/mesen/` (logs em `docs/traces/`); E3 parcial (falta morte, continue, troca de fase, chefe); E6 OK no Mesen. Itens abertos estão em `docs/runtime-hook.md` → Lacunas.
 
 Cada item desbloqueia uma task de `openspec/changes/runtime-palette-switch/tasks.md`.
 Para cada um, envie: screenshot do debugger (ou texto do Trace Logger), PC, registradores
@@ -39,4 +39,4 @@ Candidato a investigar: área `$7F:F000-$7F:FFFF`. Em Mesen: Memory Viewer → W
 
 ## E6 — Compatibilidade de expansão (task 1.4)
 
-Teste se a ROM expandida (gerada após E1–E5) carrega no Mesen 2 e no ares; reporte versão dos emuladores.
+Teste se a ROM expandida (gerada após E1–E5) carrega no Mesen 2; reporte a versão do emulador.

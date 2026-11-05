@@ -17,12 +17,12 @@ The tools refuse to patch any other ROM.
 ## Status
 
 - **Working**: strict ROM verification, BGR555 conversion, recoloring the established `C6-C9` outfit and `CB-CF` fur palette entries, IPS patch build, patched `.sfc`, and verification report.
-- **Runtime switch**: `Select+L`/`Select+R` hook implemented; automated Mesen 2 sweep covers every stage, bosses, credits, pause and soft reset, with selection persistence. Manual Mesen GUI and full ares regression passes are still pending before the OpenSpec change is archived (`docs/runtime-hook.md`).
+- **Runtime switch**: `Select+L`/`Select+R` hook implemented; automated Mesen 2 sweep covers every stage, bosses, credits, pause and soft reset, with selection persistence. A manual Mesen GUI regression pass is still pending before the OpenSpec change is archived (`docs/runtime-hook.md`).
 - **Not done**: in-game palette menu. Do not claim one exists.
 
 ## Requirements
 
-Node.js 20.12+ (for `process.loadEnvFile`), npm, OpenSpec CLI, Claude Code, and Mesen 2 for emulator debugging. Optional: ares for end-user gameplay.
+Node.js 20.12+ (for `process.loadEnvFile`), npm, OpenSpec CLI, Claude Code, and Mesen 2 for emulator debugging and testing.
 
 ## Quick start
 
@@ -45,7 +45,7 @@ To use another preset:
 npm run patch:build -- --preset presets/pink-fur-yellow-outfit.json
 ```
 
-Place `Mr. Nutz.ips` alongside an original ROM named `Mr. Nutz.sfc` for emulator soft patch support (depending on ares version); alternatively load the generated `Mr. Nutz.patched.sfc` directly.
+Place `Mr. Nutz.ips` alongside an original ROM named `Mr. Nutz.sfc` if your emulator supports IPS soft-patching; alternatively load the generated `Mr. Nutz.patched.sfc` directly.
 
 ## Runtime palette switch (in game)
 

@@ -17,7 +17,7 @@ rules:
   design:
     - Include exact CPU/ROM/CGRAM mapping, byte-level rollback, and Mesen trace references for any hook.
   tasks:
-    - Include tests, ROM signature checking, ares/Mesen smoke test, and IPS regression verification.
+    - Include tests, ROM signature checking, Mesen smoke test, and IPS regression verification.
 operations:
   apply:
     guidance:

@@ -22,8 +22,7 @@
 - [x] 3.1 Extend builder to accept verified hook/code bytes with strict expected originals (`src/manifest.ts`).
 - [x] 3.2 Test IPS encoder/decoder, ROM expansion, and ROM identity safeguards with hook manifest.
 - [x] 3.6 Fast regression: per-stage savestates + parallel `sweep:all` (~35 s) with oracle for shared palette, private slot, HDMA timing, shortcuts and persistence.
-- [ ] 3.3 Verify on Mesen 2 — automated: standing, running, jumping, cycling, wrap, hold debounce, stage transitions, hanging/rolling in pipes, swimming in blue water incl. death and color change underwater (`verify-runtime.log`, `probe-warp.log`, `probe-swim.log`, `swim-blue-35.log`, `swim-blue-37.log`); death OK in ares (user). Full-game sweep (`sweep-all.log`): every stage, bosses, credits, pause and soft reset (selection persists); fixed per-scene palette slot. Open: manual Mesen GUI run. Selection persists across world changes and soft reset (state moved to `$7FBE00`); non-gameplay screens keep original colors.
-- [ ] 3.4 Verify on ares — soft-patch IPS loads, colors survive death, no blink on colour change with the 2365-byte build (user, manual, 2026-11-04); full regression pass pending.
+- [ ] 3.3 Verify on Mesen 2 — automated: standing, running, jumping, cycling, wrap, hold debounce, stage transitions, hanging/rolling in pipes, swimming in blue water incl. death and color change underwater (`verify-runtime.log`, `probe-warp.log`, `probe-swim.log`, `swim-blue-35.log`, `swim-blue-37.log`). Full-game sweep (`sweep-all.log`): every stage, bosses, credits, pause and soft reset (selection persists); fixed per-scene palette slot. Open: manual Mesen GUI run. Selection persists across world changes and soft reset (state moved to `$7FBE00`); non-gameplay screens keep original colors.
 - [ ] 3.5 Update baseline OpenSpec specs and documentation only after passing emulator tests.
 
 ## 4. Release
