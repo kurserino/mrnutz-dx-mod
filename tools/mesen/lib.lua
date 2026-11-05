@@ -47,6 +47,12 @@ function loadStateOnBoot(onLoaded)
     if done then return end
     done = true
     print("LOAD ok=" .. tostring(emu.loadSavestate(unhex(STATE_HEX))))
+    -- Stage states come from the original ROM (no hook magic in WRAM), so the hook's one-time init runs and loads
+    -- the SRAM save record. Parallel runs share one .srm in Mesen's Saves folder: clear the record so every
+    -- state-based check starts from the original colours (0/0). tools/mesen/power-cycle.ts tests the save itself.
+    if emu.getMemorySize(emu.memType.snesSaveRam) > 0 then
+      for i = 0x100, 0x107 do emu.write(i, 0, emu.memType.snesSaveRam) end
+    end
     FRAME = 0
     if onLoaded then onLoaded() end
   end, emu.callbackType.exec, 0x0080B5, 0x0080B5, emu.cpuType.snes, emu.memType.snesMemory)

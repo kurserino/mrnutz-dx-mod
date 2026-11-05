@@ -1,0 +1,53 @@
+# options-probe | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | STAGE=1
+SHOT title -> output\traces\options-probe/title.png
+SHOT options -> output\traces\options-probe/options.png
+OPT_STEP idle-1 changed=0
+SHOT opt-idle-1 -> output\traces\options-probe/opt-idle-1.png
+OPT_STEP a-lives-1 changed=0
+SHOT opt-a-lives-1 -> output\traces\options-probe/opt-a-lives-1.png
+OPT_STEP a-lives-2 changed=0
+SHOT opt-a-lives-2 -> output\traces\options-probe/opt-a-lives-2.png
+OPT_CHANGE down-1 $7E199F 00->02
+OPT_CHANGE down-1 $7E1EDE 01->02
+OPT_CHANGE down-1 $7E1EDF 01->02
+OPT_CHANGE down-1 $7E1EE1 FF->34
+OPT_CHANGE down-1 $7E1EE2 00->FF
+OPT_STEP down-1 changed=5
+SHOT opt-down-1 -> output\traces\options-probe/opt-down-1.png
+OPT_STEP a-energy-1 changed=0
+SHOT opt-a-energy-1 -> output\traces\options-probe/opt-a-energy-1.png
+OPT_STEP a-energy-2 changed=0
+SHOT opt-a-energy-2 -> output\traces\options-probe/opt-a-energy-2.png
+OPT_CHANGE down-2 $7E199F 02->04
+OPT_CHANGE down-2 $7E1EDE 02->03
+OPT_CHANGE down-2 $7E1EDF 02->03
+OPT_CHANGE down-2 $7E1EE2 FF->34
+OPT_CHANGE down-2 $7E1EE3 00->FF
+OPT_STEP down-2 changed=5
+SHOT opt-down-2 -> output\traces\options-probe/opt-down-2.png
+OPT_STEP a-pad-1 changed=0
+SHOT opt-a-pad-1 -> output\traces\options-probe/opt-a-pad-1.png
+OPT_STEP a-pad-2 changed=0
+SHOT opt-a-pad-2 -> output\traces\options-probe/opt-a-pad-2.png
+OPT_CHANGE down-3 $7E199F 04->06
+OPT_CHANGE down-3 $7E1EDE 03->04
+OPT_CHANGE down-3 $7E1EDF 03->04
+OPT_CHANGE down-3 $7E1EE3 FF->34
+OPT_CHANGE down-3 $7E1EE4 00->FF
+OPT_STEP down-3 changed=5
+SHOT opt-down-3 -> output\traces\options-probe/opt-down-3.png
+OPT_STEP a-music-1 changed=0
+SHOT opt-a-music-1 -> output\traces\options-probe/opt-a-music-1.png
+OPT_STEP a-music-2 changed=0
+SHOT opt-a-music-2 -> output\traces\options-probe/opt-a-music-2.png
+OPT_CHANGE down-4 $7E199F 06->08
+OPT_CHANGE down-4 $7E1EDE 04->05
+OPT_CHANGE down-4 $7E1EDF 04->05
+OPT_CHANGE down-4 $7E1EE4 FF->34
+OPT_CHANGE down-4 $7E1EE5 00->FF
+OPT_STEP down-4 changed=5
+SHOT opt-down-4 -> output\traces\options-probe/opt-down-4.png
+OPT_STEP a-lang-1 changed=0
+SHOT opt-a-lang-1 -> output\traces\options-probe/opt-a-lang-1.png
+OPT_STEP a-lang-2 changed=0
+SHOT opt-a-lang-2 -> output\traces\options-probe/opt-a-lang-2.png

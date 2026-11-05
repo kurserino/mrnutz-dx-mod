@@ -1,5 +1,28 @@
 # Changelog
 
+## Unreleased — SRAM save (`openspec/changes/archive/2026-11-05-sram-persistence`)
+
+Patch: `npm run runtime:build` → `output/Mr. Nutz.runtime.ips` (2584 bytes). Patched ROM: CRC32 `8DBACAD6`.
+
+### Added
+- The fur/outfit selection is saved to battery-backed SRAM (2 KiB, `.srm` next to the ROM in the emulator's
+  save folder) and restored on the next power-on. A fresh or corrupted save falls back to the original colours.
+- Lives and energy addresses for testing (`docs/knowledge/game-state.md`); lives are obfuscated (BCD XOR `$A3B7` at `$7E:1889`).
+- Tooling: `trace:sram` / `trace:sram:all` (SRAM and anti-copier evidence), `check:power` (real power cycles),
+  `check:ending` (last stage → credits → final screen → reset → new game), RAM search helpers.
+
+### Changed
+- The anti-copier SRAM checks are neutralized (needed once SRAM exists). The trace found three active checks the
+  static scan had missed (boot hang, a flag at `$7E:054C`, a write to `$7F:C07F` that makes Mr. Nutz vanish).
+
+### Verified (Mesen 2.2.1 headless)
+- `sweep:all`: 40 stages, violations=0, soft reset and world changes, power cycle (4 cases).
+- No SRAM write by game code in boot, 40 stages, 2 soft resets and 4 game overs (`trace-sram-patched.log`).
+- End of the game: same behaviour as the original; reset → title → new game keeps the selection.
+
+### Notes
+- Savestates from v0.1.0 still load, but start fresh to get a save file.
+
 ## v0.1.0 — 2026-11-04 — runtime palette switch (`openspec/changes/archive/2026-11-04-runtime-palette-switch`)
 
 Patch: `npm run runtime:build` → `output/Mr. Nutz.runtime.ips` (2365 bytes, 2 MiB expanded LoROM),
@@ -36,7 +59,7 @@ Source ROM: `Mr. Nutz (USA) (En,Fr).sfc`, CRC32 `A99BDD9A`, unheadered. Patched 
 - Spider boss (Woody Land 5) and credits: no free palette slot in the same colour-math group → Mr. Nutz
   keeps his original colours there.
 - Intro, "Stage Clear" and other non-gameplay screens show the original colours.
-- Power-off resets the selection (no SRAM; the game hangs when it detects SRAM).
+- Power-off resets the selection (no SRAM; the game hangs when it detects SRAM). Fixed in the next release (SRAM save).
 
 ### Not yet verified
 - Interactive (human) Mesen GUI play-through; verification so far is headless plus screenshot review.

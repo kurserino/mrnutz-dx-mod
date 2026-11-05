@@ -1,5 +1,5 @@
 // Runtime palette switch patch (OpenSpec change runtime-palette-switch).
-// Evidence: docs/static-analysis.md, docs/traces/*.log, docs/runtime-hook.md.
+// Evidence: docs/knowledge/ (mod-implementation.md, frame-cycle.md, palettes.md), docs/traces/*.log.
 
 import { createHash } from "node:crypto";
 import { ORIGINAL_PALETTE, hexColorToBgr555 } from "./core.js";
@@ -47,6 +47,33 @@ export const STATE = {
 // (slot 4 = $C0 in most scenes, slot 0 = $80 in the stage traced in docs/traces/sweep-debug10.log).
 export const NUTZ_PALETTE_CPU = 0x859cc0;
 const MAGIC = 0x5a4e; // "NZ"
+// Save record in battery-backed SRAM (openspec/changes/archive/2026-11-05-sram-persistence, design D3). 8 bytes at $70:0100, away from
+// every address the anti-copier checks use ($0000-0001, $0004, $0034, $00A9-00AA, $0345-0348):
+// +0 magic "NZ" (16-bit), +2 version, +3 fur, +4 outfit, +5 reserved, +6 checksum = $FFFF ^ (w0 + w2 + w4).
+export const SAVE_RECORD = { address: 0x700100, magic: MAGIC, version: 0x01, size: 8 } as const;
+
+export function saveRecordChecksum(record: Buffer): number {
+  return ((record.readUInt16LE(0) + record.readUInt16LE(2) + record.readUInt16LE(4)) & 0xffff) ^ 0xffff;
+}
+
+export function encodeSaveRecord(fur: number, outfit: number): Buffer {
+  const r = Buffer.alloc(SAVE_RECORD.size);
+  r.writeUInt16LE(SAVE_RECORD.magic, 0);
+  r[2] = SAVE_RECORD.version;
+  r[3] = fur;
+  r[4] = outfit;
+  r[5] = 0;
+  r.writeUInt16LE(saveRecordChecksum(r), 6);
+  return r;
+}
+
+/** Mirrors load_save in the hook: undefined when the record is absent/corrupt; out-of-range indices become 0. */
+export function decodeSaveRecord(record: Buffer, furCount: number, outfitCount: number): { fur: number; outfit: number } | undefined {
+  if (record.length < SAVE_RECORD.size) return undefined;
+  if (record.readUInt16LE(0) !== SAVE_RECORD.magic || record[2] !== SAVE_RECORD.version) return undefined;
+  if (record.readUInt16LE(6) !== saveRecordChecksum(record)) return undefined;
+  return { fur: record[3] < furCount ? record[3] : 0, outfit: record[4] < outfitCount ? record[4] : 0 };
+}
 const MAX_PRESETS = 12;
 const LAST_SAFE_SCANLINE = 250; // leave >= 11 VBlank lines for the remaining NMI work
 
@@ -102,6 +129,7 @@ export function hookSource(furCount: number, outfitCount: number): string {
     LDA #$0000
     STA ${L(S.furIndex)}   ; fur and outfit index = 0 (original)
     STA ${L(S.prevPad)}
+    JSR load_save          ; power-on: a valid SRAM record overrides the 0/0 default
     LDA #$FFFF
     STA ${L(S.customSlot)} ; customSlot = slotS = $FF
     STA ${L(S.tablePtr)}   ; impossible table pointer: the manager resets the scene state on its first run
@@ -132,6 +160,7 @@ export function hookSource(furCount: number, outfitCount: number): string {
     LDA #$00
   fur_ok:
     STA ${L(S.furIndex)}
+    JSR write_save
     REP #$20
   check_r:
     TYA
@@ -145,6 +174,7 @@ export function hookSource(furCount: number, outfitCount: number): string {
     LDA #$00
   outfit_ok:
     STA ${L(S.outfitIndex)}
+    JSR write_save
   input_done:
     REP #$30
     JSR manage
@@ -154,6 +184,62 @@ export function hookSource(furCount: number, outfitCount: number): string {
     PLX
     PLP
     RTL
+
+  load_save:               ; A16 X16 in and out. Copies a valid SRAM record into the WRAM indices.
+    .a16
+    .i16
+    LDA ${L(SAVE_RECORD.address)}
+    CMP #${h(MAGIC, 4)}
+    BNE ls_done
+    LDA ${L(SAVE_RECORD.address + 2)}
+    AND #$00FF
+    CMP #${h(SAVE_RECORD.version, 4)}
+    BNE ls_done
+    LDA ${L(SAVE_RECORD.address)}
+    CLC
+    ADC ${L(SAVE_RECORD.address + 2)}
+    CLC
+    ADC ${L(SAVE_RECORD.address + 4)}
+    EOR #$FFFF
+    CMP ${L(SAVE_RECORD.address + 6)}
+    BNE ls_done
+    SEP #$20
+    LDA ${L(SAVE_RECORD.address + 3)}
+    CMP #${h(furCount, 2)}
+    BCS ls_outfit          ; out of range: keep 0 (original)
+    STA ${L(S.furIndex)}
+  ls_outfit:
+    LDA ${L(SAVE_RECORD.address + 4)}
+    CMP #${h(outfitCount, 2)}
+    BCS ls_wide
+    STA ${L(S.outfitIndex)}
+  ls_wide:
+    REP #$20
+  ls_done:
+    RTS
+
+  write_save:              ; any width in, restored on exit. Payload first, checksum last.
+    PHP
+    SEP #$20
+    LDA #${h(SAVE_RECORD.version, 2)}
+    STA ${L(SAVE_RECORD.address + 2)}
+    LDA ${L(S.furIndex)}
+    STA ${L(SAVE_RECORD.address + 3)}
+    LDA ${L(S.outfitIndex)}
+    STA ${L(SAVE_RECORD.address + 4)}
+    LDA #$00
+    STA ${L(SAVE_RECORD.address + 5)}
+    REP #$20
+    LDA #${h(MAGIC, 4)}
+    STA ${L(SAVE_RECORD.address)}
+    CLC
+    ADC ${L(SAVE_RECORD.address + 2)}
+    CLC
+    ADC ${L(SAVE_RECORD.address + 4)}
+    EOR #$FFFF
+    STA ${L(SAVE_RECORD.address + 6)}
+    PLP
+    RTS
 
   manage:                  ; non-critical part, once per gameplay frame
     .a16
@@ -784,6 +870,50 @@ export function attrTables(): Buffer {
   return t;
 }
 
+// Battery-backed SRAM (openspec/changes/archive/2026-11-05-sram-persistence, design D1): header chipset ROM -> ROM+RAM+battery,
+// SRAM size 0 -> 2 KiB. LoROM maps it at $70-$7D:0000-$7FFF.
+export const SRAM_HEADER = [
+  { offset: 0x7fd6, original: "00", replacement: "02", reason: "Header chipset $00 (ROM) -> $02 (ROM + RAM + battery)" },
+  { offset: 0x7fd8, original: "00", replacement: "01", reason: "Header SRAM size 0 -> 2 KiB" },
+];
+
+// Anti-copier SRAM checks (design D2, docs/knowledge/protection.md). E-G run in the game and are
+// replaced by their "no SRAM" path without any bank $70 access; A-D never run and get width-independent guards.
+export interface SramCheckPatch { id: string; cpu: number; original: string; replacement: string; reason: string; evidence: string }
+const G_REPLACEMENT = assemble(`.a16
+.i16
+    LDA #$7070             ; $12 = open-bus value the original read from $70:00A9
+    STA $12
+    LDA $1C                ; X = $1C + $0F, as on the original mismatch path
+    CLC
+    ADC #$000F
+    TAX
+    LDY #$AF05             ; Y = A = the constant from $80:BE3F
+    TYA
+    BRA done
+${"    NOP\n".repeat(0x16)}done:`, 0x81c45c).bytes.subarray(0, 18); // NOPs only place "done" at $81:C484 (not emitted)
+export const SRAM_CHECK_PATCHES: SramCheckPatch[] = [
+  {
+    id: "E", cpu: 0x9cf819, original: "cf00", replacement: "8015",
+    reason: "Check E (boot): BRA $9C:F830 instead of CMP $700000; the no-SRAM path always ends there",
+    evidence: "docs/traces/trace-sram-header-boot.log (hang with SRAM), docs/traces/probe-regs-boot.log (M16/X16)",
+  },
+  {
+    id: "F", cpu: 0x82ba22, original: "b710d989", replacement: "a0028008",
+    reason: "Check F: LDY #$02 / BRA $82:BA2E, the no-SRAM exit (Y=X=2) without touching $70:0345",
+    evidence: "docs/traces/trace-sram-header.log (sets $7E:054C with SRAM), docs/traces/probe-regs-stage.log (M16/X8)",
+  },
+  {
+    id: "G", cpu: 0x81c45c, original: "a71a8512cd3fbef01fad3fbe871aa8a51c18", replacement: G_REPLACEMENT.toString("hex"),
+    reason: "Check G: reproduce the no-SRAM mismatch path ($12=$7070, X=$1C+$0F, Y=A=$AF05) and BRA $81:C484",
+    evidence: "docs/traces/trace-sram-header.log (writes $7F:C07F with SRAM), docs/traces/probe-regs-stage.log (M16/X16)",
+  },
+  { id: "A", cpu: 0x808400, original: "f0fe", replacement: "eaea", reason: "Check A (never reached): BEQ * -> NOP NOP", evidence: "docs/traces/static-sram-checks.txt, docs/traces/trace-sram-all.log (0 calls)" },
+  { id: "D", cpu: 0x819d4b, original: "f0fe", replacement: "eaea", reason: "Check D (never reached): BEQ * -> NOP NOP", evidence: "docs/traces/static-sram-checks.txt, docs/traces/trace-sram-all.log (0 calls)" },
+  { id: "C", cpu: 0x818f5e, original: "f001", replacement: "eaea", reason: "Check C (never reached): always RTS, never fall into $81:8F61", evidence: "docs/traces/static-sram-checks.txt, docs/traces/trace-sram-all.log (0 calls)" },
+  { id: "B", cpu: 0x818035, original: "38", replacement: "18", reason: "Check B (never reached): SEC -> CLC, always report no SRAM", evidence: "docs/traces/static-sram-checks.txt, docs/traces/trace-sram-all.log (0 calls)" },
+];
+
 function sumWithNeutralChecksum(rom: Buffer): number {
   let sum = 0;
   for (let i = 0; i < rom.length; i++) {
@@ -806,7 +936,7 @@ export function buildRuntimeManifest(rom: Buffer, presets: RuntimePresetFile): P
     {
       offset: 0x7fd7, original: "0A", replacement: "0B",
       reason: "Header ROM size 1 MiB -> 2 MiB for expanded LoROM banks $A0-$BF",
-      evidence: "docs/static-analysis.md (header), docs/runtime-hook.md",
+      evidence: "docs/knowledge/memory-map.md (header), docs/knowledge/mod-implementation.md",
     },
     {
       offset: hookOffset, original: HOOK_ORIGINAL, replacement: jsl(labels.input_hook) + "eaea",
@@ -816,7 +946,7 @@ export function buildRuntimeManifest(rom: Buffer, presets: RuntimePresetFile): P
     {
       offset: loromToFile(CODE_ORIGIN), replacement: code.toString("hex"),
       reason: "Hook code: Select+L/R input, private Nutz palette slot, OAM palette remap, CGRAM writes in VBlank",
-      evidence: "docs/runtime-hook.md",
+      evidence: "docs/knowledge/mod-implementation.md",
     },
     {
       offset: loromToFile(OAM_HOOK_SITE), original: OAM_HOOK_ORIGINAL, replacement: jsl(labels.oam_hook),
@@ -831,13 +961,15 @@ export function buildRuntimeManifest(rom: Buffer, presets: RuntimePresetFile): P
     {
       offset: loromToFile(FUR_TABLE), replacement: Buffer.concat([tables.fur, Buffer.alloc(0x70 - tables.fur.length, 0xff), furOffsets]).toString("hex"),
       reason: "Fur preset table ($CB-$CF x N, index 0 = original) + per-index byte offsets at +$70",
-      evidence: "presets/runtime.json, docs/rom-map.md",
+      evidence: "presets/runtime.json, docs/knowledge/palettes.md",
     },
     {
       offset: loromToFile(OUTFIT_TABLE), replacement: tables.outfit.toString("hex"),
       reason: "Outfit preset table ($C6-$C9 x N, index 0 = original)",
-      evidence: "presets/runtime.json, docs/rom-map.md",
+      evidence: "presets/runtime.json, docs/knowledge/palettes.md",
     },
+    ...SRAM_HEADER.map((h) => ({ ...h, evidence: "openspec/changes/archive/2026-11-05-sram-persistence/design.md (D1)" })),
+    ...SRAM_CHECK_PATCHES.map((c) => ({ offset: loromToFile(c.cpu), original: c.original, replacement: c.replacement, reason: c.reason, evidence: c.evidence })),
   ];
   const draft: PatchManifest = { sourceSha256: sha, expandTo: EXPANDED_SIZE, fill: 0xff, entries };
   const checksum = sumWithNeutralChecksum(buildManifestPatch(rom, draft).patched);

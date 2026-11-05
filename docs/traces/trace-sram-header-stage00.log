@@ -1,0 +1,12 @@
+# trace-sram-header-stage00 | exit=0 | rom=Mr. Nutz.header-only.sfc | state=stage-00.mss | MODE=1 FRAMES=1500 LIGHT=1
+LOAD ok=true
+DETECT G frame=0 pc=$81C477 A=$AF05 X=$007F Y=$AF05 D=$0000 DBR=$00 [$10]=$B30014 gameplay=false
+DETECT G frame=1 pc=$81C477 A=$AF05 X=$007F Y=$AF05 D=$0000 DBR=$00 [$10]=$B30014 gameplay=true
+DETECT F frame=2 pc=$82B9E6 A=$0052 X=$0002 Y=$0002 D=$0000 DBR=$00 [$10]=$700345 gameplay=true
+DETECT G frame=2 pc=$81C477 A=$AF05 X=$007F Y=$AF05 D=$0000 DBR=$00 [$10]=$B30014 gameplay=true
+DETECT G frame=3 pc=$81C477 A=$AF05 X=$007F Y=$AF05 D=$0000 DBR=$00 [$10]=$B30014 gameplay=true
+DETECT F frame=10 pc=$82B9E6 A=$0052 X=$0002 Y=$0002 D=$0000 DBR=$00 [$10]=$700345 gameplay=true
+DETECT F frame=14 pc=$82B9E6 A=$0052 X=$0002 Y=$0002 D=$0000 DBR=$00 [$10]=$700345 gameplay=true
+DETECT F frame=18 pc=$82B9E6 A=$0052 X=$0002 Y=$0002 D=$0000 DBR=$00 [$10]=$700345 gameplay=true
+SHOT end -> output\traces\trace-sram-header-stage00/end.png
+RESULT mode=1 frames=1500 gameplay=1439 calls=A=0,B=0,C=0,D=0 detect=E=0,F=5,G=5,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0

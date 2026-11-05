@@ -1,0 +1,17 @@
+# boot-timeline | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | FRAMES=1600 STEP=100
+SHOT t00100 -> output\traces\boot-timeline/t00100.png
+SHOT t00200 -> output\traces\boot-timeline/t00200.png
+SHOT t00300 -> output\traces\boot-timeline/t00300.png
+SHOT t00400 -> output\traces\boot-timeline/t00400.png
+SHOT t00500 -> output\traces\boot-timeline/t00500.png
+SHOT t00600 -> output\traces\boot-timeline/t00600.png
+SHOT t00700 -> output\traces\boot-timeline/t00700.png
+SHOT t00800 -> output\traces\boot-timeline/t00800.png
+SHOT t00900 -> output\traces\boot-timeline/t00900.png
+SHOT t01000 -> output\traces\boot-timeline/t01000.png
+SHOT t01100 -> output\traces\boot-timeline/t01100.png
+SHOT t01200 -> output\traces\boot-timeline/t01200.png
+SHOT t01300 -> output\traces\boot-timeline/t01300.png
+SHOT t01400 -> output\traces\boot-timeline/t01400.png
+SHOT t01500 -> output\traces\boot-timeline/t01500.png
+SHOT t01600 -> output\traces\boot-timeline/t01600.png

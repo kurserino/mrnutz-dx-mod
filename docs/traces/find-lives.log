@@ -1,0 +1,11 @@
+# find-lives | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-00.mss
+LOAD ok=true
+SHOT snap-1000 -> output\traces\find-lives/snap-1000.png
+SHOT snap-1500 -> output\traces\find-lives/snap-1500.png
+SHOT snap-4600 -> output\traces\find-lives/snap-4600.png
+SHOT snap-4750 -> output\traces\find-lives/snap-4750.png
+SHOT snap-6600 -> output\traces\find-lives/snap-6600.png
+SHOT snap-6750 -> output\traces\find-lives/snap-6750.png
+LIVES_CANDIDATE $7E1889 values=181,182,183 step=1
+LIVES_CANDIDATE $7E188B values=181,182,183 step=1
+LIVES_CANDIDATES total=2

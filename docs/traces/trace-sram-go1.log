@@ -1,0 +1,51 @@
+# trace-sram-go1 | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-00.mss | MODE=2 FRAMES=2000 POKE_ENERGY=1
+LOAD ok=true
+SRAM_R frame=0 addr=$7000A9 value=$70 pc=$81C45E
+SRAM_R frame=0 addr=$7000AA value=$70 pc=$81C45E
+SRAM_W frame=0 addr=$7000A9 value=$05 pc=$81C46A
+SRAM_W frame=0 addr=$7000AA value=$AF pc=$81C46A
+SRAM_R frame=0 addr=$7000A9 value=$70 pc=$81C475
+SRAM_R frame=0 addr=$7000AA value=$70 pc=$81C475
+PC frame=250 pc=$808230 gameplay=false lives=$A3B7 energy=1
+SHOT f00250 -> output\traces\trace-sram-go1/f00250.png
+SRAM_R frame=301 addr=$700345 value=$70 pc=$82BA24
+SRAM_R frame=301 addr=$700346 value=$70 pc=$82BA24
+SRAM_R frame=301 addr=$700345 value=$70 pc=$82B9C8
+SRAM_R frame=301 addr=$700346 value=$70 pc=$82B9C8
+SRAM_W frame=301 addr=$700345 value=$10 pc=$82B9CE
+SRAM_W frame=301 addr=$700346 value=$06 pc=$82B9CE
+SRAM_R frame=301 addr=$700347 value=$70 pc=$82B9D2
+SRAM_R frame=301 addr=$700348 value=$70 pc=$82B9D2
+SRAM_W frame=301 addr=$700347 value=$52 pc=$82B9D8
+SRAM_W frame=301 addr=$700348 value=$00 pc=$82B9D8
+PC frame=750 pc=$8A81E2 gameplay=false lives=$0000 energy=0
+SHOT f00750 -> output\traces\trace-sram-go1/f00750.png
+PC frame=1250 pc=$8A81E5 gameplay=false lives=$0000 energy=0
+SHOT f01250 -> output\traces\trace-sram-go1/f01250.png
+PC frame=1750 pc=$8A81E7 gameplay=false lives=$0000 energy=0
+SHOT f01750 -> output\traces\trace-sram-go1/f01750.png
+SHOT end -> output\traces\trace-sram-go1/end.png
+SRAM_PC pc=$81C45E r=122 w=0 addr=$7000A9-$7000AA firstFrame=0
+SRAM_PC pc=$81C46A r=0 w=122 addr=$7000A9-$7000AA firstFrame=0
+SRAM_PC pc=$81C475 r=122 w=0 addr=$7000A9-$7000AA firstFrame=0
+SRAM_PC pc=$82B9C8 r=26 w=0 addr=$700345-$700346 firstFrame=301
+SRAM_PC pc=$82B9CE r=0 w=26 addr=$700345-$700346 firstFrame=301
+SRAM_PC pc=$82B9D2 r=26 w=0 addr=$700347-$700348 firstFrame=301
+SRAM_PC pc=$82B9D8 r=0 w=26 addr=$700347-$700348 firstFrame=301
+SRAM_PC pc=$82B9DA r=26 w=0 addr=$700345-$700346 firstFrame=301
+SRAM_PC pc=$82B9EC r=0 w=26 addr=$700347-$700348 firstFrame=301
+SRAM_PC pc=$82B9EF r=0 w=26 addr=$700345-$700346 firstFrame=301
+SRAM_PC pc=$82BA24 r=26 w=0 addr=$700345-$700346 firstFrame=301
+RESULT mode=2 frames=2000 gameplay=59 calls=A=0,B=0,C=0,D=0 sramReads=348 sramWrites=226 codeReads=0
+SRAM_PC pc=$81C45E r=122 w=0 addr=$7000A9-$7000AA firstFrame=0
+SRAM_PC pc=$81C46A r=0 w=122 addr=$7000A9-$7000AA firstFrame=0
+SRAM_PC pc=$81C475 r=122 w=0 addr=$7000A9-$7000AA firstFrame=0
+SRAM_PC pc=$82B9C8 r=26 w=0 addr=$700345-$700346 firstFrame=301
+SRAM_PC pc=$82B9CE r=0 w=26 addr=$700345-$700346 firstFrame=301
+SRAM_PC pc=$82B9D2 r=26 w=0 addr=$700347-$700348 firstFrame=301
+SRAM_PC pc=$82B9D8 r=0 w=26 addr=$700347-$700348 firstFrame=301
+SRAM_PC pc=$82B9DA r=26 w=0 addr=$700345-$700346 firstFrame=301
+SRAM_PC pc=$82B9EC r=0 w=26 addr=$700347-$700348 firstFrame=301
+SRAM_PC pc=$82B9EF r=0 w=26 addr=$700345-$700346 firstFrame=301
+SRAM_PC pc=$82BA24 r=26 w=0 addr=$700345-$700346 firstFrame=301
+RESULT mode=2 frames=2001 gameplay=59 calls=A=0,B=0,C=0,D=0 sramReads=348 sramWrites=226 codeReads=0

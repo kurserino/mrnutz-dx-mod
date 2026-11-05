@@ -1,0 +1,8 @@
+# poke-lives0A8A | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-00.mss | ADDR=2698 VALUE=7 HOLD=0
+LOAD ok=true
+BEFORE $7E0A8A=3
+SHOT before -> output\traces\poke-lives0A8A/before.png
+AFTER $7E0A8A=7
+SHOT after -> output\traces\poke-lives0A8A/after.png
+LATE $7E0A8A=1
+SHOT late -> output\traces\poke-lives0A8A/late.png

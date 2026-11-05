@@ -1,0 +1,9 @@
+# trace-sram-header-boot | exit=0 | rom=Mr. Nutz.header-only.sfc | MODE=0 FRAMES=600 LIGHT=1
+DETECT E frame=100 pc=$9CF82C A=$4F4B X=$0097 Y=$0010 D=$0000 DBR=$00 [$10]=$00CE58 gameplay=false
+DETECT E frame=100 pc=$9CF82C A=$4F4C X=$0097 Y=$0010 D=$0000 DBR=$00 [$10]=$00CE58 gameplay=false
+DETECT E frame=100 pc=$9CF82C A=$4F4D X=$0097 Y=$0010 D=$0000 DBR=$00 [$10]=$00CE58 gameplay=false
+DETECT E frame=100 pc=$9CF82C A=$4F4E X=$0097 Y=$0010 D=$0000 DBR=$00 [$10]=$00CE58 gameplay=false
+STALL frame=221 pc=$1CF826
+SHOT stall-221 -> output\traces\trace-sram-header-boot/stall-221.png
+SHOT end -> output\traces\trace-sram-header-boot/end.png
+RESULT mode=0 frames=600 gameplay=0 calls=A=0,B=0,C=0,D=0 detect=E=5,F=0,G=0,C=0 stalls=1 sramReads=0 sramWrites=0 codeReads=0

@@ -1,0 +1,5 @@
+# probe-regs-boot | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | FRAMES=400
+SITE $9CF819 frame=100 P=$04 m8=false x8=false A=$4F4B X=$0097 Y=$0010 D=$0000 DBR=$00
+SITE total $81C45C count=0
+SITE total $82BA22 count=0
+SITE total $9CF819 count=1

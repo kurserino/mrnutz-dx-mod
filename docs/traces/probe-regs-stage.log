@@ -1,0 +1,11 @@
+# probe-regs-stage | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-00.mss | FRAMES=300
+LOAD ok=true
+SITE $81C45C frame=0 P=$05 m8=false x8=false A=$00C0 X=$0070 Y=$0000 D=$0000 DBR=$00
+SITE $81C45C frame=1 P=$05 m8=false x8=false A=$00C0 X=$0070 Y=$0000 D=$0000 DBR=$00
+SITE $82BA22 frame=2 P=$15 m8=false x8=true A=$0070 X=$0002 Y=$0000 D=$0000 DBR=$00
+SITE $81C45C frame=2 P=$05 m8=false x8=false A=$00C0 X=$0070 Y=$0000 D=$0000 DBR=$00
+SITE $82BA22 frame=17 P=$15 m8=false x8=true A=$0070 X=$0002 Y=$0000 D=$0000 DBR=$00
+SITE $82BA22 frame=32 P=$15 m8=false x8=true A=$0070 X=$0002 Y=$0000 D=$0000 DBR=$00
+SITE total $81C45C count=300
+SITE total $82BA22 count=20
+SITE total $9CF819 count=0

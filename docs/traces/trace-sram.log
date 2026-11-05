@@ -1,0 +1,33 @@
+# trace-sram | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc
+SRAM_R frame=100 addr=$700000 value=$70 pc=$9CF81D
+SRAM_R frame=100 addr=$700001 value=$70 pc=$9CF81D
+SRAM_W frame=100 addr=$700000 value=$4B pc=$9CF823
+SRAM_W frame=100 addr=$700001 value=$4F pc=$9CF823
+SRAM_R frame=100 addr=$700000 value=$70 pc=$9CF82A
+SRAM_R frame=100 addr=$700001 value=$70 pc=$9CF82A
+SRAM_R frame=1815 addr=$700345 value=$70 pc=$82BA24
+SRAM_R frame=1815 addr=$700346 value=$70 pc=$82BA24
+SRAM_R frame=1815 addr=$700345 value=$70 pc=$82B9C8
+SRAM_R frame=1815 addr=$700346 value=$70 pc=$82B9C8
+SRAM_W frame=1815 addr=$700345 value=$10 pc=$82B9CE
+SRAM_W frame=1815 addr=$700346 value=$06 pc=$82B9CE
+SRAM_R frame=1815 addr=$700347 value=$70 pc=$82B9D2
+SRAM_R frame=1815 addr=$700348 value=$70 pc=$82B9D2
+SRAM_W frame=1815 addr=$700347 value=$52 pc=$82B9D8
+SRAM_W frame=1815 addr=$700348 value=$00 pc=$82B9D8
+SHOT end -> output\traces\trace-sram/end.png
+SRAM_PC pc=$81C45E r=772 w=0 addr=$7000A9-$7000AA firstFrame=1815
+SRAM_PC pc=$81C46A r=0 w=772 addr=$7000A9-$7000AA firstFrame=1815
+SRAM_PC pc=$81C475 r=772 w=0 addr=$7000A9-$7000AA firstFrame=1815
+SRAM_PC pc=$82B9C8 r=70 w=0 addr=$700345-$700346 firstFrame=1815
+SRAM_PC pc=$82B9CE r=0 w=70 addr=$700345-$700346 firstFrame=1815
+SRAM_PC pc=$82B9D2 r=70 w=0 addr=$700347-$700348 firstFrame=1815
+SRAM_PC pc=$82B9D8 r=0 w=70 addr=$700347-$700348 firstFrame=1815
+SRAM_PC pc=$82B9DA r=70 w=0 addr=$700345-$700346 firstFrame=1815
+SRAM_PC pc=$82B9EC r=0 w=70 addr=$700347-$700348 firstFrame=1815
+SRAM_PC pc=$82B9EF r=0 w=70 addr=$700345-$700346 firstFrame=1815
+SRAM_PC pc=$82BA24 r=70 w=0 addr=$700345-$700346 firstFrame=1815
+SRAM_PC pc=$9CF81D r=2 w=0 addr=$700000-$700001 firstFrame=100
+SRAM_PC pc=$9CF823 r=0 w=2 addr=$700000-$700001 firstFrame=100
+SRAM_PC pc=$9CF82A r=2 w=0 addr=$700000-$700001 firstFrame=100
+RESULT mode=0 frames=3000 gameplay=386 calls=A=0,B=0,C=0,D=0 sramReads=1828 sramWrites=1054 codeReads=0

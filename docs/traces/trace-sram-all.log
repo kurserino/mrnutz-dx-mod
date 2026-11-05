@@ -1,0 +1,59 @@
+# trace-sram-all | rom=original | 47 runs | 94 s
+boot: RESULT mode=0 frames=3000 gameplay=386 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-00: RESULT mode=1 frames=1500 gameplay=1439 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-00-death: RESULT mode=2 frames=5000 gameplay=1843 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-00-reset: RESULT mode=3 frames=4000 gameplay=685 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-01: RESULT mode=1 frames=1500 gameplay=1415 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-02: RESULT mode=1 frames=1500 gameplay=1121 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-03: RESULT mode=1 frames=1500 gameplay=1439 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-04: RESULT mode=1 frames=1500 gameplay=1499 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-05: RESULT mode=1 frames=1500 gameplay=1215 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-06: RESULT mode=1 frames=1500 gameplay=1155 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-07: RESULT mode=1 frames=1500 gameplay=1284 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-08: RESULT mode=1 frames=1500 gameplay=1308 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-09: RESULT mode=1 frames=1500 gameplay=1439 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-10: RESULT mode=1 frames=1500 gameplay=1439 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-11: RESULT mode=1 frames=1500 gameplay=1439 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-12: RESULT mode=1 frames=1500 gameplay=1341 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-13: RESULT mode=1 frames=1500 gameplay=1365 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-13-death: RESULT mode=2 frames=5000 gameplay=1899 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-14: RESULT mode=1 frames=1500 gameplay=1439 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-15: RESULT mode=1 frames=1500 gameplay=1439 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-16: RESULT mode=1 frames=1500 gameplay=1271 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-17: RESULT mode=1 frames=1500 gameplay=1439 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-18: RESULT mode=1 frames=1500 gameplay=1172 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-19: RESULT mode=1 frames=1500 gameplay=296 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-20: RESULT mode=1 frames=1500 gameplay=1335 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-20-death: RESULT mode=2 frames=5000 gameplay=1604 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-20-reset: RESULT mode=3 frames=4000 gameplay=685 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-21: RESULT mode=1 frames=1500 gameplay=1439 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-22: RESULT mode=1 frames=1500 gameplay=1246 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-23: RESULT mode=1 frames=1500 gameplay=1439 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-24: RESULT mode=1 frames=1500 gameplay=1439 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-25: RESULT mode=1 frames=1500 gameplay=1221 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-26: RESULT mode=1 frames=1500 gameplay=1439 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-27: RESULT mode=1 frames=1500 gameplay=1382 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-28: RESULT mode=1 frames=1500 gameplay=1439 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-29: RESULT mode=1 frames=1500 gameplay=1299 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-30: RESULT mode=1 frames=1500 gameplay=946 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-30-death: RESULT mode=2 frames=5000 gameplay=1955 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-31: RESULT mode=1 frames=1500 gameplay=1499 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-32: RESULT mode=1 frames=1500 gameplay=1140 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-33: RESULT mode=1 frames=1500 gameplay=1190 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-34: RESULT mode=1 frames=1500 gameplay=940 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-35: RESULT mode=1 frames=1500 gameplay=840 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-36: RESULT mode=1 frames=1500 gameplay=840 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-37: RESULT mode=1 frames=1500 gameplay=840 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-38: RESULT mode=1 frames=1500 gameplay=490 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+stage-39: RESULT mode=1 frames=1500 gameplay=1064 calls=A=0,B=0,C=0,D=0 detect=E=0,F=0,G=0,C=0 stalls=0 sramReads=0 sramWrites=0 codeReads=0
+
+## Check routine calls and SRAM-detected branches (first of each)
+none
+
+## SRAM accessors (union over all runs)
+
+## Hangs
+none
+
+## Data reads of check routine bytes
+none

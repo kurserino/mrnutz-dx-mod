@@ -1,0 +1,83 @@
+# ending-check | exit=0 | rom=Mr. Nutz.runtime.sfc | state=stage-36.mss | FRAMES=25000
+LOAD ok=true
+STATE frame=1 $01DC=$835B phase=select
+MILESTONE selected frame=90 state=$835B idx=2/3
+SHOT selected -> output\traces\ending-check/selected.png
+STATE frame=137 $01DC=$8357 phase=skip
+SHOT ending-00400 -> output\traces\ending-check/ending-00400.png
+SHOT ending-00900 -> output\traces\ending-check/ending-00900.png
+SHOT f01000 -> output\traces\ending-check/f01000.png
+SHOT ending-01400 -> output\traces\ending-check/ending-01400.png
+SHOT ending-01900 -> output\traces\ending-check/ending-01900.png
+SHOT f02000 -> output\traces\ending-check/f02000.png
+SHOT ending-02400 -> output\traces\ending-check/ending-02400.png
+SHOT ending-02900 -> output\traces\ending-check/ending-02900.png
+SHOT f03000 -> output\traces\ending-check/f03000.png
+SHOT ending-03400 -> output\traces\ending-check/ending-03400.png
+SHOT ending-03900 -> output\traces\ending-check/ending-03900.png
+SHOT f04000 -> output\traces\ending-check/f04000.png
+SHOT ending-04400 -> output\traces\ending-check/ending-04400.png
+SHOT ending-04900 -> output\traces\ending-check/ending-04900.png
+SHOT f05000 -> output\traces\ending-check/f05000.png
+SHOT ending-05400 -> output\traces\ending-check/ending-05400.png
+SHOT ending-05900 -> output\traces\ending-check/ending-05900.png
+SHOT f06000 -> output\traces\ending-check/f06000.png
+SHOT ending-06400 -> output\traces\ending-check/ending-06400.png
+SHOT ending-06900 -> output\traces\ending-check/ending-06900.png
+SHOT f07000 -> output\traces\ending-check/f07000.png
+SHOT ending-07400 -> output\traces\ending-check/ending-07400.png
+SHOT ending-07900 -> output\traces\ending-check/ending-07900.png
+SHOT f08000 -> output\traces\ending-check/f08000.png
+SHOT ending-08400 -> output\traces\ending-check/ending-08400.png
+SHOT ending-08900 -> output\traces\ending-check/ending-08900.png
+SHOT f09000 -> output\traces\ending-check/f09000.png
+SHOT ending-09400 -> output\traces\ending-check/ending-09400.png
+SHOT ending-09900 -> output\traces\ending-check/ending-09900.png
+SHOT f10000 -> output\traces\ending-check/f10000.png
+SHOT ending-10400 -> output\traces\ending-check/ending-10400.png
+SHOT ending-10900 -> output\traces\ending-check/ending-10900.png
+SHOT f11000 -> output\traces\ending-check/f11000.png
+SHOT ending-11400 -> output\traces\ending-check/ending-11400.png
+SHOT ending-11900 -> output\traces\ending-check/ending-11900.png
+SHOT f12000 -> output\traces\ending-check/f12000.png
+SHOT ending-12400 -> output\traces\ending-check/ending-12400.png
+SHOT ending-12900 -> output\traces\ending-check/ending-12900.png
+SHOT f13000 -> output\traces\ending-check/f13000.png
+SHOT ending-13400 -> output\traces\ending-check/ending-13400.png
+SHOT ending-13900 -> output\traces\ending-check/ending-13900.png
+SHOT f14000 -> output\traces\ending-check/f14000.png
+SHOT ending-14400 -> output\traces\ending-check/ending-14400.png
+SHOT ending-14900 -> output\traces\ending-check/ending-14900.png
+SHOT f15000 -> output\traces\ending-check/f15000.png
+MILESTONE ending-end frame=15150 state=$8357 idx=2/3
+SHOT ending-end -> output\traces\ending-check/ending-end.png
+SHOT f16000 -> output\traces\ending-check/f16000.png
+SHOT f17000 -> output\traces\ending-check/f17000.png
+SHOT f18000 -> output\traces\ending-check/f18000.png
+MILESTONE final-screen-waits frame=18150 state=$8357 idx=2/3
+STATE frame=18152 $01DC=$0000 phase=reset
+SHOT final-screen-waits -> output\traces\ending-check/final-screen-waits.png
+SHOT reset-18200 -> output\traces\ending-check/reset-18200.png
+SHOT reset-18300 -> output\traces\ending-check/reset-18300.png
+SHOT reset-18400 -> output\traces\ending-check/reset-18400.png
+SHOT reset-18500 -> output\traces\ending-check/reset-18500.png
+SHOT reset-18600 -> output\traces\ending-check/reset-18600.png
+SHOT reset-18700 -> output\traces\ending-check/reset-18700.png
+SHOT reset-18800 -> output\traces\ending-check/reset-18800.png
+SHOT reset-18900 -> output\traces\ending-check/reset-18900.png
+SHOT reset-19000 -> output\traces\ending-check/reset-19000.png
+SHOT f19000 -> output\traces\ending-check/f19000.png
+SHOT reset-19100 -> output\traces\ending-check/reset-19100.png
+SHOT reset-19200 -> output\traces\ending-check/reset-19200.png
+SHOT reset-19300 -> output\traces\ending-check/reset-19300.png
+SHOT reset-19400 -> output\traces\ending-check/reset-19400.png
+SHOT reset-19500 -> output\traces\ending-check/reset-19500.png
+SHOT reset-19600 -> output\traces\ending-check/reset-19600.png
+SHOT reset-19700 -> output\traces\ending-check/reset-19700.png
+MILESTONE gameplay-after-reset frame=19766 state=$835B idx=2/3
+SHOT gameplay-after-reset -> output\traces\ending-check/gameplay-after-reset.png
+SHOT f20000 -> output\traces\ending-check/f20000.png
+MILESTONE new-game frame=20065 state=$835B idx=2/3
+NEWGAME idx=2/3 nutzOk=true nutz=6 sharedChanged=false
+SHOT new-game -> output\traces\ending-check/new-game.png
+RESULT frames=20073 phase=done milestones=selected@90,ending-end@15150,final-screen-waits@18150,gameplay-after-reset@19766,new-game@20065
