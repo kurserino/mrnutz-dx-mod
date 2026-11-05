@@ -1,8 +1,9 @@
 # Changelog
 
-## Unreleased — SRAM save (`openspec/changes/archive/2026-11-05-sram-persistence`)
+## v0.2.0 — 2026-11-05 — SRAM save (`openspec/changes/archive/2026-11-05-sram-persistence`)
 
-Patch: `npm run runtime:build` → `output/Mr. Nutz.runtime.ips` (2584 bytes). Patched ROM: CRC32 `8DBACAD6`.
+Patch: `npm run runtime:build` → `output/Mr. Nutz.runtime.ips` (2584 bytes), published as `mrnutz-dx-v0.2.0.ips`
+on the GitHub release. Source ROM CRC32 `A99BDD9A`; patched ROM CRC32 `8DBACAD6`.
 
 ### Added
 - The fur/outfit selection is saved to battery-backed SRAM (2 KiB, `.srm` next to the ROM in the emulator's
@@ -19,6 +20,10 @@ Patch: `npm run runtime:build` → `output/Mr. Nutz.runtime.ips` (2584 bytes). P
 - `sweep:all`: 40 stages, violations=0, soft reset and world changes, power cycle (4 cases).
 - No SRAM write by game code in boot, 40 stages, 2 soft resets and 4 game overs (`trace-sram-patched.log`).
 - End of the game: same behaviour as the original; reset → title → new game keeps the selection.
+
+### Docs
+- Shared English knowledge base in `docs/knowledge/`; `AGENTS.md` is the single rule file for Claude Code and
+  Codex (`openspec/changes/archive/2026-11-05-knowledge-base`).
 
 ### Notes
 - Savestates from v0.1.0 still load, but start fresh to get a save file.
