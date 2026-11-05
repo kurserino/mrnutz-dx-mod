@@ -8,3 +8,6 @@ output/
 .DS_Store
 .env
 *.mss
+roms/
+*.srm
+*.bps
