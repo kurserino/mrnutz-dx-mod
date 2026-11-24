@@ -1,8 +1,8 @@
 # power-cycle | rom=Mr. Nutz.power-test.sfc (runtime build) | save=Saves/Mr. Nutz.power-test.srm
-  1-fresh: CHECK boot frame=1935 idx=0/0 X=255 nutz=6 nutzOk=false noSlot=nil sharedChanged=false sram=4C16C8703CA73C76
+  1-fresh: CHECK boot frame=1935 idx=0/0 X=255 nutz=6 nutzOk=false noSlot=nil sharedChanged=false sram=A136230FBC1C9AA2
   1-fresh: CHECK selected frame=2055 idx=2/3 X=5 nutz=6 nutzOk=true noSlot=nil sharedChanged=false sram=4E5A01020300ADA3
   1-fresh: RESULT ok
-ok   1 fresh boot is original: CHECK boot frame=1935 idx=0/0 X=255 nutz=6 nutzOk=false noSlot=nil sharedChanged=false sram=4C16C8703CA73C76
+ok   1 fresh boot is original: CHECK boot frame=1935 idx=0/0 X=255 nutz=6 nutzOk=false noSlot=nil sharedChanged=false sram=A136230FBC1C9AA2
 ok   1 selection applied: CHECK selected frame=2055 idx=2/3 X=5 nutz=6 nutzOk=true noSlot=nil sharedChanged=false sram=4E5A01020300ADA3
 ok   1 save file holds the record: srm=4E5A01020300ADA3 expected=4E5A01020300ADA3
   2-restore: CHECK boot frame=1935 idx=2/3 X=5 nutz=6 nutzOk=true noSlot=nil sharedChanged=false sram=4E5A01020300ADA3

@@ -54,7 +54,7 @@ async function worker() {
     const stage = stages[next++];
     const r = await runMesen({ script: "tools/mesen/stage-check.lua", rom: PATCHED, state: join(STATES_DIR, `${stage}.mss`), name: `sweep/${stage}`, log: false });
     const fl = await runMesen({ script: "tools/mesen/flicker-check.lua", rom: PATCHED, state: join(STATES_DIR, `${stage}.mss`), name: `sweep/${stage}-flicker`, log: false });
-    const events = r.lines.filter((l) => /^(SHARED_CHANGED|FOREIGN_ON_X|SHORTCUT_FAIL|HDMA_LATE) /.test(l));
+    const events = r.lines.filter((l) => /^(SHARED_CHANGED|FOREIGN_ON_X|SHORTCUT_FAIL|HDMA_LATE|PPU_OUT) /.test(l));
     results.push({ stage, result: parse(r.lines), flicker: parse(fl.lines), events, status: r.status });
     process.stdout.write(".");
   }
@@ -73,12 +73,12 @@ for (const r of results) {
   const x = r.result;
   if (!x) { violations++; out.push(`${r.stage} NO RESULT exit=${r.status}`); continue; }
   const flash = r.flicker ? Number(r.flicker.flash) : NaN;
-  const bad = Number(x.sharedChanged) > 0 || Number(x.foreignOnX) > 0 || Number(x.hdmaLate) > 0 || !(flash === 0)
+  const bad = Number(x.sharedChanged) > 0 || Number(x.foreignOnX) > 0 || Number(x.hdmaLate) > 0 || Number(x.ppuOut) !== 0 || !(flash === 0)
     || r.events.some((e) => e.startsWith("SHORTCUT_FAIL"));
   if (bad) violations++;
   const pct = Number(x.nutzFrames) ? ((100 * Number(x.ok)) / Number(x.nutzFrames)).toFixed(1) : "-";
   if (pct !== "-" && Number(pct) < 99) original.push(`${r.stage} (${pct}%)`);
-  out.push(`${r.stage} ${bad ? "VIOLATION" : "ok"} nutzColoured=${pct}% gameplay=${x.gameplay} nutzFrames=${x.nutzFrames} lostMax=${x.lostMax} sharedChanged=${x.sharedChanged} foreignOnX=${x.foreignOnX} hdmaLate=${x.hdmaLate} hdmaMaxLine=${x.hdmaMaxLine} flash=${r.flicker?.flash ?? "NO RESULT"} slotSwitch=${r.flicker?.switch ?? "-"} noSlot=${x.noSlot} slots(S/X)=${x.slots} idx=${x.idx}`);
+  out.push(`${r.stage} ${bad ? "VIOLATION" : "ok"} nutzColoured=${pct}% gameplay=${x.gameplay} nutzFrames=${x.nutzFrames} lostMax=${x.lostMax} sharedChanged=${x.sharedChanged} foreignOnX=${x.foreignOnX} hdmaLate=${x.hdmaLate} hdmaMaxLine=${x.hdmaMaxLine} ppuOut=${x.ppuOut} flash=${r.flicker?.flash ?? "NO RESULT"} slotSwitch=${r.flicker?.switch ?? "-"} noSlot=${x.noSlot} slots(S/X)=${x.slots} idx=${x.idx}`);
   for (const e of r.events) out.push(`  ${e}`);
 }
 if (p) {
