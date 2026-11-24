@@ -1,0 +1,43 @@
+# house-v020 | exit=0 | rom=v0.2.0.runtime.sfc | state=stage-07.mss
+LOAD ok=true
+F60 gameplay=false inidisp=80 pc=82824A vec=835B
+F120 gameplay=false inidisp=80 pc=82824A vec=835B
+F180 gameplay=false inidisp=80 pc=82824A vec=835B
+F240 gameplay=false inidisp=80 pc=82824A vec=835B
+SHOT f0240 -> output\traces\house-v020/f0240.png
+F300 gameplay=false inidisp=80 pc=82824A vec=835B
+F360 gameplay=false inidisp=80 pc=82824A vec=835B
+F420 gameplay=true inidisp=0E pc=818240 vec=835B
+F480 gameplay=true inidisp=0F pc=818240 vec=835B
+SHOT f0480 -> output\traces\house-v020/f0480.png
+F540 gameplay=true inidisp=0F pc=818240 vec=835B
+F600 gameplay=true inidisp=0F pc=818240 vec=835B
+F660 gameplay=true inidisp=0F pc=818240 vec=835B
+F720 gameplay=true inidisp=0F pc=818240 vec=835B
+SHOT f0720 -> output\traces\house-v020/f0720.png
+F780 gameplay=true inidisp=0F pc=818240 vec=835B
+F840 gameplay=true inidisp=0F pc=818240 vec=835B
+F900 gameplay=true inidisp=0F pc=818240 vec=835B
+F960 gameplay=true inidisp=0F pc=818240 vec=835B
+SHOT f0960 -> output\traces\house-v020/f0960.png
+F1020 gameplay=true inidisp=0F pc=818240 vec=835B
+F1080 gameplay=true inidisp=0F pc=818240 vec=835B
+F1140 gameplay=true inidisp=0F pc=818240 vec=835B
+F1200 gameplay=true inidisp=0F pc=818240 vec=835B
+SHOT f1200 -> output\traces\house-v020/f1200.png
+F1260 gameplay=true inidisp=0F pc=818240 vec=835B
+F1320 gameplay=true inidisp=0F pc=818240 vec=835B
+F1380 gameplay=true inidisp=0F pc=818240 vec=835B
+F1440 gameplay=true inidisp=0F pc=818240 vec=835B
+SHOT f1440 -> output\traces\house-v020/f1440.png
+F1500 gameplay=true inidisp=0F pc=818240 vec=835B
+RESULT left=true back=375 litBack=379 gameFrames=1158 inidisp=0F
+RESULT left=true back=375 litBack=379 gameFrames=1159 inidisp=0F
+RESULT left=true back=375 litBack=379 gameFrames=1160 inidisp=0F
+RESULT left=true back=375 litBack=379 gameFrames=1161 inidisp=0F
+SHOT end -> output\traces\house-v020/end.png
+RESULT left=true back=375 litBack=379 gameFrames=1162 inidisp=0F
+SHOT end -> output\traces\house-v020/end.png
+RESULT left=true back=375 litBack=379 gameFrames=1163 inidisp=0F
+SHOT end -> output\traces\house-v020/end.png
+RESULT left=true back=375 litBack=379 gameFrames=1164 inidisp=0F

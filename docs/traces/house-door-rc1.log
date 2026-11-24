@@ -1,0 +1,48 @@
+# house-door-rc1 | exit=0 | rom=v0.2.1-rc.runtime.sfc | state=stage-07.mss
+LOAD ok=true
+F1 scene=82D54C
+F60 DOOR px=87 py=1108 dest0550=EB29
+F60 gameplay=true inidisp=0F vec=835B
+SHOT door -> output\traces\house-door-rc1/door.png
+F120 gameplay=true inidisp=0F vec=835B
+SHOT f0120 -> output\traces\house-door-rc1/f0120.png
+F131 target13B6=82A1
+F131 target13B6=0000
+F172 scene=82D52C
+F180 gameplay=true inidisp=00 vec=835B
+F180 target13B6=0000
+F240 gameplay=true inidisp=0F vec=835B
+SHOT f0240 -> output\traces\house-door-rc1/f0240.png
+F300 gameplay=true inidisp=0F vec=835B
+F360 gameplay=true inidisp=0F vec=835B
+SHOT f0360 -> output\traces\house-door-rc1/f0360.png
+F420 gameplay=true inidisp=0F vec=835B
+F480 gameplay=true inidisp=0F vec=835B
+SHOT f0480 -> output\traces\house-door-rc1/f0480.png
+F540 gameplay=true inidisp=0F vec=835B
+F600 gameplay=true inidisp=0F vec=835B
+SHOT f0600 -> output\traces\house-door-rc1/f0600.png
+F660 gameplay=true inidisp=0F vec=835B
+F720 gameplay=true inidisp=0F vec=835B
+SHOT f0720 -> output\traces\house-door-rc1/f0720.png
+F780 gameplay=true inidisp=0F vec=835B
+F840 gameplay=true inidisp=0F vec=835B
+SHOT f0840 -> output\traces\house-door-rc1/f0840.png
+F900 gameplay=true inidisp=0F vec=835B
+F960 gameplay=true inidisp=0F vec=835B
+SHOT f0960 -> output\traces\house-door-rc1/f0960.png
+F1020 gameplay=true inidisp=0F vec=835B
+F1080 gameplay=true inidisp=0F vec=835B
+SHOT f1080 -> output\traces\house-door-rc1/f1080.png
+F1140 gameplay=true inidisp=0F vec=835B
+F1200 gameplay=true inidisp=0F vec=835B
+SHOT f1200 -> output\traces\house-door-rc1/f1200.png
+F1260 gameplay=true inidisp=0F vec=835B
+F1320 gameplay=true inidisp=0F vec=835B
+SHOT f1320 -> output\traces\house-door-rc1/f1320.png
+F1380 gameplay=true inidisp=0F vec=835B
+F1440 gameplay=true inidisp=0F vec=835B
+SHOT f1440 -> output\traces\house-door-rc1/f1440.png
+F1500 gameplay=true inidisp=0F vec=835B
+RESULT left=true back=86 litBack=86 inidisp=0F
+SHOT end -> output\traces\house-door-rc1/end.png

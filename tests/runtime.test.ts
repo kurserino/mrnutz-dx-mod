@@ -3,8 +3,9 @@ import { existsSync, readFileSync } from "node:fs";
 import { DEFAULT_ROM_PATH, ORIGINAL_PALETTE, PALETTE_FILE_OFFSET, applyIps } from "../src/core.js";
 import { assemble } from "../src/asm.js";
 import { disassemble, formatInstruction, loromToFile, parseHeader } from "../src/snes.js";
-import { CODE_ORIGIN, EXPANDED_SIZE, HOOK_ORIGINAL, HOOK_SITE, OAM_HOOK_ORIGINAL, OAM_HOOK_SITE, SAVE_RECORD, SRAM_CHECK_PATCHES, SRAM_HEADER, STATE, buildRuntimePatch, buildTables, decodeSaveRecord, encodeSaveRecord, hookSource } from "../src/runtime.js";
+import { CODE_ORIGIN, EXPANDED_SIZE, FRAME_HOOK_ORIGINAL, FRAME_HOOK_SITE, HOOK_ORIGINAL, HOOK_SITE, OAM_HOOK_ORIGINAL, OAM_HOOK_SITE, SAVE_RECORD, SRAM_CHECK_PATCHES, SRAM_HEADER, STATE, buildRuntimePatch, buildTables, decodeSaveRecord, encodeSaveRecord, hookSource } from "../src/runtime.js";
 import type { RuntimePresetFile } from "../src/runtime.js";
+import { MENU_BUFFER, MENU_DATA, MENU_STATE, PAUSE_DATA, PAUSE_HOOK_ORIGINAL, PAUSE_HOOK_SITE, buildMenuData } from "../src/pause.js";
 
 const presets = JSON.parse(readFileSync("presets/runtime.json", "utf8")) as RuntimePresetFile;
 
@@ -13,8 +14,10 @@ const fixture = Buffer.alloc(1048576, 0);
 ORIGINAL_PALETTE.copy(fixture, PALETTE_FILE_OFFSET);
 Buffer.from(HOOK_ORIGINAL, "hex").copy(fixture, loromToFile(HOOK_SITE));
 Buffer.from(OAM_HOOK_ORIGINAL, "hex").copy(fixture, loromToFile(OAM_HOOK_SITE));
+Buffer.from(FRAME_HOOK_ORIGINAL, "hex").copy(fixture, loromToFile(FRAME_HOOK_SITE));
 fixture[0x7fd7] = 0x0a;
 for (const c of SRAM_CHECK_PATCHES) Buffer.from(c.original, "hex").copy(fixture, loromToFile(c.cpu));
+Buffer.from(PAUSE_HOOK_ORIGINAL, "hex").copy(fixture, loromToFile(PAUSE_HOOK_SITE));
 
 describe("65C816 assembler", () => {
   it("encodes widths, labels and stack-relative operands", () => {
@@ -48,6 +51,31 @@ describe("65C816 assembler", () => {
 });
 
 describe("runtime palette patch", () => {
+  it("accepts PPU access only for a latched V inside VBlank (fix-vblank-check-race)", () => {
+    const { bytes, labels } = assemble(hookSource(4, 4), CODE_ORIGIN);
+    const at = (label: string, n: number) => bytes.subarray(labels[label] - CODE_ORIGIN, labels[label] - CODE_ORIGIN + n).toString("hex").toUpperCase();
+    // $4212 flag first, then the latched V counter: upper bound 250 (+1 = $FB) for CGRAM, 257 (+1 = $102) for OAM reads ...
+    expect(at("vblank_ok", 13)).toMatch(/^E220AD1242[0-9A-F]{4}20[0-9A-F]{4}C9FB00/);
+    expect(at("oam_read_ok", 11)).toMatch(/^AD1242[0-9A-F]{4}20[0-9A-F]{4}C90201/);
+    // ... and the lower bound 225 ($E1): a latch taken after VBlank ended (V = 0..224) is rejected.
+    expect(at("vb_range", 7)).toMatch(/^B0[0-9A-F]{2}C9E10090/);
+    expect(at("read_vcount", 19)).toBe("AF3F2100AF372100AF3D2100EBAF3D21002901");
+    // oam_hook no longer trusts the $4212 flag alone before its CGRAM writes.
+    const oam = bytes.subarray(labels.oam_hook - CODE_ORIGIN, labels.oh_no_restore - CODE_ORIGIN).toString("hex").toUpperCase();
+    const jsr = "20" + (labels.vblank_ok & 0xff).toString(16).padStart(2, "0").toUpperCase() + ((labels.vblank_ok >> 8) & 0xff).toString(16).padStart(2, "0").toUpperCase();
+    expect(oam).toContain(jsr + "B0");
+    expect(oam).not.toContain("AD1242");
+  });
+  it("remaps Mr. Nutz in frame_hook, outside VBlank, after the relocated JSL $8A8134 (fix-vblank-check-race)", () => {
+    const { bytes, labels } = assemble(hookSource(4, 4), CODE_ORIGIN);
+    const fh = bytes.subarray(labels.frame_hook - CODE_ORIGIN, labels.fh_handle - CODE_ORIGIN).toString("hex").toUpperCase();
+    expect(fh.startsWith("2234818A")).toBe(true);
+    expect(fh).toContain("C9CE00"); // starts only before line 206
+    // oam_hook has no buffer scan any more: no loop over $0024 entries
+    const oam = bytes.subarray(labels.oam_hook - CODE_ORIGIN, labels.unmap_list - CODE_ORIGIN).toString("hex").toUpperCase();
+    expect(oam).not.toContain("AF240000");
+  });
+
   it("puts the exact original palette at index 0 of both tables", () => {
     const t = buildTables(presets);
     expect(t.fur.subarray(0, 10)).toEqual(ORIGINAL_PALETTE.subarray(22, 32));
@@ -67,9 +95,12 @@ describe("runtime palette patch", () => {
     for (let i = 0; i < fixture.length; i++) if (fixture[i] !== patched[i]) changed.push(i);
     const oam = loromToFile(OAM_HOOK_SITE);
     expect(patched.subarray(oam, oam + 4).toString("hex").toUpperCase().startsWith("22")).toBe(true);
+    const frame = loromToFile(FRAME_HOOK_SITE);
+    expect(patched.subarray(frame, frame + 1).toString("hex").toUpperCase()).toBe("22");
     const inCheck = (i: number) => SRAM_CHECK_PATCHES.some((c) => i >= loromToFile(c.cpu) && i < loromToFile(c.cpu) + c.original.length / 2);
     const allowed = (i: number) => i === 0x7fd6 || i === 0x7fd7 || i === 0x7fd8 || (i >= 0x7fdc && i <= 0x7fdf)
-      || (i >= hook && i < hook + 6) || (i >= oam && i < oam + 4) || inCheck(i);
+      || (i >= hook && i < hook + 6) || (i >= oam && i < oam + 4) || (i >= frame && i < frame + 4) || inCheck(i)
+      || (i >= loromToFile(PAUSE_HOOK_SITE) && i < loromToFile(PAUSE_HOOK_SITE) + 8);
     expect(changed.every(allowed)).toBe(true);
     expect(applyIps(fixture, ips, EXPANDED_SIZE).equals(patched)).toBe(true);
     expect(manifest.entries.every((e) => e.reason && e.evidence)).toBe(true);
@@ -103,6 +134,18 @@ describe("runtime palette patch", () => {
     for (const c of SRAM_CHECK_PATCHES) {
       expect(c.replacement.length).toBe(c.original.length);
       expect(c.evidence).toMatch(/docs\/traces\//);
+    }
+  });
+  it("hooks the paused NMI with JSL pause_hook + 4 NOP and keeps the menu data and buffers in their regions", () => {
+    const { patched } = buildRuntimePatch(fixture, presets);
+    const site = loromToFile(PAUSE_HOOK_SITE);
+    expect(patched.subarray(site, site + 8).toString("hex").toUpperCase()).toBe("2200A0A0EAEAEAEA");
+    expect(buildMenuData().length).toBe(MENU_DATA.end - PAUSE_DATA);
+    expect(MENU_BUFFER.bg3Map).toBeGreaterThanOrEqual(0x7fd040);
+    expect(MENU_BUFFER.end).toBeLessThanOrEqual(0x7ffff0); // the game clears $7FFFF0+ on world changes
+    for (const a of Object.values(MENU_STATE)) {
+      expect(a).toBeGreaterThanOrEqual(0x7fb680);
+      expect(a).toBeLessThan(0x7fc000);
     }
   });
   it("keeps the hook state inside WRAM never touched by the game ($7FB6C0-$7FBFFF, sweep-wram.log)", () => {

@@ -42,6 +42,33 @@ end
 for _, b in ipairs({ 0x00, 0x80 }) do
   emu.addMemoryCallback(onHdmaEnable, emu.callbackType.write, b * 0x10000 + 0x420C, b * 0x10000 + 0x420C, emu.cpuType.snes, emu.memType.snesMemory)
 end
+-- Hook PPU access outside VBlank (openspec change fix-vblank-check-race): CPU reads of $2138 (OAM) / $213B (CGRAM)
+-- and CGADD writes by the hook bank $A0 on an active-display line. HDMA writes of the game happen while our code runs
+-- and are reported with our PC, so an access counts only when the instruction that just ran really is LDA/STA (abs or
+-- long) of that register. Mesen reports the PC of the next instruction in these callbacks (v0.2.0: STA $2121 at
+-- $A0:84F7 is reported as $A0:84FA).
+local ppuOut = 0
+local function cpuAccess(pc, reg)
+  local abs, long = bus8(pc - 3), bus8(pc - 4)
+  if bus16(pc - 2) == reg and (abs == 0xAD or abs == 0x8D) then return true end
+  return bus16(pc - 3) == reg and (long == 0xAF or long == 0x8F)
+end
+local function onHookPpu(kind, reg)
+  return function(address, value)
+    if FRAME < CHECK_FROM or FRAME >= END_AT then return end
+    local s = emu.getState()
+    if s["cpu.k"] ~= 0xA0 or s["ppu.scanline"] >= 225 or s["ppu.forcedBlank"] then return end
+    if not cpuAccess(0xA00000 + s["cpu.pc"], reg) then return end
+    ppuOut = ppuOut + 1
+    if ppuOut == 1 then print(string.format("PPU_OUT frame=%d %s line=%d pc=A0:%04X", FRAME, kind, s["ppu.scanline"], s["cpu.pc"])) end
+  end
+end
+for _, b in ipairs({ 0x00, 0x80, 0xA0 }) do
+  local base = b * 0x10000
+  emu.addMemoryCallback(onHookPpu("oam-read", 0x2138), emu.callbackType.read, base + 0x2138, base + 0x2138, emu.cpuType.snes, emu.memType.snesMemory)
+  emu.addMemoryCallback(onHookPpu("cgram-read", 0x213B), emu.callbackType.read, base + 0x213B, base + 0x213B, emu.cpuType.snes, emu.memType.snesMemory)
+  emu.addMemoryCallback(onHookPpu("cgadd", 0x2121), emu.callbackType.write, base + 0x2121, base + 0x2121, emu.cpuType.snes, emu.memType.snesMemory)
+end
 local function event(kind, text)
   if events[kind] then return end
   events[kind] = true
@@ -81,8 +108,8 @@ emu.addEventCallback(function()
     local s = {}
     for k in pairs(slots) do s[#s + 1] = k end
     table.sort(s)
-    print(string.format("RESULT gameplay=%d nutzFrames=%d ok=%d lostMax=%d sharedChanged=%d foreignOnX=%d noSlot=%d hdmaLate=%d hdmaMaxLine=%d slots=%s idx=%d/%d",
-      r.gameplay, r.nutzFrames, r.ok, r.lostMax, r.sharedChanged, r.foreignOnX, r.noSlot, hdma.late, hdma.maxLine, table.concat(s, ","), w8(NUTZ.fur), w8(NUTZ.outfit)))
+    print(string.format("RESULT gameplay=%d nutzFrames=%d ok=%d lostMax=%d sharedChanged=%d foreignOnX=%d noSlot=%d hdmaLate=%d hdmaMaxLine=%d ppuOut=%d slots=%s idx=%d/%d",
+      r.gameplay, r.nutzFrames, r.ok, r.lostMax, r.sharedChanged, r.foreignOnX, r.noSlot, hdma.late, hdma.maxLine, ppuOut, table.concat(s, ","), w8(NUTZ.fur), w8(NUTZ.outfit)))
     emu.stop(0)
   end
 end, emu.eventType.endFrame)

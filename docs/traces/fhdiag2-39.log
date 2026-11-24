@@ -1,0 +1,35 @@
+# fhdiag2-39 | exit=0 | rom=v0.2.1-rc5.runtime.sfc | state=stage-39.mss
+LOAD ok=true
+OH F912 line=230 count=0018 conflict=0 ready=1
+FH F912 line=65 count=0018
+  WRITE-after-frame_hook F912 addr=0338 v=7A pc=A0:8891 line=70
+OH F913 line=230 count=0018 conflict=0 ready=1
+FH F913 line=67 count=001C
+OH F914 line=230 count=001C conflict=1 ready=1
+FH F914 line=67 count=001C
+BAD F915 foreign=1 nutz=6 ok=false X=5 frameEnd=67 calls=1 ready=1 conflict=1 list=0 onX=[0:t0C4:a7A]
+OH F915 line=230 count=001C conflict=1 ready=1
+FH F915 line=79 count=001C
+BAD F916 foreign=1 nutz=6 ok=false X=5 frameEnd=79 calls=1 ready=1 conflict=1 list=0 onX=[0:t0C4:a7A]
+OH F916 line=242 count=001C conflict=1 ready=1
+FH F916 line=81 count=0018
+  WRITE-after-frame_hook F916 addr=0338 v=3A pc=A0:8891 line=86
+BAD F917 foreign=1 nutz=6 ok=false X=5 frameEnd=81 calls=1 ready=1 conflict=0 list=6 onX=[0:t0C4:a7A]
+OH F917 line=230 count=0018 conflict=0 ready=1
+FH F917 line=68 count=0018
+  WRITE-after-frame_hook F917 addr=0338 v=3A pc=A0:8891 line=73
+OH F918 line=227 count=0018 conflict=0 ready=1
+FH F918 line=65 count=0018
+  WRITE-after-frame_hook F918 addr=0338 v=3A pc=A0:8891 line=70
+OH F919 line=227 count=0018 conflict=0 ready=1
+FH F919 line=75 count=0024
+OH F920 line=238 count=0024 conflict=1 ready=1
+FH F920 line=77 count=0024
+BAD F921 foreign=3 nutz=6 ok=false X=5 frameEnd=77 calls=1 ready=1 conflict=1 list=0 onX=[0:t0C6:a7A 1:t0EE:a7A 2:t0A8:a7A]
+OH F921 line=227 count=0024 conflict=1 ready=1
+FH F921 line=118 count=0024
+  WRITE-after-frame_hook F921 addr=0344 v=3C pc=A0:8891 line=124
+BAD F922 foreign=0 nutz=6 ok=false X=6 frameEnd=118 calls=1 ready=1 conflict=0 list=6 onX=[]
+OH F922 line=227 count=0024 conflict=0 ready=1
+FH F922 line=69 count=0020
+  WRITE-after-frame_hook F922 addr=0340 v=3C pc=A0:8891 line=75

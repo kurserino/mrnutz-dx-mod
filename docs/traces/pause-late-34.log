@@ -1,0 +1,6 @@
+# pause-late-34 | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-34.mss | PRESS_AT=700
+LOAD ok=true
+BG3 map=$1000 chr=$0000 tiles=3B9 pals=0 prio0=1024 prio1=0 main=$17 sub=$11 bg3prio=true colormath=2 cmAddSub=true
+OBJ visible=10 nutzEntries=6 nutzSlot=4 paused=$00
+SHOT paused -> output\traces\pause-late-34/paused.png
+HOOK runs=0 P= D= DBR= entryLine=999--1 exitLine=999--1

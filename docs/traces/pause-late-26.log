@@ -1,0 +1,6 @@
+# pause-late-26 | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-26.mss | PRESS_AT=700
+LOAD ok=true
+BG3 map=$1000 chr=$0000 tiles=010,014-015,030,045,048,04C,064-065,06D,074,079,084,0E1,0F9,100-101,104-105,108,111,11D,121,130,135,160,165,170,1BC,1D0,1E0,1E8,1F8,200-204,208,20F-210,213,217,21E,224,230,23C,240,243,248,25F-260,262,264,26C,270,272,274,278,280,288,28F,2B2,2E0-2E2,2ED,2F0,301,314,316,341,366,380-381,383-384,389,3A0-3A1,3B9-3CD pals=0,1,2,3,4,5,6,7 prio0=971 prio1=53 main=$17 sub=$00 bg3prio=true colormath=47 cmAddSub=true
+OBJ visible=17 nutzEntries=6 nutzSlot=4 paused=$00
+SHOT paused -> output\traces\pause-late-26/paused.png
+HOOK runs=0 P= D= DBR= entryLine=999--1 exitLine=999--1

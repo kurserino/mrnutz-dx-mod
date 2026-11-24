@@ -1,0 +1,26 @@
+# oamw-02 | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-02.mss | END=600
+LOAD ok=true
+FIRST buf 81:C659 addr=0321 F0 m1 x0 D=0000 DBR=00 line=4
+FIRST buf 81:C682 addr=0322 F0 m1 x0 D=0000 DBR=00 line=4
+FIRST count 81:C698 addr=0024 F0 m0 x0 D=0000 DBR=00 line=4
+FIRST buf 81:C6A9 addr=0323 F0 m0 x0 D=0000 DBR=00 line=4
+FIRST buf 81:BF7B addr=0339 F0 m1 x0 D=0000 DBR=00 line=11
+FIRST buf 81:BFA4 addr=033A F0 m1 x0 D=0000 DBR=00 line=11
+FIRST count 81:BFBA addr=0024 F0 m0 x0 D=0000 DBR=00 line=11
+FIRST buf 81:BFCB addr=033B F0 m0 x0 D=0000 DBR=00 line=11
+FIRST count 81:C3E3 addr=0024 F1 m0 x0 D=0000 DBR=00 line=241
+FIRST count 81:F047 addr=0024 F281 m0 x0 D=0000 DBR=99 line=4
+FIRST buf 81:BF90 addr=033D F283 m1 x0 D=0000 DBR=00 line=21
+FIRST count 82:8CD9 addr=0024 F519 m0 x0 D=0000 DBR=00 line=66
+TOTAL buf 81:BF7B x3478
+TOTAL buf 81:BF90 x140
+TOTAL buf 81:BFA4 x3618
+TOTAL buf 81:BFCB x7236
+TOTAL buf 81:C659 x2292
+TOTAL buf 81:C682 x2292
+TOTAL buf 81:C6A9 x4584
+TOTAL count 81:BFBA x3618
+TOTAL count 81:C3E3 x518
+TOTAL count 81:C698 x2292
+TOTAL count 81:F047 x58
+TOTAL count 82:8CD9 x1

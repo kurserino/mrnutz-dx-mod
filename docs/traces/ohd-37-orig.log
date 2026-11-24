@@ -1,0 +1,3 @@
+# ohd-37-orig | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-37.mss
+LOAD ok=true
+DIST enter224:537 enter228:120 enter236:73 enter240:41 | worst enter=241 hdma=254 bytes0024=0000

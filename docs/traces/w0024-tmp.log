@@ -1,0 +1,33 @@
+# w0024-tmp | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-00.mss | ADDR=36 END=6
+LOAD ok=true
+WRITE frame=0 addr=$000024 value=4 pc=$81C698 A=$0004 X=$0000 Y=$0000
+WRITE frame=0 addr=$000024 value=8 pc=$81C698 A=$0008 X=$0004 Y=$0090
+WRITE frame=0 addr=$000024 value=12 pc=$81C698 A=$000C X=$0008 Y=$00A0
+WRITE frame=0 addr=$000024 value=16 pc=$81C698 A=$0010 X=$000C Y=$00B0
+WRITE frame=0 addr=$000024 value=20 pc=$81C698 A=$0014 X=$0010 Y=$00B0
+WRITE frame=0 addr=$000024 value=24 pc=$81C698 A=$0018 X=$0014 Y=$00B0
+WRITE frame=1 addr=$000024 value=0 pc=$81C3E3 A=$0018 X=$0018 Y=$0521
+WRITE frame=359 addr=$000024 value=4 pc=$81F047 A=$0004 X=$0000 Y=$0000
+WRITE frame=359 addr=$000024 value=28 pc=$81C698 A=$001C X=$0018 Y=$00B0
+WRITE frame=376 addr=$000024 value=8 pc=$81F047 A=$0008 X=$0004 Y=$0000
+WRITE frame=376 addr=$000024 value=32 pc=$81C698 A=$0020 X=$001C Y=$00B0
+WRITE frame=383 addr=$000024 value=12 pc=$81F047 A=$000C X=$0008 Y=$0000
+WRITE frame=383 addr=$000024 value=16 pc=$81F047 A=$0010 X=$000C Y=$0000
+WRITE frame=383 addr=$000024 value=36 pc=$81C698 A=$0024 X=$0020 Y=$00B0
+WRITE frame=383 addr=$000024 value=40 pc=$81C698 A=$0028 X=$0024 Y=$00B0
+WRITE frame=1762 addr=$000024 value=4 pc=$81B159 A=$0004 X=$0000 Y=$000C
+WRITE frame=1796 addr=$000024 value=20 pc=$81F047 A=$0014 X=$0010 Y=$0081
+WRITE frame=1796 addr=$000024 value=44 pc=$81C698 A=$002C X=$0028 Y=$00B0
+WRITE frame=2102 addr=$000024 value=24 pc=$81F047 A=$0018 X=$0014 Y=$0081
+WRITE frame=2102 addr=$000024 value=48 pc=$81C698 A=$0030 X=$002C Y=$00B0
+WRITE frame=2107 addr=$000024 value=8 pc=$81B159 A=$0008 X=$0004 Y=$000C
+WRITE frame=2107 addr=$000024 value=28 pc=$81F047 A=$001C X=$0018 Y=$0081
+WRITE frame=2108 addr=$000024 value=32 pc=$81F047 A=$0020 X=$001C Y=$0081
+WRITE frame=2108 addr=$000024 value=52 pc=$81C698 A=$0034 X=$0030 Y=$00B0
+WRITE frame=2108 addr=$000024 value=56 pc=$81C698 A=$0038 X=$0034 Y=$00B0
+WRITE frame=2113 addr=$000024 value=12 pc=$81B159 A=$000C X=$0008 Y=$0019
+WRITE frame=2146 addr=$000024 value=36 pc=$81F047 A=$0024 X=$0020 Y=$0081
+WRITE frame=2146 addr=$000024 value=60 pc=$81C698 A=$003C X=$0038 Y=$00B0
+WRITE frame=2278 addr=$000024 value=40 pc=$81F047 A=$0028 X=$0024 Y=$0002
+WRITE frame=2278 addr=$000024 value=64 pc=$81C698 A=$0040 X=$003C Y=$0090
+WRITE frame=2757 addr=$000024 value=0 pc=$828CD9 A=$E36F X=$FFFE Y=$0000

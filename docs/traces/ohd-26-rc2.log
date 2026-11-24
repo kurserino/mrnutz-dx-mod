@@ -1,0 +1,3 @@
+# ohd-26-rc2 | exit=0 | rom=v0.2.1-rc2.runtime.sfc | state=stage-26.mss
+LOAD ok=true
+DIST enter224:736 enter228:5 enter236:46 enter240:26 | worst enter=238 hdma=261 bytes0024=0000

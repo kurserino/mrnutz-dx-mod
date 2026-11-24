@@ -7,6 +7,7 @@ import { assemble } from "./asm.js";
 import { buildManifestPatch } from "./manifest.js";
 import type { ManifestEntry, ManifestPatch, PatchManifest } from "./manifest.js";
 import { loromToFile } from "./snes.js";
+import { MENU_STATE, PAUSE_DATA, PAUSE_HOOK_ORIGINAL, PAUSE_HOOK_SITE, PAUSE_ORIGIN, buildMenuData, pauseSource } from "./pause.js";
 
 export interface RuntimePresetFile {
   fur: { name: string; colors: string[] }[];
@@ -24,6 +25,12 @@ export const ATTR_BIT = 0xa09200; // 256 bytes: OAM attr -> 1 << palette
 // OAM upload ($81:C367, called from $81:C363): LDA #$4300 / TCD, right before the OAM DMA (sweep-oamtiming.log)
 export const OAM_HOOK_SITE = 0x81c36a;
 export const OAM_HOOK_ORIGINAL = "A900435B";
+// End of the gameplay frame work (JSL $8A8134, then wait for the end of VBlank, NMI on, RTI): the OAM buffer for the
+// next frame is complete here, in active display, long before the next NMI (docs/traces/probe-frame-hook.log:
+// M8 X8, D=$0000, DBR=$00, once per gameplay frame; lines 94-162 in the Mr. Blizzard breath, franken-order.log).
+export const FRAME_HOOK_SITE = 0x818569;
+export const FRAME_HOOK_ORIGINAL = "2234818A";
+const FRAME_HOOK_CALL = 0x8a8134; // relocated call
 const NUTZ_LIST_MAX = 16;
 // WRAM $7FB6C0-$7FBFFF had no read or write during the whole game, credits, soft reset and boot
 // (docs/traces/sweep-wram.log). The previous block at $7FFFF0 is cleared by the game on some world changes.
@@ -42,7 +49,16 @@ export const STATE = {
   passMask: 0x7fbe1c, // palettes of other dynamic objects in the current pass
   prevMask: 0x7fbe1d, // ... in the previous pass. Busy slots = stickyMask | prevMask | passMask
   entryOff: 0x7fbe1e, // scan_chunk: byte offset of the entry being read
+  // frame_hook remap (fix-vblank-check-race): attr -> class table for the current S/X, Mr. Nutz entry list
+  classTbl: 0x7fbc00, // 256 bytes: 0 other, 1 palette S name table 0, 2 palette X name table 0, 3 palette X name table 1
+  list: 0x7fbd00, // NUTZ_LIST_MAX words: OAM buffer offsets of Mr. Nutz entries found this frame
+  limit: 0x7fbd20, // word: OAM buffer bytes in use ($0024) copied for the frame_hook scan (DBR=$7F there)
+  listCount: 0x7fbd28, // Mr. Nutz entries in list
+  classKey: 0x7fbd29, // S * 16 + X the class table was built for ($FF = none)
+  layout: 0x7fbd2a, // STATE_LAYOUT once the fields above were initialized (v0.2.0 WRAM, e.g. a savestate, has garbage here)
+  conflict: 0x7fbd2b, // frame_hook saw another object on palette X in the buffer
 }
+const STATE_LAYOUT = 0x02;
 // Mr. Nutz palette source; the scene's 8-entry sprite palette table at [$055E] decides its CGRAM slot
 // (slot 4 = $C0 in most scenes, slot 0 = $80 in the stage traced in docs/traces/sweep-debug10.log).
 export const NUTZ_PALETTE_CPU = 0x859cc0;
@@ -76,6 +92,13 @@ export function decodeSaveRecord(record: Buffer, furCount: number, outfitCount: 
 }
 const MAX_PRESETS = 12;
 const LAST_SAFE_SCANLINE = 250; // leave >= 11 VBlank lines for the remaining NMI work
+const FIRST_VBLANK_SCANLINE = 225; // NTSC VBlank starts at line 225; a smaller latched V means VBlank already ended
+// Reading OAM through $2138 is safe up to the end of VBlank; input_hook runs after the game's HDMA enable, so a read
+// there delays nothing the game needs in VBlank. CGRAM writes keep the stricter LAST_SAFE_SCANLINE.
+const OAM_READ_LAST_SCANLINE = 257;
+// frame_hook scans the whole buffer (up to 128 entries, ~13 lines): it only starts before this line so it always ends
+// before the next NMI at line 225 and never makes the game miss a frame.
+const FRAME_HOOK_LAST_SCANLINE = 205;
 
 const h = (v: number, digits: number) => "$" + v.toString(16).toUpperCase().padStart(digits, "0");
 
@@ -137,10 +160,31 @@ export function hookSource(furCount: number, outfitCount: number): string {
     STA ${L(S.tablePtr + 2)}
     LDA #$00
     STA ${L(S.ready)}
+    STA ${L(S.layout)}     ; new fields: initialized by the layout check below
     REP #$20
     LDA #${h(MAGIC, 4)}
     STA ${L(S.magic)}
   ready:
+    SEP #$20
+    LDA ${L(MENU_STATE.state)} ; pause menu state left over (soft reset, unexpected resume): drop it
+    BEQ no_menu
+    LDA #$00
+    STA ${L(MENU_STATE.state)}
+  no_menu:
+    REP #$20
+    SEP #$20               ; state fields added after v0.2.0: initialize once (magic already set by an older build)
+    LDA ${L(S.layout)}
+    CMP #${h(STATE_LAYOUT, 2)}
+    BEQ layout_ok
+    LDA #${h(STATE_LAYOUT, 2)}
+    STA ${L(S.layout)}
+    LDA #$FF
+    STA ${L(S.classKey)}
+    LDA #$00
+    STA ${L(S.listCount)}
+    STA ${L(S.conflict)}
+  layout_ok:
+    REP #$20
     LDA $1A6F              ; pressed = (cur ^ prev) & cur
     EOR ${L(S.prevPad)}
     AND $1A6F
@@ -270,6 +314,7 @@ export function hookSource(furCount: number, outfitCount: number): string {
     BCS m_off
     JSR prepare_colors     ; expected colours; upload left to oam_hook (always early in VBlank)
     SEP #$20
+    JSR build_classes      ; class table for this S/X before oam_hook may use it
     LDA ${L(S.customSlot)}
     ASL A
     STA ${L(S.xBits)}
@@ -321,6 +366,7 @@ export function hookSource(furCount: number, outfitCount: number): string {
     STA ${L(S.passes)}
     STA ${L(S.ready)}
     LDA #$FF
+    STA ${L(S.classKey)}
     STA ${L(S.customSlot)}
     STA ${L(S.slotS)}
     REP #$20
@@ -376,7 +422,7 @@ export function hookSource(furCount: number, outfitCount: number): string {
     .i16
     ; The WRAM buffer at $0321 holds stale entries past the bytes in use; the PPU OAM is the truth
     ; (cleared entries have y=$E0, boss parts uploaded once stay there). Read it through $2138.
-    JSR vblank_ok
+    JSR oam_read_ok
     BCC sc_go
     RTS
   sc_go:
@@ -389,7 +435,13 @@ export function hookSource(furCount: number, outfitCount: number): string {
     STA ${L(S.entryOff)}    ; byte offset = OAM word address * 2
     LDA #$0000             ; B = 0 for the A8 TAX/TAY below
     SEP #$20
+    LDA #$80               ; up to 16 entries, never past entry 127 (the high table follows)
+    SEC
+    SBC ${L(S.scanPos)}
+    CMP #$10
+    BCC sc_count
     LDA #$10
+  sc_count:
     STA ${L(S.tmp)}
   sc_loop:
     LDA $2138              ; x (unused)
@@ -442,16 +494,26 @@ export function hookSource(furCount: number, outfitCount: number): string {
     DEC A
     STA ${L(S.tmp)}
     BEQ sc_end
+    BIT #$03               ; every 4 entries: stop before the reads could leave VBlank, resume next frame
+    BNE sc_more
+    JSR read_vcount
+    .a16
+    CMP #${h(OAM_READ_LAST_SCANLINE + 1, 4)}
+    LDA #$0000
+    SEP #$20
+    BCS sc_end
+  sc_more:
     JMP sc_loop            ; loop body is longer than a branch reaches
   sc_end:
+    .a8
     REP #$20
     LDA $0026              ; restore OAMADD as the game leaves it ($81:C3AF: entries in use / 2)
     LSR A
     STA $2102
+    LDA ${L(S.entryOff)}   ; next entry = byte offset / 4 (the chunk may have stopped early)
+    LSR A
+    LSR A
     SEP #$20
-    LDA ${L(S.scanPos)}
-    CLC
-    ADC #$10
     AND #$7F
     STA ${L(S.scanPos)}
     BNE sc_done
@@ -548,25 +610,86 @@ export function hookSource(furCount: number, outfitCount: number): string {
     SEC
     RTS
 
-  vblank_ok:               ; C=0 when CGRAM may be accessed now (VBlank, scanline <= ${LAST_SAFE_SCANLINE}); returns A8
-    SEP #$20
+  vblank_ok:               ; C=0 when PPU access is safe now: latched V in ${FIRST_VBLANK_SCANLINE}..${LAST_SAFE_SCANLINE}; returns A8
+    SEP #$20               ; (the $4212 flag alone races: read at line 261, latch at line 0 -> V=0 in active display)
     LDA $4212
     BPL vb_no
-    LDA $213F              ; reset the counter latch flip-flop
-    LDA $2137              ; latch H/V counters
-    LDA $213D
+    JSR read_vcount
+    .a16
+    CMP #${h(LAST_SAFE_SCANLINE + 1, 4)}
+    BRA vb_range
+  oam_read_ok:             ; same check for OAM reads ($2138): V in ${FIRST_VBLANK_SCANLINE}..${OAM_READ_LAST_SCANLINE}
+    .a8
+    LDA $4212
+    BPL vb_no
+    JSR read_vcount
+    .a16
+    CMP #${h(OAM_READ_LAST_SCANLINE + 1, 4)}
+  vb_range:
+    .a16
+    BCS vb_no16
+    CMP #${h(FIRST_VBLANK_SCANLINE, 4)}
+    BCC vb_no16
+    SEP #$20
+    CLC
+    RTS
+  vb_no16:
+    SEP #$20
+  vb_no:
+    .a8
+    SEC
+    RTS
+
+  read_vcount:             ; A8 in, A16 out = latched V counter (9 bits). Long addressing: works with any DBR
+    .a8
+    LDA $00213F            ; reset the counter latch flip-flop
+    LDA $002137            ; latch H/V counters
+    LDA $00213D
     XBA
-    LDA $213D
+    LDA $00213D
     AND #$01
     XBA
     REP #$20
-    CMP #${h(LAST_SAFE_SCANLINE + 1, 4)}
-    SEP #$20
-    BCS vb_no
-    CLC
     RTS
-  vb_no:
-    SEC
+
+  build_classes:           ; A8 X16 in/out. Class table for the current S/X (rebuilt only when they changed)
+    .a8
+    .i16
+    LDA ${L(S.slotS)}
+    ASL A
+    ASL A
+    ASL A
+    ASL A
+    ORA ${L(S.customSlot)}
+    CMP ${L(S.classKey)}
+    BEQ bc_done
+    STA ${L(S.classKey)}
+    LDX #$0000
+  bc_loop:
+    TXA                    ; attr = low byte of X
+    AND #$0E
+    LSR A
+    CMP ${L(S.customSlot)}
+    BEQ bc_x
+    CMP ${L(S.slotS)}
+    BEQ bc_s
+    LDA #$00
+    BRA bc_put
+  bc_x:
+    TXA
+    AND #$01
+    ORA #$02               ; 2: palette X name table 0, 3: palette X name table 1
+    BRA bc_put
+  bc_s:
+    TXA
+    AND #$01
+    EOR #$01               ; 1: palette S name table 0, 0: palette S name table 1 (not Mr. Nutz)
+  bc_put:
+    STA ${L(S.classTbl)},X
+    INX
+    CPX #$0100
+    BNE bc_loop
+  bc_done:
     RTS
 
   prepare_colors:          ; A16. Expected colours of the selection; pending upload when slot/fur/outfit changed
@@ -701,13 +824,12 @@ ${Array.from({ length: 10 }, () => `    LDA ${A(FUR_TABLE)},X\n    STA $2122\n  
     REP #$20
     RTS
 
-  oh_out16:
-  oh_out:                  ; trampolines for the early exits of oam_hook (branch range)
+  oh_t_unmap:              ; trampolines (branch range)
+    JMP oh_unmap_exit
+  oh_t_exit:
     JMP oh_exit
-  oh_nr:
-    JMP oh_notready
 
-  oam_hook:                ; critical path: keep it short
+  oam_hook:                ; VBlank, right before the OAM DMA: CGRAM work only (the buffer was remapped by frame_hook)
     .a16
     .i16
     PHP
@@ -717,20 +839,18 @@ ${Array.from({ length: 10 }, () => `    LDA ${A(FUR_TABLE)},X\n    STA $2122\n  
     PHK
     PLB
     REP #$30
-    SEP #$20
-    REP #$20               ; gameplay NMI and the scene table the manager prepared (also right after a pause)
-    LDA $01DC
+    LDA $01DC              ; gameplay NMI and the scene table the manager prepared (also right after a pause)
     CMP #$835B
-    BNE oh_out16
+    BNE oh_t_unmap
     LDA $055E
     CMP ${L(S.tablePtr)}
-    BNE oh_out16
+    BNE oh_t_unmap
     SEP #$20
     LDA $0560
     CMP ${L(S.tablePtr + 2)}
-    BNE oh_out
-    LDA $4212
-    BPL oh_out             ; not in VBlank
+    BNE oh_t_unmap
+    JSR vblank_ok
+    BCS oh_t_exit          ; not safely in VBlank (lag frame): X keeps its colours, the remapped buffer still fits
     LDA ${L(S.pending)}
     BIT #$02
     BEQ oh_no_restore
@@ -738,11 +858,14 @@ ${Array.from({ length: 10 }, () => `    LDA ${A(FUR_TABLE)},X\n    STA $2122\n  
     STA ${L(S.pending)}
     REP #$20
     JSR restore_custom     ; selection back to original: X gets its scene palette back; ready = 0
-    JMP oh_exit
+    SEP #$20
+    BRA oh_t_unmap
   oh_no_restore:
     .a8
     LDA ${L(S.ready)}
-    BEQ oh_out
+    BEQ oh_t_unmap
+    LDA ${L(S.conflict)}
+    BNE oh_conflict
     LDA ${L(S.xBits)}      ; X still holds the selection? (scene reloads, respawn) -> upload again now
     ASL A
     ASL A
@@ -759,7 +882,7 @@ ${Array.from({ length: 10 }, () => `    LDA ${A(FUR_TABLE)},X\n    STA $2122\n  
   oh_check_pending:
     LDA ${L(S.pending)}
     BIT #$01
-    BEQ oh_scan
+    BEQ oh_t_exit
     AND #$FE
     STA ${L(S.pending)}
     REP #$20
@@ -772,66 +895,10 @@ ${Array.from({ length: 10 }, () => `    LDA ${A(FUR_TABLE)},X\n    STA $2122\n  
     STA ${L(S.applied + 1)}
     LDA ${L(S.outfitIndex)}
     STA ${L(S.applied + 2)}
-  oh_scan:
-    SEP #$20
-    LDX #$0000
-    LDY #$0000
-  oh_loop:
-    CPX $0024              ; OAM buffer bytes in use this frame
-    BCS oh_end
-    LDA $0324,X            ; attr
-    AND #$0E
-    CMP ${L(S.xBits)}
-    BEQ oh_isx
-    CMP ${L(S.sBits)}
-    BEQ oh_iss
-  oh_next:
-    INX
-    INX
-    INX
-    INX
-    BRA oh_loop
-  oh_iss:
-    LDA $0323,X            ; palette S: Mr. Nutz only with tile < $50 on name table 0
-    CMP #$50
-    BCS oh_next
-    LDA $0324,X
-    LSR A
-    BCS oh_next
-  oh_nutz:
-    CPY #${h(NUTZ_LIST_MAX, 4)}
-    BCS oh_next
-    PHX
-    INY
-    BRA oh_next
-  oh_isx:
-    LDA $0323,X            ; palette X: anything but Mr. Nutz is a conflict
-    CMP #$50
-    BCS oh_conflict
-    LDA $0324,X
-    LSR A
-    BCS oh_conflict
-    BRA oh_nutz
-  oh_end:
-    CPY #$0000
-    BEQ oh_exit
-  oh_remap:
-    PLX
-    LDA $0324,X
-    AND #$F1
-    ORA ${L(S.xBits)}
-    STA $0324,X
-    DEY
-    BNE oh_remap
-    BRA oh_exit
-  oh_conflict:
-    CPY #$0000
-    BEQ oh_restore
-  oh_pop:
-    PLX
-    DEY
-    BNE oh_pop
-  oh_restore:
+    JMP oh_exit
+  oh_conflict:             ; frame_hook saw another object on X: Mr. Nutz back to S, X gets its scene palette back
+    .a8
+    JSR unmap_list
     LDA ${L(S.xBits)}      ; X is busy: keep it out of the free slots for this and the next pass
     REP #$20
     AND #$00FF
@@ -842,13 +909,20 @@ ${Array.from({ length: 10 }, () => `    LDA ${A(FUR_TABLE)},X\n    STA $2122\n  
     STA ${L(S.passMask)}
     REP #$20
     JSR restore_custom     ; X gets its scene palette back before the DMA; ready = 0
-  oh_notready:
     SEP #$20
     LDA #$00
     STA ${L(S.ready)}
     LDA #$FF               ; force the manager to upload the colours again
     STA ${L(S.applied)}
+    BRA oh_exit
+  oh_unmap_exit:           ; X cannot be used for this buffer: listed Mr. Nutz entries back to S
+    SEP #$20
+    JSR unmap_list
   oh_exit:
+    SEP #$20
+    LDA #$00               ; the list belongs to the buffer the DMA is about to upload
+    STA ${L(S.listCount)}
+    STA ${L(S.conflict)}
     REP #$30
     PLB
     PLY
@@ -857,6 +931,251 @@ ${Array.from({ length: 10 }, () => `    LDA ${A(FUR_TABLE)},X\n    STA $2122\n  
     LDA #$4300             ; relocated original instructions
     TCD
     RTL
+
+  unmap_list:              ; A8 X16, any DBR. Listed entries that still look remapped (tile < $50, palette X) -> S
+    .a8
+    .i16
+    LDA ${L(S.listCount)}
+    BEQ ul_done
+    DEC A
+    ASL A
+    REP #$20
+    AND #$00FF
+    TAX
+  ul_loop:
+    .a16
+    LDA ${L(S.list)},X
+    PHX
+    TAX
+    SEP #$20
+    LDA $7E0323,X
+    CMP #$50
+    BCS ul_next
+    LDA $7E0324,X
+    AND #$0E
+    CMP ${L(S.xBits)}
+    BNE ul_next
+    LDA $7E0324,X
+    AND #$F1
+    ORA ${L(S.sBits)}
+    STA $7E0324,X
+  ul_next:
+    REP #$20
+    PLX
+    DEX
+    DEX
+    BPL ul_loop
+    SEP #$20
+  ul_done:
+    .a8
+    RTS
+
+  frame_hook:              ; JSL from $81:8569: end of the gameplay frame work, active display, M8 X8 D=0 DBR=0
+    JSL ${L(FRAME_HOOK_CALL)}  ; relocated original call
+    PHP
+    PHB
+    REP #$30
+    PHA
+    PHX
+    PHY
+    SEP #$20
+    .a8
+    .i16
+    LDA #$00
+    STA ${L(S.listCount)}
+    STA ${L(S.conflict)}
+    REP #$20
+    LDA ${L(S.magic)}      ; hook state initialized (input_hook ran since power-on) and this build's layout
+    CMP #${h(MAGIC, 4)}
+    BNE fh_t_out
+    SEP #$20
+    LDA ${L(S.layout)}
+    CMP #${h(STATE_LAYOUT, 2)}
+    BNE fh_t_out
+    LDA ${L(S.ready)}
+    BEQ fh_t_out
+    JSR read_vcount        ; time to scan the whole buffer before the next NMI?
+    .a16
+    CMP #${h(FRAME_HOOK_LAST_SCANLINE + 1, 4)}
+    BCS fh_t_out
+    SEP #$20
+    PHB
+    LDA #$7F
+    PHA
+    PLB                    ; DBR=$7F: class table, list and state by absolute address
+    REP #$20
+    LDA $000024            ; OAM buffer bytes in use
+    STA ${A(S.limit)}
+    LDA #$0000             ; B = 0: TAY below gives Y = attr
+    SEP #$20
+    TAX
+  fh_group:                ; 4 entries per step through the class table
+    .a8
+    REP #$20
+    TXA
+    CLC
+    ADC #$000F             ; 4 more entries fit when X + 16 <= limit
+    CMP ${A(S.limit)}
+    LDA #$0000
+    SEP #$20
+    BCC fh_g4
+    JMP fh_tail
+  fh_t_out:
+    JMP fh_out
+  fh_g4:
+    LDA $7E0324,X
+    TAY
+    LDA ${A(S.classTbl)},Y
+    BNE fh_h0
+  fh_r0:
+    LDA $7E0328,X
+    TAY
+    LDA ${A(S.classTbl)},Y
+    BNE fh_h1
+  fh_r1:
+    LDA $7E032C,X
+    TAY
+    LDA ${A(S.classTbl)},Y
+    BNE fh_h2
+  fh_r2:
+    LDA $7E0330,X
+    TAY
+    LDA ${A(S.classTbl)},Y
+    BNE fh_h3
+  fh_r3:
+    REP #$20
+    TXA
+    CLC
+    ADC #$0010
+    TAX
+    LDA #$0000
+    SEP #$20
+    BRA fh_group
+  fh_h0:
+    JSR fh_handle
+    BRA fh_r0
+  fh_h1:
+    INX
+    INX
+    INX
+    INX
+    JSR fh_handle
+    DEX
+    DEX
+    DEX
+    DEX
+    BRA fh_r1
+  fh_h2:
+    REP #$20
+    TXA
+    CLC
+    ADC #$0008
+    TAX
+    LDA #$0000
+    SEP #$20
+    JSR fh_handle
+    REP #$20
+    TXA
+    SEC
+    SBC #$0008
+    TAX
+    LDA #$0000
+    SEP #$20
+    BRA fh_r2
+  fh_h3:
+    REP #$20
+    TXA
+    CLC
+    ADC #$000C
+    TAX
+    LDA #$0000
+    SEP #$20
+    JSR fh_handle
+    REP #$20
+    TXA
+    SEC
+    SBC #$000C
+    TAX
+    LDA #$0000
+    SEP #$20
+    BRA fh_r3
+  fh_tail:                 ; last 0-3 entries one by one
+    .a8
+    CPX ${A(S.limit)}
+    BCS fh_apply
+    LDA $7E0324,X
+    TAY
+    LDA ${A(S.classTbl)},Y
+    BEQ fh_tnext
+    JSR fh_handle
+  fh_tnext:
+    INX
+    INX
+    INX
+    INX
+    BRA fh_tail
+  fh_apply:                ; move the listed Mr. Nutz entries to X
+    LDA ${A(S.listCount)}
+    BEQ fh_scan_done
+    DEC A
+    ASL A
+    TAY
+  fh_aloop:
+    REP #$20
+    LDA ${A(S.list)},Y
+    TAX
+    SEP #$20
+    LDA $7E0324,X
+    AND #$F1
+    ORA ${A(S.xBits)}
+    STA $7E0324,X
+    DEY
+    DEY
+    BPL fh_aloop
+  fh_scan_done:
+    PLB
+  fh_out:
+    REP #$30
+    PLY
+    PLX
+    PLA
+    PLB
+    PLP
+    RTL
+  fh_handle:               ; A8 (B=0), X = entry offset, Y = attr: Mr. Nutz -> list; another object on X -> conflict
+    .a8
+    LDA ${A(S.classTbl)},Y
+    CMP #$03
+    BEQ fh_hconf           ; palette X, name table 1
+    LDA $7E0323,X          ; tile
+    CMP #$50
+    BCC fh_hnutz
+    LDA ${A(S.classTbl)},Y
+    CMP #$02
+    BEQ fh_hconf           ; palette X, tile >= $50: another object
+    RTS                    ; palette S, not Mr. Nutz
+  fh_hnutz:
+    LDA ${A(S.listCount)}
+    CMP #${h(NUTZ_LIST_MAX, 2)}
+    BCS fh_hdone
+    INC A
+    STA ${A(S.listCount)}
+    DEC A
+    ASL A
+    TAY
+    REP #$20
+    TXA
+    STA ${A(S.list)},Y
+    LDA #$0000
+    SEP #$20
+  fh_hdone:
+    RTS
+  fh_hconf:                ; another object on X: no remap in this buffer, oam_hook gives X its palette back
+    LDA #$01
+    STA ${A(S.conflict)}
+    PLA
+    PLA                    ; drop fh_handle's return address
+    JMP fh_scan_done
   `;
 }
 
@@ -929,6 +1248,8 @@ export function buildRuntimeManifest(rom: Buffer, presets: RuntimePresetFile): P
   if (tables.fur.length > 0x70) throw new Error("Fur table overlaps its offset table");
   const { bytes: code, labels } = assemble(hookSource(tables.furCount, tables.outfitCount), CODE_ORIGIN);
   if (CODE_ORIGIN + code.length > FUR_TABLE) throw new Error(`Hook code too large: ${code.length} bytes`);
+  const { bytes: pauseCode } = assemble(pauseSource({ slotS: STATE.slotS, customSlot: STATE.customSlot }), PAUSE_ORIGIN);
+  if (pauseCode.length > 0x2000) throw new Error(`Pause code too large: ${pauseCode.length} bytes`);
   const jsl = (target: number) => "22" + Buffer.from([target & 0xff, (target >> 8) & 0xff, target >> 16]).toString("hex");
   const sha = createHash("sha256").update(rom).digest("hex");
   const hookOffset = loromToFile(HOOK_SITE);
@@ -954,6 +1275,11 @@ export function buildRuntimeManifest(rom: Buffer, presets: RuntimePresetFile): P
       evidence: "docs/traces/sweep-oamtiming.log, docs/traces/sweep-analyze.log",
     },
     {
+      offset: loromToFile(FRAME_HOOK_SITE), original: FRAME_HOOK_ORIGINAL, replacement: jsl(labels.frame_hook),
+      reason: "JSL frame_hook replacing JSL $8A8134 (called first inside the hook) at the end of the gameplay frame work",
+      evidence: "docs/traces/probe-frame-hook.log, docs/traces/franken-order.log, openspec/changes/fix-vblank-check-race/design.md",
+    },
+    {
       offset: loromToFile(ATTR_PAL), replacement: attrTables().toString("hex"),
       reason: "OAM attr lookup tables: palette or $FF (name table 1) at +$000, 1 << palette at +$100",
       evidence: "src/runtime.ts",
@@ -967,6 +1293,21 @@ export function buildRuntimeManifest(rom: Buffer, presets: RuntimePresetFile): P
       offset: loromToFile(OUTFIT_TABLE), replacement: tables.outfit.toString("hex"),
       reason: "Outfit preset table ($C6-$C9 x N, index 0 = original)",
       evidence: "presets/runtime.json, docs/knowledge/palettes.md",
+    },
+    {
+      offset: loromToFile(PAUSE_HOOK_SITE), original: PAUSE_HOOK_ORIGINAL, replacement: jsl(PAUSE_ORIGIN) + "eaeaeaea",
+      reason: "JSL pause_hook + 4 NOP replacing SEP #$30 / LDA $183D / STA $420C (relocated) at the paused-NMI branch",
+      evidence: "docs/traces/pause-measure.log, docs/knowledge/frame-cycle.md",
+    },
+    {
+      offset: loromToFile(PAUSE_ORIGIN), replacement: pauseCode.toString("hex"),
+      reason: "Pause menu code: open/close state machine, VRAM/OAM/CGRAM backup and restore, menu upload",
+      evidence: "openspec/changes/pause-menu/design.md",
+    },
+    {
+      offset: loromToFile(PAUSE_DATA), replacement: buildMenuData().toString("hex"),
+      reason: "Pause menu data: BG3 tiles and map, swatch OBJ tiles, OAM template, palettes",
+      evidence: "openspec/changes/pause-menu/design.md",
     },
     ...SRAM_HEADER.map((h) => ({ ...h, evidence: "openspec/changes/archive/2026-11-05-sram-persistence/design.md (D1)" })),
     ...SRAM_CHECK_PATCHES.map((c) => ({ offset: loromToFile(c.cpu), original: c.original, replacement: c.replacement, reason: c.reason, evidence: c.evidence })),

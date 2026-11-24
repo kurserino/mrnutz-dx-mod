@@ -96,7 +96,13 @@ Gameplay layout, identical in all 40 stage states (byte addresses) [trace] `spac
 | BG1/BG2 tiles (4bpp) | `$4000-$BFFF` | stage, streamed during play |
 | Sprites (OBJ) | `$C000-$FFFF` | Mr. Nutz, enemies, items |
 
-- BG mode 1; main screen `$17` (BG1, BG2, BG3, OBJ).
+- BG mode 1; main screen `$17` (BG1, BG2, BG3, OBJ); mode-1 BG3 priority bit set.
+- **BG3 is not only the HUD:** in many stages it also draws scenery (fog, clouds, water) with all 8 of its 4-colour
+  palettes and sometimes colour math; the HUD itself uses tiles `$380-$387` and `$3B9-$3CF` [trace]
+  `pause-measure.log`. Anything drawn on BG3 must back up and restore the BG3 tilemap and the tiles it replaces.
+- **OBJ tiles while paused** [trace] `pause-measure.log`: Mr. Nutz always uses name table 0 tiles `$000-$055`
+  (columns 0-5 of rows 0-5); other sprites use scattered tiles in both name tables, and no 16-tile row is free in every
+  stage.
 - **Practically no free space:** only `$8600-$86FF` was never referenced in any stage (conservative for sprites).
   Anything that needs VRAM (for example the pause menu) must back up and restore what it overwrites.
 

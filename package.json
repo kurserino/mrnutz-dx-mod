@@ -28,7 +28,8 @@
     "check:power": "tsx tools/mesen/power-cycle.ts",
     "survey:space": "tsx tools/mesen/space-survey.ts",
     "probe:options": "tsx tools/mesen/run.ts tools/mesen/options-probe.lua --define STAGE=1",
-    "probe:pause": "tsx tools/mesen/run.ts tools/mesen/pause-probe.lua --state output/states/stage-00.mss"
+    "probe:pause": "tsx tools/mesen/run.ts tools/mesen/pause-probe.lua --state output/states/stage-00.mss",
+    "probe:pause-menu": "tsx tools/mesen/pause-measure.ts"
   },
   "devDependencies": {
     "@types/node": "^22.15.0",

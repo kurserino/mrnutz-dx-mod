@@ -1,0 +1,24 @@
+# probe-frame-hook-00 | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-00.mss | FRAMES=200
+LOAD ok=true
+SITE $818569 frame=0 P=$B4 m8=true x8=true A=$0000 X=$009C Y=$0000 D=$0000 DBR=$00
+SITE $818569 frame=1 P=$B4 m8=true x8=true A=$0000 X=$009C Y=$0000 D=$0000 DBR=$00
+SITE $818569 frame=2 P=$B4 m8=true x8=true A=$0000 X=$009C Y=$0000 D=$0000 DBR=$00
+SITE total $818569 count=200
+# probe-frame-hook-04 | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-04.mss | FRAMES=200
+LOAD ok=true
+SITE $818569 frame=0 P=$B4 m8=true x8=true A=$0000 X=$0090 Y=$0000 D=$0000 DBR=$00
+SITE $818569 frame=1 P=$B4 m8=true x8=true A=$0000 X=$0090 Y=$0000 D=$0000 DBR=$00
+SITE $818569 frame=2 P=$B4 m8=true x8=true A=$0000 X=$0090 Y=$0000 D=$0000 DBR=$00
+SITE total $818569 count=200
+# probe-frame-hook-21 | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-21.mss | FRAMES=200
+LOAD ok=true
+SITE $818569 frame=0 P=$35 m8=true x8=true A=$FFFF X=$008C Y=$0000 D=$0000 DBR=$00
+SITE $818569 frame=1 P=$35 m8=true x8=true A=$FFFF X=$008C Y=$0000 D=$0000 DBR=$00
+SITE $818569 frame=2 P=$35 m8=true x8=true A=$FFFF X=$008C Y=$0000 D=$0000 DBR=$00
+SITE total $818569 count=200
+# probe-frame-hook-30 | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-30.mss | FRAMES=200
+LOAD ok=true
+SITE $818569 frame=0 P=$35 m8=true x8=true A=$FFFF X=$008C Y=$0000 D=$0000 DBR=$00
+SITE $818569 frame=1 P=$35 m8=true x8=true A=$FFFF X=$008C Y=$0000 D=$0000 DBR=$00
+SITE $818569 frame=2 P=$35 m8=true x8=true A=$FFFF X=$008C Y=$0000 D=$0000 DBR=$00
+SITE total $818569 count=200

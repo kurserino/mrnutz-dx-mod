@@ -1,0 +1,3 @@
+# ohd-26-v020 | exit=0 | rom=v0.2.0.runtime.sfc | state=stage-26.mss
+LOAD ok=true
+DIST enter224:750 enter228:5 enter236:47 enter240:26 | worst enter=240 hdma=261 bytes0024=0000

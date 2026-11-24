@@ -1,0 +1,5 @@
+# fhd33-v020 | exit=0 | rom=v0.2.0.runtime.sfc | state=stage-33.mss
+LOAD ok=true
+BAD F70 foreign=0 nutz=6 ok=false X=5 frameEnd=71 calls=1 ready=1 conflict=165 list=204 onX=[]
+BAD F780 foreign=0 nutz=6 ok=false X=6 frameEnd=146 calls=1 ready=1 conflict=165 list=204 onX=[]
+SKIPS(frameEnd 206-224)=0

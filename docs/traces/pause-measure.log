@@ -1,0 +1,164 @@
+# pause-measure | original ROM | 40 stage states
+stage-00 BG3 map=$1000 chr=$0000 tiles=380,382,3B9-3CD pals=0,1,2,3 prio0=985 prio1=39 main=$17 sub=$00 bg3prio=true colormath=0 cmAddSub=false
+stage-00 OBJ visible=6 nutzEntries=6 nutzSlot=4 paused=$FF
+stage-00 OBJTILES 000-005,010-015,020-025,030-035,040-045,050-055
+stage-00 HOOK runs=239 P=B4 D=0000 DBR=00 entryLine=225-225 exitLine=0-0
+stage-01 BG3 map=$1000 chr=$0000 tiles=380-382,3B9-3CD pals=0,1,2,3 prio0=984 prio1=40 main=$17 sub=$00 bg3prio=true colormath=0 cmAddSub=false
+stage-01 OBJ visible=9 nutzEntries=6 nutzSlot=4 paused=$FF
+stage-01 OBJTILES 000-005,010-015,020-025,02E-035,03E-045,050-055,124-125,134-135
+stage-01 HOOK runs=239 P=B4 D=0000 DBR=00 entryLine=225-225 exitLine=0-0
+stage-02 BG3 map=$1000 chr=$0000 tiles=000-001,004,09E,101,103,118,180,200-20E,210-21D,21F-220,222-22C,22F-23B,23E-245,247-249,24C-257,25B-264,266,26A-26F,271,27F-280,2C0,300-302,31E,380-382,3B9-3CD pals=0,1,2,3,4,5,6,7 prio0=980 prio1=44 main=$17 sub=$00 bg3prio=true colormath=2 cmAddSub=true
+stage-02 OBJ visible=10 nutzEntries=6 nutzSlot=4 paused=$FF
+stage-02 OBJTILES 000-005,010-015,020-025,030-035,040-045,050-055,066-067,06E-06F,076-077,07E-07F
+stage-02 HOOK runs=239 P=B4 D=0000 DBR=00 entryLine=225-225 exitLine=0-0
+stage-03 BG3 map=$1000 chr=$0000 tiles=000,002,00E,011-012,018,028,02C,03C,04A,066,068,06C,07C,100-101,103-104,107,11C,11E-11F,139,13C-13F,17E,1D1,1EE,1FE,200-207,209-20E,210-220,222-22C,22F-23C,23E-249,24C-257,25B-264,266,26A-271,280,2AC,2C0,2C4,2D0,2E0,2F0,303,306,313,338-339,380-382,3A2,3B9-3CD pals=0,1,2,3,4,5,6,7 prio0=941 prio1=83 main=$17 sub=$00 bg3prio=true colormath=2 cmAddSub=true
+stage-03 OBJ visible=9 nutzEntries=6 nutzSlot=4 paused=$FF
+stage-03 OBJTILES 000-005,00C-00D,010-015,01C-01D,020-025,030-035,040-045,050-055
+stage-03 HOOK runs=239 P=B4 D=0000 DBR=00 entryLine=225-225 exitLine=0-0
+stage-04 BG3 map=$1000 chr=$0000 tiles=000-001,004,09E,101,103,118,180,200-20E,210-21D,21F-220,222-22C,22F-23B,23E-245,247-249,24C-257,25B-264,266,26A-26F,271,27F-280,2C0,300-302,31E,380-382,3B9-3CD pals=0,1,2,3,4,5,6,7 prio0=980 prio1=44 main=$17 sub=$00 bg3prio=true colormath=0 cmAddSub=false
+stage-04 OBJ visible=6 nutzEntries=6 nutzSlot=4 paused=$FF
+stage-04 OBJTILES 000-005,010-015,020-025,030-035,040-045,050-055
+stage-04 HOOK runs=239 P=B4 D=0000 DBR=00 entryLine=225-225 exitLine=0-0
+stage-05 BG3 map=$1000 chr=$0000 tiles=380-382,385,3B9-3CD pals=0,1,2,3 prio0=985 prio1=39 main=$17 sub=$00 bg3prio=true colormath=0 cmAddSub=false
+stage-05 OBJ visible=7 nutzEntries=6 nutzSlot=4 paused=$FF
+stage-05 OBJTILES 000-005,010-015,020-025,030-035,040-045,050-055,16E-16F,17E-17F
+stage-05 HOOK runs=239 P=B4 D=0000 DBR=00 entryLine=225-225 exitLine=0-0
+stage-06 BG3 map=$1000 chr=$0000 tiles=380-382,385,3B9-3CD pals=0,1,2,3 prio0=984 prio1=40 main=$17 sub=$00 bg3prio=true colormath=0 cmAddSub=false
+stage-06 OBJ visible=15 nutzEntries=6 nutzSlot=4 paused=$FF
+stage-06 OBJTILES 000-005,00C-00D,010-015,01C-01D,020-025,02A-02D,030-035,03A-03D,040-045,048-04D,050-055,058-05D
+stage-06 HOOK runs=239 P=B4 D=0000 DBR=00 entryLine=225-225 exitLine=0-0
+stage-07 BG3 map=$1000 chr=$0000 tiles=380-382,385,3B9-3CD pals=0,1,2,3 prio0=984 prio1=40 main=$17 sub=$00 bg3prio=true colormath=47 cmAddSub=true
+stage-07 OBJ visible=37 nutzEntries=6 nutzSlot=4 paused=$00
+stage-07 OBJTILES 000-065,070-075
+stage-07 HOOK runs=0 P= D= DBR= entryLine=999--1 exitLine=999--1
+stage-08 BG3 map=$9000 chr=$8000 tiles=380-382,385,3B9-3CE pals=0,1,2,3 prio0=976 prio1=48 main=$11 sub=$00 bg3prio=false colormath=32 cmAddSub=true
+stage-08 OBJ visible=88 nutzEntries=6 nutzSlot=4 paused=$FF
+stage-08 OBJTILES 000-005,010-015,020-025,030-035,040-045,050-055,100-12D,130-13D,142-149,14C-14F,152-159,15C-17F,182-185,192-195,1A0-1A3,1B0-1B3
+stage-08 HOOK runs=239 P=B4 D=0000 DBR=00 entryLine=225-225 exitLine=0-0
+stage-09 BG3 map=$1000 chr=$0000 tiles=380,382-384,389,3B9-3CD pals=0,1,2,3 prio0=985 prio1=39 main=$17 sub=$03 bg3prio=true colormath=16 cmAddSub=true
+stage-09 OBJ visible=6 nutzEntries=6 nutzSlot=0 paused=$FF
+stage-09 OBJTILES 000-005,010-015,020-025,030-035,040-045,050-055
+stage-09 HOOK runs=239 P=B4 D=0000 DBR=00 entryLine=225-225 exitLine=0-0
+stage-10 BG3 map=$1000 chr=$0000 tiles=380-384,389,3B9-3CD pals=0,1,2,3 prio0=984 prio1=40 main=$17 sub=$00 bg3prio=true colormath=0 cmAddSub=false
+stage-10 OBJ visible=11 nutzEntries=6 nutzSlot=4 paused=$FF
+stage-10 OBJTILES 000-005,010-015,020-025,030-035,040-045,050-055,1AA-1AB,1BA-1BB,1C8-1CF,1D8-1DF
+stage-10 HOOK runs=239 P=B4 D=0000 DBR=00 entryLine=225-225 exitLine=0-0
+stage-11 BG3 map=$1000 chr=$0000 tiles=380-384,389,3B9-3CD pals=0,1,2,3 prio0=984 prio1=40 main=$17 sub=$00 bg3prio=true colormath=0 cmAddSub=false
+stage-11 OBJ visible=7 nutzEntries=6 nutzSlot=4 paused=$FF
+stage-11 OBJTILES 000-005,010-015,020-025,030-035,040-045,050-055,1AA-1AB,1BA-1BB
+stage-11 HOOK runs=239 P=B4 D=0000 DBR=00 entryLine=225-225 exitLine=0-0
+stage-12 BG3 map=$1000 chr=$0000 tiles=380-384,389,3B9-3CD pals=0,1,2,3 prio0=984 prio1=40 main=$17 sub=$11 bg3prio=true colormath=2 cmAddSub=true
+stage-12 OBJ visible=9 nutzEntries=6 nutzSlot=4 paused=$FF
+stage-12 OBJTILES 000-005,010-015,020-025,030-035,040-045,050-055,1A2-1A3,1B2-1B3,1E0-1E1,1F0-1F1
+stage-12 HOOK runs=239 P=B4 D=0000 DBR=00 entryLine=225-225 exitLine=0-0
+stage-13 BG3 map=$1000 chr=$0000 tiles=380-384,389,3B9-3CD pals=0,1,2,3 prio0=984 prio1=40 main=$17 sub=$11 bg3prio=true colormath=2 cmAddSub=true
+stage-13 OBJ visible=18 nutzEntries=6 nutzSlot=4 paused=$FF
+stage-13 OBJTILES 000-005,010-015,020-025,028-029,030-035,038-039,040-045,050-055,066-067,076-077,084-087,094-097,0A4-0A7,0B4-0B7,0C0-0C1,0D0-0D1,0E0-0E1,0EA-0EB,0F0-0F1,0FA-0FB
+stage-13 HOOK runs=239 P=B4 D=0000 DBR=00 entryLine=225-225 exitLine=0-0
+stage-14 BG3 map=$1000 chr=$0000 tiles=380-384,389,3B9-3CD pals=0,1,2,3 prio0=984 prio1=40 main=$17 sub=$11 bg3prio=true colormath=2 cmAddSub=true
+stage-14 OBJ visible=8 nutzEntries=6 nutzSlot=4 paused=$FF
+stage-14 OBJTILES 000-005,010-015,020-025,030-035,040-045,04E-055,05E-05F
+stage-14 HOOK runs=239 P=B4 D=0000 DBR=00 entryLine=225-225 exitLine=0-0
+stage-15 BG3 map=$1000 chr=$0000 tiles=380-384,389,3B9-3CD pals=0,1,2,3 prio0=984 prio1=40 main=$17 sub=$11 bg3prio=true colormath=2 cmAddSub=true
+stage-15 OBJ visible=12 nutzEntries=6 nutzSlot=4 paused=$FF
+stage-15 OBJTILES 000-005,010-015,020-025,02E-035,03E-045,050-055
+stage-15 HOOK runs=239 P=B4 D=0000 DBR=00 entryLine=225-225 exitLine=0-0
+stage-16 BG3 map=$1000 chr=$0000 tiles=000,006,009,00C,011,020,047,04C,060,06E,080,0C0,0C4,0CE,0D0,0D6,0E6,0E9-0EA,0F0-0F1,0FA,0FD,100-101,103,10C,110,11F,130,13F,14C,158,161,169,173-174,17B,17E,180,193,19C,1C0,1CC,1DF,1EC,1EE,1F0,1F3,1F8,1FC,200-26B,272,27F,284,286-287,2BF,2C6,2CC-2CE,2D5,2E8,2EE,2F2,2F7,2FF-300,302-303,307,309,30E,310,316,31E,380,382-383,385,387,3B9-3CD,3EE-3EF,3FE pals=0,1,2,3,4,5,6,7 prio0=935 prio1=89 main=$17 sub=$00 bg3prio=true colormath=0 cmAddSub=false
+stage-16 OBJ visible=11 nutzEntries=6 nutzSlot=4 paused=$FF
+stage-16 OBJTILES 000-005,010-015,020-025,030-035,040-045,050-055,08E-08F,09E-0A5,0AE-0B5,0BE-0BF
+stage-16 HOOK runs=239 P=B4 D=0000 DBR=00 entryLine=225-225 exitLine=0-0
+stage-17 BG3 map=$1000 chr=$0000 tiles=000,002,00E,011-012,018,028,02C,03C,04A,066,068,06C,07C,100-101,103-104,107,11C,11E-11F,139,13C-13F,17E,1D1,1EE,1FE,200-26B,270,280,2AC,2C0,2C4,2D0,2E0,2F0,303,306,313,338-339,380-383,385,387,3A2,3B9-3CD pals=0,1,2,3,4,5,6,7 prio0=941 prio1=83 main=$17 sub=$00 bg3prio=true colormath=0 cmAddSub=false
+stage-17 OBJ visible=7 nutzEntries=6 nutzSlot=4 paused=$FF
+stage-17 OBJTILES 000-005,00C-00D,010-015,01C-01D,020-025,030-035,040-045,050-055
+stage-17 HOOK runs=239 P=B4 D=0000 DBR=00 entryLine=225-225 exitLine=0-0
+stage-18 BG3 map=$1000 chr=$0000 tiles=000,002,00E,011-012,018,028,02C,03C,04A,066,068,06C,07C,100-101,103-104,107,11C,11E-11F,139,13C-13F,17E,1D1,1EE,1FE,200-26B,270,280,2AC,2C0,2C4,2D0,2E0,2F0,303,306,313,338-339,380-383,385,387,3A2,3B9-3CD pals=0,1,2,3,4,5,6,7 prio0=941 prio1=83 main=$17 sub=$00 bg3prio=true colormath=0 cmAddSub=false
+stage-18 OBJ visible=12 nutzEntries=6 nutzSlot=4 paused=$FF
+stage-18 OBJTILES 000-005,010-015,020-025,02E-035,03E-045,050-055
+stage-18 HOOK runs=239 P=B4 D=0000 DBR=00 entryLine=225-225 exitLine=0-0
+stage-19 BG3 map=$1000 chr=$0000 tiles=006,100-101,103,107,109,10B,10F,119,11C,11F,133,13F,147,14F,17F-180,183,18F,19F,1BF,1C3,1E0-1E1,1E7,1F0-1F1,1F9,1FF-2CD,2E0,2E2,2FC,300-301,367,380-383,385,387,3B9-3CD,3E3 pals=0,1,2,3,4,5,6,7 prio0=969 prio1=55 main=$17 sub=$10 bg3prio=true colormath=1 cmAddSub=true
+stage-19 OBJ visible=6 nutzEntries=6 nutzSlot=4 paused=$FF
+stage-19 OBJTILES 000-005,010-015,020-025,030-035,040-045,050-055
+stage-19 HOOK runs=239 P=B4 D=0000 DBR=00 entryLine=225-225 exitLine=0-0
+stage-20 BG3 map=$1000 chr=$0000 tiles=000,012,081,08C,0DF,0F8,0FF-102,104,107-108,10A,10C,110,118,11E,120,140,160,1A3,1ED,1F1,200-2CD,2CF,2FE-2FF,301,303,380-383,385,387,3B9-3CD,3FF pals=0,1,2,3,4,5,6,7 prio0=952 prio1=72 main=$17 sub=$10 bg3prio=true colormath=1 cmAddSub=true
+stage-20 OBJ visible=7 nutzEntries=6 nutzSlot=4 paused=$FF
+stage-20 OBJTILES 000-005,010-015,020-025,028-029,030-035,038-039,040-045,050-055
+stage-20 HOOK runs=239 P=B4 D=0000 DBR=00 entryLine=225-225 exitLine=0-0
+stage-21 BG3 map=$1000 chr=$0000 tiles=000,005,049,055,067,08D,0A5,0C0-0C1,0E1,0F5,0FD,100-101,107,114,11C,128,12B,131,14B,150-151,157,16D,170-171,174,178,17C,17E-180,188,197,1A0-1A1,1A5,1A8,1B4,1BA,1BC-1BD,1C0,1C3,1C8,1CB,1CF-1D1,1D5,1D7,1E0,1E4,1E7-1E8,1EF,1F2,1F8,1FB-1FD,1FF-206,20E-214,21C-224,226-228,22A,22C-233,238-23C,23F-243,249-24E,257-25C,260-261,263-265,267-26B,26E-271,279-281,283,28F,293-2BE,2C3-2C7,2CB,2CE-2D0,2D2-2D3,2D5-2D8,2DB-2DC,2DE-2DF,2E8-2FF,30A,32A,37E,380-383,385,387,3A2,3B9-3CF,3E6,3EE,3FA,3FE pals=0,1,2,3,4,5,6,7 prio0=821 prio1=203 main=$17 sub=$00 bg3prio=true colormath=2 cmAddSub=false
+stage-21 OBJ visible=6 nutzEntries=6 nutzSlot=4 paused=$FF
+stage-21 OBJTILES 000-005,010-015,020-025,030-035,040-045,050-055
+stage-21 HOOK runs=239 P=B4 D=0000 DBR=00 entryLine=225-225 exitLine=0-0
+stage-22 BG3 map=$1000 chr=$0000 tiles=035,077,081,097,100,104,143,160,180,188,194,1AC,1E0,1F8,1FC,200-2AC,2AE,2B1-2B4,2B9-2C0,2C3,2D7-2D8,2DF-2E2,2E6-2E7,2EC,2F0,2F3,2F5,2F8,2FB,2FD,2FF-300,368,36A,380-382,384,399,3B9-3CD,3FE pals=0,1,2,3,4,5,6,7 prio0=971 prio1=53 main=$17 sub=$00 bg3prio=true colormath=2 cmAddSub=true
+stage-22 OBJ visible=6 nutzEntries=6 nutzSlot=4 paused=$FF
+stage-22 OBJTILES 000-005,010-015,020-025,030-035,040-045,050-055
+stage-22 HOOK runs=239 P=B4 D=0000 DBR=00 entryLine=225-225 exitLine=0-0
+stage-23 BG3 map=$1000 chr=$0000 tiles=002,00E,011,035,04A,081,100-101,103-104,107,1E0,1FC,200-2AC,2B1-2B4,2B9-2C0,2C3,2D7-2D8,2DF-2E1,2E6-2E7,2EC,2F0,2F3,2F5,2F8,2FB,2FD,2FF-300,303,306,380-382,384,3B9-3CD,3FE pals=0,1,2,3,4,5,6,7 prio0=969 prio1=55 main=$17 sub=$00 bg3prio=true colormath=2 cmAddSub=true
+stage-23 OBJ visible=6 nutzEntries=6 nutzSlot=4 paused=$FF
+stage-23 OBJTILES 000-005,010-015,020-025,030-035,040-045,050-055
+stage-23 HOOK runs=239 P=B4 D=0000 DBR=00 entryLine=225-225 exitLine=0-0
+stage-24 BG3 map=$1000 chr=$0000 tiles=002,00E,011,035,04A,081,100-101,103-104,107,1E0,1FC,200-2AC,2B1-2B4,2B9-2C0,2C3,2D7-2D8,2DF-2E1,2E6-2E7,2EC,2F0,2F3,2F5,2F8,2FB,2FD,2FF-300,303,306,380-382,384,3B9-3CD,3FE pals=0,1,2,3,4,5,6,7 prio0=969 prio1=55 main=$17 sub=$00 bg3prio=true colormath=2 cmAddSub=true
+stage-24 OBJ visible=9 nutzEntries=6 nutzSlot=4 paused=$FF
+stage-24 OBJTILES 000-005,010-015,020-025,02E-035,03E-045,050-055
+stage-24 HOOK runs=239 P=B4 D=0000 DBR=00 entryLine=225-225 exitLine=0-0
+stage-25 BG3 map=$9000 chr=$8000 tiles=380-382,384,3B9-3CE pals=0,1,2,3 prio0=981 prio1=43 main=$11 sub=$00 bg3prio=false colormath=0 cmAddSub=false
+stage-25 OBJ visible=64 nutzEntries=6 nutzSlot=4 paused=$00
+stage-25 OBJTILES 000-005,010-015,020-025,030-035,040-045,050-055,080-09F,180-181,190-191,1A0-1A1,1B0-1B1,1C0-1FF
+stage-25 HOOK runs=0 P= D= DBR= entryLine=999--1 exitLine=999--1
+stage-26 BG3 map=$1000 chr=$0000 tiles=010,014-015,030,045,048,04C,064-065,06D,074,079,084,0E1,0F9,100-101,104-105,108,111,11D,121,130,135,160,165,170,1BC,1D0,1E0,1E8,1F8,200-204,208,20F-210,213,217,21E,224,230,23C,240,243,248,25F-260,262,264,26C,270,272,274,278,280,288,28F,2B2,2E0-2E2,2ED,2F0,301,314,316,341,366,380-381,383-384,389,3A0-3A1,3B9-3CD pals=0,1,2,3,4,5,6,7 prio0=971 prio1=53 main=$17 sub=$00 bg3prio=true colormath=47 cmAddSub=true
+stage-26 OBJ visible=48 nutzEntries=6 nutzSlot=4 paused=$00
+stage-26 OBJTILES 000-065,070-075,100-103,110-113,160-163,16E-173,17E-183,188-193,198-19F
+stage-26 HOOK runs=0 P= D= DBR= entryLine=999--1 exitLine=999--1
+stage-27 BG3 map=$1000 chr=$0000 tiles=000,00E,0BA,0C0,100,103,105-108,10C,11F,13F,170,197,1C0,1E3,1EF,1FC,1FF-205,210,220,224,23C,240,250,270,274,280,2A0,2B8,2C0,300-301,303,30A,380-381,383-384,389,3B9-3CD,3F3 pals=0,1,2,3,4,5,6,7 prio0=963 prio1=61 main=$17 sub=$00 bg3prio=true colormath=0 cmAddSub=false
+stage-27 OBJ visible=6 nutzEntries=6 nutzSlot=4 paused=$FF
+stage-27 OBJTILES 000-005,010-015,020-025,030-035,040-045,050-055
+stage-27 HOOK runs=239 P=B4 D=0000 DBR=00 entryLine=225-225 exitLine=0-0
+stage-28 BG3 map=$1000 chr=$0000 tiles=019,039,041,07D,081,091,0C1,0C9,0EB,0F1,0F9,0FB,0FF-100,10C,10E,13E,14F,15F,172,187,18D,19C,19F,1AF,1B7,1BC,1CE-1D0,1DE,1E0,1E7,1F0,1F2-1F4,1F7,1FB-20A,20C-214,21C-225,227-249,24B-2D0,2D2-2DD,2DF-2E4,2E7-2EB,2EF,2F2-2FF,322,332,35E,380-381,383-384,389,3B9-3CE,3E6,3F3,3F6-3F7,3FE-3FF pals=0,1,2,3,4,5,6,7 prio0=950 prio1=74 main=$17 sub=$00 bg3prio=true colormath=0 cmAddSub=false
+stage-28 OBJ visible=6 nutzEntries=6 nutzSlot=4 paused=$FF
+stage-28 OBJTILES 000-005,010-015,020-025,030-035,040-045,050-055
+stage-28 HOOK runs=239 P=B4 D=0000 DBR=00 entryLine=225-225 exitLine=0-0
+stage-29 BG3 map=$1000 chr=$0000 tiles=019,039,041,07D,081,091,0C1,0C9,0EB,0F1,0F9,0FB,0FF-100,10C,10E,13E,14F,15F,172,187,18D,19C,19F,1AF,1B7,1BC,1CE-1D0,1DE,1E0,1E7,1F0,1F2-1F4,1F7,1FB-20A,20C-214,21C-225,227-249,24B-2D0,2D2-2DD,2DF-2E4,2E7-2EB,2EF,2F2-2FF,322,332,35E,380-381,383-384,389,3B9-3CE,3E6,3F3,3F6-3F7,3FE-3FF pals=0,1,2,3,4,5,6,7 prio0=950 prio1=74 main=$17 sub=$00 bg3prio=true colormath=0 cmAddSub=false
+stage-29 OBJ visible=17 nutzEntries=6 nutzSlot=4 paused=$FF
+stage-29 OBJTILES 000-005,010-015,020-025,030-035,040-045,050-055,100-103,110-113,160-163,16E-173,17E-183,188-193,198-19F
+stage-29 HOOK runs=239 P=B4 D=0000 DBR=00 entryLine=225-225 exitLine=0-0
+stage-30 BG3 map=$1000 chr=$0000 tiles=019,039,041,07D,081,091,0C1,0C9,0EB,0F1,0F9,0FB,0FF-100,10C,10E,13E,14F,15F,172,187,18D,19C,19F,1AF,1B7,1BC,1CE-1D0,1DE,1E0,1E7,1F0,1F2-1F4,1F7,1FB-20A,20C-214,21C-225,227-249,24B-2D0,2D2-2DD,2DF-2E4,2E7-2EB,2EF,2F2-2FF,322,332,35E,380-381,383-384,389,3B9-3CE,3E6,3F3,3F6-3F7,3FE-3FF pals=0,1,2,3,4,5,6,7 prio0=950 prio1=74 main=$17 sub=$00 bg3prio=true colormath=0 cmAddSub=false
+stage-30 OBJ visible=6 nutzEntries=6 nutzSlot=4 paused=$FF
+stage-30 OBJTILES 000-005,010-015,020-025,030-035,040-045,050-055
+stage-30 HOOK runs=239 P=B4 D=0000 DBR=00 entryLine=225-225 exitLine=0-0
+stage-31 BG3 map=$1000 chr=$0000 tiles=019,039,041,07D,081,091,0C1,0C9,0EB,0F1,0F9,0FB,0FF-100,10C,10E,13E,14F,15F,172,187,18D,19C,19F,1AF,1B7,1BC,1CE-1D0,1DE,1E0,1E7,1F0,1F2-1F4,1F7,1FB-20A,20C-214,21C-225,227-249,24B-2D0,2D2-2DD,2DF-2E4,2E7-2EB,2EF,2F2-2FF,322,332,35E,3CA,3CE,3E6,3F3,3F6-3F7,3FE-3FF pals=0,1,2,3,4,5,6,7 prio0=990 prio1=34 main=$17 sub=$00 bg3prio=true colormath=37 cmAddSub=true
+stage-31 OBJ visible=6 nutzEntries=6 nutzSlot=4 paused=$00
+stage-31 OBJTILES 000-005,010-015,020-025,030-035,040-045,050-055
+stage-31 HOOK runs=0 P= D= DBR= entryLine=999--1 exitLine=999--1
+stage-32 BG3 map=$1000 chr=$0000 tiles=000-001,031,033,086,0B2,0C5,0D8,0EB,0ED-0EE,0FF-100,104,10C,110,11C,148,170,17D,180,187,194,1A1,1BE,1C0,1C7,1C9,1EE,1F7,1FD,1FF-20E,210-21D,21F-220,222-22C,22F-23C,23E-245,247-249,24C-257,25B-264,266,26A-26F,271,27F-280,288,290,29D,2A7,2C0,2C3,2DC,2DF-2E0,2EF-2F0,2FF-300,302,304-306,312,317,31F-320,336,33B,342,344,34C,35F,38E,392,39F,3AB,3E1,3EF,3FA-3FB,3FD-3FE pals=0,1,2,3,4,5,6,7 prio0=975 prio1=49 main=$17 sub=$00 bg3prio=true colormath=2 cmAddSub=true
+stage-32 OBJ visible=7 nutzEntries=6 nutzSlot=4 paused=$00
+stage-32 OBJTILES 000-005,010-015,020-025,030-035,040-045,050-055,080-083,090-093,0A0-0A3,0B0-0B3
+stage-32 HOOK runs=0 P= D= DBR= entryLine=999--1 exitLine=999--1
+stage-33 BG3 map=$1000 chr=$0000 tiles=3B9 pals=0 prio0=1024 prio1=0 main=$17 sub=$00 bg3prio=true colormath=0 cmAddSub=false
+stage-33 OBJ visible=11 nutzEntries=5 nutzSlot=4 paused=$00
+stage-33 OBJTILES 000-005,00C-00D,010-015,01C-01D,020-025,030-035,040-045,050-055,060-065,070-075,16E-16F,17E-17F
+stage-33 HOOK runs=0 P= D= DBR= entryLine=999--1 exitLine=999--1
+stage-34 BG3 map=$1000 chr=$0000 tiles=3B9 pals=0 prio0=1024 prio1=0 main=$17 sub=$11 bg3prio=true colormath=2 cmAddSub=true
+stage-34 OBJ visible=29 nutzEntries=15 nutzSlot=4 paused=$00
+stage-34 OBJTILES 000-005,010-015,020-025,030-035,040-045,050-055,060-065,070-075,120-129,130-139,140-143,150-153,160-163,170-173,180-183,186-187,18A-18B,18E-193,196-197,19A-19B,19E-19F
+stage-34 HOOK runs=0 P= D= DBR= entryLine=999--1 exitLine=999--1
+stage-35 BG3 map=$1000 chr=$0000 tiles=000,006,009,00C,011,020,047,04C,060,06E,080,0C0,0C4,0CE,0D0,0D6,0E6,0E9-0EA,0F0-0F1,0FA,0FD,100-101,103,10C,110,11F,130,13F,14C,158,161,169,173-174,17B,17E,180,193,19C,1C0,1CC,1DF,1EC,1EE,1F0,1F3,1F8,1FC,200-26B,272,27F,284,286-287,2BF,2C6,2CC-2CE,2D5,2E8,2EE,2F2,2F7,2FF-300,302-303,307,309,30E,310,316,31E,3C2,3EE-3EF,3FE pals=0,1,2,3,4,5,6,7 prio0=974 prio1=50 main=$17 sub=$00 bg3prio=true colormath=0 cmAddSub=false
+stage-35 OBJ visible=9 nutzEntries=5 nutzSlot=4 paused=$00
+stage-35 OBJTILES 000-005,010-015,020-025,030-035,040-045,050-055,060-065,070-075,1E4-1E7,1F4-1F7
+stage-35 HOOK runs=0 P= D= DBR= entryLine=999--1 exitLine=999--1
+stage-36 BG3 map=$1000 chr=$0000 tiles=000,012,081,08C,0DF,0F8,0FF-102,104,107-108,10A,10C,110,118,11E,120,140,160,1A3,1ED,1F1,200-2CD,2CF,2FE-2FF,301,303,380,382,3FF pals=0,1,2,3,4,5,6,7 prio0=992 prio1=32 main=$17 sub=$10 bg3prio=true colormath=1 cmAddSub=true
+stage-36 OBJ visible=14 nutzEntries=6 nutzSlot=4 paused=$00
+stage-36 OBJTILES 000-005,010-015,020-025,030-035,040-045,050-055,0CC-0CF,0DC-0DF,0EC-0EF,0FC-0FF
+stage-36 HOOK runs=0 P= D= DBR= entryLine=999--1 exitLine=999--1
+stage-37 BG3 map=$1000 chr=$0000 tiles=035,077,081,097,100,104,143,160,180,188,194,1AC,1E0,1F8,1FC,200-2AC,2AE,2B1-2B4,2B9-2C0,2C3,2D7-2D8,2DF-2E2,2E6-2E7,2EC,2F0,2F3,2F5,2F8,2FB,2FD,2FF-300,368,36A,380,399,3FE pals=0,1,2,3,4,5,6,7 prio0=1010 prio1=14 main=$17 sub=$00 bg3prio=true colormath=2 cmAddSub=true
+stage-37 OBJ visible=18 nutzEntries=6 nutzSlot=4 paused=$00
+stage-37 OBJTILES 000-005,010-015,020-025,030-035,040-045,050-055,086-089,096-099,0A6-0A9,0B6-0B9,0C0-0C3,0D0-0D3,10C-10D,11C-11D,188-189,198-199,1A0-1A3,1A6-1A7,1B0-1B3,1B6-1B7,1C4-1C7,1CA-1CB,1D4-1D7,1DA-1DB
+stage-37 HOOK runs=0 P= D= DBR= entryLine=999--1 exitLine=999--1
+stage-38 BG3 map=$1000 chr=$0000 tiles=010,014-015,030,045,048,04C,064-065,06D,074,079,084,0E1,0F9,100-101,104-105,108,111,11D,121,130,135,160,165,170,1BC,1D0,1E0,1E8,1F8,200-204,208,20F-210,213,217,21E,224,230,23C,240,243,248,25F-260,262,264,26C,270,272,274,278,280,288,28F,2B2,2E0-2E2,2ED,2F0,301,314,316,341,366,3A0-3A1 pals=0,1,2,3,4,5,6,7 prio0=1010 prio1=14 main=$17 sub=$00 bg3prio=true colormath=0 cmAddSub=false
+stage-38 OBJ visible=17 nutzEntries=6 nutzSlot=4 paused=$00
+stage-38 OBJTILES 000-005,00C-00D,010-015,01C-01D,020-025,02A-02D,030-035,03A-03D,040-045,050-055
+stage-38 HOOK runs=0 P= D= DBR= entryLine=999--1 exitLine=999--1
+stage-39 BG3 map=$1000 chr=$0000 tiles=38A,391,394,397-398,39C-39D,3B9 pals=0,3 prio0=995 prio1=29 main=$16 sub=$00 bg3prio=true colormath=59 cmAddSub=true
+stage-39 OBJ visible=7 nutzEntries=6 nutzSlot=4 paused=$00
+stage-39 OBJTILES 000-005,010-015,020-025,030-035,040-045,050-055,108-10B,118-11B,128-12B,138-13B
+stage-39 HOOK runs=0 P= D= DBR= entryLine=999--1 exitLine=999--1
+
+## BG3 tiles used by any stage while paused (union): 0-2,4-6,9,c,e,10-12,14-15,18-19,20,28,2c,30-31,33,35,39,3c,41,45,47-4a,4c,55,60,64-68,6c-6e,74,77,79,7c-7d,80-81,84,86,8c-8d,91,97,9e,a5,b2,ba,c0-c1,c4-c5,c9,ce,d0,d6,d8,df,e1,e6,e9-eb,ed-ee,f0-f1,f5,f8-fb,fd,ff-10c,10e-111,114,118-119,11c-121,128,12b,130-131,133,135,139,13c-140,143,147-148,14b-14c,14f-151,157-158,15f-161,165,169,16d,170-174,178,17b-180,183,187-188,18d,18f,193-194,197,19c,19f-1a1,1a3,1a5,1a8,1ac,1af,1b4,1b7,1ba,1bc-1c0,1c3,1c7-1c9,1cb-1cc,1ce-1d1,1d5,1d7,1de-1e1,1e3-1e4,1e7-1e8,1ec-1f4,1f7-1f9,1fb-2d0,2d2-2e4,2e6-307,309-30a,30e,310,312-314,316-317,31e-320,322,32a,332,336,338-339,33b,341-342,344,34c,35e-35f,366-368,36a,37e,380-385,387,389-38a,38e,391-392,394,397-399,39c-39d,39f-3a2,3ab,3b9-3cf,3e1,3e3,3e6,3ee-3ef,3f3,3f6-3f7,3fa-3fb,3fd-3ff
+## OBJ tile rows (16 x 8x8 tiles) never referenced by a visible sprite while paused: none

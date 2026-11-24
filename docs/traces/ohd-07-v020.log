@@ -1,0 +1,3 @@
+# ohd-07-v020 | exit=0 | rom=v0.2.0.runtime.sfc | state=stage-07.mss
+LOAD ok=true
+DIST enter224:644 enter228:23 enter236:80 enter240:83 | worst enter=227 hdma=260 bytes0024=0000

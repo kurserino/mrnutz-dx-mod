@@ -65,9 +65,35 @@ $80:83EA  BRA $80:839E -> wait, NMI back on, RTI
   in 300 frames [trace] `pause-probe.log`. The OAM stays frozen.
 - Brightness, layers and the VRAM layout do not change when pausing: the screen just freezes [trace]
   `space-survey.log`.
-- **Hook point for a pause menu:** `$80:83B8`, at the start of the paused NMI, with almost all of VBlank free. From
-  there the Start press can be filtered before `$80:83D7` [hypothesis: register widths and timing must be measured
-  before patching].
+- **Measured at `$80:83B8`** in 30 stage states [trace] `pause-measure.log`, `pause-late-07.log`, `pause-late-25.log`:
+  P=`$B4` (M8 X8), D=`$0000`, DBR=`$00`, always entered on **scanline 225** (start of VBlank). The paused NMI only
+  returns on **scanline 0**: after the joypad read it spins at `$80:83A0` (`LDA $4212 / BIT #$C0 / BNE`) until VBlank
+  ends. So the whole VBlank (scanlines 225-261, about 37 lines) is free for a hook placed at `$80:83B8`.
+- **Hook point for a pause menu:** `$80:83B8` (`E2 30 AD 3D 18 8D 0C 42` = `SEP #$30 / LDA $183D / STA $420C`). From
+  there the Start press can be filtered before `$80:83D7` [hypothesis until implemented and traced].
+- **Start toggles the pause in the gameplay path at `$81:839B-$81:83B5`** [static]: `LDA $1A6F / AND #$1000`; on a new
+  press (`$13B5 == 0`) it sets `$13B5 = $13B4 = $FF`. `$81:83B8` clears `$13B5` when Start is released.
+- **Game-driven input:** in some stage states (`stage-26`, `stage-31` … `stage-39` from `sweep:prepare`) the game feeds
+  its own input into `$1A6F` after the `$81:828A` mirror (Mr. Nutz walks by himself, no HUD), so Start never pauses
+  [trace] `pause-why-34.log`. Our `input_hook` reads `$4218` itself, so the colour shortcuts still work there.
+
+## Write-only PPU registers: who sets them
+
+No WRAM shadow exists for these registers; the game writes **constants** [static + trace] `reg-writers-00.log`,
+`reg-writers-02.log`:
+
+| Register | Value and writer |
+| --- | --- |
+| `$2105` BGMODE | `$39` (mode 1, BG3 priority, 16×16 tiles on BG1/BG2) at scene init `$9D:ABBF` |
+| `$2101` OBSEL | `$63` at scene init `$9D:AC13` (OBJ base `$C000` bytes, small/large = 16×16 / 32×32) |
+| `$212C` / `$212D` | `$17` / `$00` at scene init `$9D:AC1B-$9D:AC22`; `$9D:E135` writes `$212C=$01` during a transition |
+| `$2111` BG3 HOFS | 0 at scene init; also 0 **every gameplay NMI** at `$81:8107-$81:810A` (`STX` with X=0). In some stages HDMA writes it per line (`stage-02`) |
+| `$2112` BG3 VOFS | `$03FF` at scene init `$9D:AC01-$9D:AC04` only |
+| `$210D-$2110`, `$2113-$2114` | BG1/BG2/BG4 scroll: HOFS 0, VOFS `$1FFF`/`$03FF`/`$03FF` at scene init |
+| `$2130-$2132` colour math | `$30/$00/$E0` at scene init `$9D:ABB2-$9D:ABBC`; stage code sets its own constants later (for example `$81:A660`: `$2130=$02`, `$2131=$82` = subtract on BG2, `$2132` = `$E0/$24/$44`); `$82:826C` writes `$00/$00/$E0` on stage transitions |
+
+Colour math layer masks seen while paused (`pause-measure.log`): BG1 or BG2 only in most stages; BG3 is included only in
+`stage-26` (`$2F`) and `stage-31` (`$25`); OBJ never.
 
 ## Joypad
 

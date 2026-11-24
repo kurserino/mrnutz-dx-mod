@@ -1,0 +1,52 @@
+# house-key-rc8 | exit=0 | rom=v0.2.1-rc8.runtime.sfc | state=stage-07.mss | MODE=4 INVULN=1 LAND=1 DOORAT=800 END=1800 PX=600 PY=1290
+LOAD ok=true
+F1 scene=82D54C
+F60 gameplay=true inidisp=0F vec=835B
+F120 gameplay=true inidisp=0F vec=835B
+SHOT f0120 -> output\traces\house-key-rc8/f0120.png
+F180 gameplay=true inidisp=0F vec=835B
+F240 gameplay=true inidisp=0F vec=835B
+SHOT f0240 -> output\traces\house-key-rc8/f0240.png
+F300 gameplay=true inidisp=0F vec=835B
+F360 gameplay=true inidisp=0F vec=835B
+SHOT f0360 -> output\traces\house-key-rc8/f0360.png
+F420 gameplay=true inidisp=0F vec=835B
+F480 gameplay=true inidisp=0F vec=835B
+SHOT f0480 -> output\traces\house-key-rc8/f0480.png
+F540 gameplay=true inidisp=0F vec=835B
+F600 gameplay=true inidisp=0F vec=835B
+SHOT f0600 -> output\traces\house-key-rc8/f0600.png
+F660 gameplay=true inidisp=0F vec=835B
+F720 gameplay=true inidisp=0F vec=835B
+SHOT f0720 -> output\traces\house-key-rc8/f0720.png
+F780 gameplay=true inidisp=0F vec=835B
+F800 DOOR1 px=600 py=1278 dest0550=EB29 dest0552=EBA5
+SHOT door1 -> output\traces\house-key-rc8/door1.png
+F840 gameplay=true inidisp=0F vec=835B
+SHOT f0840 -> output\traces\house-key-rc8/f0840.png
+F900 gameplay=true inidisp=0F vec=835B
+F960 gameplay=true inidisp=0F vec=835B
+SHOT f0960 -> output\traces\house-key-rc8/f0960.png
+F1020 gameplay=true inidisp=0F vec=835B
+F1080 gameplay=false inidisp=0F vec=835B
+SHOT f1080 -> output\traces\house-key-rc8/f1080.png
+F1140 gameplay=false inidisp=0F vec=835B
+F1200 gameplay=false inidisp=0F vec=835B
+SHOT f1200 -> output\traces\house-key-rc8/f1200.png
+F1260 gameplay=false inidisp=0F vec=835B
+F1320 gameplay=false inidisp=0F vec=835B
+SHOT f1320 -> output\traces\house-key-rc8/f1320.png
+F1380 gameplay=false inidisp=0F vec=835B
+F1440 gameplay=false inidisp=0F vec=835B
+SHOT f1440 -> output\traces\house-key-rc8/f1440.png
+F1500 gameplay=false inidisp=0F vec=835B
+F1560 gameplay=false inidisp=0F vec=835B
+SHOT f1560 -> output\traces\house-key-rc8/f1560.png
+F1620 gameplay=false inidisp=0F vec=835B
+F1680 gameplay=false inidisp=0F vec=835B
+SHOT f1680 -> output\traces\house-key-rc8/f1680.png
+F1740 gameplay=false inidisp=0F vec=835B
+F1800 gameplay=false inidisp=0F vec=835B
+RESULT left=true back=-1 litBack=-1 inidisp=0F
+SHOT end -> output\traces\house-key-rc8/end.png
+SHOT f1800 -> output\traces\house-key-rc8/f1800.png

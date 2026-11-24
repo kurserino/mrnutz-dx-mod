@@ -1,0 +1,8 @@
+# fhdiag-39 | exit=0 | rom=v0.2.1-rc5.runtime.sfc | state=stage-39.mss
+LOAD ok=true
+BAD F915 foreign=1 nutz=6 ok=false X=5 frameEnd=67 calls=1 ready=1 conflict=1 list=0 onX=[0:t0C4:a7A]
+BAD F916 foreign=1 nutz=6 ok=false X=5 frameEnd=79 calls=1 ready=1 conflict=1 list=0 onX=[0:t0C4:a7A]
+BAD F917 foreign=1 nutz=6 ok=false X=5 frameEnd=81 calls=1 ready=1 conflict=0 list=6 onX=[0:t0C4:a7A]
+BAD F921 foreign=3 nutz=6 ok=false X=5 frameEnd=77 calls=1 ready=1 conflict=1 list=0 onX=[0:t0C6:a7A 1:t0EE:a7A 2:t0A8:a7A]
+BAD F922 foreign=0 nutz=6 ok=false X=6 frameEnd=118 calls=1 ready=1 conflict=0 list=6 onX=[]
+SKIPS(frameEnd 206-224)=0

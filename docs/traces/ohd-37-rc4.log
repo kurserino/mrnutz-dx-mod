@@ -1,0 +1,3 @@
+# ohd-37-rc4 | exit=0 | rom=v0.2.1-rc4.runtime.sfc | state=stage-37.mss
+LOAD ok=true
+DIST enter224:537 enter228:120 enter236:74 enter240:40 | worst enter=241 hdma=260 bytes0024=0000

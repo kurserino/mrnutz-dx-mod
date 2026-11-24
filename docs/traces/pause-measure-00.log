@@ -1,0 +1,6 @@
+# pause-measure-00 | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-00.mss
+LOAD ok=true
+BG3 map=$1000 chr=$0000 tiles=380,382,3B9-3CD pals=0,1,2,3 prio0=985 prio1=39 main=$17 sub=$00 bg3prio=true colormath=0 cmAddSub=false
+OBJ visible=6 nutzEntries=6 nutzSlot=4 paused=$FF
+SHOT paused -> output\traces\pause-measure-00/paused.png
+HOOK runs=239 P=B4 D=0000 DBR=00 entryLine=225-225 exitLine=0-0

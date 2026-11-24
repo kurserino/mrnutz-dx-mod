@@ -1,0 +1,18 @@
+# reg-writers-00 | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-00.mss
+LOAD ok=true
+REG $2111@81810A count=1043 frame=1 value=$00 A=$0000 X=$0000 Y=$002F D=$0000 DBR=$00 P=$17 gameplay=false
+REG $2111@81810D count=1043 frame=1 value=$00 A=$0000 X=$0000 Y=$002F D=$0000 DBR=$00 P=$17 gameplay=false
+REG $2130@82826C count=1 frame=202 value=$00 A=$FF00 X=$00D0 Y=$00D2 D=$0000 DBR=$00 P=$26 gameplay=true
+REG $2131@82826F count=1 frame=202 value=$00 A=$FF00 X=$00D0 Y=$00D2 D=$0000 DBR=$00 P=$26 gameplay=true
+REG $2132@828274 count=1 frame=202 value=$E0 A=$FFE0 X=$00D0 Y=$00D2 D=$0000 DBR=$00 P=$A4 gameplay=true
+REG $2130@9DABB7 count=2 frame=204 value=$30 A=$2130 X=$0000 Y=$0000 D=$2100 DBR=$00 P=$34 gameplay=false
+REG $2131@9DABBA count=2 frame=204 value=$00 A=$2130 X=$0000 Y=$0000 D=$2100 DBR=$00 P=$34 gameplay=false
+REG $2132@9DABBF count=2 frame=204 value=$E0 A=$21E0 X=$0000 Y=$0000 D=$2100 DBR=$00 P=$B4 gameplay=false
+REG $2111@9DABFE count=2 frame=204 value=$00 A=$2100 X=$0003 Y=$00FF D=$2100 DBR=$00 P=$34 gameplay=false
+REG $2111@9DAC01 count=2 frame=204 value=$00 A=$2100 X=$0003 Y=$00FF D=$2100 DBR=$00 P=$34 gameplay=false
+REG $2112@9DAC04 count=2 frame=204 value=$FF A=$2100 X=$0003 Y=$00FF D=$2100 DBR=$00 P=$34 gameplay=false
+REG $2112@9DAC07 count=2 frame=204 value=$03 A=$2100 X=$0003 Y=$00FF D=$2100 DBR=$00 P=$34 gameplay=false
+REG $2101@9DAC18 count=2 frame=204 value=$63 A=$2163 X=$0003 Y=$00FF D=$2100 DBR=$00 P=$34 gameplay=false
+REG $212C@9DAC20 count=2 frame=204 value=$17 A=$2117 X=$0003 Y=$00FF D=$2100 DBR=$00 P=$34 gameplay=false
+REG $212D@9DAC25 count=2 frame=204 value=$00 A=$2100 X=$0003 Y=$00FF D=$2100 DBR=$00 P=$36 gameplay=false
+REG $212C@9DE135 count=1 frame=226 value=$01 A=$0001 X=$0001 Y=$0000 D=$0000 DBR=$00 P=$34 gameplay=false

@@ -40,6 +40,7 @@ Mesen 2 (2.2.1) is the only test emulator. Everything below runs it headless, wi
 | `npm run survey:space` | per stage: WRAM/CGRAM/OAM blocks touched, VRAM referenced, PPU layout, pause behaviour | ~30 s | `space-survey.log` |
 | `npm run probe:pause` | pause flag candidates, PCs and NMI work while paused | seconds | `pause-probe.log` |
 | `npm run probe:options` | WRAM diffs around each press in OPTION MODE | seconds | `options-probe.log` |
+| `npm run probe:pause-menu` | per stage, while paused: state and scanlines at the paused-NMI hook, BG3 tiles/palettes, visible sprites | ~30 s | `pause-measure.log` |
 | `npm run trace:palette` / `trace:hook` / `trace:wram` | original evidence for the palette hook (palette DMA, hook site state, untouched WRAM) | minutes | `trace-*.log` |
 | `npm run research:sweep` | slow single-run whole-game sweep, kept for its investigation modes | long | `research-sweep.log` |
 
@@ -54,6 +55,7 @@ Scripts without an npm alias (run with `npx tsx tools/mesen/run.ts <script> [--s
 | `probe-regs.lua` | CPU state (P, widths, D, DBR) at given exec addresses — run before writing patch bytes |
 | `boot-timeline.lua` | screenshots every N frames from power-on |
 | `probe-api.lua` | lists Mesen Lua functions, memory types, counter types and PPU state keys |
+| `pause-why.lua` | why Start does not pause: NMI vector, pause flags, joypad mirror and writes to `$13B4/$13B5` around a press |
 
 ## Methods that worked
 
@@ -82,6 +84,10 @@ Scripts without an npm alias (run with `npx tsx tools/mesen/run.ts <script> [--s
   (`frame-cycle.md`).
 - Heavy Lua callbacks on a tight loop (check E with SRAM present): Mesen crawls. Use `--light` or self-removing
   callbacks.
+- Testing the pause in `stage-26` and `stage-31` … `stage-39`: those states run game-driven input, so Start is ignored
+  (`frame-cycle.md`). Use the other states, or rebuild those later inside the stage.
+- `run.ts --name a/b`: logs are written to `docs/traces/<name>.log` without creating subfolders; use flat names
+  (screenshots do support subfolders).
 
 ## Mesen GUI (manual checks)
 
@@ -100,4 +106,4 @@ Scripts without an npm alias (run with `npx tsx tools/mesen/run.ts <script> [--s
 - What `$7E:054C` (set by check F) and `$7E:188B` control.
 - The black-screen loop at `$8A:81E2` after writing energy outside gameplay.
 - Sound driver (SPC700): how to control BGM and SFX volume separately.
-- Pause-menu hook `$80:83B8`: register widths and VBlank time available.
+- Why `stage-26` and `stage-31` … `stage-39` run with game-driven input (demo-like sequence?).
