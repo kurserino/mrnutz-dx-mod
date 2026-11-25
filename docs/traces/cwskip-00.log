@@ -1,0 +1,117 @@
+# cwskip-00 | exit=0 | rom=v0.2.1-rc8.runtime.sfc | state=stage-00.mss | END=700 SAVEFUR=1 INPUT=5 FIRSTSHOTS=90 SHOTEVERY=1000
+LOAD ok=true
+F1 SCENE 82D454 stage=00 area0550=E744 x=96 y=372
+F1 nogameplay
+F2 S=4 X=255 nutz=6 ok=false foreignOnX=0 shared=false pend=01 ready=0 passes=0
+SHOT s0002 -> output\traces\cwskip-00/s0002.png
+SHOT s0003 -> output\traces\cwskip-00/s0003.png
+SHOT s0004 -> output\traces\cwskip-00/s0004.png
+F8 S=4 X=5 nutz=6 ok=false foreignOnX=0 shared=false pend=01 ready=1 passes=1
+SHOT s0005 -> output\traces\cwskip-00/s0005.png
+F9 FIRSTOK 8 frames after scene change
+F9 S=4 X=5 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F9 XCOLOUR slot5 entry1 008C->49CE
+F9 XCOLOUR slot5 entry2 0114->5A52
+F9 XCOLOUR slot5 entry3 0118->6AD6
+F9 XCOLOUR slot5 entry4 019E->7B5A
+F9 XCOLOUR slot5 entry5 021E->7BDE
+F9 XCOLOUR slot5 entry6 029E->031A
+F9 XCOLOUR slot5 entry7 031E->0292
+F9 XCOLOUR slot5 entry8 03DE->018A
+F9 XCOLOUR slot5 entry9 0000->00C8
+F9 XCOLOUR slot5 entry10 0842->0000
+F9 XCOLOUR slot5 entry11 2108->104B
+F9 XCOLOUR slot5 entry12 318C->2091
+F9 XCOLOUR slot5 entry13 3000->2CF8
+F9 XCOLOUR slot5 entry14 5000->3D5F
+F9 XCOLOUR slot5 entry15 7BDE->5A7F
+SHOT s0006 -> output\traces\cwskip-00/s0006.png
+SHOT s0007 -> output\traces\cwskip-00/s0007.png
+SHOT s0008 -> output\traces\cwskip-00/s0008.png
+SHOT s0009 -> output\traces\cwskip-00/s0009.png
+SHOT s0010 -> output\traces\cwskip-00/s0010.png
+SHOT s0011 -> output\traces\cwskip-00/s0011.png
+SHOT s0012 -> output\traces\cwskip-00/s0012.png
+SHOT s0013 -> output\traces\cwskip-00/s0013.png
+SHOT s0014 -> output\traces\cwskip-00/s0014.png
+SHOT s0015 -> output\traces\cwskip-00/s0015.png
+SHOT s0016 -> output\traces\cwskip-00/s0016.png
+SHOT s0017 -> output\traces\cwskip-00/s0017.png
+SHOT s0018 -> output\traces\cwskip-00/s0018.png
+SHOT s0019 -> output\traces\cwskip-00/s0019.png
+SHOT s0020 -> output\traces\cwskip-00/s0020.png
+SHOT s0021 -> output\traces\cwskip-00/s0021.png
+SHOT s0022 -> output\traces\cwskip-00/s0022.png
+SHOT s0023 -> output\traces\cwskip-00/s0023.png
+SHOT s0024 -> output\traces\cwskip-00/s0024.png
+SHOT s0025 -> output\traces\cwskip-00/s0025.png
+SHOT s0026 -> output\traces\cwskip-00/s0026.png
+SHOT s0027 -> output\traces\cwskip-00/s0027.png
+SHOT s0028 -> output\traces\cwskip-00/s0028.png
+SHOT s0029 -> output\traces\cwskip-00/s0029.png
+SHOT s0030 -> output\traces\cwskip-00/s0030.png
+SHOT s0031 -> output\traces\cwskip-00/s0031.png
+SHOT s0032 -> output\traces\cwskip-00/s0032.png
+SHOT s0033 -> output\traces\cwskip-00/s0033.png
+SHOT s0034 -> output\traces\cwskip-00/s0034.png
+SHOT s0035 -> output\traces\cwskip-00/s0035.png
+SHOT s0036 -> output\traces\cwskip-00/s0036.png
+SHOT s0037 -> output\traces\cwskip-00/s0037.png
+SHOT s0038 -> output\traces\cwskip-00/s0038.png
+SHOT s0039 -> output\traces\cwskip-00/s0039.png
+SHOT s0040 -> output\traces\cwskip-00/s0040.png
+SHOT s0041 -> output\traces\cwskip-00/s0041.png
+SHOT s0042 -> output\traces\cwskip-00/s0042.png
+SHOT s0043 -> output\traces\cwskip-00/s0043.png
+SHOT s0044 -> output\traces\cwskip-00/s0044.png
+SHOT s0045 -> output\traces\cwskip-00/s0045.png
+SHOT s0046 -> output\traces\cwskip-00/s0046.png
+SHOT s0047 -> output\traces\cwskip-00/s0047.png
+SHOT s0048 -> output\traces\cwskip-00/s0048.png
+SHOT s0049 -> output\traces\cwskip-00/s0049.png
+SHOT s0050 -> output\traces\cwskip-00/s0050.png
+SHOT s0051 -> output\traces\cwskip-00/s0051.png
+SHOT s0052 -> output\traces\cwskip-00/s0052.png
+SHOT s0053 -> output\traces\cwskip-00/s0053.png
+SHOT s0054 -> output\traces\cwskip-00/s0054.png
+SHOT s0055 -> output\traces\cwskip-00/s0055.png
+SHOT s0056 -> output\traces\cwskip-00/s0056.png
+SHOT s0057 -> output\traces\cwskip-00/s0057.png
+SHOT s0058 -> output\traces\cwskip-00/s0058.png
+SHOT s0059 -> output\traces\cwskip-00/s0059.png
+F63 nogameplay
+SHOT s0060 -> output\traces\cwskip-00/s0060.png
+SHOT s0061 -> output\traces\cwskip-00/s0061.png
+F65 SCENE 82D4AC stage=02 area0550=E744 x=96 y=0
+SHOT s0062 -> output\traces\cwskip-00/s0062.png
+F519 S=4 X=255 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=0 passes=0
+F520 S=4 X=255 nutz=6 ok=false foreignOnX=0 shared=false pend=00 ready=0 passes=0
+F588 S=4 X=5 nutz=6 ok=false foreignOnX=0 shared=false pend=01 ready=1 passes=1
+F588 XCOLOUR slot5 entry1 49CE->008C
+F588 XCOLOUR slot5 entry2 5A52->0114
+F588 XCOLOUR slot5 entry3 6AD6->0118
+F588 XCOLOUR slot5 entry4 7B5A->019E
+F588 XCOLOUR slot5 entry5 7BDE->021E
+F588 XCOLOUR slot5 entry6 031A->029E
+F588 XCOLOUR slot5 entry7 0292->031E
+F588 XCOLOUR slot5 entry8 018A->03DE
+F588 XCOLOUR slot5 entry9 00C8->0000
+F588 XCOLOUR slot5 entry10 0000->0842
+F588 XCOLOUR slot5 entry11 104B->2108
+F588 XCOLOUR slot5 entry12 2091->318C
+F588 XCOLOUR slot5 entry13 2CF8->3000
+F588 XCOLOUR slot5 entry14 3D5F->5000
+F588 XCOLOUR slot5 entry15 5A7F->7BDE
+F589 FIRSTOK 524 frames after scene change
+F589 S=4 X=5 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F589 XCOLOUR slot5 entry1 008C->49CE
+F589 XCOLOUR slot5 entry2 0114->5A52
+F589 XCOLOUR slot5 entry3 0118->6AD6
+F589 XCOLOUR slot5 entry4 019E->7B5A
+F589 XCOLOUR slot5 entry5 021E->7BDE
+F589 XCOLOUR slot5 entry6 029E->031A
+F589 XCOLOUR slot5 entry7 031E->0292
+F589 XCOLOUR slot5 entry8 03DE->018A
+F589 XCOLOUR slot5 entry9 0000->00C8
+F589 XCOLOUR slot5 entry10 0842->0000
+RESULT visible=242 ok=166 bad=76

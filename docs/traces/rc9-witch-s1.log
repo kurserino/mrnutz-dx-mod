@@ -1,0 +1,301 @@
+# rc9-witch-s1 | exit=0 | rom=v0.2.1-rc9.runtime.sfc | state=stage-08.mss | END=2400 SAVEFUR=1 INPUT=2 SHOTEVERY=300
+LOAD ok=true
+F1 SCENE 82D58C stage=14 area0550=EB29 x=180 y=212
+F1 nogameplay
+F2 S=4 X=255 nutz=6 ok=false foreignOnX=0 shared=false pend=01 ready=0 passes=0
+F9 S=4 X=0 nutz=6 ok=false foreignOnX=0 shared=false pend=01 ready=1 passes=1
+F10 FIRSTOK 9 frames after scene change
+F10 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F10 XCOLOUR slot0 entry1 0000->49CE
+F10 XCOLOUR slot0 entry2 7A94->5A52
+F10 XCOLOUR slot0 entry3 0000->6AD6
+F10 XCOLOUR slot0 entry4 0000->7B5A
+F10 XCOLOUR slot0 entry5 0000->7BDE
+F10 XCOLOUR slot0 entry6 0000->031A
+F10 XCOLOUR slot0 entry7 0000->0292
+F10 XCOLOUR slot0 entry8 0000->018A
+F10 XCOLOUR slot0 entry9 0000->00C8
+F10 XCOLOUR slot0 entry11 0000->104B
+F10 XCOLOUR slot0 entry12 0000->2091
+F10 XCOLOUR slot0 entry13 0000->2CF8
+F10 XCOLOUR slot0 entry14 0000->3D5F
+F10 XCOLOUR slot0 entry15 0000->5A7F
+SHOT f0300 -> output\traces\rc9-witch-s1/f0300.png
+F445 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F446 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F447 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F448 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F449 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F450 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F451 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F452 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F453 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F454 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F455 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F456 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F457 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F458 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F459 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F460 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F461 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F462 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F463 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F464 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F465 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F466 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F467 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F468 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F469 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F470 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F471 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F472 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F473 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F474 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F475 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F476 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F477 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F478 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F479 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F480 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F481 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F482 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F483 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F484 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F485 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F486 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F487 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F488 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F489 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F490 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F491 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F492 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F493 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F494 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F495 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F496 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F497 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F498 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F499 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F500 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F503 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F504 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F507 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F508 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F511 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F512 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F515 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F516 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F519 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F520 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F523 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F524 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F527 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F528 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F531 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F532 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F535 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F536 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F539 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F540 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F543 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F544 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F547 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F548 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F551 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F552 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F555 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F556 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F559 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F560 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F563 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F564 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+SHOT f0600 -> output\traces\rc9-witch-s1/f0600.png
+SHOT f0900 -> output\traces\rc9-witch-s1/f0900.png
+F985 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F986 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F987 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F988 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F989 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F990 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F991 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F992 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F993 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F994 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F995 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F996 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F997 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F998 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F999 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1000 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1001 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1002 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1003 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1004 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1005 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1006 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1007 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1008 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1009 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1010 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1011 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1012 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1013 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1014 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1015 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1016 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1017 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1018 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1019 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1020 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1021 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1022 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1023 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1024 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1025 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1026 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1027 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1028 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1029 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1030 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1031 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1032 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1033 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1034 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1035 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1036 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1037 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1038 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1039 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1040 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1043 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1044 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1047 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1048 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1051 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1052 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1055 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1056 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1059 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1060 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1063 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1064 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1067 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1068 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1071 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1072 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1075 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1076 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1079 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1080 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1083 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1084 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1087 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1088 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1091 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1092 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1095 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1096 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1099 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1100 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1103 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1104 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1145 S=4 X=0 nutz=5 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1161 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1177 S=4 X=0 nutz=3 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+SHOT f1200 -> output\traces\rc9-witch-s1/f1200.png
+F1276 nogameplay
+F1412 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1413 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+SHOT f1500 -> output\traces\rc9-witch-s1/f1500.png
+SHOT f1800 -> output\traces\rc9-witch-s1/f1800.png
+F1946 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1947 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1948 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1949 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1950 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1951 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1952 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1953 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1954 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1955 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1956 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1957 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1958 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1959 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1960 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1961 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1962 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1963 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1964 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1965 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1966 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1967 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1968 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1969 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1970 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1971 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1972 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1973 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1974 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1975 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1976 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1977 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1978 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1979 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1980 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1981 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1982 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1983 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1984 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1985 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1986 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1987 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1988 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1989 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1990 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1991 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1992 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1993 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1994 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1995 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1996 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1997 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1998 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F1999 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F2000 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F2001 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F2004 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F2005 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F2008 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F2009 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F2012 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F2013 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F2016 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F2017 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F2020 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F2021 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F2024 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F2025 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F2028 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F2029 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F2032 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F2033 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F2036 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F2037 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F2040 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F2041 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F2044 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F2045 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F2048 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F2049 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F2052 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F2053 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F2056 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F2057 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F2060 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F2061 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F2064 S=4 X=0 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F2065 S=4 X=0 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+SHOT f2100 -> output\traces\rc9-witch-s1/f2100.png
+RESULT visible=2130 ok=2122 bad=8
+SHOT f2400 -> output\traces\rc9-witch-s1/f2400.png

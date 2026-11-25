@@ -54,6 +54,27 @@ Scripts without an npm alias (run with `npx tsx tools/mesen/run.ts <script> [--s
 | `probe-regs.lua` | CPU state (P, widths, D, DBR) at given exec addresses — run before writing patch bytes |
 | `boot-timeline.lua` | screenshots every N frames from power-on |
 | `probe-api.lua` | lists Mesen Lua functions, memory types, counter types and PPU state keys |
+| `colour-watch.lua` | per frame: Mr. Nutz coloured or not, S/X/pending/passes, scene changes, first coloured frame, colour changes of slot X; `INPUT` (idle, up, walk, walk to `TX` and press `ACT`, debug stage skip), `SAVEFUR`/`SAVEOUTFIT` write a save record after the state load |
+| `scene-palettes.lua` | OAM palettes used by Mr. Nutz and other sprites, and Mesen's colour-math state (`ppu.colorMathEnabled`, bit 4 = OBJ) |
+| `cgadsub-writers.lua` | every writer of `$2130/$2131` (PC, value) and `$13BC` changes |
+| `cgram91-writers.lua` | CGADD writes of `$90/$91` and DMA to `$2122` (finds who writes a CGRAM slot) |
+| `hook-scanline.lua` | scanline at `$81:828A` per frame around a debug stage skip, with the scan state |
+| `nmi-trace.lua` | first instructions after the NMI of frame `AT`, with scanlines |
+| `oam-high-dump.lua` | PPU OAM entries past the bytes in use, grouped by y/tile/attr |
+
+**ares savestates in Mesen:** `npx tsx tools/mesen/ares-import.ts <copy of file.bsN> <name>` writes
+`output/ares/<name>.lua` (private), a prelude that copies the ares WRAM/VRAM/CGRAM (ares v148, 268001-byte states:
+offsets `0xA8C`, `0x20C28`, `0x311DB`) into a Mesen state of the same stage at the main-loop wait `$80:822E`. Run any
+script on it with `--state output/states/stage-NN.mss --prelude output/ares/<name>.lua`. OAM is rebuilt by the game;
+objects of the Mesen state may draw garbage for a while. Work on copies of the user's saves only.
+
+**ares savestates across IPS versions:** an ares state stores the CPU registers at file offset `0xA2A` (PC as a
+32-bit word, then A, X, Y, ?, S, D as 16-bit words, then DBR) [byte] (both user states of 2026-11-25: PC `$A0:8287`,
+S `$1FE2`, DBR `$A0`). ares saves at a point inside the gameplay NMI, often inside our hook, so a state made with one
+build resumes at a wrong instruction with another build whose hook code moved (black screen). Fix: map the PC and the
+hook return addresses on the stack (`JSR` pushes target - 1; here `$1FE3` and `$1FE5`) by label + offset between the
+two assembled hook sources, after checking the bytes match. Done for rc8 → rc9 (PC `$8287` → `$82DB`, `$8164` →
+`$816C`, `$80BC` → `$80C4`); originals kept in the user's backup folder.
 
 ## Methods that worked
 

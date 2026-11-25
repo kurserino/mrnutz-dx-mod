@@ -1,0 +1,33 @@
+# rc9-slot2 | exit=0 | rom=v0.2.1-rc9.runtime.sfc | state=stage-09.mss | END=900 INPUT=2 SHOTEVERY=150
+LOAD ok=true
+F1 SCENE 82D60C stage=1A area0550=EB29 x=960 y=644
+F1 nogameplay
+F2 S=0 X=255 nutz=6 ok=false foreignOnX=0 shared=false pend=01 ready=0 passes=0
+ARES transplant at F2
+F3 S=0 X=255 nutz=0 ok=true foreignOnX=0 shared=false pend=DC ready=0 passes=0
+F4 S=0 X=255 nutz=6 ok=false foreignOnX=0 shared=false pend=DC ready=0 passes=0
+F10 S=0 X=2 nutz=6 ok=false foreignOnX=0 shared=false pend=DD ready=1 passes=1
+F11 FIRSTOK 10 frames after scene change
+F11 S=0 X=2 nutz=6 ok=true foreignOnX=0 shared=false pend=DC ready=1 passes=1
+F11 XCOLOUR slot2 entry1 21D2->49CE
+F11 XCOLOUR slot2 entry2 114E->5A52
+F11 XCOLOUR slot2 entry3 090C->6AD6
+F11 XCOLOUR slot2 entry4 00CA->7B5A
+F11 XCOLOUR slot2 entry5 0088->7BDE
+F11 XCOLOUR slot2 entry6 0046->031A
+F11 XCOLOUR slot2 entry7 0004->0292
+F11 XCOLOUR slot2 entry8 7A14->018A
+F11 XCOLOUR slot2 entry9 6992->00C8
+F11 XCOLOUR slot2 entry10 410E->0000
+F11 XCOLOUR slot2 entry11 3256->104B
+F11 XCOLOUR slot2 entry12 21D0->2091
+F11 XCOLOUR slot2 entry13 2A96->2CF8
+F11 XCOLOUR slot2 entry14 2B1A->3D5F
+F11 XCOLOUR slot2 entry15 439E->5A7F
+SHOT f0150 -> output\traces\rc9-slot2/f0150.png
+SHOT f0300 -> output\traces\rc9-slot2/f0300.png
+SHOT f0450 -> output\traces\rc9-slot2/f0450.png
+SHOT f0600 -> output\traces\rc9-slot2/f0600.png
+SHOT f0750 -> output\traces\rc9-slot2/f0750.png
+RESULT visible=898 ok=890 bad=8
+SHOT f0900 -> output\traces\rc9-slot2/f0900.png
