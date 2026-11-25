@@ -3,7 +3,7 @@ import { existsSync, readFileSync } from "node:fs";
 import { DEFAULT_ROM_PATH, ORIGINAL_PALETTE, PALETTE_FILE_OFFSET, applyIps } from "../src/core.js";
 import { assemble } from "../src/asm.js";
 import { disassemble, formatInstruction, loromToFile, parseHeader } from "../src/snes.js";
-import { CODE_ORIGIN, EXPANDED_SIZE, FRAME_HOOK_ORIGINAL, FRAME_HOOK_SITE, HOOK_ORIGINAL, HOOK_SITE, OAM_HOOK_ORIGINAL, OAM_HOOK_SITE, SAVE_RECORD, SRAM_CHECK_PATCHES, SRAM_HEADER, STATE, buildRuntimePatch, buildTables, decodeSaveRecord, encodeSaveRecord, hookSource } from "../src/runtime.js";
+import { CODE_ORIGIN, CROSS_GROUP_SCENES, EXPANDED_SIZE, FRAME_HOOK_ORIGINAL, FRAME_HOOK_SITE, HOOK_ORIGINAL, HOOK_SITE, OAM_HOOK_ORIGINAL, OAM_HOOK_SITE, SAVE_RECORD, SRAM_CHECK_PATCHES, SRAM_HEADER, STATE, buildRuntimePatch, buildTables, decodeSaveRecord, encodeSaveRecord, hookSource } from "../src/runtime.js";
 import type { RuntimePresetFile } from "../src/runtime.js";
 import { MENU_BUFFER, MENU_DATA, MENU_STATE, PAUSE_DATA, PAUSE_HOOK_ORIGINAL, PAUSE_HOOK_SITE, buildMenuData } from "../src/pause.js";
 
@@ -74,6 +74,34 @@ describe("runtime palette patch", () => {
     // oam_hook has no buffer scan any more: no loop over $0024 entries
     const oam = bytes.subarray(labels.oam_hook - CODE_ORIGIN, labels.unmap_list - CODE_ORIGIN).toString("hex").toUpperCase();
     expect(oam).not.toContain("AF240000");
+  });
+
+  it("never takes the animated sprite palette 1 while [$13BC] is set (fix-private-slot-choice)", () => {
+    const { bytes, labels } = assemble(hookSource(4, 4), CODE_ORIGIN);
+    const sf = bytes.subarray(labels.slot_is_free - CODE_ORIGIN, labels.not_free - CODE_ORIGIN).toString("hex").toUpperCase();
+    expect(sf).toContain("C901D0"); // candidate == 1 ...
+    expect(sf).toContain("ADBC130DBD13D0"); // ... and LDA $13BC / ORA $13BD / BNE not_free
+  });
+  it("lets only the listed scenes take the other colour-math group (fix-private-slot-choice)", () => {
+    const src = hookSource(4, 4);
+    expect(CROSS_GROUP_SCENES).toEqual([0x82d58c, 0x82d620]);
+    for (const t of CROSS_GROUP_SCENES) expect(src).toContain(`CMP #$${(t & 0xffff).toString(16).toUpperCase().padStart(4, "0")}`);
+    const { bytes, labels } = assemble(src, CODE_ORIGIN);
+    // choose_slot tries the other group only when anyGroup is set
+    const ch = bytes.subarray(labels.choose_slot - CODE_ORIGIN, labels.ch_fail - CODE_ORIGIN).toString("hex").toUpperCase();
+    const anyGroup = "AF" + [0, 1, 2].map((i) => ((STATE.anyGroup >> (8 * i)) & 0xff).toString(16).padStart(2, "0").toUpperCase()).join("");
+    expect(ch).toContain(anyGroup + "F0");
+    expect(labels.ch_other).toBeGreaterThan(labels.ch_loop);
+  });
+  it("scans the WRAM OAM buffer before the first pass when the PPU OAM is out of reach (fix-private-slot-choice)", () => {
+    const { bytes, labels } = assemble(hookSource(4, 4), CODE_ORIGIN);
+    const sw = bytes.subarray(labels.scan_wram - CODE_ORIGIN, labels.sw_done - CODE_ORIGIN).toString("hex").toUpperCase();
+    expect(sw).toContain("CD2400"); // limit: bytes in use $0024
+    expect(sw).toContain("BF22037E"); // y from $7E:0322,X
+    expect(sw).not.toContain("3821"); // no PPU OAM read ($2138)
+    // the static-entry scan skips the game's cleared pattern y = tile = attr = $E0
+    const st = bytes.subarray(labels.sc_static - CODE_ORIGIN, labels.sc_static_live - CODE_ORIGIN).toString("hex").toUpperCase();
+    expect(st).toMatch(/^E0E000D0[0-9A-F]{2}C0E000D0[0-9A-F]{2}AF[0-9A-F]{6}C9E0F0/);
   });
 
   it("puts the exact original palette at index 0 of both tables", () => {

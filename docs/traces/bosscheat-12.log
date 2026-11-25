@@ -1,0 +1,23 @@
+# bosscheat-12 | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-12.mss | SEED=1 END=1800 PAR=2115613952 HOLD=6563 HOLDV=0
+LOAD ok=true
+ADDCHEAT 7E19B500 ok=true nil
+F600 hp19A3=0 bar1ED4=16 x=262 y=210
+SHOT f00600 -> output\traces\bosscheat-12/f00600.png
+F1200 hp19A3=0 bar1ED4=16 x=352 y=203
+SHOT f01200 -> output\traces\bosscheat-12/f01200.png
+F1800 hp19A3=0 bar1ED4=16 x=254 y=197
+CAND $036B drops=2 142>134>66
+CAND $0373 drops=2 138>134>128
+CAND $037F drops=2 132>128>4
+CAND $0383 drops=2 134>128>36
+CAND $0385 drops=2 124>116>101
+CAND $0396 drops=2 190>64>44
+CAND $0399 drops=2 124>100>97
+CAND $039A drops=2 190>80>44
+CAND $05A9 drops=2 232>48>40
+CAND $1077 drops=4 126>125>124>123>122
+CAND $108B drops=4 126>125>124>123>122
+CAND $109F drops=4 126>125>124>123>122
+CAND $1B1E drops=4 255>30>27>17>7
+RESULT done
+SHOT f01800 -> output\traces\bosscheat-12/f01800.png

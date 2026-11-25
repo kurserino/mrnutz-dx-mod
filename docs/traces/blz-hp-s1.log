@@ -1,0 +1,36 @@
+# blz-hp-s1 | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-21.mss | SEED=1 END=9000 INFJUMP=1
+LOAD ok=true
+F600 hp19A3=30 bar1ED4=5 x=248 y=260
+SHOT f00600 -> output\traces\blz-hp-s1/f00600.png
+F1200 hp19A3=30 bar1ED4=5 x=165 y=260
+SHOT f01200 -> output\traces\blz-hp-s1/f01200.png
+F1800 hp19A3=30 bar1ED4=5 x=6 y=260
+SHOT f01800 -> output\traces\blz-hp-s1/f01800.png
+F2400 hp19A3=30 bar1ED4=5 x=172 y=260
+SHOT f02400 -> output\traces\blz-hp-s1/f02400.png
+F3000 hp19A3=30 bar1ED4=5 x=343 y=260
+SHOT f03000 -> output\traces\blz-hp-s1/f03000.png
+F3600 hp19A3=30 bar1ED4=5 x=65520 y=42
+SHOT f03600 -> output\traces\blz-hp-s1/f03600.png
+F4200 hp19A3=30 bar1ED4=5 x=49 y=260
+SHOT f04200 -> output\traces\blz-hp-s1/f04200.png
+F4800 hp19A3=30 bar1ED4=5 x=343 y=260
+SHOT f04800 -> output\traces\blz-hp-s1/f04800.png
+F5400 hp19A3=30 bar1ED4=5 x=32 y=260
+SHOT f05400 -> output\traces\blz-hp-s1/f05400.png
+F6000 hp19A3=30 bar1ED4=4 x=65534 y=260
+SHOT f06000 -> output\traces\blz-hp-s1/f06000.png
+F6600 hp19A3=30 bar1ED4=4 x=343 y=260
+SHOT f06600 -> output\traces\blz-hp-s1/f06600.png
+F7200 hp19A3=30 bar1ED4=4 x=343 y=260
+SHOT f07200 -> output\traces\blz-hp-s1/f07200.png
+F7800 hp19A3=30 bar1ED4=4 x=343 y=67
+SHOT f07800 -> output\traces\blz-hp-s1/f07800.png
+F8400 hp19A3=30 bar1ED4=4 x=33 y=260
+SHOT f08400 -> output\traces\blz-hp-s1/f08400.png
+F9000 hp19A3=30 bar1ED4=3 x=65520 y=260
+CAND $19B5 drops=2 5>4>3
+CAND $1ED4 drops=2 5>4>3
+CAND $1ED6 drops=2 5>4>3
+RESULT done
+SHOT f09000 -> output\traces\blz-hp-s1/f09000.png

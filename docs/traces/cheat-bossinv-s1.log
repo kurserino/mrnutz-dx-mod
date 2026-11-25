@@ -1,0 +1,33 @@
+# cheat-bossinv-s1 | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=blz-01.mss | CHEAT=3 CHEAT2=4 END=900 SEED=1 LOGEVERY=60
+LOAD ok=true
+F1 energy=5 lives=0009 nuts=00 coins=00 r05D0=00 stage=50 x=0 y=180 gameplay=false
+SHOT f0030 -> output\traces\cheat-bossinv-s1/f0030.png
+F60 energy=5 lives=0009 nuts=00 coins=00 r05D0=00 stage=50 x=0 y=180 gameplay=true
+F120 energy=5 lives=0009 nuts=00 coins=00 r05D0=00 stage=50 x=66 y=180 gameplay=true
+F180 energy=5 lives=0009 nuts=00 coins=00 r05D0=00 stage=50 x=163 y=129 gameplay=true
+F240 energy=5 lives=0009 nuts=00 coins=00 r05D0=00 stage=50 x=243 y=304 gameplay=true
+F263 DEATH lives=0009 x=243 y=304 invuln8D=2D
+F263 REQUEST 825C stage=50
+F263 REQUEST 0000 stage=50
+SHOT death1 -> output\traces\cheat-bossinv-s1/death1.png
+F300 energy=5 lives=0009 nuts=00 coins=00 r05D0=00 stage=50 x=96 y=0 gameplay=false
+F313 REQUEST 82D4 stage=50
+F360 energy=5 lives=0009 nuts=00 coins=00 r05D0=00 stage=50 x=96 y=0 gameplay=false
+F386 REQUEST 0000 stage=50
+F420 energy=5 lives=0009 nuts=00 coins=00 r05D0=00 stage=50 x=11 y=129 gameplay=true
+SHOT f0450 -> output\traces\cheat-bossinv-s1/f0450.png
+F480 energy=5 lives=0009 nuts=00 coins=00 r05D0=00 stage=50 x=65524 y=180 gameplay=true
+F540 energy=5 lives=0009 nuts=00 coins=00 r05D0=00 stage=50 x=76 y=159 gameplay=true
+F600 energy=5 lives=0009 nuts=00 coins=00 r05D0=00 stage=50 x=130 y=129 gameplay=true
+F660 energy=5 lives=0009 nuts=00 coins=00 r05D0=00 stage=50 x=220 y=132 gameplay=true
+F720 energy=5 lives=0009 nuts=00 coins=00 r05D0=00 stage=50 x=335 y=147 gameplay=true
+F780 energy=5 lives=0009 nuts=00 coins=00 r05D0=00 stage=50 x=353 y=305 gameplay=true
+F788 DEATH lives=0009 x=353 y=305 invuln8D=2D
+F788 REQUEST 825C stage=50
+F788 REQUEST 0000 stage=50
+SHOT death2 -> output\traces\cheat-bossinv-s1/death2.png
+F838 REQUEST 82D4 stage=50
+F840 energy=5 lives=0009 nuts=00 coins=00 r05D0=00 stage=50 x=96 y=0 gameplay=false
+F900 energy=5 lives=0009 nuts=00 coins=00 r05D0=00 stage=50 x=96 y=0 gameplay=false
+RESULT cheat=3 hits=0 deaths=2 jumpPeak=0 end energy=5 lives=0009 nuts=00 coins=00 r05D0=00 stage=50 x=96 y=0 gameplay=false
+SHOT f0900 -> output\traces\cheat-bossinv-s1/f0900.png

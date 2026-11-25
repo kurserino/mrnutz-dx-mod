@@ -1,0 +1,27 @@
+# bosscheat-30 | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-30.mss | SEED=1 END=1800 PAR=2115613952 HOLD=6563 HOLDV=0
+LOAD ok=true
+ADDCHEAT 7E19B500 ok=true nil
+F600 hp19A3=0 bar1ED4=1 x=276 y=152
+SHOT f00600 -> output\traces\bosscheat-30/f00600.png
+F674 REQUEST 825C
+F674 REQUEST 0000
+SHOT req674 -> output\traces\bosscheat-30/req674.png
+SHOT req674 -> output\traces\bosscheat-30/req674.png
+F725 REQUEST 82D4
+SHOT req725 -> output\traces\bosscheat-30/req725.png
+F798 REQUEST 0000
+SHOT req798 -> output\traces\bosscheat-30/req798.png
+F1200 hp19A3=0 bar1ED4=1 x=204 y=301
+SHOT f01200 -> output\traces\bosscheat-30/f01200.png
+F1223 REQUEST 825C
+F1223 REQUEST 0000
+SHOT req1223 -> output\traces\bosscheat-30/req1223.png
+SHOT req1223 -> output\traces\bosscheat-30/req1223.png
+F1289 REQUEST 82D4
+SHOT req1289 -> output\traces\bosscheat-30/req1289.png
+F1362 REQUEST 0000
+SHOT req1362 -> output\traces\bosscheat-30/req1362.png
+F1800 hp19A3=0 bar1ED4=1 x=6 y=180
+CAND $05E2 drops=2 160>16>0
+RESULT done
+SHOT f01800 -> output\traces\bosscheat-30/f01800.png

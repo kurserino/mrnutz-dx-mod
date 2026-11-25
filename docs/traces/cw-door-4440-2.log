@@ -1,0 +1,15 @@
+# cw-door-4440-2 | exit=0 | rom=v0.2.1-rc8.runtime.sfc | state=stage-07.mss | END=600 INPUT=4 TX=4440 ACT=2 SHOTEVERY=100
+LOAD ok=true
+F1 SCENE 82D54C stage=12 area0550=EB29 x=87 y=1108
+F1 nogameplay
+F2 S=4 X=255 nutz=6 ok=false foreignOnX=0 shared=false pend=01 ready=0 passes=0
+ARES transplant at F2
+F3 S=4 X=6 nutz=6 ok=false foreignOnX=0 shared=false pend=DC ready=1 passes=1
+F4 S=4 X=6 nutz=12 ok=false foreignOnX=0 shared=false pend=DC ready=1 passes=1
+SHOT f0100 -> output\traces\cw-door-4440-2/f0100.png
+SHOT f0200 -> output\traces\cw-door-4440-2/f0200.png
+SHOT f0300 -> output\traces\cw-door-4440-2/f0300.png
+SHOT f0400 -> output\traces\cw-door-4440-2/f0400.png
+SHOT f0500 -> output\traces\cw-door-4440-2/f0500.png
+RESULT visible=599 ok=0 bad=599
+SHOT f0600 -> output\traces\cw-door-4440-2/f0600.png

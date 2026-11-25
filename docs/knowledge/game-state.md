@@ -11,6 +11,44 @@
 | `$7E:1894` | 8 bits | coins: PAR `7E189499` | [public] |
 | `$7E:05D0` | 8 bits | "one shot bosses": PAR `7E05D000` | [public] |
 
+Checked in Mesen with `tools/mesen/cheat-check.lua` (each code held every frame, as an ares RAM cheat; 2026-11-25):
+
+- `$8D = $2D` (invulnerability): 0 deaths in 4 × 3600 frames of random play in `stage-00`, against 6 deaths without
+  it [trace] `cheat-ctl-s2..5.log`, `cheat-inv-s2..5.log`. It does **not** prevent pit deaths (Mr. Blizzard arena,
+  Y 180 → 304) [trace] `cheat-bossinv-s1.log`.
+- Lives `word($1889) = $A3BE` (x9): the HUD shows x9 and a death leaves it at 9 [trace] `cheat-lives.log`.
+- `$0A29 = $99` (nuts) and `$1894 = $99` (coins): the HUD shows 99 [trace] `cheat-nuts.log`, `cheat-coins.log`.
+- `$1EC9 = $01`: one R press goes to the next stage (`$054C` 0 → 2) [trace] `cheat-skip.log`.
+- `$8E = $FF` (infinite jump) and `$91 = $00` (super jump): jump peak 300 px against 78 px [trace]
+  `cheat-ctl-jump.log`, `cheat-infjump.log`, `cheat-superjump.log`.
+- `$05D0 = $00` ("one shot bosses") is **not confirmed** on this ROM: `$05D0` is already `$00` in the Mr. Blizzard
+  fight and the runs with and without the code are identical; in `stage-00` it changes between 0, 1 and 2 during
+  normal play [trace] `cheat-boss-ctl-s1..3.log`, `cheat-boss-1hit-s1..3.log`. Purpose unknown.
+
+### Boss health
+
+Found with `tools/mesen/boss-hp.lua` (WRAM bytes that only fall while an invulnerable Mr. Nutz jumps around the boss
+room; Mr. Nutz damages a boss by landing on its head). The boss health bar mirrors `$7E:1ED4`/`$7E:1ED6`.
+
+| Boss | State | Health | Start value | Evidence |
+| --- | --- | --- | --- | --- |
+| Mr. Blizzard (giant face, `stage-21`) | `stage-21.mss` | `$7E:19B5` | 5 (bar 5) | [trace] `blz-hp-s1.log`: 5 → 4 → 3 with the bar |
+| Witch (picture frame, `stage-08`) | `stage-08.mss` | `$7E:19A3` | 15 (bar 16) | [trace] `boss-hp-s1..3.log`: 15 → 6, one per stomp |
+
+Cheats tested with Mesen's own cheat engine (`emu.addCheat`, Pro Action Replay type; like ares it answers CPU reads
+with the code value):
+
+- `7E19B500`: Mr. Blizzard dies as soon as the fight runs (frame 2969 of the state, no stomp needed) and the
+  STAGE CLEAR screen follows; the next stage plays normally [trace] `blz-par0.log`.
+- `7E19A300`: the witch dies at frame 420 and the next stage plays normally [trace] `witch-par0.log`.
+- `7E19B501` (health held at 1) does **not** work: the stomp still lowers the bar (5 → 4 → 3) and the boss lives.
+  The hit probably decrements the byte, and the death check reads it again (sees 1) [hypothesis] `blz-par1.log`.
+- Both zero codes held together change nothing in 12 normal stages (`stage-00` … `stage-30`, 1800 frames of random
+  play): every stage end matches the run without cheats or follows a death [trace] `bosscheat-*.log`.
+- The other bosses (spider in `stage-04`, …) are not mapped yet; each boss seen so far has its own address.
+- In `boss-hp.lua`, `emu.addCheat` called at the script top level hangs Mesen 2.2.1 headless; call it after the state
+  load (inside an exec callback).
+
 Public codes: [Almar's Guides — Mr. Nutz (USA) Pro Action Replay](https://almarsguides.com/retro/walkthroughs/snes/games/MrNutz/ProActionReplay/).
 No SNES Game Genie codes are published.
 

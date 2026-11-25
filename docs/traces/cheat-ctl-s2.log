@@ -1,0 +1,54 @@
+# cheat-ctl-s2 | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-00.mss | CHEAT=0 END=3600 SEED=2
+LOAD ok=true
+F1 energy=5 lives=0002 nuts=00 coins=00 r05D0=01 stage=00 x=96 y=372 gameplay=false
+SHOT f0030 -> output\traces\cheat-ctl-s2/f0030.png
+F120 energy=5 lives=0002 nuts=00 coins=00 r05D0=01 stage=00 x=143 y=372 gameplay=true
+F240 energy=6 lives=0002 nuts=00 coins=00 r05D0=00 stage=00 x=248 y=372 gameplay=true
+F360 energy=6 lives=0002 nuts=00 coins=00 r05D0=00 stage=00 x=262 y=372 gameplay=true
+F480 energy=6 lives=0002 nuts=00 coins=00 r05D0=00 stage=00 x=331 y=340 gameplay=true
+F521 HIT energy 6->5
+F600 energy=5 lives=0002 nuts=00 coins=00 r05D0=FF stage=00 x=452 y=312 gameplay=true
+F720 energy=5 lives=0002 nuts=00 coins=00 r05D0=02 stage=00 x=648 y=321 gameplay=true
+F840 energy=6 lives=0002 nuts=00 coins=00 r05D0=00 stage=00 x=687 y=274 gameplay=true
+F960 energy=6 lives=0002 nuts=00 coins=00 r05D0=00 stage=00 x=746 y=340 gameplay=true
+F1061 DEATH lives=0002
+F1061 REQUEST 825C stage=00
+F1061 REQUEST 0000 stage=00
+F1080 energy=5 lives=0001 nuts=00 coins=00 r05D0=00 stage=00 x=96 y=0 gameplay=false
+F1167 REQUEST 82D4 stage=00
+F1200 energy=5 lives=0001 nuts=00 coins=00 r05D0=00 stage=00 x=96 y=0 gameplay=false
+F1229 HIT energy 6->5
+F1229 REQUEST 0000 stage=00
+F1320 energy=5 lives=0001 nuts=00 coins=00 r05D0=00 stage=00 x=113 y=321 gameplay=true
+F1440 energy=5 lives=0001 nuts=00 coins=00 r05D0=00 stage=00 x=204 y=372 gameplay=true
+F1560 energy=6 lives=0001 nuts=00 coins=00 r05D0=00 stage=00 x=253 y=358 gameplay=true
+F1642 HIT energy 6->5
+F1680 energy=5 lives=0001 nuts=00 coins=00 r05D0=00 stage=00 x=441 y=305 gameplay=true
+F1800 energy=5 lives=0001 nuts=00 coins=00 r05D0=02 stage=00 x=616 y=340 gameplay=true
+SHOT f1800 -> output\traces\cheat-ctl-s2/f1800.png
+F1920 energy=6 lives=0001 nuts=00 coins=00 r05D0=01 stage=00 x=721 y=340 gameplay=true
+F2040 energy=6 lives=0001 nuts=00 coins=00 r05D0=01 stage=00 x=825 y=302 gameplay=true
+F2160 energy=6 lives=0001 nuts=00 coins=00 r05D0=01 stage=00 x=825 y=308 gameplay=true
+F2185 DEATH lives=0001
+F2185 REQUEST 825C stage=00
+F2185 REQUEST 0000 stage=00
+F2280 energy=5 lives=0000 nuts=00 coins=00 r05D0=01 stage=00 x=96 y=0 gameplay=false
+F2291 REQUEST 82D4 stage=00
+F2353 HIT energy 6->5
+F2353 REQUEST 0000 stage=00
+F2400 energy=5 lives=0000 nuts=00 coins=00 r05D0=01 stage=00 x=96 y=372 gameplay=true
+F2520 energy=5 lives=0000 nuts=00 coins=00 r05D0=00 stage=00 x=200 y=372 gameplay=true
+F2640 energy=5 lives=0000 nuts=00 coins=00 r05D0=00 stage=00 x=187 y=372 gameplay=true
+F2674 HIT energy 6->5
+F2760 energy=5 lives=0000 nuts=00 coins=00 r05D0=00 stage=00 x=342 y=292 gameplay=true
+F2880 energy=5 lives=0000 nuts=00 coins=00 r05D0=00 stage=00 x=481 y=341 gameplay=true
+F3000 energy=6 lives=0000 nuts=00 coins=00 r05D0=00 stage=00 x=634 y=372 gameplay=true
+F3062 HIT energy 6->5
+F3120 energy=6 lives=0000 nuts=00 coins=00 r05D0=02 stage=00 x=702 y=292 gameplay=true
+F3240 energy=6 lives=0000 nuts=00 coins=00 r05D0=01 stage=00 x=942 y=250 gameplay=true
+F3251 HIT energy 6->5
+F3360 energy=6 lives=0000 nuts=00 coins=00 r05D0=02 stage=00 x=1051 y=372 gameplay=true
+F3480 energy=6 lives=0000 nuts=00 coins=00 r05D0=00 stage=00 x=1082 y=308 gameplay=true
+F3600 energy=6 lives=0000 nuts=00 coins=00 r05D0=00 stage=00 x=1159 y=301 gameplay=true
+RESULT cheat=0 hits=7 deaths=2 jumpPeak=0 end energy=6 lives=0000 nuts=00 coins=00 r05D0=00 stage=00 x=1159 y=301 gameplay=true
+SHOT f3600 -> output\traces\cheat-ctl-s2/f3600.png

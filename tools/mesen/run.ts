@@ -1,5 +1,7 @@
 // Runs a Mesen 2 Lua script headless (--testRunner) and stores its output.
 // CLI: tsx tools/mesen/run.ts <script.lua> [--rom file.sfc] [--name trace-name] [--state file.mss] [--define NAME=N]...
+//      [--prelude file.lua]   (Lua inserted after lib.lua, before the script; e.g. an ares transplant from
+//                              tools/mesen/ares-import.ts)
 // Env (.env, see .env.example): MESEN_PATH (required), ROM_PATH (optional).
 // Every script gets tools/mesen/lib.lua prepended (Lua require needs Mesen's I/O permission, which stays off).
 // Output protocol on stdout:
@@ -22,6 +24,7 @@ export interface RunOptions {
   name?: string;
   state?: string;
   defines?: string[];
+  prelude?: string; // Lua file inserted after lib.lua, before the script
   log?: boolean; // write docs/traces/<name>.log (default true)
 }
 export interface RunResult { status: number | null; lines: string[]; name: string }
@@ -38,7 +41,7 @@ export function runMesen(o: RunOptions): Promise<RunResult> {
   mkdirSync(shotsDir, { recursive: true });
   const generated = resolve(shotsDir, "script-generated.lua");
   const prefix = (o.state ? `STATE_HEX = "${readFileSync(o.state).toString("hex")}"\n` : "") + defines.map((d) => d + "\n").join("");
-  writeFileSync(generated, prefix + readFileSync(LIB, "utf8") + "\n" + readFileSync(script, "utf8"));
+  writeFileSync(generated, prefix + readFileSync(LIB, "utf8") + "\n" + (o.prelude ? readFileSync(o.prelude, "utf8") + "\n" : "") + readFileSync(script, "utf8"));
   return new Promise((done, fail) => {
     // --timeout: without it the test runner stops long scripts with exit -1 (seen around 2 minutes on 2.2.1).
     const child = spawn(mesen, ["--testRunner", "--timeout=3600", rom, generated]);
@@ -79,7 +82,7 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
     return i >= 0 ? args[i + 1] : undefined;
   };
   const defines = args.flatMap((a, i) => (a === "--define" && args[i + 1] ? [args[i + 1]] : []));
-  const r = await runMesen({ script: args[0] ?? "tools/mesen/trace-palette.lua", rom: opt("--rom"), name: opt("--name"), state: opt("--state"), defines });
+  const r = await runMesen({ script: args[0] ?? "tools/mesen/trace-palette.lua", rom: opt("--rom"), name: opt("--name"), state: opt("--state"), defines, prelude: opt("--prelude") });
   console.log(`exit=${r.status} lines=${r.lines.length} -> docs/traces/${r.name}.log, output/traces/${r.name}/`);
   process.exitCode = r.status ?? 1;
 }

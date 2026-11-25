@@ -1,0 +1,17 @@
+# cheat-skip | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-00.mss | CHEAT=8 INPUT=2 END=600
+LOAD ok=true
+F1 energy=5 lives=0002 nuts=00 coins=00 r05D0=01 stage=00 x=96 y=372 gameplay=false
+SHOT f0030 -> output\traces\cheat-skip/f0030.png
+F120 energy=5 lives=0002 nuts=00 coins=00 r05D0=01 stage=00 x=96 y=372 gameplay=true
+F120 REQUEST 82D4 stage=00
+F120 REQUEST 0000 stage=00
+F121 REQUEST 82D4 stage=00
+F240 energy=5 lives=0002 nuts=00 coins=00 r05D0=01 stage=02 x=96 y=0 gameplay=false
+SHOT f0300 -> output\traces\cheat-skip/f0300.png
+F360 energy=5 lives=0002 nuts=00 coins=00 r05D0=01 stage=02 x=96 y=0 gameplay=false
+F417 REQUEST 82D4 stage=02
+F480 energy=5 lives=0002 nuts=00 coins=00 r05D0=01 stage=02 x=96 y=0 gameplay=false
+F579 REQUEST 0000 stage=02
+F600 energy=5 lives=0002 nuts=00 coins=00 r05D0=02 stage=02 x=96 y=564 gameplay=true
+RESULT cheat=8 hits=0 deaths=0 jumpPeak=0 end energy=5 lives=0002 nuts=00 coins=00 r05D0=02 stage=02 x=96 y=564 gameplay=true
+SHOT f0600 -> output\traces\cheat-skip/f0600.png

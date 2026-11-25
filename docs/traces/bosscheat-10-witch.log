@@ -1,0 +1,18 @@
+# bosscheat-10-witch | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-10.mss | SEED=1 END=1800 PAR=2115609344
+LOAD ok=true
+ADDCHEAT 7E19A300 ok=true nil
+F600 hp19A3=0 bar1ED4=16 x=530 y=308
+SHOT f00600 -> output\traces\bosscheat-10-witch/f00600.png
+F1098 REQUEST 82D4
+F1098 REQUEST 0000
+SHOT req1098 -> output\traces\bosscheat-10-witch/req1098.png
+SHOT req1098 -> output\traces\bosscheat-10-witch/req1098.png
+F1200 hp19A3=0 bar1ED4=16 x=96 y=0
+SHOT f01200 -> output\traces\bosscheat-10-witch/f01200.png
+F1282 REQUEST 82D4
+SHOT req1282 -> output\traces\bosscheat-10-witch/req1282.png
+F1355 REQUEST 0000
+SHOT req1355 -> output\traces\bosscheat-10-witch/req1355.png
+F1800 hp19A3=0 bar1ED4=16 x=1492 y=1624
+RESULT done
+SHOT f01800 -> output\traces\bosscheat-10-witch/f01800.png

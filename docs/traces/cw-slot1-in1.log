@@ -1,0 +1,39 @@
+# cw-slot1-in1 | exit=0 | rom=v0.2.1-rc8.runtime.sfc | state=stage-07.mss | END=900 INPUT=1 SHOTEVERY=30
+LOAD ok=true
+F1 SCENE 82D54C stage=12 area0550=EB29 x=87 y=1108
+F1 nogameplay
+F2 S=4 X=255 nutz=6 ok=false foreignOnX=0 shared=false pend=01 ready=0 passes=0
+ARES transplant at F2
+F3 S=4 X=6 nutz=6 ok=false foreignOnX=0 shared=false pend=DC ready=1 passes=1
+F4 S=4 X=6 nutz=12 ok=false foreignOnX=0 shared=false pend=DC ready=1 passes=1
+SHOT f0030 -> output\traces\cw-slot1-in1/f0030.png
+SHOT f0060 -> output\traces\cw-slot1-in1/f0060.png
+SHOT f0090 -> output\traces\cw-slot1-in1/f0090.png
+SHOT f0120 -> output\traces\cw-slot1-in1/f0120.png
+SHOT f0150 -> output\traces\cw-slot1-in1/f0150.png
+SHOT f0180 -> output\traces\cw-slot1-in1/f0180.png
+SHOT f0210 -> output\traces\cw-slot1-in1/f0210.png
+SHOT f0240 -> output\traces\cw-slot1-in1/f0240.png
+SHOT f0270 -> output\traces\cw-slot1-in1/f0270.png
+SHOT f0300 -> output\traces\cw-slot1-in1/f0300.png
+SHOT f0330 -> output\traces\cw-slot1-in1/f0330.png
+SHOT f0360 -> output\traces\cw-slot1-in1/f0360.png
+SHOT f0390 -> output\traces\cw-slot1-in1/f0390.png
+SHOT f0420 -> output\traces\cw-slot1-in1/f0420.png
+SHOT f0450 -> output\traces\cw-slot1-in1/f0450.png
+SHOT f0480 -> output\traces\cw-slot1-in1/f0480.png
+SHOT f0510 -> output\traces\cw-slot1-in1/f0510.png
+SHOT f0540 -> output\traces\cw-slot1-in1/f0540.png
+SHOT f0570 -> output\traces\cw-slot1-in1/f0570.png
+SHOT f0600 -> output\traces\cw-slot1-in1/f0600.png
+SHOT f0630 -> output\traces\cw-slot1-in1/f0630.png
+SHOT f0660 -> output\traces\cw-slot1-in1/f0660.png
+SHOT f0690 -> output\traces\cw-slot1-in1/f0690.png
+SHOT f0720 -> output\traces\cw-slot1-in1/f0720.png
+SHOT f0750 -> output\traces\cw-slot1-in1/f0750.png
+SHOT f0780 -> output\traces\cw-slot1-in1/f0780.png
+SHOT f0810 -> output\traces\cw-slot1-in1/f0810.png
+SHOT f0840 -> output\traces\cw-slot1-in1/f0840.png
+SHOT f0870 -> output\traces\cw-slot1-in1/f0870.png
+RESULT visible=899 ok=0 bad=899
+SHOT f0900 -> output\traces\cw-slot1-in1/f0900.png

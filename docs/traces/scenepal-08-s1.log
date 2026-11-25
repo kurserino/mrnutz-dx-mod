@@ -1,0 +1,19 @@
+# scenepal-08-s1 | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-08.mss | SEED=1 END=2400
+LOAD ok=true
+F2 other sprites start using palette 3
+F2 other sprites start using palette 5
+F2 other sprites start using palette 6
+F2 other sprites start using palette 7
+F2 tiles<$50 on palette 4
+F2 MATH enabled=32 addSub=true halve=false subtract=false sub=0
+F20 other sprites start using palette 4
+SHOT f0300 -> output\traces\scenepal-08-s1/f0300.png
+SHOT f0600 -> output\traces\scenepal-08-s1/f0600.png
+F829 other sprites start using palette 2
+SHOT f0900 -> output\traces\scenepal-08-s1/f0900.png
+F1112 tiles<$50 on palette 1
+SHOT f1200 -> output\traces\scenepal-08-s1/f1200.png
+SHOT f1500 -> output\traces\scenepal-08-s1/f1500.png
+SHOT f1800 -> output\traces\scenepal-08-s1/f1800.png
+SHOT f2100 -> output\traces\scenepal-08-s1/f2100.png
+RESULT other palettes: 2,3,4,5,6,7

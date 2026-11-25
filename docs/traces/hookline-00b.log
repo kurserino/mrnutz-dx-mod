@@ -1,0 +1,110 @@
+# hookline-00b | exit=0 | rom=v0.2.1-rc8.runtime.sfc | state=stage-00.mss | FROM=516 TO=596
+LOAD ok=true
+F516 hookLines=[] scanPos=96 passes=1 ready=1 X=5 0026=0000
+F516 inidisp=80 nmi4200=? 
+F517 hookLines=[] scanPos=96 passes=1 ready=1 X=5 0026=0000
+F518 hookLines=[] scanPos=96 passes=1 ready=1 X=5 0026=0000
+F519 hookLines=[246] scanPos=12 passes=0 ready=0 X=255 0026=0000
+SHOT t0516 -> output\traces\hookline-00b/t0516.png
+F520 hookLines=[0] scanPos=12 passes=0 ready=0 X=255 0026=0024
+F521 hookLines=[255] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F522 hookLines=[0] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F522 inidisp=0F nmi4200=? 
+F523 hookLines=[4] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F524 hookLines=[12] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F525 hookLines=[15] scanPos=16 passes=0 ready=0 X=255 0026=0024
+SHOT t0522 -> output\traces\hookline-00b/t0522.png
+F526 hookLines=[21] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F527 hookLines=[27] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F528 hookLines=[34] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F528 inidisp=0F nmi4200=? 
+F529 hookLines=[38] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F530 hookLines=[44] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F531 hookLines=[50] scanPos=16 passes=0 ready=0 X=255 0026=0024
+SHOT t0528 -> output\traces\hookline-00b/t0528.png
+F532 hookLines=[57] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F533 hookLines=[61] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F534 hookLines=[66] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F534 inidisp=0F nmi4200=? 
+F535 hookLines=[83] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F536 hookLines=[79] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F537 hookLines=[82] scanPos=16 passes=0 ready=0 X=255 0026=0024
+SHOT t0534 -> output\traces\hookline-00b/t0534.png
+F538 hookLines=[88] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F539 hookLines=[93] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F540 hookLines=[100] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F540 inidisp=0F nmi4200=? 
+F541 hookLines=[104] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F542 hookLines=[109] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F543 hookLines=[115] scanPos=16 passes=0 ready=0 X=255 0026=0024
+SHOT t0540 -> output\traces\hookline-00b/t0540.png
+F544 hookLines=[122] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F545 hookLines=[125] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F546 hookLines=[131] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F546 inidisp=0F nmi4200=? 
+F547 hookLines=[136] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F548 hookLines=[143] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F549 hookLines=[147] scanPos=16 passes=0 ready=0 X=255 0026=0024
+SHOT t0546 -> output\traces\hookline-00b/t0546.png
+F550 hookLines=[165] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F551 hookLines=[158] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F552 hookLines=[165] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F552 inidisp=0F nmi4200=? 
+F553 hookLines=[169] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F554 hookLines=[174] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F555 hookLines=[180] scanPos=16 passes=0 ready=0 X=255 0026=0024
+SHOT t0552 -> output\traces\hookline-00b/t0552.png
+F556 hookLines=[164] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F557 hookLines=[167] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F558 hookLines=[172] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F558 inidisp=0F nmi4200=? 
+F559 hookLines=[164] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F560 hookLines=[157] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F561 hookLines=[149] scanPos=16 passes=0 ready=0 X=255 0026=0024
+SHOT t0558 -> output\traces\hookline-00b/t0558.png
+F562 hookLines=[146] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F563 hookLines=[143] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F564 hookLines=[142] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F564 inidisp=0F nmi4200=? 
+F565 hookLines=[151] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F566 hookLines=[137] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F567 hookLines=[136] scanPos=16 passes=0 ready=0 X=255 0026=0024
+SHOT t0564 -> output\traces\hookline-00b/t0564.png
+F568 hookLines=[136] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F569 hookLines=[134] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F570 hookLines=[133] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F570 inidisp=0F nmi4200=? 
+F571 hookLines=[133] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F572 hookLines=[133] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F573 hookLines=[130] scanPos=16 passes=0 ready=0 X=255 0026=0024
+SHOT t0570 -> output\traces\hookline-00b/t0570.png
+F574 hookLines=[130] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F575 hookLines=[130] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F576 hookLines=[131] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F576 inidisp=0F nmi4200=? 
+F577 hookLines=[129] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F578 hookLines=[128] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F579 hookLines=[129] scanPos=16 passes=0 ready=0 X=255 0026=0024
+SHOT t0576 -> output\traces\hookline-00b/t0576.png
+F580 hookLines=[143] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F581 hookLines=[128] scanPos=16 passes=0 ready=0 X=255 0026=0024
+F582 hookLines=[233] scanPos=32 passes=0 ready=0 X=255 0026=0024
+F582 inidisp=0F nmi4200=? 
+F583 hookLines=[233] scanPos=48 passes=0 ready=0 X=255 0026=0024
+F584 hookLines=[234] scanPos=64 passes=0 ready=0 X=255 0026=0024
+F585 hookLines=[233] scanPos=80 passes=0 ready=0 X=255 0026=0024
+SHOT t0582 -> output\traces\hookline-00b/t0582.png
+F586 hookLines=[233] scanPos=96 passes=0 ready=0 X=255 0026=0024
+F587 hookLines=[233] scanPos=112 passes=0 ready=0 X=255 0026=0024
+F588 hookLines=[234] scanPos=0 passes=1 ready=1 X=5 0026=0024
+F588 inidisp=0F nmi4200=? 
+F589 hookLines=[236] scanPos=16 passes=1 ready=1 X=5 0026=0024
+F590 hookLines=[233] scanPos=32 passes=1 ready=1 X=5 0026=0024
+F591 hookLines=[233] scanPos=48 passes=1 ready=1 X=5 0026=0024
+SHOT t0588 -> output\traces\hookline-00b/t0588.png
+F592 hookLines=[235] scanPos=64 passes=1 ready=1 X=5 0026=0024
+F593 hookLines=[233] scanPos=80 passes=1 ready=1 X=5 0026=0024
+F594 hookLines=[233] scanPos=96 passes=1 ready=1 X=5 0026=0024
+F594 inidisp=0F nmi4200=? 
+F595 hookLines=[244] scanPos=112 passes=1 ready=1 X=5 0026=0024
+F596 hookLines=[235] scanPos=0 passes=1 ready=1 X=5 0026=0024

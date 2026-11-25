@@ -1,0 +1,49 @@
+# cwstart-09 | exit=0 | rom=v0.2.1-rc8.runtime.sfc | state=stage-09.mss | END=240 SAVEFUR=1 SHOTEVERY=1000
+LOAD ok=true
+F1 SCENE 82D60C stage=1A area0550=EB29 x=960 y=644
+F1 nogameplay
+F2 S=0 X=255 nutz=6 ok=false foreignOnX=0 shared=false pend=01 ready=0 passes=0
+F8 S=0 X=1 nutz=6 ok=false foreignOnX=0 shared=false pend=01 ready=1 passes=1
+F9 FIRSTOK 8 frames after scene change
+F9 S=0 X=1 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F9 XCOLOUR slot1 entry1 001F->03E0
+F9 XCOLOUR slot1 entry2 18C6->5A52
+F9 XCOLOUR slot1 entry3 318C->6AD6
+F9 XCOLOUR slot1 entry4 0014->7B5A
+F9 XCOLOUR slot1 entry5 0010->7BDE
+F9 XCOLOUR slot1 entry6 001C->031A
+F9 XCOLOUR slot1 entry7 0004->0292
+F9 XCOLOUR slot1 entry8 0088->018A
+F9 XCOLOUR slot1 entry9 010C->00C8
+F9 XCOLOUR slot1 entry10 0190->0000
+F9 XCOLOUR slot1 entry11 0214->104B
+F9 XCOLOUR slot1 entry12 0298->2091
+F9 XCOLOUR slot1 entry13 031C->2CF8
+F9 XCOLOUR slot1 entry14 339C->3D5F
+F9 XCOLOUR slot1 entry15 7BDE->5A7F
+F10 XCOLOUR slot1 entry1 03E0->001F
+F11 XCOLOUR slot1 entry1 001F->03FF
+F12 XCOLOUR slot1 entry1 03FF->001F
+F13 XCOLOUR slot1 entry1 001F->03E0
+F14 XCOLOUR slot1 entry1 03E0->001F
+F15 XCOLOUR slot1 entry1 001F->03FF
+F16 XCOLOUR slot1 entry1 03FF->001F
+F17 XCOLOUR slot1 entry1 001F->03E0
+F18 XCOLOUR slot1 entry1 03E0->001F
+F19 XCOLOUR slot1 entry1 001F->03FF
+F20 XCOLOUR slot1 entry1 03FF->001F
+F21 XCOLOUR slot1 entry1 001F->03E0
+F22 XCOLOUR slot1 entry1 03E0->001F
+F23 XCOLOUR slot1 entry1 001F->03FF
+F24 XCOLOUR slot1 entry1 03FF->001F
+F25 XCOLOUR slot1 entry1 001F->03E0
+F26 XCOLOUR slot1 entry1 03E0->001F
+F27 XCOLOUR slot1 entry1 001F->03FF
+F28 XCOLOUR slot1 entry1 03FF->001F
+F29 XCOLOUR slot1 entry1 001F->03E0
+F30 XCOLOUR slot1 entry1 03E0->001F
+F31 XCOLOUR slot1 entry1 001F->03FF
+F32 XCOLOUR slot1 entry1 03FF->001F
+F33 XCOLOUR slot1 entry1 001F->03E0
+F34 XCOLOUR slot1 entry1 03E0->001F
+RESULT visible=239 ok=232 bad=7

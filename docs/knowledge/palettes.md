@@ -48,6 +48,11 @@ Roles confirmed by colouring one entry at a time and capturing Mr. Nutz standing
 
 - Direct `$2121/$2122`: `$81:8F65` (inside anti-copier check C's fall-through, see `protection.md`), `$82:813C`,
   `$81:C3F3-$81:C404`, `$8B:FCC1` [static, not analysed].
+- **Animated sprite palette 1:** `$81:C3E8` runs every gameplay frame right after the OAM upload. While the word
+  `[$13BC]` is non-zero it writes CGRAM `$91` (sprite palette 1, entry 1) from the table it points to (`$13BC` cycles
+  `$960D/$960F/$9611/$9613`; colours `$001F`, `$03E0`, `$03FF`). `$13BC` was non-zero in every stage state
+  `stage-00..30` [static + trace] `cgw-slot2b.log`, `cgadsub-*.log`, `cw-slot2-0.log`. The private slot must never be
+  palette 1.
 - HDMA to `$2122` set up at `$9D:B9AE`, `$9D:B9E8`, `$9D:BE0E`, `$9D:CAC9`, `$9D:DC8B`, `$9D:EA28`, `$9D:EA62`.
   `$9D:B997` writes CGADD `$00` (backdrop) through the indirect table `$82:E4AA` [static; hypothesis: sky gradient].
 - **Water:** the blue tint underwater is a scene effect; Mr. Nutz keeps OAM palette 4 (octopus uses 5). Dying in
@@ -66,8 +71,12 @@ uses a private slot (`mod-implementation.md`).
   in the **same group** as his scene slot, or he would look different (translucency) [trace] `sweep-colormath.log`.
 - `$2131` (colour math control) is write-only and the game writes it from constants (no WRAM copy, `$85:939C`)
   [static].
-- On the spider boss, sprite colour math is off, so a slot from group 0-3 would look the same there. Using it would
-  need a list of validated scenes — not done.
+- Scenes where sprite colour math is never on (CGADSUB bit 4 off), measured over 2400 frames with Mesen's PPU state
+  (`scene-palettes.lua`): witch fight, scene table `$82:D58C` (`$2131 = $20`, backdrop only) [trace]
+  `scenepal-08-s1.log`; spider stage, `$82:D620` (`$00`, then `$2F` = BG1-4 + backdrop) [trace] `scenepal-04-s1.log`.
+  There a slot of the other group looks the same; the hook lists them in `CROSS_GROUP_SCENES` (`src/runtime.ts`).
+- `$2131` writers: `$85:939C` (scene init; `$20` in the witch fight) [trace] `cgadsub-08.log`; other constant writers
+  in `frame-cycle.md` [static].
 
 ## Scenes without a free slot
 
@@ -77,9 +86,13 @@ visible) [trace] `sweep-all.log`:
 
 | Stage state | Scene | Coloured |
 | --- | --- | --- |
-| `stage-04` | spider boss (Woody Land 5) | 45.3% |
-| `stage-08` | witch boss (picture frame) | 0.0% |
+| `stage-04` | spider boss (Woody Land 5) | 45.3% in v0.2.0; 99.8% since fix-private-slot-choice |
+| `stage-08` | witch boss (picture frame) | 0.0% in v0.2.0; 100% since fix-private-slot-choice (slot 0) |
 | every other stage | | ≥ 99% |
+
+Both boss scenes now use the other colour-math group (see above). In the witch fight palette 0 also looked busy:
+40 high-OAM entries hold the game's cleared pattern y = tile = attr = `$E0`, and attr `$E0` reads as palette 0. The hook
+skips that exact pattern [trace] `oamdump-08.log`.
 
 Screens without gameplay (intros, "Stage Clear", continue map, final screen) always show the original colours: the
 hook only runs during gameplay.

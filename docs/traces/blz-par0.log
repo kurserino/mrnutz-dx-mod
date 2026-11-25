@@ -1,0 +1,54 @@
+# blz-par0 | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-21.mss | SEED=1 END=9000 INFJUMP=1 PAR=2115613952
+LOAD ok=true
+ADDCHEAT 7E19B500 ok=true nil
+F600 hp19A3=30 bar1ED4=5 x=248 y=260
+SHOT f00600 -> output\traces\blz-par0/f00600.png
+F1200 hp19A3=30 bar1ED4=5 x=165 y=260
+SHOT f01200 -> output\traces\blz-par0/f01200.png
+F1800 hp19A3=30 bar1ED4=5 x=6 y=260
+SHOT f01800 -> output\traces\blz-par0/f01800.png
+F2400 hp19A3=30 bar1ED4=5 x=172 y=260
+SHOT f02400 -> output\traces\blz-par0/f02400.png
+F2969 REQUEST 82D4
+F2969 REQUEST 0000
+SHOT req2969 -> output\traces\blz-par0/req2969.png
+SHOT req2969 -> output\traces\blz-par0/req2969.png
+F3000 hp19A3=30 bar1ED4=5 x=96 y=0
+SHOT f03000 -> output\traces\blz-par0/f03000.png
+F3136 REQUEST 0000
+SHOT req3136 -> output\traces\blz-par0/req3136.png
+F3600 hp19A3=0 bar1ED4=5 x=101 y=206
+SHOT f03600 -> output\traces\blz-par0/f03600.png
+F4083 REQUEST 82D4
+SHOT req4083 -> output\traces\blz-par0/req4083.png
+F4200 hp19A3=58 bar1ED4=5 x=96 y=0
+SHOT f04200 -> output\traces\blz-par0/f04200.png
+F4237 REQUEST 0000
+SHOT req4237 -> output\traces\blz-par0/req4237.png
+F4243 REQUEST 82D4
+F4243 REQUEST 0000
+SHOT req4243 -> output\traces\blz-par0/req4243.png
+SHOT req4243 -> output\traces\blz-par0/req4243.png
+F4717 REQUEST 82D4
+SHOT req4717 -> output\traces\blz-par0/req4717.png
+F4800 hp19A3=52 bar1ED4=5 x=96 y=0
+SHOT f04800 -> output\traces\blz-par0/f04800.png
+F4843 REQUEST 0000
+SHOT req4843 -> output\traces\blz-par0/req4843.png
+F5400 hp19A3=52 bar1ED4=5 x=32 y=588
+SHOT f05400 -> output\traces\blz-par0/f05400.png
+F6000 hp19A3=52 bar1ED4=5 x=65534 y=588
+SHOT f06000 -> output\traces\blz-par0/f06000.png
+F6600 hp19A3=52 bar1ED4=5 x=399 y=370
+SHOT f06600 -> output\traces\blz-par0/f06600.png
+F7200 hp19A3=52 bar1ED4=5 x=1001 y=350
+SHOT f07200 -> output\traces\blz-par0/f07200.png
+F7800 hp19A3=52 bar1ED4=5 x=1218 y=135
+SHOT f07800 -> output\traces\blz-par0/f07800.png
+F8400 hp19A3=52 bar1ED4=5 x=692 y=375
+SHOT f08400 -> output\traces\blz-par0/f08400.png
+F9000 hp19A3=52 bar1ED4=5 x=556 y=100
+CAND $0BAC drops=2 156>149>147
+CAND $19A7 drops=2 170>142>136
+RESULT done
+SHOT f09000 -> output\traces\blz-par0/f09000.png

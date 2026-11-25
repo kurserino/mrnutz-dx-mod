@@ -1,0 +1,13 @@
+# blz-par-probe | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-21.mss | END=120 PAR=2115613953
+LOAD ok=true
+ADDCHEAT 7E19B501 ok=true nil
+CAND $009B drops=3 80>4>1>0
+CAND $0267 drops=2 80>16>0
+CAND $154F drops=2 39>37>35
+CAND $1551 drops=2 39>37>35
+CAND $1557 drops=2 87>83>79
+CAND $1559 drops=2 87>83>79
+CAND $156B drops=2 189>187>185
+CAND $156D drops=2 189>187>185
+CAND $199F drops=5 48>38>28>18>8>0
+RESULT done

@@ -1,0 +1,57 @@
+# rc9-skip-02 | exit=0 | rom=v0.2.1-rc9.runtime.sfc | state=stage-02.mss | END=700 SAVEFUR=1 INPUT=5 SHOTEVERY=1000
+LOAD ok=true
+F1 SCENE 82D4EC stage=04 area0550=E92A x=84 y=740
+F1 nogameplay
+F2 S=4 X=255 nutz=6 ok=false foreignOnX=0 shared=false pend=01 ready=0 passes=0
+F9 S=4 X=5 nutz=6 ok=false foreignOnX=0 shared=false pend=01 ready=1 passes=1
+F10 FIRSTOK 9 frames after scene change
+F10 S=4 X=5 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F10 XCOLOUR slot5 entry1 0300->49CE
+F10 XCOLOUR slot5 entry2 0280->5A52
+F10 XCOLOUR slot5 entry3 2BCA->6AD6
+F10 XCOLOUR slot5 entry4 5280->7B5A
+F10 XCOLOUR slot5 entry5 7BCA->7BDE
+F10 XCOLOUR slot5 entry6 0180->031A
+F10 XCOLOUR slot5 entry7 0100->0292
+F10 XCOLOUR slot5 entry8 0080->018A
+F10 XCOLOUR slot5 entry9 5294->00C8
+F10 XCOLOUR slot5 entry10 0200->0000
+F10 XCOLOUR slot5 entry11 4A40->104B
+F10 XCOLOUR slot5 entry12 4200->2091
+F10 XCOLOUR slot5 entry13 6B40->2CF8
+F10 XCOLOUR slot5 entry14 00C0->3D5F
+F10 XCOLOUR slot5 entry15 7FFF->5A7F
+F63 nogameplay
+F65 SCENE 82D4AC stage=06 area0550=E92A x=96 y=0
+F438 SCENE 82D50C stage=06 area0550=E92A x=952 y=84
+F447 S=4 X=255 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=0 passes=0
+F448 S=4 X=255 nutz=6 ok=false foreignOnX=0 shared=false pend=00 ready=0 passes=0
+F454 S=4 X=5 nutz=6 ok=false foreignOnX=0 shared=false pend=01 ready=1 passes=1
+F454 XCOLOUR slot5 entry1 49CE->0300
+F454 XCOLOUR slot5 entry2 5A52->0280
+F454 XCOLOUR slot5 entry3 6AD6->2BCA
+F454 XCOLOUR slot5 entry4 7B5A->5280
+F454 XCOLOUR slot5 entry5 7BDE->7BCA
+F454 XCOLOUR slot5 entry6 031A->0180
+F454 XCOLOUR slot5 entry7 0292->0100
+F454 XCOLOUR slot5 entry8 018A->0080
+F454 XCOLOUR slot5 entry9 00C8->5294
+F454 XCOLOUR slot5 entry10 0000->0200
+F454 XCOLOUR slot5 entry11 104B->4A40
+F454 XCOLOUR slot5 entry12 2091->4200
+F454 XCOLOUR slot5 entry13 2CF8->6B40
+F454 XCOLOUR slot5 entry14 3D5F->00C0
+F454 XCOLOUR slot5 entry15 5A7F->7FFF
+F455 FIRSTOK 17 frames after scene change
+F455 S=4 X=5 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F455 XCOLOUR slot5 entry1 0300->49CE
+F455 XCOLOUR slot5 entry2 0280->5A52
+F455 XCOLOUR slot5 entry3 2BCA->6AD6
+F455 XCOLOUR slot5 entry4 5280->7B5A
+F455 XCOLOUR slot5 entry5 7BCA->7BDE
+F455 XCOLOUR slot5 entry6 0180->031A
+F455 XCOLOUR slot5 entry7 0100->0292
+F455 XCOLOUR slot5 entry8 0080->018A
+F455 XCOLOUR slot5 entry9 5294->00C8
+F455 XCOLOUR slot5 entry10 0200->0000
+RESULT visible=314 ok=299 bad=15

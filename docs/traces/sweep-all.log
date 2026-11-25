@@ -1,14 +1,14 @@
-# sweep-all | 40 stages | jobs=6 | 447 s
+# sweep-all | 40 stages | jobs=6 | 351 s
 stage-00 ok nutzColoured=100.0% gameplay=795 nutzFrames=751 lostMax=0 sharedChanged=0 foreignOnX=0 hdmaLate=0 hdmaMaxLine=246 ppuOut=0 flash=0 slotSwitch=0 noSlot=0 slots(S/X)=4/5 idx=2/3
 stage-01 ok nutzColoured=100.0% gameplay=795 nutzFrames=707 lostMax=0 sharedChanged=0 foreignOnX=0 hdmaLate=0 hdmaMaxLine=247 ppuOut=0 flash=0 slotSwitch=0 noSlot=0 slots(S/X)=4/5 idx=2/3
 stage-02 ok nutzColoured=99.8% gameplay=587 nutzFrames=498 lostMax=1 sharedChanged=0 foreignOnX=0 hdmaLate=0 hdmaMaxLine=246 ppuOut=0 flash=0 slotSwitch=0 noSlot=0 slots(S/X)=4/5 idx=2/3
 stage-03 ok nutzColoured=100.0% gameplay=795 nutzFrames=795 lostMax=0 sharedChanged=0 foreignOnX=0 hdmaLate=0 hdmaMaxLine=247 ppuOut=0 flash=0 slotSwitch=0 noSlot=0 slots(S/X)=4/5 idx=2/3
-stage-04 ok nutzColoured=45.3% gameplay=860 nutzFrames=860 lostMax=469 sharedChanged=0 foreignOnX=0 hdmaLate=0 hdmaMaxLine=253 ppuOut=0 flash=0 slotSwitch=0 noSlot=0 slots(S/X)=4/255,4/5,4/7 idx=2/3
+stage-04 ok nutzColoured=99.8% gameplay=860 nutzFrames=860 lostMax=1 sharedChanged=0 foreignOnX=0 hdmaLate=0 hdmaMaxLine=253 ppuOut=0 flash=0 slotSwitch=0 noSlot=0 slots(S/X)=4/3,4/5,4/7 idx=2/3
 stage-05 ok nutzColoured=100.0% gameplay=795 nutzFrames=707 lostMax=0 sharedChanged=0 foreignOnX=0 hdmaLate=0 hdmaMaxLine=249 ppuOut=0 flash=0 slotSwitch=0 noSlot=0 slots(S/X)=4/5 idx=2/3
 stage-06 ok nutzColoured=100.0% gameplay=623 nutzFrames=622 lostMax=0 sharedChanged=0 foreignOnX=0 hdmaLate=0 hdmaMaxLine=247 ppuOut=0 flash=0 slotSwitch=0 noSlot=0 slots(S/X)=4/5 idx=2/3
 stage-07 ok nutzColoured=100.0% gameplay=795 nutzFrames=709 lostMax=0 sharedChanged=0 foreignOnX=0 hdmaLate=0 hdmaMaxLine=251 ppuOut=0 flash=0 slotSwitch=0 noSlot=0 slots(S/X)=4/5 idx=2/3
-stage-08 ok nutzColoured=0.0% gameplay=795 nutzFrames=707 lostMax=707 sharedChanged=0 foreignOnX=0 hdmaLate=0 hdmaMaxLine=249 ppuOut=0 flash=0 slotSwitch=0 noSlot=0 slots(S/X)=4/255 idx=2/3
-stage-09 ok nutzColoured=100.0% gameplay=795 nutzFrames=795 lostMax=0 sharedChanged=0 foreignOnX=0 hdmaLate=0 hdmaMaxLine=245 ppuOut=0 flash=0 slotSwitch=0 noSlot=0 slots(S/X)=0/1 idx=2/3
+stage-08 ok nutzColoured=100.0% gameplay=795 nutzFrames=707 lostMax=0 sharedChanged=0 foreignOnX=0 hdmaLate=0 hdmaMaxLine=249 ppuOut=0 flash=0 slotSwitch=0 noSlot=0 slots(S/X)=4/0 idx=2/3
+stage-09 ok nutzColoured=100.0% gameplay=795 nutzFrames=795 lostMax=0 sharedChanged=0 foreignOnX=0 hdmaLate=0 hdmaMaxLine=245 ppuOut=0 flash=0 slotSwitch=0 noSlot=0 slots(S/X)=0/2 idx=2/3
 stage-10 ok nutzColoured=100.0% gameplay=795 nutzFrames=752 lostMax=0 sharedChanged=0 foreignOnX=0 hdmaLate=0 hdmaMaxLine=245 ppuOut=0 flash=0 slotSwitch=0 noSlot=0 slots(S/X)=4/5 idx=2/3
 stage-11 ok nutzColoured=100.0% gameplay=795 nutzFrames=795 lostMax=0 sharedChanged=0 foreignOnX=0 hdmaLate=0 hdmaMaxLine=247 ppuOut=0 flash=0 slotSwitch=0 noSlot=0 slots(S/X)=4/5 idx=2/3
 stage-12 ok nutzColoured=100.0% gameplay=795 nutzFrames=708 lostMax=0 sharedChanged=0 foreignOnX=0 hdmaLate=0 hdmaMaxLine=248 ppuOut=0 flash=0 slotSwitch=0 noSlot=0 slots(S/X)=4/5 idx=2/3
@@ -18,7 +18,7 @@ stage-15 ok nutzColoured=99.9% gameplay=795 nutzFrames=795 lostMax=1 sharedChang
 stage-16 ok nutzColoured=100.0% gameplay=690 nutzFrames=601 lostMax=0 sharedChanged=0 foreignOnX=0 hdmaLate=0 hdmaMaxLine=247 ppuOut=0 flash=0 slotSwitch=0 noSlot=0 slots(S/X)=4/5 idx=2/3
 stage-17 ok nutzColoured=99.9% gameplay=795 nutzFrames=752 lostMax=1 sharedChanged=0 foreignOnX=0 hdmaLate=0 hdmaMaxLine=248 ppuOut=0 flash=0 slotSwitch=0 noSlot=0 slots(S/X)=4/5,4/6 idx=2/3
 stage-18 ok nutzColoured=100.0% gameplay=795 nutzFrames=708 lostMax=0 sharedChanged=0 foreignOnX=0 hdmaLate=0 hdmaMaxLine=248 ppuOut=0 flash=0 slotSwitch=0 noSlot=0 slots(S/X)=4/5 idx=2/3
-stage-19 ok nutzColoured=99.7% gameplay=396 nutzFrames=393 lostMax=1 sharedChanged=0 foreignOnX=0 hdmaLate=0 hdmaMaxLine=246 ppuOut=0 flash=0 slotSwitch=0 noSlot=0 slots(S/X)=4/5 idx=2/3
+stage-19 ok nutzColoured=99.2% gameplay=396 nutzFrames=393 lostMax=1 sharedChanged=0 foreignOnX=0 hdmaLate=0 hdmaMaxLine=246 ppuOut=0 flash=0 slotSwitch=0 noSlot=0 slots(S/X)=4/5 idx=2/3
 stage-20 ok nutzColoured=100.0% gameplay=746 nutzFrames=659 lostMax=0 sharedChanged=0 foreignOnX=0 hdmaLate=0 hdmaMaxLine=246 ppuOut=0 flash=0 slotSwitch=0 noSlot=0 slots(S/X)=4/5 idx=2/3
 stage-21 ok nutzColoured=100.0% gameplay=795 nutzFrames=795 lostMax=0 sharedChanged=0 foreignOnX=0 hdmaLate=0 hdmaMaxLine=246 ppuOut=0 flash=0 slotSwitch=0 noSlot=0 slots(S/X)=4/5 idx=2/3
 stage-22 ok nutzColoured=100.0% gameplay=795 nutzFrames=707 lostMax=0 sharedChanged=0 foreignOnX=0 hdmaLate=0 hdmaMaxLine=253 ppuOut=0 flash=0 slotSwitch=0 noSlot=0 slots(S/X)=4/5 idx=2/3
@@ -29,7 +29,7 @@ stage-26 ok nutzColoured=100.0% gameplay=795 nutzFrames=751 lostMax=0 sharedChan
 stage-27 ok nutzColoured=100.0% gameplay=795 nutzFrames=700 lostMax=0 sharedChanged=0 foreignOnX=0 hdmaLate=0 hdmaMaxLine=246 ppuOut=0 flash=0 slotSwitch=0 noSlot=0 slots(S/X)=4/5 idx=2/3
 stage-28 ok nutzColoured=100.0% gameplay=795 nutzFrames=717 lostMax=0 sharedChanged=0 foreignOnX=0 hdmaLate=0 hdmaMaxLine=246 ppuOut=0 flash=0 slotSwitch=0 noSlot=0 slots(S/X)=4/5 idx=2/3
 stage-29 ok nutzColoured=100.0% gameplay=707 nutzFrames=619 lostMax=0 sharedChanged=0 foreignOnX=0 hdmaLate=0 hdmaMaxLine=247 ppuOut=0 flash=0 slotSwitch=0 noSlot=0 slots(S/X)=4/5 idx=2/3
-stage-30 ok nutzColoured=100.0% gameplay=455 nutzFrames=453 lostMax=0 sharedChanged=0 foreignOnX=0 hdmaLate=0 hdmaMaxLine=248 ppuOut=0 flash=0 slotSwitch=0 noSlot=0 slots(S/X)=4/5 idx=2/3
+stage-30 ok nutzColoured=99.6% gameplay=455 nutzFrames=453 lostMax=1 sharedChanged=0 foreignOnX=0 hdmaLate=0 hdmaMaxLine=248 ppuOut=0 flash=0 slotSwitch=0 noSlot=0 slots(S/X)=4/5 idx=2/3
 stage-31 ok nutzColoured=100.0% gameplay=860 nutzFrames=860 lostMax=0 sharedChanged=0 foreignOnX=0 hdmaLate=0 hdmaMaxLine=248 ppuOut=0 flash=0 slotSwitch=0 noSlot=0 slots(S/X)=4/5 idx=2/3
 stage-32 ok nutzColoured=100.0% gameplay=860 nutzFrames=860 lostMax=0 sharedChanged=0 foreignOnX=0 hdmaLate=0 hdmaMaxLine=249 ppuOut=0 flash=0 slotSwitch=0 noSlot=0 slots(S/X)=4/6 idx=2/3
 stage-33 ok nutzColoured=99.9% gameplay=860 nutzFrames=860 lostMax=1 sharedChanged=0 foreignOnX=0 hdmaLate=0 hdmaMaxLine=251 ppuOut=0 flash=0 slotSwitch=0 noSlot=0 slots(S/X)=4/5,4/6 idx=2/3
@@ -47,11 +47,11 @@ persist (stage-03): RESULT checks=6 fails=0
   PERSIST warp-8 frame=5442 idx=2/3 S=4 X=5 nutz=6 ok=true
   PERSIST after-reset frame=7435 idx=2/3 S=4 X=5 nutz=6 ok=true
 power-cycle: fails=0
-  ok   1 fresh boot is original: CHECK boot frame=1935 idx=0/0 X=255 nutz=6 nutzOk=false noSlot=nil sharedChanged=false sram=6BCDA43F64056545
+  ok   1 fresh boot is original: CHECK boot frame=1935 idx=0/0 X=255 nutz=6 nutzOk=false noSlot=nil sharedChanged=false sram=39387A93C11CA4B5
   ok   1 selection applied: CHECK selected frame=2055 idx=2/3 X=5 nutz=6 nutzOk=true noSlot=nil sharedChanged=false sram=4E5A01020300ADA3
   ok   1 save file holds the record: srm=4E5A01020300ADA3 expected=4E5A01020300ADA3
   ok   2 power-on restores 2/3: CHECK boot frame=1935 idx=2/3 X=5 nutz=6 nutzOk=true noSlot=nil sharedChanged=false sram=4E5A01020300ADA3
   ok   2 restored colours in every stage after the power-on (10 skips, next world): 10/10 gameplay stages ok
   ok   3 corrupted record falls back to 0/0: CHECK boot frame=1935 idx=0/0 X=255 nutz=6 nutzOk=false noSlot=nil sharedChanged=false sram=4E5A01020300ADF6
   ok   4 out-of-range fur falls back to 0, outfit kept: CHECK boot frame=1935 idx=0/1 X=5 nutz=6 nutzOk=true noSlot=nil sharedChanged=false sram=4E5A01090100AF9C
-summary: violations=0; Mr. Nutz kept original colours (no free slot) in: stage-04 (45.3%), stage-08 (0.0%)
+summary: violations=0; Mr. Nutz kept original colours (no free slot) in: none

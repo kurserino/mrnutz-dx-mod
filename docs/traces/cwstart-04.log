@@ -1,0 +1,28 @@
+# cwstart-04 | exit=0 | rom=v0.2.1-rc8.runtime.sfc | state=stage-04.mss | END=2400 SAVEFUR=1 SHOTEVERY=600
+LOAD ok=true
+F1 SCENE 82D620 stage=08 area0550=E92A x=64 y=372
+F1 nogameplay
+F2 S=4 X=255 nutz=6 ok=false foreignOnX=0 shared=false pend=01 ready=0 passes=0
+F9 S=4 X=5 nutz=6 ok=false foreignOnX=0 shared=false pend=01 ready=1 passes=1
+F10 FIRSTOK 9 frames after scene change
+F10 S=4 X=5 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F10 XCOLOUR slot5 entry1 0004->49CE
+F10 XCOLOUR slot5 entry2 1046->5A52
+F10 XCOLOUR slot5 entry3 184A->6AD6
+F10 XCOLOUR slot5 entry4 208A->7B5A
+F10 XCOLOUR slot5 entry5 288C->7BDE
+F10 XCOLOUR slot5 entry6 38CE->031A
+F10 XCOLOUR slot5 entry7 4110->0292
+F10 XCOLOUR slot5 entry8 4952->018A
+F10 XCOLOUR slot5 entry9 5194->00C8
+F10 XCOLOUR slot5 entry10 59D6->0000
+F10 XCOLOUR slot5 entry11 6218->104B
+F10 XCOLOUR slot5 entry12 6A5A->2091
+F10 XCOLOUR slot5 entry13 729C->2CF8
+F10 XCOLOUR slot5 entry14 7ADE->3D5F
+F10 XCOLOUR slot5 entry15 6B5E->5A7F
+SHOT f0600 -> output\traces\cwstart-04/f0600.png
+SHOT f1200 -> output\traces\cwstart-04/f1200.png
+SHOT f1800 -> output\traces\cwstart-04/f1800.png
+RESULT visible=2399 ok=2391 bad=8
+SHOT f2400 -> output\traces\cwstart-04/f2400.png

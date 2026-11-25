@@ -1,0 +1,8 @@
+# cheat-blzlook7 | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=blz-07.mss | CHEAT=3 INPUT=2 END=60 LOGEVERY=60
+LOAD ok=true
+F1 energy=5 lives=0003 nuts=00 coins=00 r05D0=00 stage=00 x=282 y=1652 gameplay=false
+SHOT f0030 -> output\traces\cheat-blzlook7/f0030.png
+F51 HIT energy 6->5
+F60 energy=5 lives=0003 nuts=00 coins=00 r05D0=00 stage=00 x=400 y=1531 gameplay=true
+RESULT cheat=3 hits=1 deaths=0 jumpPeak=0 end energy=5 lives=0003 nuts=00 coins=00 r05D0=00 stage=00 x=400 y=1531 gameplay=true
+SHOT f0060 -> output\traces\cheat-blzlook7/f0060.png

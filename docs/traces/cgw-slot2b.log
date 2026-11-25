@@ -1,0 +1,5 @@
+# cgw-slot2b | exit=0 | rom=v0.2.1-rc8.runtime.sfc | state=stage-09.mss
+LOAD ok=true
+F1 CGADD=91 pc=81:C3F6
+ARES transplant at F2
+TOTAL CGADD=91 pc=81:C3F6 x119

@@ -1,0 +1,199 @@
+# cwskip-02 | exit=0 | rom=v0.2.1-rc8.runtime.sfc | state=stage-02.mss | END=700 SAVEFUR=1 INPUT=5 FIRSTSHOTS=90 SHOTEVERY=1000
+LOAD ok=true
+F1 SCENE 82D4EC stage=04 area0550=E92A x=84 y=740
+F1 nogameplay
+F2 S=4 X=255 nutz=6 ok=false foreignOnX=0 shared=false pend=01 ready=0 passes=0
+SHOT s0002 -> output\traces\cwskip-02/s0002.png
+SHOT s0003 -> output\traces\cwskip-02/s0003.png
+SHOT s0004 -> output\traces\cwskip-02/s0004.png
+SHOT s0005 -> output\traces\cwskip-02/s0005.png
+F9 S=4 X=5 nutz=6 ok=false foreignOnX=0 shared=false pend=01 ready=1 passes=1
+SHOT s0006 -> output\traces\cwskip-02/s0006.png
+F10 FIRSTOK 9 frames after scene change
+F10 S=4 X=5 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F10 XCOLOUR slot5 entry1 0300->49CE
+F10 XCOLOUR slot5 entry2 0280->5A52
+F10 XCOLOUR slot5 entry3 2BCA->6AD6
+F10 XCOLOUR slot5 entry4 5280->7B5A
+F10 XCOLOUR slot5 entry5 7BCA->7BDE
+F10 XCOLOUR slot5 entry6 0180->031A
+F10 XCOLOUR slot5 entry7 0100->0292
+F10 XCOLOUR slot5 entry8 0080->018A
+F10 XCOLOUR slot5 entry9 5294->00C8
+F10 XCOLOUR slot5 entry10 0200->0000
+F10 XCOLOUR slot5 entry11 4A40->104B
+F10 XCOLOUR slot5 entry12 4200->2091
+F10 XCOLOUR slot5 entry13 6B40->2CF8
+F10 XCOLOUR slot5 entry14 00C0->3D5F
+F10 XCOLOUR slot5 entry15 7FFF->5A7F
+SHOT s0007 -> output\traces\cwskip-02/s0007.png
+SHOT s0008 -> output\traces\cwskip-02/s0008.png
+SHOT s0009 -> output\traces\cwskip-02/s0009.png
+SHOT s0010 -> output\traces\cwskip-02/s0010.png
+SHOT s0011 -> output\traces\cwskip-02/s0011.png
+SHOT s0012 -> output\traces\cwskip-02/s0012.png
+SHOT s0013 -> output\traces\cwskip-02/s0013.png
+SHOT s0014 -> output\traces\cwskip-02/s0014.png
+SHOT s0015 -> output\traces\cwskip-02/s0015.png
+SHOT s0016 -> output\traces\cwskip-02/s0016.png
+SHOT s0017 -> output\traces\cwskip-02/s0017.png
+SHOT s0018 -> output\traces\cwskip-02/s0018.png
+SHOT s0019 -> output\traces\cwskip-02/s0019.png
+SHOT s0020 -> output\traces\cwskip-02/s0020.png
+SHOT s0021 -> output\traces\cwskip-02/s0021.png
+SHOT s0022 -> output\traces\cwskip-02/s0022.png
+SHOT s0023 -> output\traces\cwskip-02/s0023.png
+SHOT s0024 -> output\traces\cwskip-02/s0024.png
+SHOT s0025 -> output\traces\cwskip-02/s0025.png
+SHOT s0026 -> output\traces\cwskip-02/s0026.png
+SHOT s0027 -> output\traces\cwskip-02/s0027.png
+SHOT s0028 -> output\traces\cwskip-02/s0028.png
+SHOT s0029 -> output\traces\cwskip-02/s0029.png
+SHOT s0030 -> output\traces\cwskip-02/s0030.png
+SHOT s0031 -> output\traces\cwskip-02/s0031.png
+SHOT s0032 -> output\traces\cwskip-02/s0032.png
+SHOT s0033 -> output\traces\cwskip-02/s0033.png
+SHOT s0034 -> output\traces\cwskip-02/s0034.png
+SHOT s0035 -> output\traces\cwskip-02/s0035.png
+SHOT s0036 -> output\traces\cwskip-02/s0036.png
+SHOT s0037 -> output\traces\cwskip-02/s0037.png
+SHOT s0038 -> output\traces\cwskip-02/s0038.png
+SHOT s0039 -> output\traces\cwskip-02/s0039.png
+SHOT s0040 -> output\traces\cwskip-02/s0040.png
+SHOT s0041 -> output\traces\cwskip-02/s0041.png
+SHOT s0042 -> output\traces\cwskip-02/s0042.png
+SHOT s0043 -> output\traces\cwskip-02/s0043.png
+SHOT s0044 -> output\traces\cwskip-02/s0044.png
+SHOT s0045 -> output\traces\cwskip-02/s0045.png
+SHOT s0046 -> output\traces\cwskip-02/s0046.png
+SHOT s0047 -> output\traces\cwskip-02/s0047.png
+SHOT s0048 -> output\traces\cwskip-02/s0048.png
+SHOT s0049 -> output\traces\cwskip-02/s0049.png
+SHOT s0050 -> output\traces\cwskip-02/s0050.png
+SHOT s0051 -> output\traces\cwskip-02/s0051.png
+SHOT s0052 -> output\traces\cwskip-02/s0052.png
+SHOT s0053 -> output\traces\cwskip-02/s0053.png
+SHOT s0054 -> output\traces\cwskip-02/s0054.png
+SHOT s0055 -> output\traces\cwskip-02/s0055.png
+SHOT s0056 -> output\traces\cwskip-02/s0056.png
+SHOT s0057 -> output\traces\cwskip-02/s0057.png
+SHOT s0058 -> output\traces\cwskip-02/s0058.png
+SHOT s0059 -> output\traces\cwskip-02/s0059.png
+F63 nogameplay
+SHOT s0060 -> output\traces\cwskip-02/s0060.png
+SHOT s0061 -> output\traces\cwskip-02/s0061.png
+F65 SCENE 82D4AC stage=06 area0550=E92A x=96 y=0
+SHOT s0062 -> output\traces\cwskip-02/s0062.png
+F438 SCENE 82D50C stage=06 area0550=E92A x=952 y=84
+F447 S=4 X=255 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=0 passes=0
+F448 S=4 X=255 nutz=6 ok=false foreignOnX=0 shared=false pend=00 ready=0 passes=0
+SHOT s0447 -> output\traces\cwskip-02/s0447.png
+SHOT s0448 -> output\traces\cwskip-02/s0448.png
+SHOT s0449 -> output\traces\cwskip-02/s0449.png
+SHOT s0450 -> output\traces\cwskip-02/s0450.png
+F454 S=4 X=5 nutz=6 ok=false foreignOnX=0 shared=false pend=01 ready=1 passes=1
+F454 XCOLOUR slot5 entry1 49CE->0300
+F454 XCOLOUR slot5 entry2 5A52->0280
+F454 XCOLOUR slot5 entry3 6AD6->2BCA
+F454 XCOLOUR slot5 entry4 7B5A->5280
+F454 XCOLOUR slot5 entry5 7BDE->7BCA
+F454 XCOLOUR slot5 entry6 031A->0180
+F454 XCOLOUR slot5 entry7 0292->0100
+F454 XCOLOUR slot5 entry8 018A->0080
+F454 XCOLOUR slot5 entry9 00C8->5294
+F454 XCOLOUR slot5 entry10 0000->0200
+F454 XCOLOUR slot5 entry11 104B->4A40
+F454 XCOLOUR slot5 entry12 2091->4200
+F454 XCOLOUR slot5 entry13 2CF8->6B40
+F454 XCOLOUR slot5 entry14 3D5F->00C0
+F454 XCOLOUR slot5 entry15 5A7F->7FFF
+SHOT s0451 -> output\traces\cwskip-02/s0451.png
+F455 FIRSTOK 17 frames after scene change
+F455 S=4 X=5 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F455 XCOLOUR slot5 entry1 0300->49CE
+F455 XCOLOUR slot5 entry2 0280->5A52
+F455 XCOLOUR slot5 entry3 2BCA->6AD6
+F455 XCOLOUR slot5 entry4 5280->7B5A
+F455 XCOLOUR slot5 entry5 7BCA->7BDE
+F455 XCOLOUR slot5 entry6 0180->031A
+F455 XCOLOUR slot5 entry7 0100->0292
+F455 XCOLOUR slot5 entry8 0080->018A
+F455 XCOLOUR slot5 entry9 5294->00C8
+F455 XCOLOUR slot5 entry10 0200->0000
+SHOT s0452 -> output\traces\cwskip-02/s0452.png
+SHOT s0453 -> output\traces\cwskip-02/s0453.png
+SHOT s0454 -> output\traces\cwskip-02/s0454.png
+SHOT s0455 -> output\traces\cwskip-02/s0455.png
+SHOT s0456 -> output\traces\cwskip-02/s0456.png
+SHOT s0457 -> output\traces\cwskip-02/s0457.png
+SHOT s0458 -> output\traces\cwskip-02/s0458.png
+SHOT s0459 -> output\traces\cwskip-02/s0459.png
+SHOT s0460 -> output\traces\cwskip-02/s0460.png
+SHOT s0461 -> output\traces\cwskip-02/s0461.png
+SHOT s0462 -> output\traces\cwskip-02/s0462.png
+SHOT s0463 -> output\traces\cwskip-02/s0463.png
+SHOT s0464 -> output\traces\cwskip-02/s0464.png
+SHOT s0465 -> output\traces\cwskip-02/s0465.png
+SHOT s0466 -> output\traces\cwskip-02/s0466.png
+SHOT s0467 -> output\traces\cwskip-02/s0467.png
+SHOT s0468 -> output\traces\cwskip-02/s0468.png
+SHOT s0469 -> output\traces\cwskip-02/s0469.png
+SHOT s0470 -> output\traces\cwskip-02/s0470.png
+SHOT s0471 -> output\traces\cwskip-02/s0471.png
+SHOT s0472 -> output\traces\cwskip-02/s0472.png
+SHOT s0473 -> output\traces\cwskip-02/s0473.png
+SHOT s0474 -> output\traces\cwskip-02/s0474.png
+SHOT s0475 -> output\traces\cwskip-02/s0475.png
+SHOT s0476 -> output\traces\cwskip-02/s0476.png
+SHOT s0477 -> output\traces\cwskip-02/s0477.png
+SHOT s0478 -> output\traces\cwskip-02/s0478.png
+SHOT s0479 -> output\traces\cwskip-02/s0479.png
+SHOT s0480 -> output\traces\cwskip-02/s0480.png
+SHOT s0481 -> output\traces\cwskip-02/s0481.png
+SHOT s0482 -> output\traces\cwskip-02/s0482.png
+SHOT s0483 -> output\traces\cwskip-02/s0483.png
+SHOT s0484 -> output\traces\cwskip-02/s0484.png
+SHOT s0485 -> output\traces\cwskip-02/s0485.png
+SHOT s0486 -> output\traces\cwskip-02/s0486.png
+SHOT s0487 -> output\traces\cwskip-02/s0487.png
+SHOT s0488 -> output\traces\cwskip-02/s0488.png
+SHOT s0489 -> output\traces\cwskip-02/s0489.png
+SHOT s0490 -> output\traces\cwskip-02/s0490.png
+SHOT s0491 -> output\traces\cwskip-02/s0491.png
+SHOT s0492 -> output\traces\cwskip-02/s0492.png
+SHOT s0493 -> output\traces\cwskip-02/s0493.png
+SHOT s0494 -> output\traces\cwskip-02/s0494.png
+SHOT s0495 -> output\traces\cwskip-02/s0495.png
+SHOT s0496 -> output\traces\cwskip-02/s0496.png
+SHOT s0497 -> output\traces\cwskip-02/s0497.png
+SHOT s0498 -> output\traces\cwskip-02/s0498.png
+SHOT s0499 -> output\traces\cwskip-02/s0499.png
+SHOT s0500 -> output\traces\cwskip-02/s0500.png
+SHOT s0501 -> output\traces\cwskip-02/s0501.png
+SHOT s0502 -> output\traces\cwskip-02/s0502.png
+SHOT s0503 -> output\traces\cwskip-02/s0503.png
+SHOT s0504 -> output\traces\cwskip-02/s0504.png
+SHOT s0505 -> output\traces\cwskip-02/s0505.png
+SHOT s0506 -> output\traces\cwskip-02/s0506.png
+SHOT s0507 -> output\traces\cwskip-02/s0507.png
+SHOT s0508 -> output\traces\cwskip-02/s0508.png
+SHOT s0509 -> output\traces\cwskip-02/s0509.png
+SHOT s0510 -> output\traces\cwskip-02/s0510.png
+SHOT s0511 -> output\traces\cwskip-02/s0511.png
+SHOT s0512 -> output\traces\cwskip-02/s0512.png
+SHOT s0513 -> output\traces\cwskip-02/s0513.png
+SHOT s0514 -> output\traces\cwskip-02/s0514.png
+SHOT s0515 -> output\traces\cwskip-02/s0515.png
+SHOT s0516 -> output\traces\cwskip-02/s0516.png
+SHOT s0517 -> output\traces\cwskip-02/s0517.png
+SHOT s0518 -> output\traces\cwskip-02/s0518.png
+SHOT s0519 -> output\traces\cwskip-02/s0519.png
+SHOT s0520 -> output\traces\cwskip-02/s0520.png
+SHOT s0521 -> output\traces\cwskip-02/s0521.png
+SHOT s0522 -> output\traces\cwskip-02/s0522.png
+SHOT s0523 -> output\traces\cwskip-02/s0523.png
+SHOT s0524 -> output\traces\cwskip-02/s0524.png
+SHOT s0525 -> output\traces\cwskip-02/s0525.png
+SHOT s0526 -> output\traces\cwskip-02/s0526.png
+SHOT s0527 -> output\traces\cwskip-02/s0527.png
+RESULT visible=314 ok=299 bad=15

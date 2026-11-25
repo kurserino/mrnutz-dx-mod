@@ -1,0 +1,35 @@
+# bosscheat-06 | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-06.mss | SEED=1 END=1800 PAR=2115613952 HOLD=6563 HOLDV=0
+LOAD ok=true
+ADDCHEAT 7E19B500 ok=true nil
+F359 REQUEST 825C
+F359 REQUEST 0000
+SHOT req359 -> output\traces\bosscheat-06/req359.png
+SHOT req359 -> output\traces\bosscheat-06/req359.png
+F452 REQUEST 82D4
+SHOT req452 -> output\traces\bosscheat-06/req452.png
+F534 REQUEST 0000
+SHOT req534 -> output\traces\bosscheat-06/req534.png
+F600 hp19A3=0 bar1ED4=0 x=65520 y=56
+SHOT f00600 -> output\traces\bosscheat-06/f00600.png
+F1166 REQUEST 825C
+F1166 REQUEST 0000
+SHOT req1166 -> output\traces\bosscheat-06/req1166.png
+SHOT req1166 -> output\traces\bosscheat-06/req1166.png
+F1200 hp19A3=0 bar1ED4=0 x=96 y=0
+SHOT f01200 -> output\traces\bosscheat-06/f01200.png
+F1259 REQUEST 82D4
+SHOT req1259 -> output\traces\bosscheat-06/req1259.png
+F1341 REQUEST 0000
+SHOT req1341 -> output\traces\bosscheat-06/req1341.png
+F1700 REQUEST 825C
+F1700 REQUEST 0000
+SHOT req1700 -> output\traces\bosscheat-06/req1700.png
+SHOT req1700 -> output\traces\bosscheat-06/req1700.png
+F1793 REQUEST 82D4
+SHOT req1793 -> output\traces\bosscheat-06/req1793.png
+F1800 hp19A3=0 bar1ED4=0 x=96 y=0
+CAND $0362 drops=3 167>92>84>39
+CAND $1FD9 drops=2 244>160>0
+CAND $1FDB drops=2 83>30>3
+RESULT done
+SHOT f01800 -> output\traces\bosscheat-06/f01800.png

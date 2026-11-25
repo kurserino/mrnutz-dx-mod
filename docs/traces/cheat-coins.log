@@ -1,0 +1,36 @@
+# cheat-coins | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-00.mss | CHEAT=6 END=2400
+LOAD ok=true
+F1 energy=5 lives=0002 nuts=00 coins=99 r05D0=01 stage=00 x=96 y=372 gameplay=false
+SHOT f0030 -> output\traces\cheat-coins/f0030.png
+F120 energy=5 lives=0002 nuts=00 coins=99 r05D0=01 stage=00 x=162 y=372 gameplay=true
+F226 HIT energy 6->5
+F240 energy=5 lives=0002 nuts=00 coins=99 r05D0=00 stage=00 x=325 y=278 gameplay=true
+F360 energy=5 lives=0002 nuts=00 coins=99 r05D0=FF stage=00 x=494 y=325 gameplay=true
+F480 energy=5 lives=0002 nuts=00 coins=99 r05D0=FF stage=00 x=487 y=367 gameplay=true
+F600 energy=5 lives=0002 nuts=00 coins=99 r05D0=02 stage=00 x=602 y=321 gameplay=true
+F720 energy=6 lives=0002 nuts=00 coins=99 r05D0=01 stage=00 x=761 y=338 gameplay=true
+F840 energy=6 lives=0002 nuts=01 coins=99 r05D0=01 stage=00 x=794 y=308 gameplay=true
+F926 HIT energy 6->5
+F960 energy=5 lives=0002 nuts=00 coins=99 r05D0=02 stage=00 x=987 y=347 gameplay=true
+F1080 energy=6 lives=0002 nuts=00 coins=99 r05D0=02 stage=00 x=1051 y=317 gameplay=true
+F1200 energy=6 lives=0002 nuts=00 coins=99 r05D0=01 stage=00 x=1162 y=291 gameplay=true
+SHOT f1200 -> output\traces\cheat-coins/f1200.png
+F1320 energy=6 lives=0002 nuts=00 coins=99 r05D0=02 stage=00 x=1200 y=356 gameplay=true
+F1388 DEATH lives=0002
+F1388 REQUEST 825C stage=00
+F1388 REQUEST 0000 stage=00
+F1440 energy=5 lives=0001 nuts=00 coins=99 r05D0=02 stage=00 x=96 y=0 gameplay=false
+F1494 REQUEST 82D4 stage=00
+F1556 HIT energy 6->5
+F1556 REQUEST 0000 stage=00
+F1560 energy=5 lives=0001 nuts=00 coins=99 r05D0=02 stage=00 x=96 y=372 gameplay=true
+F1680 energy=5 lives=0001 nuts=00 coins=99 r05D0=02 stage=00 x=191 y=372 gameplay=true
+F1775 HIT energy 6->5
+F1800 energy=5 lives=0001 nuts=00 coins=99 r05D0=00 stage=00 x=343 y=263 gameplay=true
+F1920 energy=5 lives=0001 nuts=00 coins=99 r05D0=FF stage=00 x=553 y=372 gameplay=true
+F2040 energy=5 lives=0001 nuts=00 coins=99 r05D0=02 stage=00 x=616 y=361 gameplay=true
+F2160 energy=5 lives=0001 nuts=00 coins=99 r05D0=02 stage=00 x=635 y=372 gameplay=true
+F2280 energy=5 lives=0001 nuts=00 coins=99 r05D0=02 stage=00 x=561 y=372 gameplay=true
+F2400 energy=5 lives=0001 nuts=00 coins=99 r05D0=02 stage=00 x=651 y=337 gameplay=true
+RESULT cheat=6 hits=4 deaths=1 jumpPeak=0 end energy=5 lives=0001 nuts=00 coins=99 r05D0=02 stage=00 x=651 y=337 gameplay=true
+SHOT f2400 -> output\traces\cheat-coins/f2400.png

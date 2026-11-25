@@ -1,0 +1,50 @@
+# bosscheat-20 | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-20.mss | SEED=1 END=1800 PAR=2115613952 HOLD=6563 HOLDV=0
+LOAD ok=true
+ADDCHEAT 7E19B500 ok=true nil
+F279 REQUEST 825C
+F279 REQUEST 0000
+SHOT req279 -> output\traces\bosscheat-20/req279.png
+SHOT req279 -> output\traces\bosscheat-20/req279.png
+F323 REQUEST 82D4
+SHOT req323 -> output\traces\bosscheat-20/req323.png
+F393 REQUEST 0000
+SHOT req393 -> output\traces\bosscheat-20/req393.png
+F600 hp19A3=0 bar1ED4=16 x=173 y=1608
+SHOT f00600 -> output\traces\bosscheat-20/f00600.png
+F839 REQUEST 825C
+F839 REQUEST 0000
+SHOT req839 -> output\traces\bosscheat-20/req839.png
+SHOT req839 -> output\traces\bosscheat-20/req839.png
+F883 REQUEST 82D4
+SHOT req883 -> output\traces\bosscheat-20/req883.png
+F953 REQUEST 0000
+SHOT req953 -> output\traces\bosscheat-20/req953.png
+F1079 REQUEST 825C
+F1079 REQUEST 0000
+SHOT req1079 -> output\traces\bosscheat-20/req1079.png
+SHOT req1079 -> output\traces\bosscheat-20/req1079.png
+F1123 REQUEST 82D4
+SHOT req1123 -> output\traces\bosscheat-20/req1123.png
+F1193 REQUEST 0000
+SHOT req1193 -> output\traces\bosscheat-20/req1193.png
+F1200 hp19A3=0 bar1ED4=16 x=99 y=1652
+SHOT f01200 -> output\traces\bosscheat-20/f01200.png
+F1319 REQUEST 825C
+F1319 REQUEST 0000
+SHOT req1319 -> output\traces\bosscheat-20/req1319.png
+SHOT req1319 -> output\traces\bosscheat-20/req1319.png
+F1363 REQUEST 82D4
+SHOT req1363 -> output\traces\bosscheat-20/req1363.png
+F1433 REQUEST 0000
+SHOT req1433 -> output\traces\bosscheat-20/req1433.png
+F1585 REQUEST 825C
+F1585 REQUEST 0000
+SHOT req1585 -> output\traces\bosscheat-20/req1585.png
+SHOT req1585 -> output\traces\bosscheat-20/req1585.png
+F1649 REQUEST 82D4
+SHOT req1649 -> output\traces\bosscheat-20/req1649.png
+F1719 REQUEST 0000
+SHOT req1719 -> output\traces\bosscheat-20/req1719.png
+F1800 hp19A3=0 bar1ED4=16 x=65532 y=1731
+RESULT done
+SHOT f01800 -> output\traces\bosscheat-20/f01800.png

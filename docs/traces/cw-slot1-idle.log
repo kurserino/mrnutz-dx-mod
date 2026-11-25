@@ -1,0 +1,13 @@
+# cw-slot1-idle | exit=0 | rom=v0.2.1-rc8.runtime.sfc | state=stage-07.mss | END=240
+LOAD ok=true
+F1 SCENE 82D54C stage=12 area0550=EB29 x=87 y=1108
+F1 nogameplay
+F2 S=4 X=255 nutz=6 ok=false foreignOnX=0 shared=false pend=01 ready=0 passes=0
+ARES transplant at F2
+F3 S=4 X=6 nutz=6 ok=false foreignOnX=0 shared=false pend=DC ready=1 passes=1
+F4 S=4 X=6 nutz=12 ok=false foreignOnX=0 shared=false pend=DC ready=1 passes=1
+SHOT f0060 -> output\traces\cw-slot1-idle/f0060.png
+SHOT f0120 -> output\traces\cw-slot1-idle/f0120.png
+SHOT f0180 -> output\traces\cw-slot1-idle/f0180.png
+RESULT visible=239 ok=0 bad=239
+SHOT f0240 -> output\traces\cw-slot1-idle/f0240.png

@@ -1,0 +1,30 @@
+# cheat-invuln | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-00.mss | CHEAT=3 END=2400
+LOAD ok=true
+F1 energy=5 lives=0002 nuts=00 coins=00 r05D0=01 stage=00 x=96 y=372 gameplay=false
+SHOT f0030 -> output\traces\cheat-invuln/f0030.png
+F120 energy=5 lives=0002 nuts=00 coins=00 r05D0=01 stage=00 x=162 y=372 gameplay=true
+F240 energy=6 lives=0002 nuts=00 coins=00 r05D0=00 stage=00 x=331 y=340 gameplay=true
+F360 energy=6 lives=0002 nuts=00 coins=00 r05D0=00 stage=00 x=431 y=296 gameplay=true
+F409 HIT energy 6->5
+F480 energy=5 lives=0002 nuts=00 coins=00 r05D0=00 stage=00 x=420 y=308 gameplay=true
+F600 energy=5 lives=0002 nuts=00 coins=00 r05D0=00 stage=00 x=509 y=321 gameplay=true
+F720 energy=6 lives=0002 nuts=00 coins=00 r05D0=00 stage=00 x=637 y=321 gameplay=true
+F750 HIT energy 6->5
+F840 energy=6 lives=0002 nuts=00 coins=00 r05D0=01 stage=00 x=736 y=274 gameplay=true
+F960 energy=6 lives=0002 nuts=00 coins=00 r05D0=01 stage=00 x=904 y=308 gameplay=true
+F1080 energy=6 lives=0002 nuts=00 coins=00 r05D0=02 stage=00 x=1022 y=372 gameplay=true
+F1200 energy=6 lives=0002 nuts=00 coins=00 r05D0=02 stage=00 x=1051 y=353 gameplay=true
+SHOT f1200 -> output\traces\cheat-invuln/f1200.png
+F1320 energy=6 lives=0002 nuts=00 coins=00 r05D0=02 stage=00 x=1051 y=356 gameplay=true
+F1440 energy=6 lives=0002 nuts=00 coins=00 r05D0=02 stage=00 x=1051 y=336 gameplay=true
+F1545 HIT energy 6->5
+F1560 energy=5 lives=0002 nuts=00 coins=00 r05D0=00 stage=00 x=1049 y=318 gameplay=true
+F1680 energy=5 lives=0002 nuts=00 coins=00 r05D0=00 stage=00 x=1051 y=351 gameplay=true
+F1800 energy=5 lives=0002 nuts=00 coins=00 r05D0=00 stage=00 x=1051 y=351 gameplay=true
+F1920 energy=5 lives=0002 nuts=00 coins=00 r05D0=00 stage=00 x=1051 y=372 gameplay=true
+F2040 energy=5 lives=0002 nuts=00 coins=00 r05D0=00 stage=00 x=1051 y=361 gameplay=true
+F2160 energy=5 lives=0002 nuts=00 coins=00 r05D0=00 stage=00 x=1051 y=372 gameplay=true
+F2280 energy=6 lives=0002 nuts=00 coins=00 r05D0=00 stage=00 x=977 y=372 gameplay=true
+F2400 energy=6 lives=0002 nuts=00 coins=00 r05D0=00 stage=00 x=1051 y=337 gameplay=true
+RESULT cheat=3 hits=3 deaths=0 jumpPeak=0 end energy=6 lives=0002 nuts=00 coins=00 r05D0=00 stage=00 x=1051 y=337 gameplay=true
+SHOT f2400 -> output\traces\cheat-invuln/f2400.png

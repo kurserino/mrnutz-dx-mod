@@ -1,0 +1,16 @@
+# boss-hp-s2 | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-08.mss | SEED=2
+LOAD ok=true
+SHOT f00600 -> output\traces\boss-hp-s2/f00600.png
+SHOT f01200 -> output\traces\boss-hp-s2/f01200.png
+SHOT f01800 -> output\traces\boss-hp-s2/f01800.png
+SHOT f02400 -> output\traces\boss-hp-s2/f02400.png
+SHOT f03000 -> output\traces\boss-hp-s2/f03000.png
+SHOT f03600 -> output\traces\boss-hp-s2/f03600.png
+SHOT f04200 -> output\traces\boss-hp-s2/f04200.png
+SHOT f04800 -> output\traces\boss-hp-s2/f04800.png
+SHOT f05400 -> output\traces\boss-hp-s2/f05400.png
+CAND $19A3 drops=9 15>14>13>12>11>10>9>8>7>6
+CAND $1ED4 drops=9 16>15>14>13>12>11>10>9>8>7
+CAND $1ED6 drops=9 16>15>14>13>12>11>10>9>8>7
+RESULT done
+SHOT f06000 -> output\traces\boss-hp-s2/f06000.png

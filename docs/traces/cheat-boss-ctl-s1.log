@@ -1,0 +1,50 @@
+# cheat-boss-ctl-s1 | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=blz-01.mss | CHEAT=0 END=3600 SEED=1 LOGEVERY=300
+LOAD ok=true
+F1 energy=5 lives=0004 nuts=00 coins=00 r05D0=00 stage=50 x=0 y=180 gameplay=false
+SHOT f0030 -> output\traces\cheat-boss-ctl-s1/f0030.png
+F263 DEATH lives=0004
+F263 REQUEST 825C stage=50
+F263 REQUEST 0000 stage=50
+F300 energy=5 lives=0003 nuts=00 coins=00 r05D0=00 stage=50 x=96 y=0 gameplay=false
+F313 REQUEST 82D4 stage=50
+F386 REQUEST 0000 stage=50
+F600 energy=5 lives=0003 nuts=00 coins=00 r05D0=00 stage=50 x=130 y=129 gameplay=true
+F788 DEATH lives=0004
+F788 REQUEST 825C stage=50
+F788 REQUEST 0000 stage=50
+F838 REQUEST 82D4 stage=50
+F900 energy=5 lives=0003 nuts=00 coins=00 r05D0=00 stage=50 x=96 y=0 gameplay=false
+F911 REQUEST 0000 stage=50
+F1189 DEATH lives=0003
+F1189 REQUEST 825C stage=50
+F1189 REQUEST 0000 stage=50
+F1200 energy=5 lives=0002 nuts=00 coins=00 r05D0=00 stage=50 x=96 y=0 gameplay=false
+F1239 REQUEST 82D4 stage=50
+F1312 REQUEST 0000 stage=50
+F1500 energy=5 lives=0002 nuts=00 coins=00 r05D0=00 stage=50 x=292 y=148 gameplay=true
+F1647 DEATH lives=0002
+F1647 REQUEST 825C stage=50
+F1647 REQUEST 0000 stage=50
+F1697 REQUEST 82D4 stage=50
+F1770 REQUEST 0000 stage=50
+F1800 energy=5 lives=0001 nuts=00 coins=00 r05D0=00 stage=50 x=20 y=140 gameplay=true
+SHOT f1800 -> output\traces\cheat-boss-ctl-s1/f1800.png
+F1956 DEATH lives=0001
+F1956 REQUEST 825C stage=50
+F1956 REQUEST 0000 stage=50
+F2006 REQUEST 82D4 stage=50
+F2079 REQUEST 0000 stage=50
+F2100 energy=5 lives=0000 nuts=00 coins=00 r05D0=00 stage=50 x=34 y=180 gameplay=true
+F2257 DEATH lives=0000
+F2257 REQUEST 8283 stage=50
+F2257 REQUEST 0000 stage=50
+F2400 energy=5 lives=9999 nuts=00 coins=00 r05D0=00 stage=50 x=96 y=0 gameplay=false
+F2501 REQUEST 0000 stage=50
+F2700 energy=5 lives=9999 nuts=00 coins=00 r05D0=00 stage=50 x=31 y=165 gameplay=false
+F3000 energy=5 lives=9999 nuts=00 coins=00 r05D0=00 stage=50 x=31 y=165 gameplay=false
+F3300 energy=5 lives=9999 nuts=00 coins=00 r05D0=00 stage=50 x=31 y=165 gameplay=false
+F3470 REQUEST 82D4 stage=50
+F3470 REQUEST 0000 stage=50
+F3600 energy=5 lives=9999 nuts=00 coins=00 r05D0=00 stage=50 x=31 y=165 gameplay=false
+RESULT cheat=0 hits=0 deaths=6 jumpPeak=0 end energy=5 lives=9999 nuts=00 coins=00 r05D0=00 stage=50 x=31 y=165 gameplay=false
+SHOT f3600 -> output\traces\cheat-boss-ctl-s1/f3600.png

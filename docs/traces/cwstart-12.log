@@ -1,0 +1,24 @@
+# cwstart-12 | exit=0 | rom=v0.2.1-rc8.runtime.sfc | state=stage-12.mss | END=240 SAVEFUR=1 SHOTEVERY=1000
+LOAD ok=true
+F1 SCENE 82D660 stage=20 area0550=FFFF x=0 y=132
+F1 nogameplay
+F2 S=4 X=255 nutz=6 ok=false foreignOnX=0 shared=false pend=01 ready=0 passes=0
+F8 S=4 X=5 nutz=6 ok=false foreignOnX=0 shared=false pend=01 ready=1 passes=1
+F9 FIRSTOK 8 frames after scene change
+F9 S=4 X=5 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F9 XCOLOUR slot5 entry1 53C0->49CE
+F9 XCOLOUR slot5 entry2 4B40->5A52
+F9 XCOLOUR slot5 entry3 3AC0->6AD6
+F9 XCOLOUR slot5 entry4 2280->7B5A
+F9 XCOLOUR slot5 entry5 09C0->7BDE
+F9 XCOLOUR slot5 entry6 0140->031A
+F9 XCOLOUR slot5 entry7 5A46->0292
+F9 XCOLOUR slot5 entry8 6288->018A
+F9 XCOLOUR slot5 entry9 62CA->00C8
+F9 XCOLOUR slot5 entry10 72CC->0000
+F9 XCOLOUR slot5 entry11 6B0E->104B
+F9 XCOLOUR slot5 entry12 7352->2091
+F9 XCOLOUR slot5 entry13 7B54->2CF8
+F9 XCOLOUR slot5 entry14 7B96->3D5F
+F9 XCOLOUR slot5 entry15 7BDE->5A7F
+RESULT visible=239 ok=232 bad=7

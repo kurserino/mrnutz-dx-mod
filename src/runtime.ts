@@ -57,8 +57,19 @@ export const STATE = {
   classKey: 0x7fbd29, // S * 16 + X the class table was built for ($FF = none)
   layout: 0x7fbd2a, // STATE_LAYOUT once the fields above were initialized (v0.2.0 WRAM, e.g. a savestate, has garbage here)
   conflict: 0x7fbd2b, // frame_hook saw another object on palette X in the buffer
+  anyGroup: 0x7fbd2c, // fix-private-slot-choice: 1 when the scene is in CROSS_GROUP_SCENES (set on each scene reset)
 }
-const STATE_LAYOUT = 0x02;
+const STATE_LAYOUT = 0x03;
+// Scene tables ([$055E]/$0560) whose sprites never take part in colour math (CGADSUB bit 4 off for the whole scene),
+// so a private slot of the other colour-math group looks the same (fix-private-slot-choice, scenepal-*.log).
+export const CROSS_GROUP_SCENES = [
+  0x82d58c, // witch fight (stage-08): $2131 = $20 (backdrop only); palettes 2-7 used by other objects
+  0x82d620, // spider (stage-04): $2131 = $00 / $2F (BG1-4 + backdrop)
+];
+// While [$13BC] is non-zero (every stage seen), $81:C3E8 writes an animated colour into CGRAM $91 (sprite palette 1,
+// entry 1) every frame, so palette 1 can never be the private slot (cgw-slot2b.log, cgadsub-*.log).
+const ANIMATED_SLOT = 1;
+const ANIMATED_SLOT_POINTER = 0x13bc;
 // Mr. Nutz palette source; the scene's 8-entry sprite palette table at [$055E] decides its CGRAM slot
 // (slot 4 = $C0 in most scenes, slot 0 = $80 in the stage traced in docs/traces/sweep-debug10.log).
 export const NUTZ_PALETTE_CPU = 0x859cc0;
@@ -180,9 +191,11 @@ export function hookSource(furCount: number, outfitCount: number): string {
     STA ${L(S.layout)}
     LDA #$FF
     STA ${L(S.classKey)}
+    STA ${L(S.tablePtr + 2)} ; impossible bank: the manager resets the scene state (anyGroup included) next run
     LDA #$00
     STA ${L(S.listCount)}
     STA ${L(S.conflict)}
+    STA ${L(S.anyGroup)}
   layout_ok:
     REP #$20
     LDA $1A6F              ; pressed = (cur ^ prev) & cur
@@ -348,7 +361,11 @@ export function hookSource(furCount: number, outfitCount: number): string {
     CMP #$FF
     BEQ ts_reset
     JSR vblank_ok          ; X back to the new scene's palette before it can be shown
-    BCS ts_defer
+    BCC ts_restore
+    REP #$20               ; deferred: C=1
+    RTS
+  ts_restore:
+    .a8
     REP #$20
     JSR restore_custom
   ts_reset:
@@ -369,13 +386,28 @@ export function hookSource(furCount: number, outfitCount: number): string {
     STA ${L(S.classKey)}
     STA ${L(S.customSlot)}
     STA ${L(S.slotS)}
+    LDA #$00               ; anyGroup = 1 for the scene tables with sprite colour math off
+    STA ${L(S.anyGroup)}
     REP #$20
+${CROSS_GROUP_SCENES.map((t, i) => `    LDA $055E
+    CMP #${A(t)}
+    BNE ag_next${i}
+    SEP #$20
+    LDA $0560
+    CMP #${h(t >> 16, 2)}
+    REP #$20
+    BNE ag_next${i}
+    SEP #$20
+    LDA #$01
+    STA ${L(S.anyGroup)}
+    REP #$20
+    BRA ag_done
+  ag_next${i}:
+    .a16`).join("\n")}
+  ag_done:
+    .a16
     JSR find_slot
     CLC
-    RTS
-  ts_defer:
-    REP #$20
-    SEC
     RTS
 
   find_slot:               ; A16. slotS/sBits = palette (0-7) holding $85:9CC0 in the scene table, if any
@@ -424,6 +456,10 @@ export function hookSource(furCount: number, outfitCount: number): string {
     ; (cleared entries have y=$E0, boss parts uploaded once stay there). Read it through $2138.
     JSR oam_read_ok
     BCC sc_go
+    LDA ${L(S.passes)}     ; no PPU access (e.g. the iris-in runs the frame out of VBlank): before the first full
+    BNE sc_skip            ; pass of the scene, scan the game's WRAM buffer instead so a slot can be chosen
+    JMP scan_wram
+  sc_skip:
     RTS
   sc_go:
     REP #$20
@@ -472,7 +508,15 @@ export function hookSource(furCount: number, outfitCount: number): string {
     STA ${L(S.passMask)}
     BRA sc_next
   sc_static:               ; static entries are not seen by oam_hook: keep their palettes for the whole scene,
-    LDA ${L(S.tile)}       ; hidden ones included (they can be shown again without an upload we see)
+    CPX #$00E0             ; hidden ones included (they can be shown again without an upload we see), except the
+    BNE sc_static_live     ; game's cleared pattern y = tile = attr = $E0 (attr $E0 reads as palette 0; witch fight,
+    CPY #$00E0             ; oamdump-08.log)
+    BNE sc_static_live
+    LDA ${L(S.tile)}
+    CMP #$E0
+    BEQ sc_next
+  sc_static_live:
+    LDA ${L(S.tile)}
     CMP #$50
     BCS sc_static_mark
     LDA ${A(ATTR_PAL)},Y
@@ -527,6 +571,76 @@ export function hookSource(furCount: number, outfitCount: number): string {
     SEP #$20
     RTS
 
+  scan_wram:               ; A8 in/out. Fallback of scan_chunk: 16 entries of the WRAM OAM buffer $7E:0321, which the
+    .a8                    ; game uploads every frame ($0024 bytes in use). Entries past those bytes are left to the
+    .i16                   ; PPU scan (boss parts); frame_hook still unmaps Mr. Nutz if another object shows up on X.
+    REP #$20
+    LDA ${L(S.scanPos)}
+    AND #$007F
+    ASL A
+    ASL A
+    TAX                    ; X = byte offset of the entry
+    LDA #$0000             ; B = 0 for the A8 TAY below
+    SEP #$20
+    LDA #$80               ; up to 16 entries, never past entry 127
+    SEC
+    SBC ${L(S.scanPos)}
+    CMP #$10
+    BCC sw_count
+    LDA #$10
+  sw_count:
+    STA ${L(S.tmp)}
+  sw_loop:
+    REP #$20
+    TXA
+    CMP $0024              ; past the bytes in use: unknown here
+    LDA #$0000
+    SEP #$20
+    BCS sw_next
+    LDA $7E0322,X          ; y
+    CMP #$E0
+    BEQ sw_next            ; hidden entry
+    LDA $7E0324,X          ; attr
+    TAY
+    LDA $7E0323,X          ; tile
+    CMP #$50
+    BCS sw_other
+    LDA ${A(ATTR_PAL)},Y   ; palette, or $FF for name table 1
+    CMP ${L(S.slotS)}
+    BEQ sw_next            ; Mr. Nutz entry
+    CMP ${L(S.customSlot)}
+    BEQ sw_next
+  sw_other:
+    LDA ${A(ATTR_BIT)},Y
+    ORA ${L(S.passMask)}
+    STA ${L(S.passMask)}
+  sw_next:
+    INX
+    INX
+    INX
+    INX
+    LDA ${L(S.tmp)}
+    DEC A
+    STA ${L(S.tmp)}
+    BNE sw_loop
+    REP #$20
+    TXA
+    LSR A
+    LSR A
+    SEP #$20
+    AND #$7F
+    STA ${L(S.scanPos)}
+    BNE sw_done
+    LDA ${L(S.passMask)}   ; pass complete, as in scan_chunk
+    STA ${L(S.prevMask)}
+    LDA #$00
+    STA ${L(S.passMask)}
+    LDA #$01
+    STA ${L(S.passes)}
+  sw_done:
+    SEP #$20
+    RTS
+
   drop_custom:             ; A16. Selection back to original: X gets its scene palette back (in VBlank)
     .a16
     .i16
@@ -568,6 +682,18 @@ export function hookSource(furCount: number, outfitCount: number): string {
     INC A
     BIT #$03
     BNE ch_loop
+    LDA ${L(S.anyGroup)}   ; same group full: scenes without sprite colour math may use the other group
+    BEQ ch_fail
+    LDA ${L(S.slotS)}
+    AND #$04
+    EOR #$04
+  ch_other:
+    JSR slot_is_free
+    BCC ch_take
+    LDA ${L(S.tmp)}
+    INC A
+    BIT #$03
+    BNE ch_other
   ch_fail:
     .a8
     REP #$20
@@ -581,15 +707,25 @@ export function hookSource(furCount: number, outfitCount: number): string {
     CLC
     RTS
 
-  slot_is_free:            ; A8 = candidate, B = 0. C=0 and A=candidate if != S, same group, unused in the scene
-    .a8
+  slot_is_free:            ; A8 = candidate, B = 0. C=0 and A=candidate if != S, same group (or anyGroup), not
+    .a8                    ; animated by the game, unused in the scene
     .i16
     STA ${L(S.tmp)}
     CMP ${L(S.slotS)}
     BEQ not_free
     EOR ${L(S.slotS)}
     AND #$04
+    BEQ sf_group_ok
+    LDA ${L(S.anyGroup)}
+    BEQ not_free
+  sf_group_ok:
+    LDA ${L(S.tmp)}
+    CMP #${h(ANIMATED_SLOT, 2)}
+    BNE sf_not_animated
+    LDA ${A(ANIMATED_SLOT_POINTER)} ; $81:C3E8 animates CGRAM $91 while this word is non-zero
+    ORA ${A(ANIMATED_SLOT_POINTER + 1)}
     BNE not_free
+  sf_not_animated:
     LDA ${L(S.tmp)}
     ASL A
     TAY

@@ -1,0 +1,35 @@
+# witch-par0 | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-08.mss | SEED=1 END=3000 PAR=2115609344
+LOAD ok=true
+ADDCHEAT 7E19A300 ok=true nil
+F420 REQUEST 82D4
+F420 REQUEST 0000
+SHOT req420 -> output\traces\witch-par0/req420.png
+SHOT req420 -> output\traces\witch-par0/req420.png
+F587 REQUEST 0000
+SHOT req587 -> output\traces\witch-par0/req587.png
+F600 hp19A3=0 bar1ED4=15 x=101 y=206
+SHOT f00600 -> output\traces\witch-par0/f00600.png
+F1200 hp19A3=0 bar1ED4=15 x=101 y=206
+SHOT f01200 -> output\traces\witch-par0/f01200.png
+F1550 REQUEST 82D4
+SHOT req1550 -> output\traces\witch-par0/req1550.png
+F1701 REQUEST 0000
+SHOT req1701 -> output\traces\witch-par0/req1701.png
+F1800 hp19A3=0 bar1ED4=15 x=96 y=0
+SHOT f01800 -> output\traces\witch-par0/f01800.png
+F1931 REQUEST 82D4
+F1931 REQUEST 0000
+SHOT req1931 -> output\traces\witch-par0/req1931.png
+SHOT req1931 -> output\traces\witch-par0/req1931.png
+F2336 REQUEST 82D4
+SHOT req2336 -> output\traces\witch-par0/req2336.png
+F2380 REQUEST 0000
+SHOT req2380 -> output\traces\witch-par0/req2380.png
+F2400 hp19A3=0 bar1ED4=15 x=927 y=644
+SHOT f02400 -> output\traces\witch-par0/f02400.png
+F3000 hp19A3=0 bar1ED4=15 x=983 y=644
+CAND $01A2 drops=2 23>9>0
+CAND $0350 drops=2 79>42>41
+CAND $0354 drops=2 79>42>41
+RESULT done
+SHOT f03000 -> output\traces\witch-par0/f03000.png

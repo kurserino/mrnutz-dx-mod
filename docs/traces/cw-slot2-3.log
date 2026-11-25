@@ -1,0 +1,57 @@
+# cw-slot2-3 | exit=0 | rom=v0.2.1-rc8.runtime.sfc | state=stage-09.mss | END=900 INPUT=3 SHOTEVERY=150
+LOAD ok=true
+F1 SCENE 82D60C stage=1A area0550=EB29 x=960 y=644
+F1 nogameplay
+F2 S=0 X=255 nutz=6 ok=false foreignOnX=0 shared=false pend=01 ready=0 passes=0
+ARES transplant at F2
+F3 S=0 X=1 nutz=6 ok=false foreignOnX=0 shared=false pend=DC ready=1 passes=1
+F4 S=0 X=1 nutz=0 ok=true foreignOnX=0 shared=false pend=DC ready=1 passes=1
+F4 XCOLOUR slot1 entry1 03FF->001F
+F5 FIRSTOK 4 frames after scene change
+F5 S=0 X=1 nutz=6 ok=true foreignOnX=0 shared=false pend=DC ready=1 passes=1
+F5 XCOLOUR slot1 entry1 001F->03E0
+F6 XCOLOUR slot1 entry1 03E0->001F
+F7 XCOLOUR slot1 entry1 001F->03FF
+F8 XCOLOUR slot1 entry1 03FF->001F
+F9 XCOLOUR slot1 entry1 001F->03E0
+F10 XCOLOUR slot1 entry1 03E0->001F
+F11 XCOLOUR slot1 entry1 001F->03FF
+F12 XCOLOUR slot1 entry1 03FF->001F
+F13 XCOLOUR slot1 entry1 001F->03E0
+F14 XCOLOUR slot1 entry1 03E0->001F
+F15 XCOLOUR slot1 entry1 001F->03FF
+F16 XCOLOUR slot1 entry1 03FF->001F
+F17 XCOLOUR slot1 entry1 001F->03E0
+F18 XCOLOUR slot1 entry1 03E0->001F
+F19 XCOLOUR slot1 entry1 001F->03FF
+F20 XCOLOUR slot1 entry1 03FF->001F
+F21 XCOLOUR slot1 entry1 001F->03E0
+F22 XCOLOUR slot1 entry1 03E0->001F
+F23 XCOLOUR slot1 entry1 001F->03FF
+F24 XCOLOUR slot1 entry1 03FF->001F
+F25 XCOLOUR slot1 entry1 001F->03E0
+F26 XCOLOUR slot1 entry1 03E0->001F
+F27 XCOLOUR slot1 entry1 001F->03FF
+F28 XCOLOUR slot1 entry1 03FF->001F
+F29 XCOLOUR slot1 entry1 001F->03E0
+F30 XCOLOUR slot1 entry1 03E0->001F
+F31 XCOLOUR slot1 entry1 001F->03FF
+F32 XCOLOUR slot1 entry1 03FF->001F
+F33 XCOLOUR slot1 entry1 001F->03E0
+F34 XCOLOUR slot1 entry1 03E0->001F
+F35 XCOLOUR slot1 entry1 001F->03FF
+F36 XCOLOUR slot1 entry1 03FF->001F
+F37 XCOLOUR slot1 entry1 001F->03E0
+F38 XCOLOUR slot1 entry1 03E0->001F
+F39 XCOLOUR slot1 entry1 001F->03FF
+F40 XCOLOUR slot1 entry1 03FF->001F
+F41 XCOLOUR slot1 entry1 001F->03E0
+F42 XCOLOUR slot1 entry1 03E0->001F
+F43 XCOLOUR slot1 entry1 001F->03FF
+SHOT f0150 -> output\traces\cw-slot2-3/f0150.png
+SHOT f0300 -> output\traces\cw-slot2-3/f0300.png
+SHOT f0450 -> output\traces\cw-slot2-3/f0450.png
+SHOT f0600 -> output\traces\cw-slot2-3/f0600.png
+SHOT f0750 -> output\traces\cw-slot2-3/f0750.png
+RESULT visible=898 ok=896 bad=2
+SHOT f0900 -> output\traces\cw-slot2-3/f0900.png

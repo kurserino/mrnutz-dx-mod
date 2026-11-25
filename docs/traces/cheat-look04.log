@@ -1,0 +1,8 @@
+# cheat-look04 | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-04.mss | CHEAT=3 INPUT=2 END=300 LOGEVERY=300
+LOAD ok=true
+F1 energy=5 lives=0002 nuts=00 coins=00 r05D0=02 stage=08 x=64 y=372 gameplay=false
+SHOT f0030 -> output\traces\cheat-look04/f0030.png
+SHOT f0150 -> output\traces\cheat-look04/f0150.png
+F300 energy=5 lives=0002 nuts=00 coins=00 r05D0=02 stage=08 x=64 y=372 gameplay=true
+RESULT cheat=3 hits=0 deaths=0 jumpPeak=0 end energy=5 lives=0002 nuts=00 coins=00 r05D0=02 stage=08 x=64 y=372 gameplay=true
+SHOT f0300 -> output\traces\cheat-look04/f0300.png

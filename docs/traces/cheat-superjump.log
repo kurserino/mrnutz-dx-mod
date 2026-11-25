@@ -1,0 +1,10 @@
+# cheat-superjump | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-00.mss | CHEAT=1 INPUT=1 END=300
+LOAD ok=true
+F1 energy=5 lives=0002 nuts=00 coins=00 r05D0=01 stage=00 x=96 y=372 gameplay=false
+SHOT f0030 -> output\traces\cheat-superjump/f0030.png
+SHOT jump -> output\traces\cheat-superjump/jump.png
+F120 energy=5 lives=0002 nuts=00 coins=00 r05D0=01 stage=00 x=96 y=94 gameplay=true
+SHOT f0150 -> output\traces\cheat-superjump/f0150.png
+F240 energy=5 lives=0002 nuts=00 coins=00 r05D0=01 stage=00 x=96 y=372 gameplay=true
+RESULT cheat=1 hits=0 deaths=0 jumpPeak=300 end energy=5 lives=0002 nuts=00 coins=00 r05D0=01 stage=00 x=96 y=372 gameplay=true
+SHOT f0300 -> output\traces\cheat-superjump/f0300.png

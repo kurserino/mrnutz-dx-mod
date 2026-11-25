@@ -67,6 +67,11 @@ The static palette `0x029CC0` is **not** touched by the runtime patch.
 - The private slot X must be in the same colour-math group as S and unused by any other object since the scene table
   changed (`stickyMask` for fixed boss parts in high OAM, plus a two-pass window for dynamic objects). It is only used
   after one full pass over the 128 entries.
+- Since fix-private-slot-choice: never palette 1 while `[$13BC]` is non-zero (the game animates it, `palettes.md`);
+  scenes in `CROSS_GROUP_SCENES` (`anyGroup`, `$7F:BD2C`) may use the other group once the same group is full; the
+  cleared high-OAM pattern `$E0/$E0/$E0` is not a sticky object; before the first pass, when the PPU OAM is out of
+  reach (iris-in, `frame-cycle.md`), the pass reads the WRAM buffer `$7E:0321` within `$0024` bytes (`scan_wram`).
+  State layout `$03`.
 - No free slot → Mr. Nutz keeps his original colours in that scene (`palettes.md`).
 - A colour change has 1 frame of latency. When another object takes X, there is 1 frame of original colour by design:
   switching slots in the same frame would double the critical-path work.
