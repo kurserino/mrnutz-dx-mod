@@ -67,6 +67,12 @@ Scripts without an npm alias (run with `npx tsx tools/mesen/run.ts <script> [--s
 | `scene-table-writers.lua` | writers of `$055E` and `$13B6` (PC, value) |
 | `stage-clear-all.lua` | Stage Clear regression for one stage state: debug skip at frame 60 (or a boss `PAR`), then which slots hold the selection / `$85:9CC0` and the OAM palettes; run it on `stage-04/08/15/21/25` (`scall-summary.log`) |
 | `stage-clear-caller.lua` | stack and stage index when the Stage Clear routine starts |
+| `hud-energy.lua` | counts full-heart pixels in the HUD each frame; on a change, diffs the whole WRAM against 20 frames earlier (found energy `$01F4`) |
+| `hit-diff.lua` | WRAM diff around each damage (`$8D = 120`), `AFTER` frames later |
+| `find-energy.lua` | bytes that only drop by 1 during random play (counter search) |
+| `watch-energy.lua` | writes to `$7F:B00D/B00E` (energy start/maximum) with decoded values |
+| `energy-cheat-check.lua` | energy cheat regression: `PAR` in Mesen's cheat engine, random play (`MODE 0`) or from power-on (`MODE 1`); hits, deaths, HUD hearts |
+| `cheat-check.lua` / `boss-hp.lua` | ares cheat codes held every frame / boss health search (main branch) |
 | `cheat-check.lua` | holds a cheat code every frame (`CHEAT`, optional `CHEAT2`) during random play or a jump test (`INPUT`); counts deaths, energy drops, main-loop requests and the jump peak; compare with `CHEAT=0` |
 | `boss-hp.lua` | boss health search: invulnerable Mr. Nutz jumps around the boss room (`INFJUMP=1` for tall bosses), WRAM bytes that only fall are printed as `CAND`; `PAR` tests a Pro Action Replay code through Mesen's cheat engine, `HOLD`/`HOLDV` hold a byte |
 | `pause-why.lua` | why Start does not pause: NMI vector, pause flags, joypad mirror and writes to `$13B4/$13B5` around a press |

@@ -1,0 +1,5 @@
+# watch-05a2-00 | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-00.mss | ADDR=1442 FRAMES=4000
+LOAD ok=true
+WRITE frame=359 addr=$0005A2 value=5 pc=$81E108 A=$05E3 X=$05E3 Y=$05A3
+WRITE frame=376 addr=$0005A2 value=6 pc=$81E108 A=$0623 X=$0623 Y=$05E3
+WRITE frame=2757 addr=$0005A2 value=5 pc=$828E5B A=$CCFF X=$05A3 Y=$0000

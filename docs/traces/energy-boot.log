@@ -1,0 +1,19 @@
+# energy-boot | exit=0 | rom=v0.2.1-rc10.runtime.sfc | MODE=1 END=4000 PAR=2114057395
+ADDCHEAT true
+F500 gameplay=false energy(read)=4 heartPx full=0 empty=0 hits=0
+SHOT f0500 -> output\traces\energy-boot/f0500.png
+F1000 gameplay=false energy(read)=4 heartPx full=0 empty=0 hits=0
+SHOT f1000 -> output\traces\energy-boot/f1000.png
+F1500 gameplay=false energy(read)=4 heartPx full=0 empty=0 hits=0
+SHOT f1500 -> output\traces\energy-boot/f1500.png
+F1816 GAMEPLAY
+F2000 gameplay=true energy(read)=4 heartPx full=55 empty=0 hits=0
+SHOT f2000 -> output\traces\energy-boot/f2000.png
+F2500 gameplay=true energy(read)=4 heartPx full=55 empty=0 hits=1
+SHOT f2500 -> output\traces\energy-boot/f2500.png
+F3000 gameplay=true energy(read)=4 heartPx full=55 empty=0 hits=1
+SHOT f3000 -> output\traces\energy-boot/f3000.png
+F3500 gameplay=true energy(read)=4 heartPx full=55 empty=0 hits=4
+SHOT f3500 -> output\traces\energy-boot/f3500.png
+F4000 gameplay=true energy(read)=4 heartPx full=55 empty=0 hits=6
+RESULT hits=6 deaths=0 firstGameplay=1816

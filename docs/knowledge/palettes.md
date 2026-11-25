@@ -104,7 +104,7 @@ during gameplay. The Stage Clear screen is the exception (next section).
   it until the screen ends [static + trace] `sc-init-witch.log`. Reached from the fade-out request `$81:D20E`
   (`$13B6 = $82D4`) [trace] `w055e-witch.log`; NMI handler `$8357` while it is shown.
 - Sprites: Mr. Nutz 6 entries on palette 4 (tiles `$000-$044`), slot 4 = `$85:9CC0`; chest 25 entries on palette 5;
-  coins on palette 1. Same after the witch and Mr. Blizzard [trace] `sc-witch.log`, `sc-blizzard.log`.
+  coins on palette 1. Same after the witch and the `stage-21` boss [trace] `sc-witch.log`, `sc-blizzard.log`.
 - The patch writes the selection into that slot after `JSL $9DABA7` (`clear_hook`, stage-clear-colours)
   [trace] `sc10-witch.log`, `sc10-blizzard.log`.
 - **When it appears:** only at the end of a world. `$80:82D4` (next stage) adds 2 to the stage index `$054C`; at

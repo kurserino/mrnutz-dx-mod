@@ -1,0 +1,8 @@
+# hudshots | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-00.mss
+LOAD ok=true
+SHOT f0440 -> output\traces\hudshots/f0440.png
+SHOT f0530 -> output\traces\hudshots/f0530.png
+SHOT f1680 -> output\traces\hudshots/f1680.png
+SHOT f1780 -> output\traces\hudshots/f1780.png
+SHOT f2300 -> output\traces\hudshots/f2300.png
+SHOT f2400 -> output\traces\hudshots/f2400.png

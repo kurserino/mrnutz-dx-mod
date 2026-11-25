@@ -2,7 +2,7 @@
 
 ## 1. Evidence
 
-- [x] 1.1 Reach STAGE CLEAR in Mesen (witch and Mr. Blizzard health cheats) and log palettes, OAM and NMI handler.
+- [x] 1.1 Reach STAGE CLEAR in Mesen (witch and `stage-21` boss health cheats) and log palettes, OAM and NMI handler.
   Check: `sc-witch.log`, `sc-blizzard.log` (Mr. Nutz alone on palette 4, slot 4 = `$85:9CC0`).
 - [x] 1.2 Find the init, its scene table write and a hook point in forced blank with no later sprite palette write.
   Check: `w055e-witch.log`, `sc-init-witch.log`.
@@ -14,7 +14,7 @@
 
 ## 3. Validation
 
-- [x] 3.1 Mesen: slot 4 holds the selection during the whole Stage Clear after the witch and Mr. Blizzard; chest and
+- [x] 3.1 Mesen: slot 4 holds the selection during the whole Stage Clear after the witch and the `stage-21` boss; chest and
   coins unchanged (`sc10-witch.log`, `sc10-blizzard.log`, screenshots).
 - [x] 3.1b All Stage Clear screens: `stage-clear-all.lua` on every stage state finds exactly 5 (after `stage-04`, `08`,
   `15`, `21`, `25`), each with the selection in slot 4; `stage-30` leads to the ending; with the original selection

@@ -5,7 +5,9 @@
 | Address | Size | Content | Tag |
 | --- | --- | --- | --- |
 | `$7E:1889` | 16 bits | **Lives, obfuscated:** `lives_BCD = word($1889) XOR $A3B7`. The HUD shows the same number (`x2` = `$0002`, stored as `$A3B5`) | [trace] `watch-1889.log`, `poke-lives6281.log` |
-| `$7E:05A2` | 8 bits | **Energy** (red HUD dots). 5 at the start of `stage-00`, 6 the highest seen; drops by 1 per hit and is restored on each new life | [trace] `poke-energy05A2.log` |
+| `$7E:01F4` | 8 bits | **Energy, obfuscated:** `energy = byte XOR $B7`; the HUD shows energy + 1 hearts (full `$FF0000`, empty `$6B0000`). `stage-00` starts at 2 (`$B5`, 3 hearts); each hit -1; below 0 = life lost. Maximum `$7F:B00E XOR $B7` = 4 (5 hearts). Set at stage start from `$188E` (`$82:82DB`) | [trace] `hud-energy-00.log`, `energy-ctl-s1.log` |
+| `$7F:B00D` / `$7F:B00E` | 8 bits | start energy / maximum, XOR `$B7`, from the ENERGY option through the table `$9D:AD98` (`$B5 $B4 $B3 …`) at `$9D:ACCD-$9D:ACE7`; maximum = min(start + 2, 4) | [static + trace] `watch-energy-00.log` |
+| `$7E:05A2` | 8 bits | **not energy** (wrong until 2026-11-25): high byte of the list pointer `$05A1` (writes from `$81:E108` with `$05E3`/`$0623`) | [trace] `watch-05a2-00.log` |
 | `$7E:008D` | 8 bits | invulnerability: PAR `7E008D2D` | [public] |
 | `$7E:0A29` | 8 bits | nuts: PAR `7E0A2999` | [public] |
 | `$7E:1894` | 8 bits | coins: PAR `7E189499` | [public] |
@@ -18,6 +20,9 @@ Checked in Mesen with `tools/mesen/cheat-check.lua` (each code held every frame,
   Y 180 → 304) [trace] `cheat-bossinv-s1.log`.
 - Lives `word($1889) = $A3BE` (x9): the HUD shows x9 and a death leaves it at 9 [trace] `cheat-lives.log`.
 - `$0A29 = $99` (nuts) and `$1894 = $99` (coins): the HUD shows 99 [trace] `cheat-nuts.log`, `cheat-coins.log`.
+- `$01F4 = $B3` (full infinite energy, 5 hearts): with Mesen's cheat engine, 0 deaths from enemies in 4000 frames
+  (only pit deaths, energy still full), against 1-2 without it; from power-on the game starts normally with 5 hearts
+  [trace] `energy-par-s1/s2.log`, `energy-ctl-s1/s2.log`, `energy-boot.log`.
 - `$1EC9 = $01`: one R press goes to the next stage (`$054C` 0 → 2) [trace] `cheat-skip.log`.
 - `$8E = $FF` (infinite jump) and `$91 = $00` (super jump): jump peak 300 px against 78 px [trace]
   `cheat-ctl-jump.log`, `cheat-infjump.log`, `cheat-superjump.log`.
@@ -27,18 +32,21 @@ Checked in Mesen with `tools/mesen/cheat-check.lua` (each code held every frame,
 
 ### Boss health
 
+**Mr. Blizzard** is the yeti, the final boss of `stage-30` (stage index `$50`, scene table `$82:D77C`; `blz-01.mss`, the
+user's ares slot of 2026-11-22). His health address is not mapped yet.
+
 Found with `tools/mesen/boss-hp.lua` (WRAM bytes that only fall while an invulnerable Mr. Nutz jumps around the boss
 room; Mr. Nutz damages a boss by landing on its head). The boss health bar mirrors `$7E:1ED4`/`$7E:1ED6`.
 
 | Boss | State | Health | Start value | Evidence |
 | --- | --- | --- | --- | --- |
-| Mr. Blizzard (giant face, `stage-21`) | `stage-21.mss` | `$7E:19B5` | 5 (bar 5) | [trace] `blz-hp-s1.log`: 5 → 4 → 3 with the bar |
+| World 4 boss (giant face, `stage-21`; not Mr. Blizzard, who is the yeti of `stage-30`) | `stage-21.mss` | `$7E:19B5` | 5 (bar 5) | [trace] `blz-hp-s1.log`: 5 → 4 → 3 with the bar |
 | Witch (picture frame, `stage-08`) | `stage-08.mss` | `$7E:19A3` | 15 (bar 16) | [trace] `boss-hp-s1..3.log`: 15 → 6, one per stomp |
 
 Cheats tested with Mesen's own cheat engine (`emu.addCheat`, Pro Action Replay type; like ares it answers CPU reads
 with the code value):
 
-- `7E19B500`: Mr. Blizzard dies as soon as the fight runs (frame 2969 of the state, no stomp needed) and the
+- `7E19B500`: the `stage-21` boss dies as soon as the fight runs (frame 2969 of the state, no stomp needed) and the
   STAGE CLEAR screen follows; the next stage plays normally [trace] `blz-par0.log`.
 - `7E19A300`: the witch dies at frame 420 and the next stage plays normally [trace] `witch-par0.log`.
 - `7E19B501` (health held at 1) does **not** work: the stomp still lowers the bar (5 → 4 → 3) and the boss lives.
@@ -131,7 +139,7 @@ original ROM too [trace] `ending-check-original.log`. A soft reset returns to th
   life" search found `$1889` (`tools/mesen/find-lives.lua`).
 - **False lives candidates:** `$7E:060E` and `$7E:0A8A` (object table, written at `$81:E3D7`/`$81:E4E5`,
   `watch-060E.log`); `$7E:1071` (generic object queue, `$81:DACB`, `watch-1071.log`).
-- **Do not write energy outside gameplay:** `$05A2 = 1` written on frame 30 of `stage-00` (still in the stage intro)
+- **Do not write `$05A2`:** it is a list pointer byte, not energy (see the table); `$05A2 = 1` written on frame 30 of `stage-00` (still in the stage intro)
   cleared `$1889` and left the game in a black-screen loop at `$8A:81E2` [trace] `trace-sram-go1.log`. Hypotheses:
   anti-tamper check or inconsistent state. Not investigated.
 - **Start presses during boot start a game:** to reach OPTIONS, press Start only once (frame 200), then Down and Start
