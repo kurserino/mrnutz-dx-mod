@@ -29,7 +29,7 @@ Runtime ROM hack (`src/runtime.ts`), not the static palette pipeline.
 
 - `src/runtime.ts` (hook code, one manifest entry), `tests/runtime.test.ts`, rebuilt IPS (one more original-area
   change: 4 bytes at `0x0EE452`).
-- Validation: Mesen Stage Clear after the witch and Mr. Blizzard (boss health cheat), `npm run sweep:all`, user check
+- Validation: Mesen Stage Clear after the witch and the `stage-21` boss (boss health cheat), `npm run sweep:all`, user check
   in ares.
 - Every Stage Clear screen goes through `$9D:E43A-$9D:E452` (constant table `$82:D474`): there is one per world end,
   five in total, all verified.

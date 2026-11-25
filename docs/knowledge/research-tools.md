@@ -66,6 +66,12 @@ Scripts without an npm alias (run with `npx tsx tools/mesen/run.ts <script> [--s
 | `scene-table-writers.lua` | writers of `$055E` and `$13B6` (PC, value) |
 | `stage-clear-all.lua` | Stage Clear regression for one stage state: debug skip at frame 60 (or a boss `PAR`), then which slots hold the selection / `$85:9CC0` and the OAM palettes; run it on `stage-04/08/15/21/25` (`scall-summary.log`) |
 | `stage-clear-caller.lua` | stack and stage index when the Stage Clear routine starts |
+| `hud-energy.lua` | counts full-heart pixels in the HUD each frame; on a change, diffs the whole WRAM against 20 frames earlier (found energy `$01F4`) |
+| `hit-diff.lua` | WRAM diff around each damage (`$8D = 120`), `AFTER` frames later |
+| `find-energy.lua` | bytes that only drop by 1 during random play (counter search) |
+| `watch-energy.lua` | writes to `$7F:B00D/B00E` (energy start/maximum) with decoded values |
+| `energy-cheat-check.lua` | energy cheat regression: `PAR` in Mesen's cheat engine, random play (`MODE 0`) or from power-on (`MODE 1`); hits, deaths, HUD hearts |
+| `cheat-check.lua` / `boss-hp.lua` | ares cheat codes held every frame / boss health search (main branch) |
 
 **ares savestates in Mesen:** `npx tsx tools/mesen/ares-import.ts <copy of file.bsN> <name>` writes
 `output/ares/<name>.lua` (private), a prelude that copies the ares WRAM/VRAM/CGRAM (ares v148, 268001-byte states:

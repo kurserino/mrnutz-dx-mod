@@ -1,0 +1,23 @@
+# energy-par-s2 | exit=0 | rom=v0.2.1-rc10.runtime.sfc | state=stage-00.mss | SEED=2 END=4000 PAR=2114057395
+LOAD ok=true
+ADDCHEAT true
+F2 GAMEPLAY
+F500 gameplay=true energy(read)=4 heartPx full=55 empty=0 hits=1
+SHOT f0500 -> output\traces\energy-par-s2/f0500.png
+F1000 gameplay=true energy(read)=4 heartPx full=55 empty=0 hits=2
+SHOT f1000 -> output\traces\energy-par-s2/f1000.png
+F1500 gameplay=true energy(read)=4 heartPx full=55 empty=0 hits=4
+SHOT f1500 -> output\traces\energy-par-s2/f1500.png
+F2000 gameplay=true energy(read)=4 heartPx full=55 empty=0 hits=4
+SHOT f2000 -> output\traces\energy-par-s2/f2000.png
+F2084 DEATH x=747 y=512 energy=4
+F2500 gameplay=true energy(read)=4 heartPx full=55 empty=0 hits=4
+SHOT f2500 -> output\traces\energy-par-s2/f2500.png
+F3000 gameplay=true energy(read)=4 heartPx full=55 empty=0 hits=4
+SHOT f3000 -> output\traces\energy-par-s2/f3000.png
+F3260 DEATH x=628 y=511 energy=4
+F3500 gameplay=true energy(read)=4 heartPx full=55 empty=0 hits=4
+SHOT f3500 -> output\traces\energy-par-s2/f3500.png
+F3820 DEATH x=583 y=512 energy=4
+F4000 gameplay=false energy(read)=4 heartPx full=0 empty=0 hits=4
+RESULT hits=4 deaths=3 firstGameplay=2

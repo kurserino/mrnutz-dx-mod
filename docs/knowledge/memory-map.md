@@ -64,7 +64,7 @@ Source: `src/runtime.ts` (`CODE_ORIGIN`, `FUR_TABLE`, `OUTFIT_TABLE`, `ATTR_PAL`
 | `$7E:13B4`, `$7E:13B5` | pause flag and Start latch (`frame-cycle.md`) | [trace] |
 | `$7E:183D` | `$420C` (HDMA) value re-applied in the NMI | [static] |
 | `$7E:1EC9` | bit 0 = debug stage skip (`game-state.md`) | [trace] |
-| `$7E:1889`, `$7E:05A2` | lives (obfuscated), energy | [trace] |
+| `$7E:1889`, `$7E:01F4` | lives (XOR `$A3B7`), energy (XOR `$B7`) | [trace] |
 | `$7F:B008-$7F:B00C` | native options | [trace] |
 | `$7F:B00D-$7F:B00E` | read by the L/R debug mode (`$81:82F1`) | [static] |
 | `$7F:B513-$7F:B519` | copies of the scene pointers, used when `$13B8 ≠ 0` (checkpoint/continue?) | [static] + [hypothesis] |

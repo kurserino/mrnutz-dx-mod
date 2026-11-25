@@ -1,0 +1,21 @@
+# energy-ctl-s1 | exit=0 | rom=v0.2.1-rc10.runtime.sfc | state=stage-00.mss | SEED=1 END=4000
+LOAD ok=true
+F2 GAMEPLAY
+F500 gameplay=true energy(read)=1 heartPx full=22 empty=42 hits=1
+SHOT f0500 -> output\traces\energy-ctl-s1/f0500.png
+F1000 gameplay=true energy(read)=0 heartPx full=11 empty=56 hits=2
+SHOT f1000 -> output\traces\energy-ctl-s1/f1000.png
+F1402 DEATH x=1085 y=308 energy=255
+F1500 gameplay=false energy(read)=2 heartPx full=0 empty=0 hits=3
+SHOT f1500 -> output\traces\energy-ctl-s1/f1500.png
+F2000 gameplay=true energy(read)=2 heartPx full=33 empty=28 hits=3
+SHOT f2000 -> output\traces\energy-ctl-s1/f2000.png
+F2500 gameplay=true energy(read)=1 heartPx full=22 empty=42 hits=4
+SHOT f2500 -> output\traces\energy-ctl-s1/f2500.png
+F3000 gameplay=true energy(read)=255 heartPx full=0 empty=70 hits=6
+SHOT f3000 -> output\traces\energy-ctl-s1/f3000.png
+F3082 DEATH x=887 y=308 energy=255
+F3500 gameplay=true energy(read)=2 heartPx full=33 empty=28 hits=6
+SHOT f3500 -> output\traces\energy-ctl-s1/f3500.png
+F4000 gameplay=true energy(read)=2 heartPx full=33 empty=28 hits=6
+RESULT hits=6 deaths=2 firstGameplay=2

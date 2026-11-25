@@ -1,0 +1,14 @@
+# hud-energy-00 | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-00.mss | FRAMES=2500
+LOAD ok=true
+F432 RED 69 -> 46
+  00043:1>7(plain) 0006D:0>1(plain) 000AD:1>0(plain) 00107:10>11(plain) 001F4:181>182(xB7 2>1) 005C3:11>6(plain) 005FB:3>0(plain) 00601:1>4(plain) 00603:0>10(plain) 018A6:2>1(plain) 01A15:2>0(plain) 01EDE:6>7(plain) 01EDF:6>7(plain)
+SHOT red0432 -> output\traces\hud-energy-00/red0432.png
+F1674 RED 46 -> 23
+  00001:1>2(plain) 00003:1>2(plain) 00043:7>2(plain) 0006D:0>1(plain) 0007B:8>0(plain) 0007C:8>0(plain) 000AD:1>0(plain) 000CF:0>1(plain) 000D2:0>8(plain) 000F0:0>1(plain) 000F4:0>1(plain) 00124:2>8(plain) 001D7:1>2(plain) 001F4:182>183(xB7 1>0) 005C1:1>4(plain) 005C3:3>11(plain) 005F7:5>1(plain) 005FB:0>1(plain) 00603:4>0(plain) 018A6:1>0(plain) 01A15:0>1(plain) 01EDE:10>12(plain) 01EDF:10>12(plain)
+SHOT red1674 -> output\traces\hud-energy-00/red1674.png
+F2288 RED 23 -> 0
+  00017:1>0(plain) 00029:3>4(plain) 0002B:2>0(plain) 00043:3>1(plain) 0009B:2>5(plain) 000AD:1>0(plain) 000B3:2>3(plain) 0011A:2>4(plain) 00124:2>8(plain) 00166:2>6(plain) 00176:12>7(plain) 00178:1>3(plain) 00217:8>6(plain) 0034B:4>0(plain) 00595:2>3(plain) 005A0:1>2(plain) 005A2:5>6(plain) 005BB:7>1(plain) 005C3:2>0(plain) 005CE:2>3(plain) 005E4:2>3(plain) 00603:0>7(plain) 0060E:2>3(plain) 00610:2>0(plain) 0061A:7>10(plain) 00A73:1>2(plain) 00A7E:2>3(plain) 00A84:0>6(plain) 00A86:2>3(plain) 00A8A:2>3(plain) 01A15:2>1(plain) 1A010:0>1(plain)
+SHOT red2288 -> output\traces\hud-energy-00/red2288.png
+F2402 RED 0 -> 19
+  005BB:8>9(plain) 005CE:3>2(plain) 005FB:4>3(plain) 00603:6>1(plain) 00A7E:3>2(plain)
+SHOT red2402 -> output\traces\hud-energy-00/red2402.png
