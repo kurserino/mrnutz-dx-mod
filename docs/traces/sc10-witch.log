@@ -1,0 +1,38 @@
+# sc10-witch | exit=0 | rom=v0.2.1-rc10.runtime.sfc | state=stage-08.mss | PAR=2115609344 SAVEFUR=1 END=1300 SHOTEVERY=100
+LOAD ok=true
+F20 nmi=835B req=0000 scene=82D58C selSlots=[0] nutzSlots=[4(15)] oam=p0:5x[000-044] p3:38x[146-1A2] p4:1x[064-064] p5:10x[108-10E] p6:23x[100-142] p7:11x[104-144]
+F40 nmi=835B req=0000 scene=82D58C selSlots=[0] nutzSlots=[4(15)] oam=p0:6x[000-044] p3:38x[146-1A2] p5:10x[108-10E] p6:23x[100-142] p7:11x[104-144]
+F60 nmi=835B req=0000 scene=82D58C selSlots=[0] nutzSlots=[4(15)] oam=p0:3x[024-044] p3:38x[146-1A2] p4:1x[064-064] p5:10x[108-10E] p6:23x[100-142] p7:11x[104-144]
+F80 nmi=835B req=0000 scene=82D58C selSlots=[0] nutzSlots=[4(15)] oam=p0:6x[000-044] p3:38x[146-1A2] p5:10x[108-10E] p6:23x[100-142] p7:11x[104-144]
+F100 nmi=835B req=0000 scene=82D58C selSlots=[0] nutzSlots=[4(15)] oam=p3:38x[146-1A2] p5:10x[108-10E] p6:23x[100-142] p7:11x[104-144]
+SHOT f0100 -> output\traces\sc10-witch/f0100.png
+F120 nmi=835B req=0000 scene=82D58C selSlots=[0] nutzSlots=[4(15)] oam=p0:2x[040-044] p3:38x[146-1A2] p4:1x[064-064] p5:10x[108-10E] p6:23x[100-142] p7:11x[104-144]
+F140 nmi=835B req=0000 scene=82D58C selSlots=[0] nutzSlots=[4(15)] oam=p0:5x[000-044] p3:38x[146-1A2] p4:1x[064-064] p5:10x[108-10E] p6:23x[100-142] p7:11x[104-144]
+F160 nmi=835B req=0000 scene=82D58C selSlots=[0] nutzSlots=[4(15)] oam=p0:6x[000-044] p3:38x[146-1A2] p5:10x[108-10E] p6:23x[100-142] p7:11x[104-144]
+F180 nmi=835B req=0000 scene=82D58C selSlots=[0] nutzSlots=[4(15)] oam=p0:5x[000-044] p3:38x[146-1A2] p4:1x[064-064] p5:10x[108-10E] p6:23x[100-142] p7:11x[104-144]
+F200 nmi=835B req=0000 scene=82D58C selSlots=[0] nutzSlots=[4(15)] oam=p0:6x[000-044] p3:38x[146-1A2] p5:10x[108-10E] p6:23x[100-142] p7:11x[104-144]
+SHOT f0200 -> output\traces\sc10-witch/f0200.png
+F220 nmi=835B req=0000 scene=82D58C selSlots=[0] nutzSlots=[4(15)] oam=p0:3x[024-044] p3:38x[146-1A2] p4:1x[064-064] p5:10x[108-10E] p6:23x[100-142] p7:11x[104-144]
+F240 nmi=835B req=0000 scene=82D58C selSlots=[0] nutzSlots=[4(15)] oam=p0:5x[000-044] p3:38x[146-1A2] p4:1x[064-064] p5:10x[108-10E] p6:23x[100-142] p7:11x[104-144]
+F260 nmi=835B req=0000 scene=82D58C selSlots=[0] nutzSlots=[4(15)] oam=p0:4x[024-044] p3:38x[146-1A2] p5:10x[108-10E] p6:23x[100-142] p7:11x[104-144]
+F280 nmi=835B req=0000 scene=82D58C selSlots=[0] nutzSlots=[4(15)] oam=p0:5x[000-044] p3:38x[146-1A2] p4:1x[064-064] p5:10x[108-10E] p6:23x[100-142] p7:11x[104-144]
+F300 nmi=835B req=0000 scene=82D58C selSlots=[0] nutzSlots=[4(15)] oam=p0:6x[000-044] p3:38x[146-1A2] p5:10x[108-10E] p6:23x[100-142] p7:11x[104-144]
+SHOT f0300 -> output\traces\sc10-witch/f0300.png
+SHOT f0400 -> output\traces\sc10-witch/f0400.png
+F440 nmi=835B req=0000 scene=82D474 selSlots=[4] nutzSlots=[] oam=
+SHOT f0500 -> output\traces\sc10-witch/f0500.png
+F600 nmi=8357 req=0000 scene=82D474 selSlots=[4] nutzSlots=[] oam=p4:6x[000-044] p5:25x[080-0E0]
+SHOT f0600 -> output\traces\sc10-witch/f0600.png
+SHOT f0700 -> output\traces\sc10-witch/f0700.png
+SHOT f0800 -> output\traces\sc10-witch/f0800.png
+SHOT f0900 -> output\traces\sc10-witch/f0900.png
+SHOT f1000 -> output\traces\sc10-witch/f1000.png
+F1060 nmi=8357 req=0000 scene=82D474 selSlots=[4] nutzSlots=[] oam=p1:4x[00C-00E] p4:6x[000-044] p5:25x[080-0E0]
+F1080 nmi=8357 req=0000 scene=82D474 selSlots=[4] nutzSlots=[] oam=p1:10x[00C-00E] p4:6x[000-044] p5:25x[080-0E0]
+F1100 nmi=8357 req=0000 scene=82D474 selSlots=[4] nutzSlots=[] oam=p1:16x[00C-00E] p4:6x[000-044] p5:25x[080-0E0]
+SHOT f1100 -> output\traces\sc10-witch/f1100.png
+F1120 nmi=8357 req=0000 scene=82D474 selSlots=[4] nutzSlots=[] oam=p1:15x[00C-00E] p4:6x[000-044] p5:25x[080-0E0]
+F1160 nmi=8357 req=0000 scene=82D474 selSlots=[4] nutzSlots=[] oam=p1:12x[00C-00E] p4:6x[000-044] p5:25x[080-0E0]
+F1180 nmi=8357 req=0000 scene=82D474 selSlots=[4] nutzSlots=[] oam=p1:6x[00C-00E] p4:6x[000-044] p5:25x[080-0E0]
+F1200 nmi=8357 req=0000 scene=82D474 selSlots=[4] nutzSlots=[] oam=p4:6x[000-044] p5:25x[080-0E0]
+SHOT f1200 -> output\traces\sc10-witch/f1200.png

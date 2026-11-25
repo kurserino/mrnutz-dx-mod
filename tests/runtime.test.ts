@@ -3,7 +3,7 @@ import { existsSync, readFileSync } from "node:fs";
 import { DEFAULT_ROM_PATH, ORIGINAL_PALETTE, PALETTE_FILE_OFFSET, applyIps } from "../src/core.js";
 import { assemble } from "../src/asm.js";
 import { disassemble, formatInstruction, loromToFile, parseHeader } from "../src/snes.js";
-import { CODE_ORIGIN, CROSS_GROUP_SCENES, EXPANDED_SIZE, FRAME_HOOK_ORIGINAL, FRAME_HOOK_SITE, HOOK_ORIGINAL, HOOK_SITE, OAM_HOOK_ORIGINAL, OAM_HOOK_SITE, SAVE_RECORD, SRAM_CHECK_PATCHES, SRAM_HEADER, STATE, buildRuntimePatch, buildTables, decodeSaveRecord, encodeSaveRecord, hookSource } from "../src/runtime.js";
+import { CLEAR_HOOK_ORIGINAL, CLEAR_HOOK_SITE, CODE_ORIGIN, CROSS_GROUP_SCENES, EXPANDED_SIZE, FRAME_HOOK_ORIGINAL, FRAME_HOOK_SITE, HOOK_ORIGINAL, HOOK_SITE, OAM_HOOK_ORIGINAL, OAM_HOOK_SITE, SAVE_RECORD, SRAM_CHECK_PATCHES, SRAM_HEADER, STATE, buildRuntimePatch, buildTables, decodeSaveRecord, encodeSaveRecord, hookSource } from "../src/runtime.js";
 import type { RuntimePresetFile } from "../src/runtime.js";
 import { MENU_BUFFER, MENU_DATA, MENU_STATE, PAUSE_DATA, PAUSE_HOOK_ORIGINAL, PAUSE_HOOK_SITE, buildMenuData } from "../src/pause.js";
 
@@ -15,6 +15,7 @@ ORIGINAL_PALETTE.copy(fixture, PALETTE_FILE_OFFSET);
 Buffer.from(HOOK_ORIGINAL, "hex").copy(fixture, loromToFile(HOOK_SITE));
 Buffer.from(OAM_HOOK_ORIGINAL, "hex").copy(fixture, loromToFile(OAM_HOOK_SITE));
 Buffer.from(FRAME_HOOK_ORIGINAL, "hex").copy(fixture, loromToFile(FRAME_HOOK_SITE));
+Buffer.from(CLEAR_HOOK_ORIGINAL, "hex").copy(fixture, loromToFile(CLEAR_HOOK_SITE));
 fixture[0x7fd7] = 0x0a;
 for (const c of SRAM_CHECK_PATCHES) Buffer.from(c.original, "hex").copy(fixture, loromToFile(c.cpu));
 Buffer.from(PAUSE_HOOK_ORIGINAL, "hex").copy(fixture, loromToFile(PAUSE_HOOK_SITE));
@@ -104,6 +105,15 @@ describe("runtime palette patch", () => {
     expect(st).toMatch(/^E0E000D0[0-9A-F]{2}C0E000D0[0-9A-F]{2}AF[0-9A-F]{6}C9E0F0/);
   });
 
+  it("writes the selection into the Nutz slot on the Stage Clear screen after the relocated JSL $9DABA7 (stage-clear-colours)", () => {
+    const { bytes, labels } = assemble(hookSource(4, 4), CODE_ORIGIN);
+    const cl = bytes.subarray(labels.clear_hook - CODE_ORIGIN, labels.cl_out - CODE_ORIGIN).toString("hex").toUpperCase();
+    expect(cl.startsWith("22A7AB9D")).toBe(true);
+    const jsr = (l: string) => "20" + (labels[l] & 0xff).toString(16).padStart(2, "0").toUpperCase() + ((labels[l] >> 8) & 0xff).toString(16).padStart(2, "0").toUpperCase();
+    expect(cl).toContain(jsr("find_slot"));
+    expect(cl).toContain(jsr("put_custom"));
+  });
+
   it("puts the exact original palette at index 0 of both tables", () => {
     const t = buildTables(presets);
     expect(t.fur.subarray(0, 10)).toEqual(ORIGINAL_PALETTE.subarray(22, 32));
@@ -125,9 +135,11 @@ describe("runtime palette patch", () => {
     expect(patched.subarray(oam, oam + 4).toString("hex").toUpperCase().startsWith("22")).toBe(true);
     const frame = loromToFile(FRAME_HOOK_SITE);
     expect(patched.subarray(frame, frame + 1).toString("hex").toUpperCase()).toBe("22");
+    const clear = loromToFile(CLEAR_HOOK_SITE);
+    expect(patched.subarray(clear, clear + 1).toString("hex").toUpperCase()).toBe("22");
     const inCheck = (i: number) => SRAM_CHECK_PATCHES.some((c) => i >= loromToFile(c.cpu) && i < loromToFile(c.cpu) + c.original.length / 2);
     const allowed = (i: number) => i === 0x7fd6 || i === 0x7fd7 || i === 0x7fd8 || (i >= 0x7fdc && i <= 0x7fdf)
-      || (i >= hook && i < hook + 6) || (i >= oam && i < oam + 4) || (i >= frame && i < frame + 4) || inCheck(i)
+      || (i >= hook && i < hook + 6) || (i >= oam && i < oam + 4) || (i >= frame && i < frame + 4) || (i >= clear && i < clear + 4) || inCheck(i)
       || (i >= loromToFile(PAUSE_HOOK_SITE) && i < loromToFile(PAUSE_HOOK_SITE) + 8);
     expect(changed.every(allowed)).toBe(true);
     expect(applyIps(fixture, ips, EXPANDED_SIZE).equals(patched)).toBe(true);

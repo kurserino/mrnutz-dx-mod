@@ -31,6 +31,12 @@ export const OAM_HOOK_ORIGINAL = "A900435B";
 export const FRAME_HOOK_SITE = 0x818569;
 export const FRAME_HOOK_ORIGINAL = "2234818A";
 const FRAME_HOOK_CALL = 0x8a8134; // relocated call
+// Stage Clear init: [$055E] = $82:D474 (constant), then JSL $9DABA7 (scene init, palettes loaded in forced blank).
+// After it returns the game writes no sprite palette until the screen ends; Mr. Nutz is the only object drawn with
+// $85:9CC0 there (slot 4; chest on 5, coins on 1) (stage-clear-colours, sc-init-witch.log, sc-witch.log, sc-blizzard.log).
+export const CLEAR_HOOK_SITE = 0x9de452;
+export const CLEAR_HOOK_ORIGINAL = "22A7AB9D";
+const CLEAR_HOOK_CALL = 0x9daba7; // relocated call
 const NUTZ_LIST_MAX = 16;
 // WRAM $7FB6C0-$7FBFFF had no read or write during the whole game, credits, soft reset and boot
 // (docs/traces/sweep-wram.log). The previous block at $7FFFF0 is cleared by the game on some world changes.
@@ -1106,6 +1112,55 @@ ${Array.from({ length: 10 }, () => `    LDA ${A(FUR_TABLE)},X\n    STA $2122\n  
     .a8
     RTS
 
+  clear_hook:              ; JSL from $9D:E452 (Stage Clear init), forced blank, D=0 DBR=0. Mr. Nutz is the only object
+    JSL ${L(CLEAR_HOOK_CALL)}  ; on his palette there, so the selection goes straight into that slot (relocated call first)
+    PHP
+    PHB
+    REP #$30
+    PHA
+    PHX
+    PHY
+    PHK
+    PLB                    ; DBR=$A0
+    LDA ${L(S.magic)}
+    CMP #${h(MAGIC, 4)}
+    BNE cl_out             ; hook state not initialized yet
+    LDA ${L(S.furIndex)}   ; fur and outfit both original: nothing to do
+    BEQ cl_out
+    SEP #$20
+    LDA ${L(S.slotS)}      ; the gameplay manager's slot fields, restored below
+    PHA
+    LDA ${L(S.sBits)}
+    PHA
+    LDA ${L(S.customSlot)}
+    PHA
+    REP #$20
+    JSR find_slot          ; slot of $85:9CC0 in the Stage Clear table
+    SEP #$20
+    LDA ${L(S.slotS)}
+    CMP #$FF
+    BEQ cl_restore
+    STA ${L(S.customSlot)} ; put_custom writes into customSlot
+    REP #$20
+    JSR offsets
+    JSR put_custom
+    SEP #$20
+  cl_restore:
+    PLA
+    STA ${L(S.customSlot)}
+    PLA
+    STA ${L(S.sBits)}
+    PLA
+    STA ${L(S.slotS)}
+  cl_out:
+    REP #$30
+    PLY
+    PLX
+    PLA
+    PLB
+    PLP
+    RTL
+
   frame_hook:              ; JSL from $81:8569: end of the gameplay frame work, active display, M8 X8 D=0 DBR=0
     JSL ${L(FRAME_HOOK_CALL)}  ; relocated original call
     PHP
@@ -1414,6 +1469,11 @@ export function buildRuntimeManifest(rom: Buffer, presets: RuntimePresetFile): P
       offset: loromToFile(FRAME_HOOK_SITE), original: FRAME_HOOK_ORIGINAL, replacement: jsl(labels.frame_hook),
       reason: "JSL frame_hook replacing JSL $8A8134 (called first inside the hook) at the end of the gameplay frame work",
       evidence: "docs/traces/probe-frame-hook.log, docs/traces/franken-order.log, openspec/changes/fix-vblank-check-race/design.md",
+    },
+    {
+      offset: loromToFile(CLEAR_HOOK_SITE), original: CLEAR_HOOK_ORIGINAL, replacement: jsl(labels.clear_hook),
+      reason: "JSL clear_hook replacing JSL $9DABA7 (called first inside the hook) in the Stage Clear init",
+      evidence: "docs/traces/sc-init-witch.log, docs/traces/sc-witch.log, openspec/changes/stage-clear-colours/design.md",
     },
     {
       offset: loromToFile(ATTR_PAL), replacement: attrTables().toString("hex"),

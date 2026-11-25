@@ -25,7 +25,7 @@ and never modify the source ROM.
 | `src/runtime.ts` | hook source, preset tables, SRAM header and check patches, save record helpers, manifest assembly and checksum |
 | `presets/runtime.json` | runtime presets (at most 11 per group; index 0 = original, added by the builder) |
 
-## Runtime manifest (17 entries)
+## Runtime manifest (19 entries)
 
 | File offset | CPU | Change |
 | --- | --- | --- |
@@ -33,6 +33,8 @@ and never modify the source ROM.
 | `0x7FDC-0x7FDF` | `$00:FFDC` | checksum/complement recomputed |
 | `0x0828A` | `$81:828A` | `AD 18 42 8D 6F 1A` (`LDA $4218 / STA $1A6F`) → `JSL input_hook` + `NOP NOP` |
 | `0x0C36A` | `$81:C36A` | `A9 00 43 5B` (`LDA #$4300 / TCD`) → `JSL oam_hook` |
+| `0x08569` | `$81:8569` | `22 34 81 8A` (`JSL $8A8134`) → `JSL frame_hook` (relocated call inside) |
+| `0x0EE452` | `$9D:E452` | `22 A7 AB 9D` (`JSL $9DABA7`, Stage Clear scene init) → `JSL clear_hook` (relocated call inside) |
 | 7 check sites | see `protection.md` | anti-copier neutralization |
 | `0x100000+` | `$A0:8000+` | hook code, preset tables, OAM attribute tables (`memory-map.md`) |
 | `0x100000-0x1FFFFF` | `$A0-$BF` | `$FF` fill |
@@ -60,6 +62,13 @@ The static palette `0x029CC0` is **not** touched by the runtime patch.
   reload, then moves **only Mr. Nutz's OAM entries** (tile < `$50`, name table 0, palette S or X) to the private slot.
   Any other object on that slot makes it get its scene palette back at once, and Mr. Nutz stays original that frame.
 - Kept short so the game's HDMA enable stays in VBlank (`frame-cycle.md`).
+
+### `clear_hook` (from `$9D:E452`, Stage Clear init, forced blank)
+
+- Runs the relocated `JSL $9DABA7` (scene init, palettes), then, after the one-time init and with a non-original
+  selection, writes the selection into the slot of `$85:9CC0` in the Stage Clear table `$82:D474` (slot 4). Mr. Nutz
+  is the only object on that palette there (`palettes.md`), so this is the one place the patch writes the scene slot.
+- Saves and restores the manager's `slotS`, `sBits` and `customSlot` around `find_slot`/`put_custom`.
 
 ### Private slot
 

@@ -1,0 +1,3 @@
+# sccaller | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-08.mss | PAR=2115609344
+LOAD ok=true
+F422 first pc=9D:E302 sp=1FF6 stack=D8 82 82 01 82 80 69 9A 87 054C=1A 1EF4=0000 7FB3F0=0000

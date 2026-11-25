@@ -62,6 +62,11 @@ Scripts without an npm alias (run with `npx tsx tools/mesen/run.ts <script> [--s
 | `hook-scanline.lua` | scanline at `$81:828A` per frame around a debug stage skip, with the scan state |
 | `nmi-trace.lua` | first instructions after the NMI of frame `AT`, with scanlines |
 | `oam-high-dump.lua` | PPU OAM entries past the bytes in use, grouped by y/tile/attr |
+| `stage-clear-probe.lua` | reaches STAGE CLEAR with a boss health `PAR` code; logs NMI handler, scene table, slots holding `$85:9CC0` or the selection, OAM palettes |
+| `stage-clear-init.lua` | state around the Stage Clear scene init `$9D:E452` (INIDISP, scanline, P/DBR/D) and later sprite palette writes |
+| `scene-table-writers.lua` | writers of `$055E` and `$13B6` (PC, value) |
+| `stage-clear-all.lua` | Stage Clear regression for one stage state: debug skip at frame 60 (or a boss `PAR`), then which slots hold the selection / `$85:9CC0` and the OAM palettes; run it on `stage-04/08/15/21/25` (`scall-summary.log`) |
+| `stage-clear-caller.lua` | stack and stage index when the Stage Clear routine starts |
 | `cheat-check.lua` | holds a cheat code every frame (`CHEAT`, optional `CHEAT2`) during random play or a jump test (`INPUT`); counts deaths, energy drops, main-loop requests and the jump peak; compare with `CHEAT=0` |
 | `boss-hp.lua` | boss health search: invulnerable Mr. Nutz jumps around the boss room (`INFJUMP=1` for tall bosses), WRAM bytes that only fall are printed as `CAND`; `PAR` tests a Pro Action Replay code through Mesen's cheat engine, `HOLD`/`HOLDV` hold a byte |
 | `pause-why.lua` | why Start does not pause: NMI vector, pause flags, joypad mirror and writes to `$13B4/$13B5` around a press |

@@ -1,0 +1,13 @@
+# sc-init-witch | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-08.mss | PAR=2115609344 END=1300
+LOAD ok=true
+F422 enter E452 inidisp=80 line=127 P=84 DBR=00 D=0000 S=1FF6 slot4match=15/15 nmi=835B 4200?
+F422 back E456 inidisp=80 line=148 P=26 DBR=00 D=0000 S=1FF6 slot4match=15/15 nmi=835B 4200?
+F500 slot4match=15/15 inidisp=80
+F600 slot4match=15/15 inidisp=03
+F700 slot4match=15/15 inidisp=0F
+F800 slot4match=15/15 inidisp=0F
+F900 slot4match=15/15 inidisp=0F
+F1000 slot4match=15/15 inidisp=0F
+F1100 slot4match=15/15 inidisp=0F
+F1200 slot4match=15/15 inidisp=0F
+F1300 slot4match=15/15 inidisp=0F

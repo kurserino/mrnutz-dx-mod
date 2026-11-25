@@ -1,0 +1,5 @@
+# scall-04-orig | exit=0 | rom=v0.2.1-rc10.runtime.sfc | state=stage-04.mss | END=1500 SAVEFUR=0
+LOAD ok=true
+F63 STAGECLEAR table
+RESULT reached=63 sel=[4] orig=[4] oam=4nx6 5x25
+SHOT stageclear -> output\traces\scall-04-orig/stageclear.png

@@ -94,5 +94,28 @@ Both boss scenes now use the other colour-math group (see above). In the witch f
 40 high-OAM entries hold the game's cleared pattern y = tile = attr = `$E0`, and attr `$E0` reads as palette 0. The hook
 skips that exact pattern [trace] `oamdump-08.log`.
 
-Screens without gameplay (intros, "Stage Clear", continue map, final screen) always show the original colours: the
-hook only runs during gameplay.
+Screens without gameplay (intros, continue map, final screen) always show the original colours: the hook only runs
+during gameplay. The Stage Clear screen is the exception (next section).
+
+## Stage Clear screen
+
+- Init at `$9D:E3F0+`: `[$055E]/$0560 = $82:D474` (constant) at `$9D:E43A-$9D:E44F`, then `JSL $9DABA7` (scene init,
+  palettes) at `$9D:E452`, which returns in forced blank (INIDISP `$80`, line 148). No sprite palette is written after
+  it until the screen ends [static + trace] `sc-init-witch.log`. Reached from the fade-out request `$81:D20E`
+  (`$13B6 = $82D4`) [trace] `w055e-witch.log`; NMI handler `$8357` while it is shown.
+- Sprites: Mr. Nutz 6 entries on palette 4 (tiles `$000-$044`), slot 4 = `$85:9CC0`; chest 25 entries on palette 5;
+  coins on palette 1. Same after the witch and Mr. Blizzard [trace] `sc-witch.log`, `sc-blizzard.log`.
+- The patch writes the selection into that slot after `JSL $9DABA7` (`clear_hook`, stage-clear-colours)
+  [trace] `sc10-witch.log`, `sc10-blizzard.log`.
+- **When it appears:** only at the end of a world. `$80:82D4` (next stage) adds 2 to the stage index `$054C`; at
+  `$82:82AA` the entry of the stage list `$99:E65F` at that index decides: `$FFFF` = end of world, the index skips
+  the marker and the next entry (a world entry, `$E6B5`, `$E6B9`, `$E6BD`, `$E6C1`, `$E6C5`) is passed in A to
+  `JSL $9DE2AE` at `$82:82D5`, the Stage Clear routine; `$FFFE` (after the last stage) = `JML $9DF00F`, the ending,
+  with no Stage Clear [static + trace] `sccaller.log`, `scall-summary.log`, `scall-30.log`.
+- So there are 5 Stage Clear screens, after `stage-04`, `stage-08`, `stage-15`, `stage-21` and `stage-25` (worlds 1-5);
+  `stage-30` leads to the ending text. Each one shows the same sprites (Mr. Nutz 6 entries on palette 4, chest 25 on
+  palette 5) and, with the patch, the selection in slot 4 and `$85:9CC0` in no slot [trace] `scall-04/08/15/21/25.log`.
+  With the original selection the screen is pixel-identical to the original ROM [trace] `scall-04-orig.log`,
+  `scall-04-romorig.log`.
+- The debug stage skip (`$81:8307`) goes through the same `$80:82D4`, so it shows the Stage Clear screen when used in
+  the last stage of a world (`tools/mesen/stage-clear-all.lua`), and not elsewhere.
