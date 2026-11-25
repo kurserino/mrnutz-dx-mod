@@ -1,4 +1,4 @@
-# sweep-all | 40 stages | jobs=6 | 351 s
+# sweep-all | 40 stages | jobs=6 | 399 s
 stage-00 ok nutzColoured=100.0% gameplay=800 nutzFrames=756 lostMax=0 sharedChanged=0 foreignOnX=0 hdmaLate=0 hdmaMaxLine=246 ppuOut=0 flash=0 slotSwitch=0 noSlot=0 slots(S/X)=4/5 idx=2/3
 stage-01 ok nutzColoured=100.0% gameplay=800 nutzFrames=712 lostMax=0 sharedChanged=0 foreignOnX=0 hdmaLate=0 hdmaMaxLine=247 ppuOut=0 flash=0 slotSwitch=0 noSlot=0 slots(S/X)=4/5 idx=2/3
 stage-02 ok nutzColoured=99.8% gameplay=587 nutzFrames=498 lostMax=1 sharedChanged=0 foreignOnX=0 hdmaLate=0 hdmaMaxLine=246 ppuOut=0 flash=0 slotSwitch=0 noSlot=0 slots(S/X)=4/5 idx=2/3
@@ -47,7 +47,7 @@ persist (stage-03): RESULT checks=6 fails=0
   PERSIST warp-8 frame=5442 idx=2/3 S=4 X=5 nutz=6 ok=true
   PERSIST after-reset frame=7435 idx=2/3 S=4 X=5 nutz=6 ok=true
 power-cycle: fails=0
-  ok   1 fresh boot is original: CHECK boot frame=1935 idx=0/0 X=255 nutz=6 nutzOk=false noSlot=nil sharedChanged=false sram=DD2115011F604359
+  ok   1 fresh boot is original: CHECK boot frame=1935 idx=0/0 X=255 nutz=6 nutzOk=false noSlot=nil sharedChanged=false sram=4BA084A2C39742D9
   ok   1 selection applied: CHECK selected frame=2055 idx=2/3 X=5 nutz=6 nutzOk=true noSlot=nil sharedChanged=false sram=4E5A01020300ADA3
   ok   1 save file holds the record: srm=4E5A01020300ADA3 expected=4E5A01020300ADA3
   ok   2 power-on restores 2/3: CHECK boot frame=1935 idx=2/3 X=5 nutz=6 nutzOk=true noSlot=nil sharedChanged=false sram=4E5A01020300ADA3

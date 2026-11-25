@@ -1,0 +1,4 @@
+# scall-30 | exit=0 | rom=v0.2.1-rc10.runtime.sfc | state=stage-30.mss | END=3000
+LOAD ok=true
+SHOT end -> output\traces\scall-30/end.png
+RESULT reached=-1 sel=[] orig=[] oam=none stage=00

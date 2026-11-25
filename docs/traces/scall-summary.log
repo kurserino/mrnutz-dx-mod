@@ -1,0 +1,15 @@
+# scall-summary | stage-clear-all.lua on v0.2.1-rc10.runtime.sfc, every stage state, SAVEFUR=1, debug stage skip at F60, END=1500
+# RESULT reached=<frame of [$055E]=$82:D474 | -1> sel=<slots with the selection> orig=<slots = $85:9CC0> oam=<palette x entries, n = tiles < $50>
+stage-00..03: reached=-1 (next stage index 02, 04, 06, 08)
+stage-04: RESULT reached=63 sel=[4] orig=[] oam=4nx6 5x25
+stage-05..07: reached=-1 (next stage index 10, 12, 14)
+stage-08: RESULT reached=63 sel=[4] orig=[] oam=4nx6 5x25
+stage-09..14: reached=-1 (next stage index 1C, 1E, 20, 22, 24, 26)
+stage-15: RESULT reached=63 sel=[4] orig=[] oam=4nx6 5x25
+stage-16..20: reached=-1 (next stage index 2E, 30, 32, 34, 36)
+stage-21: RESULT reached=63 sel=[4] orig=[] oam=4nx6 5x25
+stage-22..24: reached=-1 (next stage index 3E, 40, 42)
+stage-25: RESULT reached=63 sel=[4] orig=[] oam=4nx6 5x25
+stage-26..29: reached=-1 (next stage index 4A, 4C, 4E, 50)
+stage-30: reached=-1, ending text ("CONGRATULATIONS"), stage index 00 (END=3000)
+stage-31..36: reached=-1 (attract-mode demo states)

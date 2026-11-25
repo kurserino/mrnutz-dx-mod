@@ -61,6 +61,11 @@ Scripts without an npm alias (run with `npx tsx tools/mesen/run.ts <script> [--s
 | `hook-scanline.lua` | scanline at `$81:828A` per frame around a debug stage skip, with the scan state |
 | `nmi-trace.lua` | first instructions after the NMI of frame `AT`, with scanlines |
 | `oam-high-dump.lua` | PPU OAM entries past the bytes in use, grouped by y/tile/attr |
+| `stage-clear-probe.lua` | reaches STAGE CLEAR with a boss health `PAR` code; logs NMI handler, scene table, slots holding `$85:9CC0` or the selection, OAM palettes |
+| `stage-clear-init.lua` | state around the Stage Clear scene init `$9D:E452` (INIDISP, scanline, P/DBR/D) and later sprite palette writes |
+| `scene-table-writers.lua` | writers of `$055E` and `$13B6` (PC, value) |
+| `stage-clear-all.lua` | Stage Clear regression for one stage state: debug skip at frame 60 (or a boss `PAR`), then which slots hold the selection / `$85:9CC0` and the OAM palettes; run it on `stage-04/08/15/21/25` (`scall-summary.log`) |
+| `stage-clear-caller.lua` | stack and stage index when the Stage Clear routine starts |
 
 **ares savestates in Mesen:** `npx tsx tools/mesen/ares-import.ts <copy of file.bsN> <name>` writes
 `output/ares/<name>.lua` (private), a prelude that copies the ares WRAM/VRAM/CGRAM (ares v148, 268001-byte states:

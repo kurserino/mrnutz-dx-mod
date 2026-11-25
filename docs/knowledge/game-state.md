@@ -65,6 +65,14 @@ OPTIONS) is stable from about frame 900 [trace] `boot-timeline.log`.
 
 `$7E:13B4` = `$FF` paused, `$00` playing; `$13B5` latches Start. The paused NMI path is in `frame-cycle.md`.
 
+## Stage list
+
+- `$7E:054C` = stage index (2 per entry) into the word list `$99:E65F`. `$80:82D4` (next stage) adds 2; `$FFFF` marks
+  the end of a world (the following entry goes to the Stage Clear routine `JSL $9DE2AE`, then the next world);
+  `$FFFE` after the last stage leads to the ending (`JML $9DF00F`) [static + trace] (`palettes.md`, Stage Clear).
+- Worlds end after `stage-04`, `stage-08`, `stage-15`, `stage-21`, `stage-25`; `stage-30` is the last stage
+  [trace] `scall-summary.log`. Stage state → index: `stage-07` = `$12`, `stage-08` = `$14`, `stage-09` = `$1A`.
+
 ## Debug stage skip
 
 - With `$7E:1EC9` bit 0 set, **R** ends the current stage and goes to the next one, and L/R write `$01F4` from

@@ -1,0 +1,60 @@
+# sc-witch | exit=0 | rom=v0.2.1-rc9.runtime.sfc | state=stage-08.mss | PAR=2115609344 SAVEFUR=1 END=1400 SHOTEVERY=40
+LOAD ok=true
+F20 nmi=835B req=0000 scene=82D58C nutzSlots=[4(15)] oam=p0:5x[000-044] p3:38x[146-1A2] p4:1x[064-064] p5:10x[108-10E] p6:23x[100-142] p7:11x[104-144]
+F40 nmi=835B req=0000 scene=82D58C nutzSlots=[4(15)] oam=p0:6x[000-044] p3:38x[146-1A2] p5:10x[108-10E] p6:23x[100-142] p7:11x[104-144]
+SHOT f0040 -> output\traces\sc-witch/f0040.png
+F60 nmi=835B req=0000 scene=82D58C nutzSlots=[4(15)] oam=p0:3x[024-044] p3:38x[146-1A2] p4:1x[064-064] p5:10x[108-10E] p6:23x[100-142] p7:11x[104-144]
+F80 nmi=835B req=0000 scene=82D58C nutzSlots=[4(15)] oam=p0:6x[000-044] p3:38x[146-1A2] p5:10x[108-10E] p6:23x[100-142] p7:11x[104-144]
+SHOT f0080 -> output\traces\sc-witch/f0080.png
+F100 nmi=835B req=0000 scene=82D58C nutzSlots=[4(15)] oam=p3:38x[146-1A2] p5:10x[108-10E] p6:23x[100-142] p7:11x[104-144]
+F120 nmi=835B req=0000 scene=82D58C nutzSlots=[4(15)] oam=p0:2x[040-044] p3:38x[146-1A2] p4:1x[064-064] p5:10x[108-10E] p6:23x[100-142] p7:11x[104-144]
+SHOT f0120 -> output\traces\sc-witch/f0120.png
+F140 nmi=835B req=0000 scene=82D58C nutzSlots=[4(15)] oam=p0:5x[000-044] p3:38x[146-1A2] p4:1x[064-064] p5:10x[108-10E] p6:23x[100-142] p7:11x[104-144]
+F160 nmi=835B req=0000 scene=82D58C nutzSlots=[4(15)] oam=p0:6x[000-044] p3:38x[146-1A2] p5:10x[108-10E] p6:23x[100-142] p7:11x[104-144]
+SHOT f0160 -> output\traces\sc-witch/f0160.png
+F180 nmi=835B req=0000 scene=82D58C nutzSlots=[4(15)] oam=p0:5x[000-044] p3:38x[146-1A2] p4:1x[064-064] p5:10x[108-10E] p6:23x[100-142] p7:11x[104-144]
+F200 nmi=835B req=0000 scene=82D58C nutzSlots=[4(15)] oam=p0:6x[000-044] p3:38x[146-1A2] p5:10x[108-10E] p6:23x[100-142] p7:11x[104-144]
+SHOT f0200 -> output\traces\sc-witch/f0200.png
+F220 nmi=835B req=0000 scene=82D58C nutzSlots=[4(15)] oam=p0:3x[024-044] p3:38x[146-1A2] p4:1x[064-064] p5:10x[108-10E] p6:23x[100-142] p7:11x[104-144]
+F240 nmi=835B req=0000 scene=82D58C nutzSlots=[4(15)] oam=p0:5x[000-044] p3:38x[146-1A2] p4:1x[064-064] p5:10x[108-10E] p6:23x[100-142] p7:11x[104-144]
+SHOT f0240 -> output\traces\sc-witch/f0240.png
+F260 nmi=835B req=0000 scene=82D58C nutzSlots=[4(15)] oam=p0:4x[024-044] p3:38x[146-1A2] p5:10x[108-10E] p6:23x[100-142] p7:11x[104-144]
+F280 nmi=835B req=0000 scene=82D58C nutzSlots=[4(15)] oam=p0:5x[000-044] p3:38x[146-1A2] p4:1x[064-064] p5:10x[108-10E] p6:23x[100-142] p7:11x[104-144]
+SHOT f0280 -> output\traces\sc-witch/f0280.png
+F300 nmi=835B req=0000 scene=82D58C nutzSlots=[4(15)] oam=p0:6x[000-044] p3:38x[146-1A2] p5:10x[108-10E] p6:23x[100-142] p7:11x[104-144]
+SHOT f0320 -> output\traces\sc-witch/f0320.png
+SHOT f0360 -> output\traces\sc-witch/f0360.png
+SHOT f0400 -> output\traces\sc-witch/f0400.png
+F440 nmi=835B req=0000 scene=82D474 nutzSlots=[4(15)] oam=
+SHOT f0440 -> output\traces\sc-witch/f0440.png
+SHOT f0480 -> output\traces\sc-witch/f0480.png
+SHOT f0520 -> output\traces\sc-witch/f0520.png
+SHOT f0560 -> output\traces\sc-witch/f0560.png
+F600 nmi=8357 req=0000 scene=82D474 nutzSlots=[4(15)] oam=p4:6x[000-044] p5:25x[080-0E0]
+SHOT f0600 -> output\traces\sc-witch/f0600.png
+SHOT f0640 -> output\traces\sc-witch/f0640.png
+SHOT f0680 -> output\traces\sc-witch/f0680.png
+SHOT f0720 -> output\traces\sc-witch/f0720.png
+SHOT f0760 -> output\traces\sc-witch/f0760.png
+SHOT f0800 -> output\traces\sc-witch/f0800.png
+SHOT f0840 -> output\traces\sc-witch/f0840.png
+SHOT f0880 -> output\traces\sc-witch/f0880.png
+SHOT f0920 -> output\traces\sc-witch/f0920.png
+SHOT f0960 -> output\traces\sc-witch/f0960.png
+SHOT f1000 -> output\traces\sc-witch/f1000.png
+SHOT f1040 -> output\traces\sc-witch/f1040.png
+F1060 nmi=8357 req=0000 scene=82D474 nutzSlots=[4(15)] oam=p1:4x[00C-00E] p4:6x[000-044] p5:25x[080-0E0]
+F1080 nmi=8357 req=0000 scene=82D474 nutzSlots=[4(15)] oam=p1:10x[00C-00E] p4:6x[000-044] p5:25x[080-0E0]
+SHOT f1080 -> output\traces\sc-witch/f1080.png
+F1100 nmi=8357 req=0000 scene=82D474 nutzSlots=[4(15)] oam=p1:16x[00C-00E] p4:6x[000-044] p5:25x[080-0E0]
+F1120 nmi=8357 req=0000 scene=82D474 nutzSlots=[4(15)] oam=p1:15x[00C-00E] p4:6x[000-044] p5:25x[080-0E0]
+SHOT f1120 -> output\traces\sc-witch/f1120.png
+F1160 nmi=8357 req=0000 scene=82D474 nutzSlots=[4(15)] oam=p1:12x[00C-00E] p4:6x[000-044] p5:25x[080-0E0]
+SHOT f1160 -> output\traces\sc-witch/f1160.png
+F1180 nmi=8357 req=0000 scene=82D474 nutzSlots=[4(15)] oam=p1:6x[00C-00E] p4:6x[000-044] p5:25x[080-0E0]
+F1200 nmi=8357 req=0000 scene=82D474 nutzSlots=[4(15)] oam=p4:6x[000-044] p5:25x[080-0E0]
+SHOT f1200 -> output\traces\sc-witch/f1200.png
+SHOT f1240 -> output\traces\sc-witch/f1240.png
+SHOT f1280 -> output\traces\sc-witch/f1280.png
+SHOT f1320 -> output\traces\sc-witch/f1320.png
+SHOT f1360 -> output\traces\sc-witch/f1360.png
