@@ -17,7 +17,7 @@ The tools refuse to patch any other ROM.
 ## Status
 
 - **Working**: strict ROM verification, BGR555 conversion, recoloring the established `C6-C9` outfit and `CB-CF` fur palette entries, IPS patch build, patched `.sfc`, and verification report.
-- **Runtime switch**: `Select+L`/`Select+R` hook implemented; automated Mesen 2 sweep covers every stage, bosses, credits, pause and soft reset, with selection persistence. Released as v0.1.0 (`docs/knowledge/mod-implementation.md`).
+- **Runtime switch**: `Select+L`/`Select+R` hook implemented; automated Mesen 2 sweep covers every stage, bosses, credits, pause and soft reset, with selection persistence. Latest release v0.2.1 (saved selection since v0.2.0; colours in every boss fight, on the Stage Clear screens and from the first frame of each stage; see `CHANGELOG.md` and `docs/knowledge/mod-implementation.md`).
 - **Not done**: in-game palette menu. Do not claim one exists.
 
 ## Requirements
