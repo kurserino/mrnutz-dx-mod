@@ -1,0 +1,102 @@
+# yeti-reset-nocheat | exit=0 | rom=v0.2.1-rc11.runtime.sfc | state=blz-01.mss | UNPAUSE=1 RESETAT=200 END=3200 SHOTEVERY=100
+LOAD ok=true
+F2 GAMEPLAY
+ARES transplant at F2
+F100 gameplay=true energy(read)=4 heartPx full=55 empty=0 hits=0
+F100 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=50
+SHOT f0100 -> output\traces\yeti-reset-nocheat/f0100.png
+F151 DEATH x=240 y=301 energy=4
+F200 gameplay=false energy(read)=4 heartPx full=0 empty=0 hits=0
+F200 SCREEN inidisp=01 nmi=8357 pc=9D:E1A8 gameplay=false stage=50
+F200 SOFT RESET
+SHOT f0200 -> output\traces\yeti-reset-nocheat/f0200.png
+F300 gameplay=false energy(read)=183 heartPx full=0 empty=0 hits=0
+F300 SCREEN inidisp=80 nmi=0000 pc=8A:81B8 gameplay=false stage=00
+SHOT f0300 -> output\traces\yeti-reset-nocheat/f0300.png
+F400 gameplay=false energy(read)=183 heartPx full=0 empty=0 hits=0
+F400 SCREEN inidisp=0F nmi=8357 pc=9C:F835 gameplay=false stage=00
+SHOT f0400 -> output\traces\yeti-reset-nocheat/f0400.png
+F500 gameplay=false energy(read)=183 heartPx full=0 empty=0 hits=0
+F500 SCREEN inidisp=06 nmi=8357 pc=9D:E1A6 gameplay=false stage=00
+SHOT f0500 -> output\traces\yeti-reset-nocheat/f0500.png
+F600 gameplay=false energy(read)=183 heartPx full=0 empty=0 hits=0
+F600 SCREEN inidisp=80 nmi=8357 pc=82:99D8 gameplay=false stage=00
+SHOT f0600 -> output\traces\yeti-reset-nocheat/f0600.png
+F700 gameplay=false energy(read)=183 heartPx full=0 empty=0 hits=0
+F700 SCREEN inidisp=80 nmi=8357 pc=82:9A3C gameplay=false stage=00
+SHOT f0700 -> output\traces\yeti-reset-nocheat/f0700.png
+F800 gameplay=false energy(read)=183 heartPx full=0 empty=0 hits=0
+F800 SCREEN inidisp=07 nmi=8357 pc=9D:AF3A gameplay=false stage=00
+SHOT f0800 -> output\traces\yeti-reset-nocheat/f0800.png
+F900 gameplay=false energy(read)=183 heartPx full=0 empty=0 hits=0
+F900 SCREEN inidisp=0F nmi=8357 pc=9D:AF3C gameplay=false stage=00
+SHOT f0900 -> output\traces\yeti-reset-nocheat/f0900.png
+F1000 gameplay=false energy(read)=183 heartPx full=0 empty=0 hits=0
+F1000 SCREEN inidisp=0F nmi=8357 pc=9D:AF3A gameplay=false stage=00
+SHOT f1000 -> output\traces\yeti-reset-nocheat/f1000.png
+F1100 gameplay=false energy(read)=183 heartPx full=0 empty=0 hits=0
+F1100 SCREEN inidisp=0F nmi=8357 pc=9D:AF3E gameplay=false stage=00
+SHOT f1100 -> output\traces\yeti-reset-nocheat/f1100.png
+F1200 gameplay=false energy(read)=183 heartPx full=0 empty=0 hits=0
+F1200 SCREEN inidisp=0F nmi=8357 pc=9D:AF3E gameplay=false stage=00
+SHOT f1200 -> output\traces\yeti-reset-nocheat/f1200.png
+F1300 gameplay=false energy(read)=183 heartPx full=0 empty=0 hits=0
+F1300 SCREEN inidisp=80 nmi=8357 pc=9D:C605 gameplay=false stage=00
+SHOT f1300 -> output\traces\yeti-reset-nocheat/f1300.png
+F1400 gameplay=false energy(read)=183 heartPx full=0 empty=0 hits=0
+F1400 SCREEN inidisp=06 nmi=8357 pc=9D:C883 gameplay=false stage=00
+SHOT f1400 -> output\traces\yeti-reset-nocheat/f1400.png
+F1500 gameplay=false energy(read)=183 heartPx full=0 empty=0 hits=0
+F1500 SCREEN inidisp=06 nmi=8357 pc=9D:C883 gameplay=false stage=00
+SHOT f1500 -> output\traces\yeti-reset-nocheat/f1500.png
+F1600 gameplay=false energy(read)=4 heartPx full=0 empty=0 hits=0
+F1600 SCREEN inidisp=0C nmi=8357 pc=82:9A9A gameplay=false stage=00
+SHOT f1600 -> output\traces\yeti-reset-nocheat/f1600.png
+F1700 gameplay=false energy(read)=4 heartPx full=0 empty=0 hits=0
+F1700 SCREEN inidisp=0F nmi=8357 pc=8A:8215 gameplay=false stage=00
+SHOT f1700 -> output\traces\yeti-reset-nocheat/f1700.png
+F1800 gameplay=false energy(read)=4 heartPx full=0 empty=0 hits=0
+F1800 SCREEN inidisp=0F nmi=8357 pc=8A:8208 gameplay=false stage=00
+SHOT f1800 -> output\traces\yeti-reset-nocheat/f1800.png
+F1900 gameplay=false energy(read)=4 heartPx full=0 empty=0 hits=0
+F1900 SCREEN inidisp=0F nmi=8357 pc=82:99A8 gameplay=false stage=00
+SHOT f1900 -> output\traces\yeti-reset-nocheat/f1900.png
+F2000 gameplay=true energy(read)=4 heartPx full=0 empty=0 hits=0
+F2000 SCREEN inidisp=0F nmi=835B pc=80:8230 gameplay=true stage=00
+SHOT f2000 -> output\traces\yeti-reset-nocheat/f2000.png
+F2100 gameplay=true energy(read)=4 heartPx full=55 empty=0 hits=0
+F2100 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=00
+SHOT f2100 -> output\traces\yeti-reset-nocheat/f2100.png
+F2200 gameplay=true energy(read)=4 heartPx full=55 empty=0 hits=0
+F2200 SCREEN inidisp=0F nmi=835B pc=80:8233 gameplay=true stage=00
+SHOT f2200 -> output\traces\yeti-reset-nocheat/f2200.png
+F2300 gameplay=true energy(read)=4 heartPx full=55 empty=0 hits=0
+F2300 SCREEN inidisp=0F nmi=835B pc=80:822F gameplay=true stage=00
+SHOT f2300 -> output\traces\yeti-reset-nocheat/f2300.png
+F2400 gameplay=true energy(read)=3 heartPx full=44 empty=14 hits=1
+F2400 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=00
+SHOT f2400 -> output\traces\yeti-reset-nocheat/f2400.png
+F2500 gameplay=true energy(read)=3 heartPx full=44 empty=14 hits=1
+F2500 SCREEN inidisp=0F nmi=835B pc=80:822F gameplay=true stage=00
+SHOT f2500 -> output\traces\yeti-reset-nocheat/f2500.png
+F2600 gameplay=true energy(read)=2 heartPx full=33 empty=28 hits=2
+F2600 SCREEN inidisp=0F nmi=835B pc=80:8233 gameplay=true stage=00
+SHOT f2600 -> output\traces\yeti-reset-nocheat/f2600.png
+F2700 gameplay=true energy(read)=2 heartPx full=33 empty=28 hits=2
+F2700 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=00
+SHOT f2700 -> output\traces\yeti-reset-nocheat/f2700.png
+F2800 gameplay=true energy(read)=2 heartPx full=33 empty=28 hits=2
+F2800 SCREEN inidisp=0F nmi=835B pc=80:822E gameplay=true stage=00
+SHOT f2800 -> output\traces\yeti-reset-nocheat/f2800.png
+F2900 gameplay=true energy(read)=2 heartPx full=33 empty=28 hits=2
+F2900 SCREEN inidisp=0F nmi=835B pc=80:8233 gameplay=true stage=00
+SHOT f2900 -> output\traces\yeti-reset-nocheat/f2900.png
+F3000 gameplay=true energy(read)=2 heartPx full=33 empty=28 hits=2
+F3000 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=00
+SHOT f3000 -> output\traces\yeti-reset-nocheat/f3000.png
+F3100 gameplay=true energy(read)=2 heartPx full=33 empty=28 hits=2
+F3100 SCREEN inidisp=0F nmi=835B pc=80:8232 gameplay=true stage=00
+SHOT f3100 -> output\traces\yeti-reset-nocheat/f3100.png
+F3200 gameplay=true energy(read)=1 heartPx full=22 empty=42 hits=2
+RESULT hits=2 deaths=1 firstGameplay=2
+F3200 SCREEN inidisp=0F nmi=835B pc=80:8233 gameplay=true stage=00

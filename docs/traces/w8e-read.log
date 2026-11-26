@@ -1,0 +1,12 @@
+# w8e-read | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-00.mss
+LOAD ok=true
+F0 R 8E=00 pc=82:A229
+F0 R 8E=00 pc=82:A927
+F0 R 8E=00 pc=82:A99A
+F0 R 8E=00 pc=82:AB48
+F0 R 8E=00 pc=82:C436
+F2 R 8E=00 pc=82:BA58
+F60 R 8E=00 pc=82:A620
+F60 R 8E=00 pc=82:A7E4
+F86 R 8E=00 pc=82:A720
+F114 R 8E=00 pc=82:B91C

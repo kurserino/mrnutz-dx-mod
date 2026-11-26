@@ -1,0 +1,34 @@
+# black-orig | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-00.mss | END=900 SHOTEVERY=100 PAR=2113965823 PAR2=2114057395 PAR3=2115946753
+LOAD ok=true
+ADDCHEAT 7E008EFF true
+ADDCHEAT 7E01F4B3 true
+ADDCHEAT 7E1EC901 true
+F2 GAMEPLAY
+ARES transplant at F2
+F100 gameplay=false energy(read)=4 heartPx full=0 empty=0 hits=0
+F100 SCREEN inidisp=80 nmi=835B pc=81:CC58 gameplay=false stage=00
+SHOT f0100 -> output\traces\black-orig/f0100.png
+F200 gameplay=false energy(read)=4 heartPx full=0 empty=0 hits=0
+F200 SCREEN inidisp=80 nmi=835B pc=81:CC58 gameplay=false stage=00
+SHOT f0200 -> output\traces\black-orig/f0200.png
+F300 gameplay=false energy(read)=4 heartPx full=0 empty=0 hits=0
+F300 SCREEN inidisp=80 nmi=835B pc=81:CC58 gameplay=false stage=00
+SHOT f0300 -> output\traces\black-orig/f0300.png
+F400 gameplay=true energy(read)=4 heartPx full=50 empty=4 hits=0
+F400 SCREEN inidisp=0F nmi=835B pc=80:822E gameplay=true stage=00
+SHOT f0400 -> output\traces\black-orig/f0400.png
+F500 gameplay=true energy(read)=4 heartPx full=50 empty=7 hits=0
+F500 SCREEN inidisp=0F nmi=835B pc=80:8230 gameplay=true stage=00
+SHOT f0500 -> output\traces\black-orig/f0500.png
+F600 gameplay=true energy(read)=4 heartPx full=50 empty=6 hits=0
+F600 SCREEN inidisp=0F nmi=835B pc=80:822F gameplay=true stage=00
+SHOT f0600 -> output\traces\black-orig/f0600.png
+F700 gameplay=true energy(read)=4 heartPx full=50 empty=6 hits=0
+F700 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=00
+SHOT f0700 -> output\traces\black-orig/f0700.png
+F800 gameplay=true energy(read)=4 heartPx full=50 empty=6 hits=0
+F800 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=00
+SHOT f0800 -> output\traces\black-orig/f0800.png
+F900 gameplay=true energy(read)=4 heartPx full=50 empty=6 hits=0
+RESULT hits=0 deaths=0 firstGameplay=2
+F900 SCREEN inidisp=0F nmi=835B pc=80:8233 gameplay=true stage=00

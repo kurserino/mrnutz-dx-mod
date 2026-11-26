@@ -1,0 +1,3 @@
+# dmach-10 | exit=0 | rom=v0.2.1-rc11.runtime.sfc | state=stage-10.mss | END=1500
+LOAD ok=true
+RESULT dma=01 hdma=03 regs=03

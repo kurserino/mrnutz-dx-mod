@@ -1,0 +1,22 @@
+# ff-skip-00 | exit=0 | rom=v0.2.1-rc12.runtime.sfc | state=stage-00.mss | SCENARIO=1 END=800
+LOAD ok=true
+F2 LIT brightness=15 gameplay=true
+F2 BAD nutz=6 on palette 4 (S=4 X=5) gameplay=true brightness=15
+SHOT bad0002 -> output\traces\ff-skip-00/bad0002.png
+F62 DARK
+F94 LIT brightness=1 gameplay=false
+F358 DARK
+F519 LIT brightness=15 gameplay=true
+F551 BAD nutz=6 on palette 4 (S=4 X=5) gameplay=true brightness=15
+F553 BAD nutz=6 on palette 4 (S=4 X=5) gameplay=true brightness=15
+F554 BAD nutz=6 on palette 4 (S=4 X=5) gameplay=true brightness=15
+SHOT bad0551 -> output\traces\ff-skip-00/bad0551.png
+F555 BAD nutz=6 on palette 4 (S=4 X=5) gameplay=true brightness=15
+F556 BAD nutz=6 on palette 4 (S=4 X=5) gameplay=true brightness=15
+SHOT bad0553 -> output\traces\ff-skip-00/bad0553.png
+SHOT bad0554 -> output\traces\ff-skip-00/bad0554.png
+F558 BAD nutz=6 on palette 4 (S=4 X=5) gameplay=true brightness=15
+SHOT bad0555 -> output\traces\ff-skip-00/bad0555.png
+F559 BAD nutz=6 on palette 4 (S=4 X=5) gameplay=true brightness=15
+SHOT bad0556 -> output\traces\ff-skip-00/bad0556.png
+RESULT litNutzFrames=341 bad=8

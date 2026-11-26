@@ -1,0 +1,4 @@
+# jump-none | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-00.mss
+LOAD ok=true
+SHOT jump -> output\traces\jump-none/jump.png
+RESULT jumpPeak=78

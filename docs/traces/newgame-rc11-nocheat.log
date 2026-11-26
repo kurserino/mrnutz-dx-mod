@@ -1,0 +1,14 @@
+# newgame-rc11-nocheat | exit=0 | rom=v0.2.1-rc11.runtime.sfc | MODE=1 END=3000
+F500 gameplay=false energy(read)=183 heartPx full=0 empty=0 hits=0
+SHOT f0500 -> output\traces\newgame-rc11-nocheat/f0500.png
+F1000 gameplay=false energy(read)=183 heartPx full=0 empty=0 hits=0
+SHOT f1000 -> output\traces\newgame-rc11-nocheat/f1000.png
+F1500 gameplay=false energy(read)=2 heartPx full=0 empty=0 hits=0
+SHOT f1500 -> output\traces\newgame-rc11-nocheat/f1500.png
+F1816 GAMEPLAY
+F2000 gameplay=true energy(read)=2 heartPx full=33 empty=28 hits=0
+SHOT f2000 -> output\traces\newgame-rc11-nocheat/f2000.png
+F2500 gameplay=true energy(read)=1 heartPx full=22 empty=42 hits=1
+SHOT f2500 -> output\traces\newgame-rc11-nocheat/f2500.png
+F3000 gameplay=true energy(read)=1 heartPx full=22 empty=42 hits=1
+RESULT hits=1 deaths=0 firstGameplay=1816

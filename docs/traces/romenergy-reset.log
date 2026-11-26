@@ -1,0 +1,61 @@
+# romenergy-reset | exit=0 | rom=v0.2.1-rc11.runtime.sfc | state=blz-01.mss | UNPAUSE=1 RESETAT=200 END=3200 PAR=2191628969 PAR2=2191629234 PAR3=2191629546 PAR4=2189613993 PAR5=2189614259 PAR6=2189614570 PAR7=2156028329 PAR8=2156028595 PAR9=2156028906 PAR10=2113965823 PAR11=2115946753
+LOAD ok=true
+ADDCHEAT 82A19AA9 true
+ADDCHEAT 82A19BB2 true
+ADDCHEAT 82A19CEA true
+ADDCHEAT 8282DBA9 true
+ADDCHEAT 8282DCB3 true
+ADDCHEAT 8282DDEA true
+ADDCHEAT 808261A9 true
+ADDCHEAT 808262B3 true
+ADDCHEAT 808263EA true
+ADDCHEAT 7E008EFF true
+ADDCHEAT 7E1EC901 true
+F2 GAMEPLAY
+ARES transplant at F2
+F100 SCREEN inidisp=0F nmi=835B pc=80:822F gameplay=true stage=50
+F200 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=50
+F200 SOFT RESET
+F300 SCREEN inidisp=80 nmi=0000 pc=8A:81B8 gameplay=false stage=00
+F400 SCREEN inidisp=0F nmi=8357 pc=9C:F835 gameplay=false stage=00
+F500 gameplay=false energy(read)=183 heartPx full=0 empty=0 hits=0
+F500 SCREEN inidisp=06 nmi=8357 pc=9D:E1A6 gameplay=false stage=00
+SHOT f0500 -> output\traces\romenergy-reset/f0500.png
+F600 SCREEN inidisp=80 nmi=8357 pc=82:99D8 gameplay=false stage=00
+F700 SCREEN inidisp=80 nmi=8357 pc=82:9A3C gameplay=false stage=00
+F800 SCREEN inidisp=07 nmi=8357 pc=9D:AF3A gameplay=false stage=00
+F900 SCREEN inidisp=0F nmi=8357 pc=9D:AF3C gameplay=false stage=00
+F1000 gameplay=false energy(read)=183 heartPx full=0 empty=0 hits=0
+F1000 SCREEN inidisp=0F nmi=8357 pc=9D:AF3A gameplay=false stage=00
+SHOT f1000 -> output\traces\romenergy-reset/f1000.png
+F1100 SCREEN inidisp=0F nmi=8357 pc=9D:AF3E gameplay=false stage=00
+F1200 SCREEN inidisp=0F nmi=8357 pc=9D:AF3E gameplay=false stage=00
+F1300 SCREEN inidisp=80 nmi=8357 pc=9D:C605 gameplay=false stage=00
+F1400 SCREEN inidisp=06 nmi=8357 pc=9D:C883 gameplay=false stage=00
+F1500 gameplay=false energy(read)=183 heartPx full=0 empty=0 hits=0
+F1500 SCREEN inidisp=06 nmi=8357 pc=9D:C883 gameplay=false stage=00
+SHOT f1500 -> output\traces\romenergy-reset/f1500.png
+F1600 SCREEN inidisp=0C nmi=8357 pc=82:9A9A gameplay=false stage=00
+F1700 SCREEN inidisp=0F nmi=8357 pc=8A:8215 gameplay=false stage=00
+F1800 SCREEN inidisp=0F nmi=8357 pc=8A:8208 gameplay=false stage=00
+F1900 SCREEN inidisp=0F nmi=8357 pc=82:99A8 gameplay=false stage=00
+F2000 gameplay=true energy(read)=4 heartPx full=0 empty=0 hits=0
+F2000 SCREEN inidisp=0F nmi=835B pc=80:8230 gameplay=true stage=00
+SHOT f2000 -> output\traces\romenergy-reset/f2000.png
+F2100 SCREEN inidisp=0F nmi=835B pc=80:822F gameplay=true stage=00
+F2200 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=00
+F2300 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=00
+F2400 SCREEN inidisp=0F nmi=835B pc=80:8233 gameplay=true stage=00
+F2500 gameplay=true energy(read)=4 heartPx full=55 empty=0 hits=0
+F2500 SCREEN inidisp=0F nmi=835B pc=80:822F gameplay=true stage=00
+SHOT f2500 -> output\traces\romenergy-reset/f2500.png
+F2600 SCREEN inidisp=0F nmi=835B pc=80:8230 gameplay=true stage=00
+F2700 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=00
+F2800 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=00
+F2900 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=00
+F3000 gameplay=true energy(read)=4 heartPx full=55 empty=0 hits=0
+F3000 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=00
+SHOT f3000 -> output\traces\romenergy-reset/f3000.png
+F3100 SCREEN inidisp=0F nmi=835B pc=80:8232 gameplay=true stage=00
+RESULT hits=0 deaths=0 firstGameplay=2
+F3200 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=00

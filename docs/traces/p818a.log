@@ -1,0 +1,2 @@
+# p818a | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc
+F1508 exec 80818A P=A4 M8=true

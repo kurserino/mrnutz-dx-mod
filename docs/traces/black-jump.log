@@ -1,0 +1,50 @@
+# black-jump | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-00.mss | END=900 SHOTEVERY=50 PAR=2113965823
+LOAD ok=true
+ADDCHEAT 7E008EFF true
+F2 GAMEPLAY
+ARES transplant at F2
+F50 gameplay=false energy(read)=4 heartPx full=0 empty=0 hits=0
+SHOT f0050 -> output\traces\black-jump/f0050.png
+F100 gameplay=false energy(read)=4 heartPx full=0 empty=0 hits=0
+F100 SCREEN inidisp=80 nmi=835B pc=81:CC58 gameplay=false stage=00
+SHOT f0100 -> output\traces\black-jump/f0100.png
+F150 gameplay=false energy(read)=4 heartPx full=0 empty=0 hits=0
+SHOT f0150 -> output\traces\black-jump/f0150.png
+F200 gameplay=false energy(read)=4 heartPx full=0 empty=0 hits=0
+F200 SCREEN inidisp=80 nmi=835B pc=81:CC58 gameplay=false stage=00
+SHOT f0200 -> output\traces\black-jump/f0200.png
+F250 gameplay=false energy(read)=4 heartPx full=0 empty=0 hits=0
+SHOT f0250 -> output\traces\black-jump/f0250.png
+F300 gameplay=false energy(read)=4 heartPx full=0 empty=0 hits=0
+F300 SCREEN inidisp=80 nmi=835B pc=81:CC58 gameplay=false stage=00
+SHOT f0300 -> output\traces\black-jump/f0300.png
+F350 gameplay=true energy(read)=4 heartPx full=0 empty=0 hits=0
+SHOT f0350 -> output\traces\black-jump/f0350.png
+F400 gameplay=true energy(read)=4 heartPx full=50 empty=4 hits=0
+F400 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=00
+SHOT f0400 -> output\traces\black-jump/f0400.png
+F450 gameplay=true energy(read)=4 heartPx full=50 empty=6 hits=0
+SHOT f0450 -> output\traces\black-jump/f0450.png
+F500 gameplay=true energy(read)=4 heartPx full=50 empty=3 hits=0
+F500 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=00
+SHOT f0500 -> output\traces\black-jump/f0500.png
+F550 gameplay=true energy(read)=4 heartPx full=50 empty=6 hits=0
+SHOT f0550 -> output\traces\black-jump/f0550.png
+F600 gameplay=true energy(read)=4 heartPx full=50 empty=6 hits=0
+F600 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=00
+SHOT f0600 -> output\traces\black-jump/f0600.png
+F650 gameplay=true energy(read)=4 heartPx full=50 empty=7 hits=0
+SHOT f0650 -> output\traces\black-jump/f0650.png
+F700 gameplay=true energy(read)=4 heartPx full=50 empty=6 hits=0
+F700 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=00
+SHOT f0700 -> output\traces\black-jump/f0700.png
+F750 gameplay=true energy(read)=4 heartPx full=50 empty=7 hits=0
+SHOT f0750 -> output\traces\black-jump/f0750.png
+F800 gameplay=true energy(read)=4 heartPx full=50 empty=7 hits=0
+F800 SCREEN inidisp=0F nmi=835B pc=80:8232 gameplay=true stage=00
+SHOT f0800 -> output\traces\black-jump/f0800.png
+F850 gameplay=true energy(read)=4 heartPx full=50 empty=4 hits=0
+SHOT f0850 -> output\traces\black-jump/f0850.png
+F900 gameplay=true energy(read)=4 heartPx full=50 empty=6 hits=0
+RESULT hits=0 deaths=0 firstGameplay=2
+F900 SCREEN inidisp=0F nmi=835B pc=80:822E gameplay=true stage=00

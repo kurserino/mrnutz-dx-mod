@@ -1,0 +1,71 @@
+# romenergy-boot-orig | exit=0 | rom=v0.2.1-rc11.runtime.sfc | MODE=1 END=4000 PAR=2191628969 PAR2=2191629234 PAR3=2191629546 PAR4=2189613993 PAR5=2189614259 PAR6=2189614570 PAR7=2156028329 PAR8=2156028595 PAR9=2156028906 PAR10=2155973289 PAR11=2155973555 PAR12=2155973866 PAR13=2155974122
+ADDCHEAT 82A19AA9 true
+ADDCHEAT 82A19BB2 true
+ADDCHEAT 82A19CEA true
+ADDCHEAT 8282DBA9 true
+ADDCHEAT 8282DCB3 true
+ADDCHEAT 8282DDEA true
+ADDCHEAT 808261A9 true
+ADDCHEAT 808262B3 true
+ADDCHEAT 808263EA true
+ADDCHEAT 80818AA9 true
+ADDCHEAT 80818BB3 true
+ADDCHEAT 80818CEA true
+ADDCHEAT 80818DEA true
+F100 SCREEN inidisp=80 nmi=0000 pc=8A:81B8 gameplay=false stage=00
+F200 SCREEN inidisp=0F nmi=8357 pc=9C:F836 gameplay=false stage=00
+F300 SCREEN inidisp=06 nmi=8357 pc=9D:E1A8 gameplay=false stage=00
+F400 SCREEN inidisp=80 nmi=8357 pc=82:9A9B gameplay=false stage=00
+F500 gameplay=false energy(read)=183 heartPx full=0 empty=0 hits=0
+F500 SCREEN inidisp=80 nmi=8357 pc=82:99D3 gameplay=false stage=00
+SHOT f0500 -> output\traces\romenergy-boot-orig/f0500.png
+F600 SCREEN inidisp=07 nmi=8357 pc=9D:AF3A gameplay=false stage=00
+F700 SCREEN inidisp=0F nmi=8357 pc=9D:AF3C gameplay=false stage=00
+F800 SCREEN inidisp=0F nmi=8357 pc=9D:AF3A gameplay=false stage=00
+F900 SCREEN inidisp=0F nmi=8357 pc=9D:AF3E gameplay=false stage=00
+F1000 gameplay=false energy(read)=183 heartPx full=0 empty=0 hits=0
+F1000 SCREEN inidisp=0F nmi=8357 pc=9D:AF3E gameplay=false stage=00
+SHOT f1000 -> output\traces\romenergy-boot-orig/f1000.png
+F1100 SCREEN inidisp=80 nmi=8357 pc=9D:C605 gameplay=false stage=00
+F1200 SCREEN inidisp=06 nmi=8357 pc=9D:C884 gameplay=false stage=00
+F1300 SCREEN inidisp=0F nmi=8357 pc=9D:C883 gameplay=false stage=00
+F1400 SCREEN inidisp=08 nmi=8357 pc=82:9A3C gameplay=false stage=00
+F1500 gameplay=false energy(read)=4 heartPx full=0 empty=0 hits=0
+F1500 SCREEN inidisp=0F nmi=8357 pc=8A:820A gameplay=false stage=00
+SHOT f1500 -> output\traces\romenergy-boot-orig/f1500.png
+F1600 SCREEN inidisp=0F nmi=8357 pc=8A:8213 gameplay=false stage=00
+F1700 SCREEN inidisp=0F nmi=8357 pc=82:9A40 gameplay=false stage=00
+F1800 SCREEN inidisp=80 nmi=8357 pc=82:99E8 gameplay=false stage=00
+F1816 GAMEPLAY
+F1900 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=00
+F2000 gameplay=true energy(read)=4 heartPx full=55 empty=0 hits=0
+F2000 SCREEN inidisp=0F nmi=835B pc=80:822E gameplay=true stage=00
+SHOT f2000 -> output\traces\romenergy-boot-orig/f2000.png
+F2100 SCREEN inidisp=0F nmi=835B pc=80:8232 gameplay=true stage=00
+F2200 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=00
+F2300 SCREEN inidisp=0F nmi=835B pc=80:8230 gameplay=true stage=00
+F2400 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=00
+F2500 gameplay=true energy(read)=4 heartPx full=55 empty=0 hits=1
+F2500 SCREEN inidisp=0F nmi=835B pc=80:8232 gameplay=true stage=00
+SHOT f2500 -> output\traces\romenergy-boot-orig/f2500.png
+F2600 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=00
+F2700 SCREEN inidisp=0F nmi=835B pc=80:8233 gameplay=true stage=00
+F2800 SCREEN inidisp=0F nmi=835B pc=80:8233 gameplay=true stage=00
+F2900 SCREEN inidisp=0F nmi=835B pc=80:8232 gameplay=true stage=00
+F3000 gameplay=true energy(read)=4 heartPx full=55 empty=0 hits=1
+F3000 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=00
+SHOT f3000 -> output\traces\romenergy-boot-orig/f3000.png
+F3100 SCREEN inidisp=0F nmi=835B pc=80:8232 gameplay=true stage=00
+F3200 SCREEN inidisp=0F nmi=835B pc=80:822F gameplay=true stage=00
+F3300 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=00
+F3400 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=00
+F3500 gameplay=true energy(read)=4 heartPx full=55 empty=0 hits=4
+F3500 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=00
+SHOT f3500 -> output\traces\romenergy-boot-orig/f3500.png
+F3600 SCREEN inidisp=0F nmi=835B pc=80:8233 gameplay=true stage=00
+F3700 SCREEN inidisp=0F nmi=835B pc=80:8230 gameplay=true stage=00
+F3800 SCREEN inidisp=0F nmi=835B pc=80:8230 gameplay=true stage=00
+F3900 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=00
+F4000 gameplay=true energy(read)=4 heartPx full=55 empty=0 hits=6
+RESULT hits=6 deaths=0 firstGameplay=1816
+F4000 SCREEN inidisp=0F nmi=835B pc=80:8233 gameplay=true stage=00

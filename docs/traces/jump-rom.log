@@ -1,0 +1,4 @@
+# jump-rom | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-00.mss | PAR=2191990434 PAR2=2191990783
+LOAD ok=true
+SHOT jump -> output\traces\jump-rom/jump.png
+RESULT jumpPeak=283

@@ -1,0 +1,20 @@
+# fhline-rc13 | exit=0 | rom=v0.2.1-rc13.runtime.sfc | state=stage-00.mss
+LOAD ok=true
+F545 frameHookLines=[165] 0024=36
+F546 frameHookLines=[170] 0024=36
+F547 frameHookLines=[176] 0024=36
+F548 frameHookLines=[183] 0024=36
+F549 frameHookLines=[198] 0024=36
+F550 frameHookLines=[205] 0024=36
+F551 frameHookLines=[198] 0024=36
+F552 frameHookLines=[205] 0024=36
+F553 frameHookLines=[209] 0024=36
+F554 frameHookLines=[214] 0024=36
+F555 frameHookLines=[220] 0024=36
+F556 frameHookLines=[204] 0024=36
+F557 frameHookLines=[207] 0024=36
+F558 frameHookLines=[212] 0024=36
+F559 frameHookLines=[204] 0024=36
+F560 frameHookLines=[197] 0024=36
+F561 frameHookLines=[189] 0024=36
+F562 frameHookLines=[186] 0024=36

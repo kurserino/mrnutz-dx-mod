@@ -1,0 +1,62 @@
+# newgame-rc11-fur1 | exit=0 | rom=v0.2.1-rc11.runtime.sfc | MODE=1 END=3000 SAVEFUR=1 SHOTEVERY=100
+F100 gameplay=false energy(read)=183 heartPx full=0 empty=0 hits=0
+SHOT f0100 -> output\traces\newgame-rc11-fur1/f0100.png
+F200 gameplay=false energy(read)=183 heartPx full=0 empty=0 hits=0
+SHOT f0200 -> output\traces\newgame-rc11-fur1/f0200.png
+F300 gameplay=false energy(read)=183 heartPx full=0 empty=0 hits=0
+SHOT f0300 -> output\traces\newgame-rc11-fur1/f0300.png
+F400 gameplay=false energy(read)=183 heartPx full=0 empty=0 hits=0
+SHOT f0400 -> output\traces\newgame-rc11-fur1/f0400.png
+F500 gameplay=false energy(read)=183 heartPx full=0 empty=0 hits=0
+SHOT f0500 -> output\traces\newgame-rc11-fur1/f0500.png
+F600 gameplay=false energy(read)=183 heartPx full=0 empty=0 hits=0
+SHOT f0600 -> output\traces\newgame-rc11-fur1/f0600.png
+F700 gameplay=false energy(read)=183 heartPx full=0 empty=0 hits=0
+SHOT f0700 -> output\traces\newgame-rc11-fur1/f0700.png
+F800 gameplay=false energy(read)=183 heartPx full=0 empty=0 hits=0
+SHOT f0800 -> output\traces\newgame-rc11-fur1/f0800.png
+F900 gameplay=false energy(read)=183 heartPx full=0 empty=0 hits=0
+SHOT f0900 -> output\traces\newgame-rc11-fur1/f0900.png
+F1000 gameplay=false energy(read)=183 heartPx full=0 empty=0 hits=0
+SHOT f1000 -> output\traces\newgame-rc11-fur1/f1000.png
+F1100 gameplay=false energy(read)=183 heartPx full=0 empty=0 hits=0
+SHOT f1100 -> output\traces\newgame-rc11-fur1/f1100.png
+F1200 gameplay=false energy(read)=183 heartPx full=0 empty=0 hits=0
+SHOT f1200 -> output\traces\newgame-rc11-fur1/f1200.png
+F1300 gameplay=false energy(read)=183 heartPx full=0 empty=0 hits=0
+SHOT f1300 -> output\traces\newgame-rc11-fur1/f1300.png
+F1400 gameplay=false energy(read)=2 heartPx full=0 empty=0 hits=0
+SHOT f1400 -> output\traces\newgame-rc11-fur1/f1400.png
+F1500 gameplay=false energy(read)=2 heartPx full=0 empty=0 hits=0
+SHOT f1500 -> output\traces\newgame-rc11-fur1/f1500.png
+F1600 gameplay=false energy(read)=2 heartPx full=0 empty=0 hits=0
+SHOT f1600 -> output\traces\newgame-rc11-fur1/f1600.png
+F1700 gameplay=false energy(read)=2 heartPx full=0 empty=0 hits=0
+SHOT f1700 -> output\traces\newgame-rc11-fur1/f1700.png
+F1800 gameplay=false energy(read)=2 heartPx full=0 empty=0 hits=0
+SHOT f1800 -> output\traces\newgame-rc11-fur1/f1800.png
+F1816 GAMEPLAY
+F1900 gameplay=true energy(read)=2 heartPx full=33 empty=28 hits=0
+SHOT f1900 -> output\traces\newgame-rc11-fur1/f1900.png
+F2000 gameplay=true energy(read)=2 heartPx full=33 empty=28 hits=0
+SHOT f2000 -> output\traces\newgame-rc11-fur1/f2000.png
+F2100 gameplay=true energy(read)=2 heartPx full=33 empty=28 hits=0
+SHOT f2100 -> output\traces\newgame-rc11-fur1/f2100.png
+F2200 gameplay=true energy(read)=1 heartPx full=22 empty=42 hits=1
+SHOT f2200 -> output\traces\newgame-rc11-fur1/f2200.png
+F2300 gameplay=true energy(read)=1 heartPx full=22 empty=42 hits=1
+SHOT f2300 -> output\traces\newgame-rc11-fur1/f2300.png
+F2400 gameplay=true energy(read)=1 heartPx full=22 empty=42 hits=1
+SHOT f2400 -> output\traces\newgame-rc11-fur1/f2400.png
+F2500 gameplay=true energy(read)=1 heartPx full=22 empty=42 hits=1
+SHOT f2500 -> output\traces\newgame-rc11-fur1/f2500.png
+F2600 gameplay=true energy(read)=1 heartPx full=22 empty=42 hits=1
+SHOT f2600 -> output\traces\newgame-rc11-fur1/f2600.png
+F2700 gameplay=true energy(read)=1 heartPx full=22 empty=42 hits=1
+SHOT f2700 -> output\traces\newgame-rc11-fur1/f2700.png
+F2800 gameplay=true energy(read)=1 heartPx full=22 empty=42 hits=1
+SHOT f2800 -> output\traces\newgame-rc11-fur1/f2800.png
+F2900 gameplay=true energy(read)=1 heartPx full=22 empty=42 hits=1
+SHOT f2900 -> output\traces\newgame-rc11-fur1/f2900.png
+F3000 gameplay=true energy(read)=1 heartPx full=22 empty=42 hits=1
+RESULT hits=1 deaths=0 firstGameplay=1816

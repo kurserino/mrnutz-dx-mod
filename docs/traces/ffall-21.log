@@ -1,0 +1,8 @@
+# ffall-21 | exit=0 | rom=v0.2.1-rc13.runtime.sfc | state=stage-21.mss | SCENARIO=1 END=900
+LOAD ok=true
+F2 LIT brightness=15 gameplay=true
+F2 BAD nutz=6 on palette 4 (S=4 X=5) gameplay=true brightness=15
+SHOT bad0002 -> output\traces\ffall-21/bad0002.png
+F62 DARK
+F233 LIT brightness=1 gameplay=false
+RESULT litNutzFrames=728 bad=1

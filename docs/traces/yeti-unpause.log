@@ -1,0 +1,20 @@
+# yeti-unpause | exit=0 | rom=v0.2.1-rc11.runtime.sfc | state=blz-01.mss | END=200 INPUT=6 SHOTEVERY=20
+LOAD ok=true
+F1 SCENE 82D77C stage=50 area0550=F771 x=0 y=180
+F1 nogameplay
+F2 S=4 X=255 nutz=6 ok=false foreignOnX=0 shared=false pend=01 ready=0 passes=0
+ARES transplant at F2
+F3 nogameplay
+SHOT f0020 -> output\traces\yeti-unpause/f0020.png
+F42 FIRSTOK 41 frames after scene change
+F42 S=4 X=7 nutz=6 ok=true foreignOnX=0 shared=false pend=24 ready=1 passes=1
+SHOT f0040 -> output\traces\yeti-unpause/f0040.png
+SHOT f0060 -> output\traces\yeti-unpause/f0060.png
+SHOT f0080 -> output\traces\yeti-unpause/f0080.png
+SHOT f0100 -> output\traces\yeti-unpause/f0100.png
+SHOT f0120 -> output\traces\yeti-unpause/f0120.png
+SHOT f0140 -> output\traces\yeti-unpause/f0140.png
+SHOT f0160 -> output\traces\yeti-unpause/f0160.png
+SHOT f0180 -> output\traces\yeti-unpause/f0180.png
+RESULT visible=160 ok=159 bad=1
+SHOT f0200 -> output\traces\yeti-unpause/f0200.png

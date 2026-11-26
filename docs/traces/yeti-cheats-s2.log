@@ -1,0 +1,55 @@
+# yeti-cheats-s2 | exit=0 | rom=v0.2.1-rc11.runtime.sfc | state=blz-01.mss | UNPAUSE=1 SEED=2 END=2400 SHOTEVERY=200 PAR=2113965823 PAR2=2114057395 PAR3=2115946753
+LOAD ok=true
+ADDCHEAT 7E008EFF true
+ADDCHEAT 7E01F4B3 true
+ADDCHEAT 7E1EC901 true
+F2 GAMEPLAY
+ARES transplant at F2
+F100 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=50
+F200 gameplay=true energy(read)=4 heartPx full=55 empty=0 hits=0
+F200 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=50
+SHOT f0200 -> output\traces\yeti-cheats-s2/f0200.png
+F300 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=50
+F400 gameplay=true energy(read)=4 heartPx full=55 empty=0 hits=0
+F400 SCREEN inidisp=0F nmi=835B pc=80:8230 gameplay=true stage=50
+SHOT f0400 -> output\traces\yeti-cheats-s2/f0400.png
+F500 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=50
+F600 gameplay=true energy(read)=4 heartPx full=55 empty=0 hits=0
+F600 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=50
+SHOT f0600 -> output\traces\yeti-cheats-s2/f0600.png
+F700 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=50
+F800 gameplay=true energy(read)=4 heartPx full=55 empty=0 hits=0
+F800 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=50
+SHOT f0800 -> output\traces\yeti-cheats-s2/f0800.png
+F900 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=50
+F1000 gameplay=true energy(read)=4 heartPx full=55 empty=0 hits=0
+F1000 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=50
+SHOT f1000 -> output\traces\yeti-cheats-s2/f1000.png
+F1100 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=50
+F1200 gameplay=true energy(read)=4 heartPx full=55 empty=0 hits=0
+F1200 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=50
+SHOT f1200 -> output\traces\yeti-cheats-s2/f1200.png
+F1300 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=50
+F1400 gameplay=true energy(read)=4 heartPx full=55 empty=0 hits=0
+F1400 SCREEN inidisp=0F nmi=835B pc=80:822F gameplay=true stage=50
+SHOT f1400 -> output\traces\yeti-cheats-s2/f1400.png
+F1500 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=50
+F1600 gameplay=true energy(read)=4 heartPx full=55 empty=0 hits=1
+F1600 SCREEN inidisp=0F nmi=835B pc=80:822F gameplay=true stage=50
+SHOT f1600 -> output\traces\yeti-cheats-s2/f1600.png
+F1700 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=50
+F1800 gameplay=true energy(read)=4 heartPx full=55 empty=0 hits=3
+F1800 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=50
+SHOT f1800 -> output\traces\yeti-cheats-s2/f1800.png
+F1900 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=50
+F2000 gameplay=true energy(read)=4 heartPx full=55 empty=0 hits=3
+F2000 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=50
+SHOT f2000 -> output\traces\yeti-cheats-s2/f2000.png
+F2100 SCREEN inidisp=0F nmi=835B pc=80:822F gameplay=true stage=50
+F2200 gameplay=true energy(read)=4 heartPx full=55 empty=0 hits=3
+F2200 SCREEN inidisp=0F nmi=835B pc=80:8231 gameplay=true stage=50
+SHOT f2200 -> output\traces\yeti-cheats-s2/f2200.png
+F2300 SCREEN inidisp=0F nmi=835B pc=80:822F gameplay=true stage=50
+F2400 gameplay=true energy(read)=4 heartPx full=55 empty=0 hits=3
+RESULT hits=3 deaths=0 firstGameplay=2
+F2400 SCREEN inidisp=0F nmi=835B pc=80:822F gameplay=true stage=50

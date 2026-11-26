@@ -20,6 +20,28 @@ Checked in Mesen with `tools/mesen/cheat-check.lua` (each code held every frame,
   Y 180 → 304) [trace] `cheat-bossinv-s1.log`.
 - Lives `word($1889) = $A3BE` (x9): the HUD shows x9 and a death leaves it at 9 [trace] `cheat-lives.log`.
 - `$0A29 = $99` (nuts) and `$1894 = $99` (coins): the HUD shows 99 [trace] `cheat-nuts.log`, `cheat-coins.log`.
+- **Full infinite energy as a ROM cheat (preferred):** the hit code `$82:A19A` `LDA $01F4 / EOR #$B7 / TAX / DEC A /
+  EOR #$B7 / STA $01F4` (death if `X - 1 < 0`, `$82:A1A8`) becomes `LDA #$B2 / NOP` (every hit leaves 4 = 5 hearts);
+  energy is also set to `$B3` instead of `$188E` at stage start (`$82:82DB`) and on a new life (`$80:8261`), and
+  instead of `$7F:B00D` on a new game (`$80:818A`, 4 bytes, M8). ares code:
+  `82A19A:A9+82A19B:B2+82A19C:EA+8282DB:A9+8282DC:B3+8282DD:EA+808261:A9+808262:B3+808263:EA+80818A:A9+80818B:B3+80818C:EA+80818D:EA`.
+  Verified with Mesen's cheat engine: 5 hearts from the first frame of a new game, no enemy death, normal soft reset
+  [trace] `romenergy-boot.log`, `romenergy-play-s1/s2.log`, `romenergy-reset.log`. It touches no RAM read.
+- **RAM read cheats can break stage loading in ares.** Two user states, both after "load a save, soft reset, new game",
+  stayed black at stage start (`$0572 = $CF1C`, NMI looping over the DMA queue `$13C9+`): the garbage written over
+  `$01E2-$01F3` and `$13C2-$13F1` was `$B3` with the energy code `7E01F4:B3` on, and `$FF` once only
+  `7E008E:FF` (infinite jump) was left, i.e. always the value of a RAM read cheat [trace] `user-black*.bs1` (private,
+  analysis in this section). Not reproduced with Mesen's cheat engine. Use ROM cheats for anything left on.
+- **Infinite jump as a ROM cheat:** `$82:A71E` `LDX $8E / BEQ $A777` (air jump allowed when `$8E` is non-zero)
+  becomes `LDX #$FF`: `82A71E:A2+82A71F:FF`. Jump peak 283 px against 78 (the RAM code `$8E = $FF` gives 344: other
+  readers of `$8E` also change) [trace] `jump-none.log`, `jump-rom.log`, `jump-ram.log`; new game and soft reset
+  normal with the ROM energy and jump codes [trace] `romcheats-boot.log`, `romcheats-reset.log`.
+- The user's ares state after "load a save, soft reset, new game" with the RAM energy code on stayed black at stage
+  start: `$0572 = $CF1C` (stage loading) for ~340 frames while the NMI looped over a DMA queue (`$13C9+`) filled with
+  `$B3`, and `$01E0-$01F3` held an `$FF $00` pattern; a clean run spends 1 frame there with an empty queue
+  [trace] `blackwatch.log`, `qdump-orig.log`. Not reproduced in Mesen (cheats, soft reset, L/R fuzz:
+  `lrfuzz-s1..6.log`); [hypothesis] ares applies the RAM read code to accesses Mesen's cheat engine does not. Prefer
+  the ROM cheat above.
 - `$01F4 = $B3` (full infinite energy, 5 hearts): with Mesen's cheat engine, 0 deaths from enemies in 4000 frames
   (only pit deaths, energy still full), against 1-2 without it; from power-on the game starts normally with 5 hearts
   [trace] `energy-par-s1/s2.log`, `energy-ctl-s1/s2.log`, `energy-boot.log`.
@@ -121,6 +143,9 @@ OPTIONS) is stable from about frame 900 [trace] `boot-timeline.log`.
 
 ## Debug stage skip
 
+- The debug handler (`$81:82F1-$81:8333`) reacts to the **held** pad `$1A6F`, every frame: R → `$13B6 = $82D4`,
+  coins `$1894 = $0100`, `$01F4 = $7F:B00D`, `$056D = 1`; L → `$01F4 = $7F:B00E`, `$056D = 1`. With the debug bit on, the
+  mod's Select+L/R colour shortcuts also trigger it [static].
 - With `$7E:1EC9` bit 0 set, **R** ends the current stage and goes to the next one, and L/R write `$01F4` from
   `$7F:B00D/$7F:B00E` and set `$056D=1` (`$81:82F1-$81:8333`) [static + trace] `probe-warp.log`.
 - `$1EC9` is `$00` in normal play, so L and R alone do nothing [trace] `trace-palette.log`.

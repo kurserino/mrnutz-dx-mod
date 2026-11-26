@@ -1,0 +1,116 @@
+# ff-newgame | exit=0 | rom=v0.2.1-rc12.runtime.sfc | SCENARIO=2 END=2300
+F107 LIT brightness=1 gameplay=false
+F312 DARK
+F582 LIT brightness=1 gameplay=false
+F1031 DARK
+F1184 LIT brightness=1 gameplay=false
+F1188 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=2
+F1189 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=2
+F1190 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=3
+F1191 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=3
+SHOT bad1188 -> output\traces\ff-newgame/bad1188.png
+F1192 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=3
+SHOT bad1189 -> output\traces\ff-newgame/bad1189.png
+F1193 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=4
+SHOT bad1190 -> output\traces\ff-newgame/bad1190.png
+F1194 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=4
+SHOT bad1191 -> output\traces\ff-newgame/bad1191.png
+F1195 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=4
+SHOT bad1192 -> output\traces\ff-newgame/bad1192.png
+SHOT bad1193 -> output\traces\ff-newgame/bad1193.png
+F1204 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=7
+F1205 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=8
+F1206 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=8
+F1207 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=8
+F1208 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=9
+F1209 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=9
+F1210 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=9
+F1211 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=10
+F1220 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=13
+F1221 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=13
+F1222 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=13
+F1223 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=14
+F1224 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=14
+F1225 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=14
+F1226 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1227 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1236 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1237 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1238 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1239 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1240 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1241 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1242 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1243 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1252 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1253 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1254 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1255 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1256 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1257 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1258 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1259 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1268 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1269 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1270 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1271 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1272 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1273 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1274 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1275 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1284 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1285 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1286 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1287 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1288 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1289 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1290 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1291 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1300 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1301 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1302 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1303 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1304 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1305 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1306 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1307 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1316 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1317 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1318 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1319 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1320 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1321 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1322 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1323 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1332 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1333 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1334 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1335 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1336 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1337 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1338 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1339 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1348 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1349 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1350 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1351 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1352 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1353 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1354 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1355 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1364 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1365 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1366 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1367 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1368 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1369 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1370 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1371 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1380 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1381 BAD nutz=1 on palette 4 (S=4 X=136) gameplay=false brightness=15
+F1509 DARK
+F1541 LIT brightness=1 gameplay=false
+F1932 DARK
+F1994 LIT brightness=15 gameplay=true
+F2031 BAD nutz=6 on palette 4 (S=4 X=5) gameplay=true brightness=15
+RESULT litNutzFrames=404 bad=99

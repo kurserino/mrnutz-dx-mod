@@ -1,0 +1,15 @@
+# hookline-rc12-00 | exit=0 | rom=v0.2.1-rc12.runtime.sfc | state=stage-00.mss | FROM=515 TO=524
+LOAD ok=true
+F515 hookLines=[] scanPos=80 passes=1 ready=1 X=5 0026=0000
+F516 hookLines=[] scanPos=80 passes=1 ready=1 X=5 0026=0000
+F516 inidisp=80 nmi4200=? 
+F517 hookLines=[] scanPos=80 passes=1 ready=1 X=5 0026=0000
+F518 hookLines=[] scanPos=80 passes=1 ready=1 X=5 0026=0000
+F519 hookLines=[246] scanPos=8 passes=0 ready=0 X=255 0026=0000
+SHOT t0516 -> output\traces\hookline-rc12-00/t0516.png
+F520 hookLines=[0] scanPos=0 passes=1 ready=1 X=5 0026=0024
+F521 hookLines=[258] scanPos=0 passes=1 ready=1 X=5 0026=0024
+F522 hookLines=[0] scanPos=0 passes=1 ready=1 X=5 0026=0024
+F522 inidisp=0F nmi4200=? 
+F523 hookLines=[4] scanPos=0 passes=1 ready=1 X=5 0026=0024
+F524 hookLines=[12] scanPos=0 passes=1 ready=1 X=5 0026=0024

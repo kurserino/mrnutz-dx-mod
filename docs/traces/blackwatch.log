@@ -1,0 +1,28 @@
+# blackwatch | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | state=stage-00.mss
+LOAD ok=true
+F1 inidisp=FF 1A7F=0F 056E=0024 0572=CC08 057E=CC08 13B6=0000 nmi=835B stage=00 pc=80:8231
+F2 inidisp=0F 1A7F=0F 056E=0024 0572=CC08 057E=CC08 13B6=0000 nmi=835B stage=00 pc=80:8231
+ARES transplant at F2
+F3 inidisp=80 1A7F=00 056E=0024 0572=CF1C 057E=CC08 13B6=0000 nmi=835B stage=00 pc=81:CC58
+SHOT f0040 -> output\traces\blackwatch/f0040.png
+F50 inidisp=80 1A7F=00 056E=0024 0572=CF1C 057E=CC08 13B6=0000 nmi=835B stage=00 pc=81:CC58
+SHOT f0080 -> output\traces\blackwatch/f0080.png
+F100 inidisp=80 1A7F=00 056E=0024 0572=CF1C 057E=CC08 13B6=0000 nmi=835B stage=00 pc=81:CC58
+SHOT f0120 -> output\traces\blackwatch/f0120.png
+F150 inidisp=80 1A7F=00 056E=0024 0572=CF1C 057E=CC08 13B6=0000 nmi=835B stage=00 pc=81:CC58
+SHOT f0160 -> output\traces\blackwatch/f0160.png
+F200 inidisp=80 1A7F=00 056E=0024 0572=CF1C 057E=CC08 13B6=0000 nmi=835B stage=00 pc=81:CC58
+SHOT f0200 -> output\traces\blackwatch/f0200.png
+SHOT f0240 -> output\traces\blackwatch/f0240.png
+F250 inidisp=80 1A7F=00 056E=0024 0572=CF1C 057E=CC08 13B6=0000 nmi=835B stage=00 pc=81:CC58
+SHOT f0280 -> output\traces\blackwatch/f0280.png
+F300 inidisp=80 1A7F=00 056E=0024 0572=CF1C 057E=CC08 13B6=0000 nmi=835B stage=00 pc=81:CC58
+SHOT f0320 -> output\traces\blackwatch/f0320.png
+F343 inidisp=0F 1A7F=0F 056E=0024 0572=CF78 057E=CC08 13B6=0000 nmi=835B stage=00 pc=80:8231
+F350 inidisp=0F 1A7F=0F 056E=0024 0572=CF78 057E=CC08 13B6=0000 nmi=835B stage=00 pc=80:8233
+SHOT f0360 -> output\traces\blackwatch/f0360.png
+F400 inidisp=0F 1A7F=0F 056E=0024 0572=CF78 057E=CC08 13B6=0000 nmi=835B stage=00 pc=80:8231
+SHOT f0400 -> output\traces\blackwatch/f0400.png
+F406 inidisp=0F 1A7F=0F 056E=0024 0572=CC08 057E=CC08 13B6=0000 nmi=835B stage=00 pc=80:8233
+SHOT f0440 -> output\traces\blackwatch/f0440.png
+F450 inidisp=0F 1A7F=0F 056E=0024 0572=CC08 057E=CC08 13B6=0000 nmi=835B stage=00 pc=80:8230

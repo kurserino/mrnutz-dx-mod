@@ -64,6 +64,9 @@ export const STATE = {
   layout: 0x7fbd2a, // STATE_LAYOUT once the fields above were initialized (v0.2.0 WRAM, e.g. a savestate, has garbage here)
   conflict: 0x7fbd2b, // frame_hook saw another object on palette X in the buffer
   anyGroup: 0x7fbd2c, // fix-private-slot-choice: 1 when the scene is in CROSS_GROUP_SCENES (set on each scene reset)
+  ch7Save: 0x7fb6e0, // 11 bytes: DMA channel 7 registers $4370-$437A saved around scan_snapshot
+  lateRemap: 0x7fbd2d, // frame_hook skipped the remap for lack of time: oam_hook remaps a small buffer instead
+  oamCopy: 0x7fb700, // 544 bytes: PPU OAM copied by DMA in scan_snapshot (free WRAM, sweep-wram.log)
 }
 const STATE_LAYOUT = 0x03;
 // Scene tables ([$055E]/$0560) whose sprites never take part in colour math (CGADSUB bit 4 off for the whole scene),
@@ -113,9 +116,13 @@ const FIRST_VBLANK_SCANLINE = 225; // NTSC VBlank starts at line 225; a smaller 
 // Reading OAM through $2138 is safe up to the end of VBlank; input_hook runs after the game's HDMA enable, so a read
 // there delays nothing the game needs in VBlank. CGRAM writes keep the stricter LAST_SAFE_SCANLINE.
 const OAM_READ_LAST_SCANLINE = 257;
-// frame_hook scans the whole buffer (up to 128 entries, ~13 lines): it only starts before this line so it always ends
-// before the next NMI at line 225 and never makes the game miss a frame.
-const FRAME_HOOK_LAST_SCANLINE = 205;
+// scan_snapshot DMAs 544 OAM bytes (~3.3 lines) and must end before OAM_READ_LAST_SCANLINE: start at line <= 254.
+const SNAPSHOT_LAST_SCANLINE = 254;
+// frame_hook scans the buffer in use (up to 128 entries, ~13 lines for 512 bytes): it only starts when
+// line + ($0024 bytes / 32) <= FRAME_HOOK_END_SCANLINE, so it ends before the next NMI at line 225 and never makes the
+// game miss a frame. Full buffer: start by line 204 (as the former fixed limit 205); 36 bytes (stage start): line 219.
+// The iris-in runs the frame work late (lines 150-180+), where the fixed limit skipped the remap (ff-skip-00.log).
+const FRAME_HOOK_END_SCANLINE = 220;
 
 const h = (v: number, digits: number) => "$" + v.toString(16).toUpperCase().padStart(digits, "0");
 
@@ -460,6 +467,12 @@ ${CROSS_GROUP_SCENES.map((t, i) => `    LDA $055E
     .i16
     ; The WRAM buffer at $0321 holds stale entries past the bytes in use; the PPU OAM is the truth
     ; (cleared entries have y=$E0, boss parts uploaded once stay there). Read it through $2138.
+    LDA ${L(S.passes)}     ; first pass of a scene with VBlank time left: the whole OAM at once (scan_snapshot)
+    BNE sc_ppu
+    JSR snapshot_ok
+    BCS sc_ppu
+    JMP scan_snapshot
+  sc_ppu:
     JSR oam_read_ok
     BCC sc_go
     LDA ${L(S.passes)}     ; no PPU access (e.g. the iris-in runs the frame out of VBlank): before the first full
@@ -477,12 +490,19 @@ ${CROSS_GROUP_SCENES.map((t, i) => `    LDA $055E
     STA ${L(S.entryOff)}    ; byte offset = OAM word address * 2
     LDA #$0000             ; B = 0 for the A8 TAX/TAY below
     SEP #$20
-    LDA #$80               ; up to 16 entries, never past entry 127 (the high table follows)
-    SEC
-    SBC ${L(S.scanPos)}
+    LDA #$80               ; never past entry 127 (the high table follows); 16 entries per frame, or as many as fit
+    SEC                    ; in VBlank during the first pass of a scene (the read loop stops before line 258), so the
+    SBC ${L(S.scanPos)}    ; selection shows within a frame or two of a stage start (stage-start-colours)
+    PHA
+    LDA ${L(S.passes)}
+    BEQ sc_first
+    PLA
     CMP #$10
     BCC sc_count
     LDA #$10
+    BRA sc_count
+  sc_first:
+    PLA
   sc_count:
     STA ${L(S.tmp)}
   sc_loop:
@@ -577,24 +597,120 @@ ${CROSS_GROUP_SCENES.map((t, i) => `    LDA $055E
     SEP #$20
     RTS
 
-  scan_wram:               ; A8 in/out. Fallback of scan_chunk: 16 entries of the WRAM OAM buffer $7E:0321, which the
-    .a8                    ; game uploads every frame ($0024 bytes in use). Entries past those bytes are left to the
-    .i16                   ; PPU scan (boss parts); frame_hook still unmaps Mr. Nutz if another object shows up on X.
+  scan_snapshot:           ; A8 in/out, VBlank (latched V <= ${SNAPSHOT_LAST_SCANLINE}). First pass of a scene in one frame: DMA the
+    .a8                    ; PPU OAM (544 bytes, ~3.3 lines) to oamCopy on channel 7, whose registers are saved and
+    .i16                   ; restored (the game uses every channel for HDMA somewhere, dmach-*.log), then classify all
+    LDX #$000A             ; 128 entries like scan_chunk (stage-start-colours)
+  ss_save:
+    LDA $4370,X
+    STA ${L(S.ch7Save)},X
+    DEX
+    BPL ss_save
     REP #$20
-    LDA ${L(S.scanPos)}
+    STZ $2102              ; OAMADD = 0
+    LDA #$3880             ; $4370 = $80 (B bus -> A bus, one register), $4371 = $38 ($2138 OAM data read)
+    STA $4370
+    LDA #${A(S.oamCopy)}
+    STA $4372
+    LDA #$0220
+    STA $4375
+    SEP #$20
+    LDA #${h(S.oamCopy >> 16, 2)}
+    STA $4374
+    LDA #$80
+    STA $420B
+    REP #$20
+    LDA $0026              ; OAMADD as the game leaves it ($81:C3AF: entries in use / 2)
+    LSR A
+    STA $2102
+    SEP #$20
+    LDX #$000A
+  ss_restore:
+    LDA ${L(S.ch7Save)},X
+    STA $4370,X
+    DEX
+    BPL ss_restore
+    REP #$20
+    LDX #$0000
+    LDA #$0000             ; B = 0 for the A8 TAY below
+    SEP #$20
+  ss_loop:
+    REP #$20
+    TXA
+    CMP $0026              ; C = 1: past the bytes uploaded each frame (static entries)
+    LDA #$0000
+    SEP #$20
+    LDA ${L(S.oamCopy + 3)},X ; attr
+    TAY
+    BCS ss_static
+    LDA ${L(S.oamCopy + 1)},X ; y
+    CMP #$E0
+    BEQ ss_next            ; hidden dynamic entry
+    LDA ${L(S.oamCopy + 2)},X ; tile
+    CMP #$50
+    BCS ss_other
+    LDA ${A(ATTR_PAL)},Y
+    CMP ${L(S.slotS)}
+    BEQ ss_next            ; Mr. Nutz entry
+    CMP ${L(S.customSlot)}
+    BEQ ss_next
+  ss_other:
+    LDA ${A(ATTR_BIT)},Y
+    ORA ${L(S.passMask)}
+    STA ${L(S.passMask)}
+    BRA ss_next
+  ss_static:               ; as in scan_chunk: hidden static entries count, except the cleared $E0/$E0/$E0 pattern
+    LDA ${L(S.oamCopy + 1)},X
+    CMP #$E0
+    BNE ss_live
+    LDA ${L(S.oamCopy + 2)},X
+    CMP #$E0
+    BNE ss_live
+    CPY #$00E0
+    BEQ ss_next
+  ss_live:
+    LDA ${L(S.oamCopy + 2)},X
+    CMP #$50
+    BCS ss_mark
+    LDA ${A(ATTR_PAL)},Y
+    CMP ${L(S.slotS)}
+    BEQ ss_next
+  ss_mark:
+    LDA ${A(ATTR_BIT)},Y
+    ORA ${L(S.stickyMask)}
+    STA ${L(S.stickyMask)}
+  ss_next:
+    INX
+    INX
+    INX
+    INX
+    CPX #$0200
+    BEQ ss_done
+    JMP ss_loop
+  ss_done:
+    LDA ${L(S.passMask)}   ; pass complete, as in scan_chunk
+    STA ${L(S.prevMask)}
+    LDA #$00
+    STA ${L(S.passMask)}
+    STA ${L(S.scanPos)}
+    LDA #$01
+    STA ${L(S.passes)}
+    RTS
+
+  scan_wram:               ; A8 in/out. Fallback of scan_chunk: the rest of the pass at once from the WRAM OAM buffer
+    .a8                    ; $7E:0321, which the game uploads every frame ($0024 bytes in use). WRAM reads need no
+    .i16                   ; VBlank, so the pass completes in this frame (stage-start-colours). Entries past those bytes
+    REP #$20               ; are left to the PPU scan (boss parts); frame_hook still unmaps Mr. Nutz if another object
+    LDA ${L(S.scanPos)}    ; shows up on X.
     AND #$007F
     ASL A
     ASL A
     TAX                    ; X = byte offset of the entry
     LDA #$0000             ; B = 0 for the A8 TAY below
     SEP #$20
-    LDA #$80               ; up to 16 entries, never past entry 127
+    LDA #$80               ; every remaining entry, never past entry 127
     SEC
     SBC ${L(S.scanPos)}
-    CMP #$10
-    BCC sw_count
-    LDA #$10
-  sw_count:
     STA ${L(S.tmp)}
   sw_loop:
     REP #$20
@@ -759,6 +875,14 @@ ${CROSS_GROUP_SCENES.map((t, i) => `    LDA $055E
     JSR read_vcount
     .a16
     CMP #${h(LAST_SAFE_SCANLINE + 1, 4)}
+    BRA vb_range
+  snapshot_ok:             ; same check for the OAM DMA of scan_snapshot: V in ${FIRST_VBLANK_SCANLINE}..${SNAPSHOT_LAST_SCANLINE}
+    .a8
+    LDA $4212
+    BPL vb_no
+    JSR read_vcount
+    .a16
+    CMP #${h(SNAPSHOT_LAST_SCANLINE + 1, 4)}
     BRA vb_range
   oam_read_ok:             ; same check for OAM reads ($2138): V in ${FIRST_VBLANK_SCANLINE}..${OAM_READ_LAST_SCANLINE}
     .a8
@@ -1024,7 +1148,7 @@ ${Array.from({ length: 10 }, () => `    LDA ${A(FUR_TABLE)},X\n    STA $2122\n  
   oh_check_pending:
     LDA ${L(S.pending)}
     BIT #$01
-    BEQ oh_t_exit
+    BEQ oh_good_exit
     AND #$FE
     STA ${L(S.pending)}
     REP #$20
@@ -1037,6 +1161,9 @@ ${Array.from({ length: 10 }, () => `    LDA ${A(FUR_TABLE)},X\n    STA $2122\n  
     STA ${L(S.applied + 1)}
     LDA ${L(S.outfitIndex)}
     STA ${L(S.applied + 2)}
+  oh_good_exit:            ; X holds the selection and is usable for this buffer
+    .a8
+    JSR late_remap
     JMP oh_exit
   oh_conflict:             ; frame_hook saw another object on X: Mr. Nutz back to S, X gets its scene palette back
     .a8
@@ -1073,6 +1200,62 @@ ${Array.from({ length: 10 }, () => `    LDA ${A(FUR_TABLE)},X\n    STA $2122\n  
     LDA #$4300             ; relocated original instructions
     TCD
     RTL
+
+  late_remap:              ; A8 X16, DBR=$A0, early VBlank. frame_hook ran out of time (lateRemap): if the buffer is
+    .a8                    ; small (<= 64 bytes, a stage start) and no other object uses palette X, move Mr. Nutz's
+    .i16                   ; entries (tile < $50, palette S, name table 0) to X before the DMA (stage-start-colours)
+    LDA ${L(S.lateRemap)}
+    BEQ lr_done
+    LDA #$00
+    STA ${L(S.lateRemap)}
+    REP #$20
+    LDA $0024
+    CMP #$0041
+    SEP #$20
+    BCS lr_done
+    LDX #$0000
+  lr_check:
+    REP #$20
+    TXA
+    CMP $0024
+    SEP #$20
+    BCS lr_ok
+    LDA $7E0324,X
+    AND #$0E
+    CMP ${L(S.xBits)}
+    BEQ lr_done            ; another object on X: leave this buffer alone
+    INX
+    INX
+    INX
+    INX
+    BRA lr_check
+  lr_ok:
+    LDX #$0000
+  lr_loop:
+    REP #$20
+    TXA
+    CMP $0024
+    SEP #$20
+    BCS lr_done
+    LDA $7E0323,X          ; tile
+    CMP #$50
+    BCS lr_next
+    LDA $7E0324,X
+    AND #$0F
+    CMP ${L(S.sBits)}      ; palette S, name table 0
+    BNE lr_next
+    LDA $7E0324,X
+    AND #$F1
+    ORA ${L(S.xBits)}
+    STA $7E0324,X
+  lr_next:
+    INX
+    INX
+    INX
+    INX
+    BRA lr_loop
+  lr_done:
+    RTS
 
   unmap_list:              ; A8 X16, any DBR. Listed entries that still look remapped (tile < $50, palette X) -> S
     .a8
@@ -1175,6 +1358,7 @@ ${Array.from({ length: 10 }, () => `    LDA ${A(FUR_TABLE)},X\n    STA $2122\n  
     LDA #$00
     STA ${L(S.listCount)}
     STA ${L(S.conflict)}
+    STA ${L(S.lateRemap)}
     REP #$20
     LDA ${L(S.magic)}      ; hook state initialized (input_hook ran since power-on) and this build's layout
     CMP #${h(MAGIC, 4)}
@@ -1185,10 +1369,25 @@ ${Array.from({ length: 10 }, () => `    LDA ${A(FUR_TABLE)},X\n    STA $2122\n  
     BNE fh_t_out
     LDA ${L(S.ready)}
     BEQ fh_t_out
-    JSR read_vcount        ; time to scan the whole buffer before the next NMI?
+    JSR read_vcount        ; time to scan the buffer in use before the next NMI?
     .a16
-    CMP #${h(FRAME_HOOK_LAST_SCANLINE + 1, 4)}
-    BCS fh_t_out
+    STA ${L(S.limit)}      ; (scratch; limit is set below)
+    LDA $000024
+    LSR A
+    LSR A
+    LSR A
+    LSR A
+    LSR A                  ; estimated lines = bytes in use / 32
+    CLC
+    ADC ${L(S.limit)}
+    CMP #${h(FRAME_HOOK_END_SCANLINE + 1, 4)}
+    BCC fh_in_time
+    SEP #$20
+    LDA #$01               ; too late for this frame: oam_hook remaps the buffer if it is small
+    STA ${L(S.lateRemap)}
+    JMP fh_out
+  fh_in_time:
+    .a16
     SEP #$20
     PHB
     LDA #$7F

@@ -1,0 +1,8 @@
+# ff-skip-09 | exit=0 | rom=v0.2.1-rc12.runtime.sfc | state=stage-09.mss | SCENARIO=1 END=800
+LOAD ok=true
+F2 LIT brightness=15 gameplay=true
+F2 BAD nutz=6 on palette 0 (S=0 X=2) gameplay=true brightness=15
+SHOT bad0002 -> output\traces\ff-skip-09/bad0002.png
+F62 DARK
+F150 LIT brightness=1 gameplay=true
+RESULT litNutzFrames=603 bad=1

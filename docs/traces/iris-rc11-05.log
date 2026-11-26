@@ -1,0 +1,30 @@
+# iris-rc11-05 | exit=0 | rom=v0.2.1-rc11.runtime.sfc | state=stage-05.mss | END=700 SAVEFUR=1 INPUT=5 SHOTEVERY=1000
+LOAD ok=true
+F1 SCENE 82D52C stage=0E area0550=EB29 x=68 y=1316
+F1 nogameplay
+F2 S=4 X=255 nutz=6 ok=false foreignOnX=0 shared=false pend=01 ready=0 passes=0
+F5 S=4 X=5 nutz=6 ok=false foreignOnX=0 shared=false pend=01 ready=1 passes=1
+F6 FIRSTOK 5 frames after scene change
+F6 S=4 X=5 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F6 XCOLOUR slot5 entry1 518C->49CE
+F6 XCOLOUR slot5 entry2 6210->5A52
+F6 XCOLOUR slot5 entry3 7294->6AD6
+F6 XCOLOUR slot5 entry4 7318->7B5A
+F6 XCOLOUR slot5 entry5 4298->7BDE
+F6 XCOLOUR slot5 entry6 3214->031A
+F6 XCOLOUR slot5 entry7 2190->0292
+F6 XCOLOUR slot5 entry8 0280->018A
+F6 XCOLOUR slot5 entry9 739C->00C8
+F6 XCOLOUR slot5 entry10 039C->0000
+F6 XCOLOUR slot5 entry11 6318->104B
+F6 XCOLOUR slot5 entry12 4210->2091
+F6 XCOLOUR slot5 entry13 029C->2CF8
+F6 XCOLOUR slot5 entry14 019C->3D5F
+F6 XCOLOUR slot5 entry15 0148->5A7F
+F63 nogameplay
+F65 SCENE 82D4AC stage=10 area0550=EB29 x=96 y=0
+F424 SCENE 82D52C stage=10 area0550=EB29 x=65532 y=100
+F439 S=4 X=5 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F440 FIRSTOK 16 frames after scene change
+F440 S=4 X=5 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+RESULT visible=322 ok=318 bad=4

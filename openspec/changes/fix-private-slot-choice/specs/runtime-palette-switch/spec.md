@@ -32,4 +32,9 @@ The patch SHALL recolour only the sprites of Mr. Nutz. Every other object, inclu
 #### Scenario: Stage start with an iris-in
 - **GIVEN** a stage change that opens with the iris-in transition
 - **WHEN** a non-original preset is selected
-- **THEN** Mr. Nutz SHALL show the selected colours within 12 gameplay frames of the first gameplay frame of the new scene.
+- **THEN** Mr. Nutz SHALL show the selected colours from the first frame he is visible in the new scene.
+
+#### Scenario: Stage start without an iris
+- **GIVEN** a stage change where the hook reaches VBlank from the first gameplay frame
+- **WHEN** a non-original preset is selected
+- **THEN** Mr. Nutz SHALL show the selected colours from the first frame he is visible in the new scene.

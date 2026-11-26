@@ -1,0 +1,17 @@
+# newgame-orig-cheats | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc | MODE=1 END=3000 PAR=2113965823 PAR2=2114057395 PAR3=2115946753
+ADDCHEAT 7E008EFF true
+ADDCHEAT 7E01F4B3 true
+ADDCHEAT 7E1EC901 true
+F500 gameplay=false energy(read)=4 heartPx full=0 empty=0 hits=0
+SHOT f0500 -> output\traces\newgame-orig-cheats/f0500.png
+F1000 gameplay=false energy(read)=4 heartPx full=0 empty=0 hits=0
+SHOT f1000 -> output\traces\newgame-orig-cheats/f1000.png
+F1500 gameplay=false energy(read)=4 heartPx full=0 empty=0 hits=0
+SHOT f1500 -> output\traces\newgame-orig-cheats/f1500.png
+F1816 GAMEPLAY
+F2000 gameplay=true energy(read)=4 heartPx full=55 empty=0 hits=0
+SHOT f2000 -> output\traces\newgame-orig-cheats/f2000.png
+F2500 gameplay=true energy(read)=4 heartPx full=55 empty=0 hits=0
+SHOT f2500 -> output\traces\newgame-orig-cheats/f2500.png
+F3000 gameplay=true energy(read)=4 heartPx full=55 empty=0 hits=0
+RESULT hits=0 deaths=0 firstGameplay=1816

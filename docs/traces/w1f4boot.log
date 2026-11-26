@@ -1,0 +1,3 @@
+# w1f4boot | exit=0 | rom=Mr. Nutz (USA) (En,Fr).sfc
+F1 W 0001F4=00 pc=82:81E0
+F1508 W 0001F4=B5 pc=80:8191

@@ -29,6 +29,17 @@
   99.8% (`sweep-all.log`), persistence and power cycle pass.
 - [x] 3.4 Manual check by the user in ares with the installed rc9 IPS (witch house, `stage-09`, stage starts): confirmed 2026-11-25.
 
+## 3b. Follow-up: fast first pass
+
+- [x] 3b.1 `scan_wram` reads every remaining entry at once; `scan_chunk` reads as many entries as fit in VBlank in the
+  first pass of a scene. Check: `iris-rc11-00.log` first coloured frame 521 for first visible 520; 38 tests pass.
+- [x] 3b.2 `npm run sweep:all` on the new build (rc11 and rc12: violations=0).
+- [x] 3b.4 `scan_snapshot` (OAM DMA on channel 7 with saved registers) for the first pass: first coloured frame = first
+  visible frame (`iris-rc12-*.log`), DMA ends by line 256 (`snaptime-*.log`), sweep `ppuOut=0`.
+- [x] 3b.5 Every lit frame of every stage start (`first-frames.lua`, stages 00-30, deaths): no frame with original colours
+  after the frame_hook start limit by buffer size and the oam_hook late remap (`ffall-*.log`, `ff13-*.log`); sweep passes.
+- [ ] 3b.3 User check in ares (stage start with the iris).
+
 ## 4. Knowledge and port
 
 - [x] 4.1 Record in `docs/knowledge/` (palettes, frame cycle, research tools) the facts of section 1 with tags.
