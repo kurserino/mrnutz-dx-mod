@@ -26,4 +26,4 @@
 
 - [x] 4.1 Record the Stage Clear facts in `docs/knowledge/` with tags.
 - [x] 4.2 Port to `wip/v0.2.1-vblank-race-and-pause` and run its tests (39 pass).
-- [ ] 4.3 Archive after the user's check.
+- [x] 4.3 Archive with the v0.2.1 release.

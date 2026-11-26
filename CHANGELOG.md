@@ -1,5 +1,41 @@
 # Changelog
 
+## v0.2.1 — 2026-11-26 — colour fixes (`openspec/changes/archive/2026-11-26-*`)
+
+Patch: `npm run runtime:build` → `output/Mr. Nutz.runtime.ips` (3925 bytes), published as `mrnutz-dx-v0.2.1.ips`
+on the GitHub release. Source ROM CRC32 `A99BDD9A`; patched ROM CRC32 `928FCC07`. Save format unchanged.
+
+### Fixed
+- Mr. Blizzard's breath attack no longer makes Mr. Nutz lose his colours or recolours the sky and the HUD: every PPU
+  access of the patch stays inside VBlank, also on lag frames, and the remap of Mr. Nutz's sprites moved to the end of
+  the frame work (`2026-11-26-fix-vblank-check-race`).
+- One colour of Mr. Nutz no longer flashes in some stages: the private palette is never sprite palette 1, which the game
+  animates every frame (`2026-11-26-fix-private-slot-choice`).
+- Mr. Nutz shows the selected colours from the first visible frame of every stage start, including while the iris
+  opens (OAM snapshot by DMA on the first pass of a scene, late remap when the frame work ends late).
+
+### Changed
+- The witch fight (0% before) and the spider boss (45% before) now show the selected colours: in scenes where sprites
+  never take part in colour math, the private palette may come from the other group.
+- Every STAGE CLEAR screen (end of worlds 1-5) shows Mr. Nutz in the selected colours (`2026-11-26-stage-clear-colours`).
+
+### Verified (Mesen 2.2.1 headless)
+- `sweep:all`: 40 stages, violations=0, `hdmaLate=0`, `ppuOut=0`, no stage without a free slot; persistence and power
+  cycle pass.
+- `first-frames.lua`: no lit frame with original colours at the start of stages 00-30, after a death or during the iris.
+- `stage-clear-all.lua`: the 5 Stage Clear screens; with the original selection the screen is pixel-identical to the
+  original ROM.
+- User checks in ares: breath fight, witch house, flashing colour, Stage Clear.
+
+### Research (knowledge base)
+- ares savestates in Mesen (`tools/mesen/ares-import.ts`, `run.ts --prelude`) and how to remap them across IPS versions.
+- Energy is `$7E:01F4` XOR `$B7` (`$7E:05A2` was wrong); boss health of the witch and the `stage-21` boss; stage list and
+  world ends; RAM read cheats can corrupt stage loading in ares.
+
+### Notes
+- Savestates made with v0.2.0 or an earlier build can resume at a wrong instruction (black screen); start from the
+  battery save or a fresh state.
+
 ## v0.2.0 — 2026-11-05 — SRAM save (`openspec/changes/archive/2026-11-05-sram-persistence`)
 
 Patch: `npm run runtime:build` → `output/Mr. Nutz.runtime.ips` (2584 bytes), published as `mrnutz-dx-v0.2.0.ips`

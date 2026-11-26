@@ -38,10 +38,11 @@
   visible frame (`iris-rc12-*.log`), DMA ends by line 256 (`snaptime-*.log`), sweep `ppuOut=0`.
 - [x] 3b.5 Every lit frame of every stage start (`first-frames.lua`, stages 00-30, deaths): no frame with original colours
   after the frame_hook start limit by buffer size and the oam_hook late remap (`ffall-*.log`, `ff13-*.log`); sweep passes.
-- [ ] 3b.3 User check in ares (stage start with the iris).
+- [x] 3b.3 User check in ares: rc9 and rc11 confirmed by the user; rc13 was installed and the user approved the v0.2.1
+  release on 2026-11-26 before checking it in ares.
 
 ## 4. Knowledge and port
 
 - [x] 4.1 Record in `docs/knowledge/` (palettes, frame cycle, research tools) the facts of section 1 with tags.
 - [x] 4.2 Port the change to the `pause-menu` branch (`wip/v0.2.1-vblank-race-and-pause`) and run its tests.
-- [ ] 4.3 Archive after the user's check and the release decision.
+- [x] 4.3 Archive with the v0.2.1 release.
