@@ -66,6 +66,18 @@ to `$89`, and the private slot X went from 7 to `$FF` [trace] `docs/traces/frank
    `race-v020.log`. With the fix and the same forcing, there are 0 active-display writes and the HUD matches the
    original ROM [trace] `race-fixed.log`.
 
+7. **Final shape (rc8, shipped in v0.2.1).** The lower bound alone was not enough on heavy lag frames, so the PPU
+   work was split by what it touches:
+   - `vblank_ok` (CGRAM writes) accepts a latched V in 225..250 and `oam_read_ok` (`$2138` reads in `scan_chunk`)
+     225..257, sharing `read_vcount`; `scan_chunk` re-checks the line every 4 entries.
+   - The remap of Mr. Nutz's entries moved out of the critical path: `frame_hook` (new manifest site `$81:8569`,
+     `JSL $8A8134` relocated) runs at the end of the gameplay frame work, in active display, and moves his entries in
+     the WRAM buffer `$7E:0321` to X through a class table (`$7F:BC00`); another object on X sets `conflict`.
+   - `oam_hook` does CGRAM work only (upload, restore, conflict handling) after `vblank_ok`.
+   Evidence: `race-fixed.log` (0 hook CGRAM writes in active display under the forced race), `probe-frame-hook.log`,
+   `sweep-all.log` (`ppuOut=0`, `hdmaLate=0` on 40 stages), `blizzard-fixed.log`; the user confirmed the breath fight in
+   ares on rc8.
+
 ## Risks / Trade-offs
 
 - [Fewer frames pass the check on heavy scenes] → Correct by design: work is deferred one frame. The scan still
