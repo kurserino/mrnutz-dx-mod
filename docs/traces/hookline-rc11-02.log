@@ -1,0 +1,22 @@
+# hookline-rc11-02 | exit=0 | rom=v0.2.1-rc11.runtime.sfc | state=stage-02.mss | FROM=444 TO=458
+LOAD ok=true
+F444 hookLines=[] scanPos=16 passes=1 ready=1 X=5 0026=0000
+F444 inidisp=80 nmi4200=? 
+F445 hookLines=[] scanPos=16 passes=1 ready=1 X=5 0026=0000
+F446 hookLines=[] scanPos=16 passes=1 ready=1 X=5 0026=0000
+F447 hookLines=[235] scanPos=24 passes=0 ready=0 X=255 0026=0000
+SHOT t0444 -> output\traces\hookline-rc11-02/t0444.png
+F448 hookLines=[246] scanPos=40 passes=0 ready=0 X=255 0026=0024
+F449 hookLines=[234] scanPos=72 passes=0 ready=0 X=255 0026=0024
+F450 hookLines=[235] scanPos=104 passes=0 ready=0 X=255 0026=0024
+F450 inidisp=01 nmi4200=? 
+F451 hookLines=[233] scanPos=0 passes=1 ready=1 X=5 0026=0024
+F452 hookLines=[238] scanPos=16 passes=1 ready=1 X=5 0026=0024
+F453 hookLines=[233] scanPos=32 passes=1 ready=1 X=5 0026=0024
+SHOT t0450 -> output\traces\hookline-rc11-02/t0450.png
+F454 hookLines=[233] scanPos=48 passes=1 ready=1 X=5 0026=0024
+F455 hookLines=[234] scanPos=64 passes=1 ready=1 X=5 0026=0024
+F456 hookLines=[235] scanPos=80 passes=1 ready=1 X=5 0026=0024
+F456 inidisp=04 nmi4200=? 
+F457 hookLines=[233] scanPos=96 passes=1 ready=1 X=5 0026=0024
+F458 hookLines=[233] scanPos=112 passes=1 ready=1 X=5 0026=0024

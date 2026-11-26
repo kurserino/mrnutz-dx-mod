@@ -66,6 +66,9 @@ Scripts without an npm alias (run with `npx tsx tools/mesen/run.ts <script> [--s
 | `scene-table-writers.lua` | writers of `$055E` and `$13B6` (PC, value) |
 | `stage-clear-all.lua` | Stage Clear regression for one stage state: debug skip at frame 60 (or a boss `PAR`), then which slots hold the selection / `$85:9CC0` and the OAM palettes; run it on `stage-04/08/15/21/25` (`scall-summary.log`) |
 | `stage-clear-caller.lua` | stack and stage index when the Stage Clear routine starts |
+| `first-frames.lua` | every frame, gameplay or not: lit screen with Mr. Nutz in other colours than the selection = BAD (stage skip, new game, death scenarios) |
+| `dma-channels.lua` | OR of the `$420B`/`$420C` values and of the written `$43x0-$43xA` channels (every channel is used for HDMA somewhere) |
+| `snapshot-timing.lua` | start/end scanline of each `scan_snapshot` DMA around a stage change |
 | `hud-energy.lua` | counts full-heart pixels in the HUD each frame; on a change, diffs the whole WRAM against 20 frames earlier (found energy `$01F4`) |
 | `hit-diff.lua` | WRAM diff around each damage (`$8D = 120`), `AFTER` frames later |
 | `find-energy.lua` | bytes that only drop by 1 during random play (counter search) |

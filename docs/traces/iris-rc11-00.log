@@ -1,0 +1,61 @@
+# iris-rc11-00 | exit=0 | rom=v0.2.1-rc11.runtime.sfc | state=stage-00.mss | END=700 SAVEFUR=1 INPUT=5 SHOTEVERY=1000
+LOAD ok=true
+F1 SCENE 82D454 stage=00 area0550=E744 x=96 y=372
+F1 nogameplay
+F2 S=4 X=255 nutz=6 ok=false foreignOnX=0 shared=false pend=01 ready=0 passes=0
+F5 S=4 X=5 nutz=6 ok=false foreignOnX=0 shared=false pend=01 ready=1 passes=1
+F6 FIRSTOK 5 frames after scene change
+F6 S=4 X=5 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F6 XCOLOUR slot5 entry1 008C->49CE
+F6 XCOLOUR slot5 entry2 0114->5A52
+F6 XCOLOUR slot5 entry3 0118->6AD6
+F6 XCOLOUR slot5 entry4 019E->7B5A
+F6 XCOLOUR slot5 entry5 021E->7BDE
+F6 XCOLOUR slot5 entry6 029E->031A
+F6 XCOLOUR slot5 entry7 031E->0292
+F6 XCOLOUR slot5 entry8 03DE->018A
+F6 XCOLOUR slot5 entry9 0000->00C8
+F6 XCOLOUR slot5 entry10 0842->0000
+F6 XCOLOUR slot5 entry11 2108->104B
+F6 XCOLOUR slot5 entry12 318C->2091
+F6 XCOLOUR slot5 entry13 3000->2CF8
+F6 XCOLOUR slot5 entry14 5000->3D5F
+F6 XCOLOUR slot5 entry15 7BDE->5A7F
+F63 nogameplay
+F65 SCENE 82D4AC stage=02 area0550=E744 x=96 y=0
+F519 S=4 X=255 nutz=0 ok=true foreignOnX=0 shared=false pend=00 ready=0 passes=0
+F520 S=4 X=5 nutz=6 ok=false foreignOnX=0 shared=false pend=01 ready=1 passes=1
+F520 XCOLOUR slot5 entry1 49CE->008C
+F520 XCOLOUR slot5 entry2 5A52->0114
+F520 XCOLOUR slot5 entry3 6AD6->0118
+F520 XCOLOUR slot5 entry4 7B5A->019E
+F520 XCOLOUR slot5 entry5 7BDE->021E
+F520 XCOLOUR slot5 entry6 031A->029E
+F520 XCOLOUR slot5 entry7 0292->031E
+F520 XCOLOUR slot5 entry8 018A->03DE
+F520 XCOLOUR slot5 entry9 00C8->0000
+F520 XCOLOUR slot5 entry10 0000->0842
+F520 XCOLOUR slot5 entry11 104B->2108
+F520 XCOLOUR slot5 entry12 2091->318C
+F520 XCOLOUR slot5 entry13 2CF8->3000
+F520 XCOLOUR slot5 entry14 3D5F->5000
+F520 XCOLOUR slot5 entry15 5A7F->7BDE
+F521 FIRSTOK 456 frames after scene change
+F521 S=4 X=5 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F521 XCOLOUR slot5 entry1 008C->49CE
+F521 XCOLOUR slot5 entry2 0114->5A52
+F521 XCOLOUR slot5 entry3 0118->6AD6
+F521 XCOLOUR slot5 entry4 019E->7B5A
+F521 XCOLOUR slot5 entry5 021E->7BDE
+F521 XCOLOUR slot5 entry6 029E->031A
+F521 XCOLOUR slot5 entry7 031E->0292
+F521 XCOLOUR slot5 entry8 03DE->018A
+F521 XCOLOUR slot5 entry9 0000->00C8
+F521 XCOLOUR slot5 entry10 0842->0000
+F551 S=4 X=5 nutz=6 ok=false foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F552 S=4 X=5 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F553 S=4 X=5 nutz=6 ok=false foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F557 S=4 X=5 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F558 S=4 X=5 nutz=6 ok=false foreignOnX=0 shared=false pend=00 ready=1 passes=1
+F560 S=4 X=5 nutz=6 ok=true foreignOnX=0 shared=false pend=00 ready=1 passes=1
+RESULT visible=242 ok=230 bad=12

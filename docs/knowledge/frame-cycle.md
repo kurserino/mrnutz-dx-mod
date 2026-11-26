@@ -51,7 +51,8 @@ limit for touching CGRAM: scanline ≤ 250.
 pointer `$0572`) after the OAM upload and before the joypad mirror. The OAM upload and `oam_hook` stay early in VBlank
 (line ~227), but `$81:828A` (`input_hook`) runs at scanlines 0-180 of the next frame, so nothing there can touch the
 PPU. Seen from `stage-00` to `stage-01`: first gameplay frame 520, hook lines 0 → 180 until frame 581, back to 233
-from frame 582 [trace] `hookline-00.log`, `nmitrace-00.log`.
+from frame 582 [trace] `hookline-00.log`, `nmitrace-00.log`. The end of the frame work (`$81:8569`) drifts the same
+way, up to line 220 (`fhline-rc13.log`).
 
 ## Pause
 

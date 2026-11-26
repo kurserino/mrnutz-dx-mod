@@ -16,7 +16,10 @@ loadStateOnBoot(function()
   end
 end)
 emu.addEventCallback(function()
-  if INPUT == 5 then
+  if INPUT == 6 then
+    -- Start at frame 40 (unpause a paused savestate), then idle.
+    if FRAME >= 40 and FRAME < 44 then emu.setInput({ start = true }, 0) end
+  elseif INPUT == 5 then
     -- Debug stage skip (emulator RAM only): R at frame 60 with $1EC9 bit 0 set.
     if FRAME == 55 then ww(0x1EC9, w8(0x1EC9) | 1) end
     if FRAME >= 60 and FRAME < 64 then emu.setInput({ r = true }, 0) end

@@ -1,0 +1,2 @@
+# dmach-boot | exit=0 | rom=v0.2.1-rc11.runtime.sfc | END=2500
+RESULT dma=01 hdma=FF regs=FF

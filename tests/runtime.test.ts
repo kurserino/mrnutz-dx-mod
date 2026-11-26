@@ -69,7 +69,8 @@ describe("runtime palette patch", () => {
     const { bytes, labels } = assemble(hookSource(4, 4), CODE_ORIGIN);
     const fh = bytes.subarray(labels.frame_hook - CODE_ORIGIN, labels.fh_handle - CODE_ORIGIN).toString("hex").toUpperCase();
     expect(fh.startsWith("2234818A")).toBe(true);
-    expect(fh).toContain("C9CE00"); // starts only before line 206
+    expect(fh).toContain("C9DD00"); // starts only when line + bytes in use / 32 <= 220
+    expect(fh).toContain("AF2400004A4A4A4A4A");
     // oam_hook has no buffer scan any more: no loop over $0024 entries
     const oam = bytes.subarray(labels.oam_hook - CODE_ORIGIN, labels.unmap_list - CODE_ORIGIN).toString("hex").toUpperCase();
     expect(oam).not.toContain("AF240000");

@@ -1,0 +1,5 @@
+# snaptime-00 | exit=0 | rom=v0.2.1-rc12.runtime.sfc | state=stage-00.mss | END=700
+LOAD ok=true
+F0 SNAPSHOT start=236 end=240
+F518 SNAPSHOT start=253 end=256
+RESULT snapshots=2 maxEndLine=256

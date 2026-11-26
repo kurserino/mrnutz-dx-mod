@@ -80,7 +80,10 @@ The static palette `0x029CC0` is **not** touched by the runtime patch.
   scenes in `CROSS_GROUP_SCENES` (`anyGroup`, `$7F:BD2C`) may use the other group once the same group is full; the
   cleared high-OAM pattern `$E0/$E0/$E0` is not a sticky object; before the first pass, when the PPU OAM is out of
   reach (iris-in, `frame-cycle.md`), the pass reads the WRAM buffer `$7E:0321` within `$0024` bytes (`scan_wram`).
-  State layout `$03`.
+  State layout `$03`. The first pass of a scene, when the latched V is 225..254, copies the whole PPU OAM by DMA on
+  channel 7 (registers saved to `$7F:B6E0` and restored) to `$7F:B700` and classifies it at once (`scan_snapshot`).
+  `frame_hook` starts when line + `$0024`/32 <= 220; when it cannot (late frame work, iris-in) it sets `lateRemap`
+  (`$7F:BD2D`) and `oam_hook` remaps a buffer of at most 64 bytes before the DMA if no other object uses X.
 - No free slot → Mr. Nutz keeps his original colours in that scene (`palettes.md`).
 - A colour change has 1 frame of latency. When another object takes X, there is 1 frame of original colour by design:
   switching slots in the same frame would double the critical-path work.

@@ -1,0 +1,10 @@
+# ff13-death-00 | exit=0 | rom=v0.2.1-rc13.runtime.sfc | state=stage-00.mss | SCENARIO=3 END=700
+LOAD ok=true
+F2 LIT brightness=15 gameplay=true
+F2 BAD nutz=6 on palette 4 (S=4 X=5) gameplay=true brightness=15
+SHOT bad0002 -> output\traces\ff13-death-00/bad0002.png
+F92 DARK
+F124 LIT brightness=1 gameplay=false
+F388 DARK
+F449 LIT brightness=15 gameplay=true
+RESULT litNutzFrames=311 bad=1
